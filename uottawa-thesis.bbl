@@ -1,0 +1,205 @@
+\begin{thebibliography}{10}
+
+\bibitem{baretal8}
+L.~Barri{\`e}re.
+\newblock Symmetry properties of chordal rings of degree 3.
+\newblock {\em Discrete applied mathematics}, pages 211--232, 2003.
+
+\bibitem{baretal9}
+L.~Barri{\`e}re, J.~F{\`a}brega, E.~Sim{\'o}, and M.~Zaragoz{\'a}.
+\newblock Fault-tolerant routings in chordal ring networks.
+\newblock {\em Networks}, pages 180--190, 2000.
+
+\bibitem{baretal24}
+L.~Barri\`{e}re, P.~Flocchini, P.~Fraigniaud, and N.~Santoro.
+\newblock Capture of an intruder by mobile agents.
+\newblock In {\em Proceedings of the Fourteenth Annual ACM Symposium on
+  Parallel Algorithms and Architectures}, pages 200--209, 2002.
+
+\bibitem{bre4}
+R~Breisch.
+\newblock An intuitive approach to speleotopology.
+\newblock {\em Southwestern cavers}, pages 72--78, 1967.
+
+\bibitem{caietal18}
+J.~Cai, P.~Flocchini, and N.~Santoro.
+\newblock Decontaminating a network from a black virus.
+\newblock {\em International Journal of Networking and Computiing}, pages
+  151--173, 2014.
+
+\bibitem{caietal7}
+J.~Cai, G.~Havas, B.~Mans, A.~Nerurkar, J.~Seifert, and I.~Shparlinski.
+\newblock On routing in circulant graphs.
+\newblock In {\em Computing and Combinatorics}, pages 360--369. Springer, 1999.
+
+\bibitem{chaetal12}
+J.~Chalopin, S.~Das, A.~Labourel, and E.~Markou.
+\newblock Tight bounds for black hole search with scattered agents in
+  synchronous rings.
+\newblock {\em Theoretical Computer Science}, pages 70--85, 2013.
+
+\bibitem{cooetal15}
+C.~Cooper and R.~Tomasz.
+\newblock Searching for black-hole faults in a network using multiple agents.
+\newblock In {\em In Proceeding of 10th International Conference on Principles
+  of Distributed Systems (OPODIS}, pages 320--332, 2006.
+
+\bibitem{cooetal14}
+Colin Cooper, Ralf Klasing, and Tomasz Radzik.
+\newblock Locating and repairing faults in a network with mobile agents.
+\newblock {\em Theoretical Computer Science}, pages 1638--1647, 2010.
+
+\bibitem{czyetal2}
+J.~Czyzowicz, S.~Dobrev, R.~Kr\'{a}lovi\u{c}, S.~Mikl\'{i}k, and
+  D.~Pardubsk\'{a}.
+\newblock Black hole search in directed graphs.
+\newblock In {\em Proceedings of the 17th International Colloquium on
+  Structural Information and Communication Complexity}, pages 182--194, 2010.
+
+\bibitem{czyetal1}
+J.~Czyzowicz, D.~R. Kowalski, E.~Markou, and A.~Pelc.
+\newblock Searching for a black hole in tree networks.
+\newblock In {\em Proceedings of the 8th International Conference on Principles
+  of Distributed Systems}, pages 67--80, 2004.
+
+\bibitem{dobetal3}
+S.~Dobrev, P.~Flocchini, R.~Kr\'{a}lovi\u{c}, P.~Ruzicka, G.~Prencipe, and
+  N.~Santoro.
+\newblock Black hole search in common interconnection networks.
+\newblock {\em Networks}, pages 61--71, 2006.
+
+\bibitem{dobetal6}
+S.~Dobrev, P.~Flocchini, R.~Kr\'{a}lovi\u{c}, and N.~Santoro.
+\newblock Exploring an unknown graph to locate a black hole using tokens.
+\newblock In {\em Proceedings of the 4th IFIP International Conference on
+  Theoretical Computer Science}, pages 131--150, 2006.
+
+\bibitem{dobetal7}
+S.~Dobrev, P.~Flocchini, G.~Prencipe, and N.~Santoro.
+\newblock Searching for a black hole in arbitrary networks: Optimal mobile
+  agents protocols.
+\newblock {\em Distributed Computing}, pages 153--162, 2006.
+
+\bibitem{dobetal8}
+S.~Dobrev, P.~Flocchini, G.~Prencipe, and N.~Santoro.
+\newblock Mobile search for a black hole in an anonymous ring.
+\newblock {\em Algorithmica}, pages 67--90, 2007.
+
+\bibitem{floc21}
+P.~Flocchini.
+\newblock Contamination and decontamination in majority-based systems.
+\newblock {\em Journal of Cellular Automata}, pages 183 -- 200, 2009.
+
+\bibitem{floetal31}
+P.~Flocchini, F.~Geurts, and N.~Santoro.
+\newblock Optimal irreversible dynamos in chordal rings.
+\newblock {\em Discrete Applied Mathematics}, pages 23--42, 2001.
+
+\bibitem{floetal17}
+P.~Flocchini, M.~Huang, and F.~Luccio.
+\newblock Decontamination of chordal rings and tori.
+\newblock In {\em Parallel and Distributed Processing Symposium, 2006. IPDPS
+  2006. 20th International}, pages 8--pp, 2006.
+
+\bibitem{floetal20}
+P.~Flocchini, M.~Huang, and F.~Luccio.
+\newblock Decontamination of hypercubes by mobile agents.
+\newblock {\em Networks}, pages 167--178, 2008.
+
+\bibitem{floetal9}
+P.~Flocchini, D.~Ilcinkas, and N.~Santoro.
+\newblock Ping pong in dangerous graphs: Optimal black hole search with
+  pebbles.
+\newblock {\em Algorithmica}, pages 1006--1033, 2012.
+
+\bibitem{floetal10}
+P.~Flocchini, M.~Kellett, P.~Mason, and N.~Santoro.
+\newblock Map construction and exploration by mobile agents scattered in a
+  dangerous network.
+\newblock In {\em Parallel \& Distributed Processing, 2009. IPDPS 2009. IEEE
+  International Symposium on}, pages 1--10, 2009.
+
+\bibitem{floetal11}
+P.~Flocchini, M.~Kellett, P.~C. Mason, and N.~Santoro.
+\newblock Searching for black holes in subways.
+\newblock {\em Theory of Computing Systems}, pages 158--184, 2012.
+
+\bibitem{floetal19}
+P.~Flocchini, F.~Luccio, and L.~Song.
+\newblock {Size Optimal Strategies for Capturing an Intruder in Mesh Networks}.
+\newblock In {\em Communications in Computing}, pages 200--206, 2005.
+
+\bibitem{floetal13}
+P.~Flocchini, B.~Mans, and N.~Santoro.
+\newblock Tree decontamination with temporary immunity.
+\newblock In {\em Proceedings of the 19th International Symposium on Algorithms
+  and Computation}, pages 330--341, 2008.
+
+\bibitem{floetal30}
+P.~Flocchini, A.~Nayak, and M.~Xie.
+\newblock Enhancing peer-to-peer systems through redundancy.
+\newblock {\em IEEE Journal on Selected Areas in Communications}, pages 15--24,
+  2007.
+
+\bibitem{kimetal}
+S.~Kim and T.~Robertazzi.
+\newblock Modeling mobile agent behavior.
+\newblock {\em Computers \& Mathematics with Applications}, pages 951 -- 966,
+  2006.
+
+\bibitem{kosetal16}
+A.~Kosowski, A.~Navarra, and C.~Pinotti.
+\newblock Synchronization helps robots to detect black holes in directed
+  graphs.
+\newblock In {\em Principles of Distributed Systems}, pages 86--98. Springer,
+  2009.
+
+\bibitem{kosetal15}
+A.~Kosowski, A.~Navarra, and C.~M. Pinotti.
+\newblock Synchronous black hole search in directed graphs.
+\newblock {\em Theoretical Computer Science}, pages 5752--5759, 2011.
+
+\bibitem{lucetal22}
+F.~Luccio, L.~Pagli, and N.~Santoro.
+\newblock Network decontamination in presence of local immunity.
+\newblock {\em International Journal of Foundations of Computer Science}, pages
+  457--474, 2007.
+
+\bibitem{manetal6}
+B.~Mans.
+\newblock On the interval routing of chordal rings.
+\newblock In {\em Parallel Architectures, Algorithms, and Networks,
+  1999.(I-SPAN'99) Proceedings. Fourth InternationalSymposium on}, pages
+  16--21, 1999.
+
+\bibitem{manetal5}
+B.~Mans and N.~Santoro.
+\newblock Optimal fault-tolerant leader election in chordal rings.
+\newblock In {\em Fault-Tolerant Computing, 1994. FTCS-24. Digest of Papers.,
+  Twenty-Fourth International Symposium on}, pages 392--401, 1994.
+
+\bibitem{nayetal2}
+A.~Nayak, L.~Pagli, and N.~Santoro.
+\newblock Efficient construction of catastrophic patterns for vlsi
+  reconfigurable arrays.
+\newblock {\em Integration, the VLSI journal}, pages 133--150, 1993.
+
+\bibitem{nayetal4}
+A.~Nayak, J.~Ren, and N.~Santoro.
+\newblock An improved testing scheme for catastrophic fault patterns.
+\newblock {\em Information processing letters}, pages 199--206, 2000.
+
+\bibitem{nayetal3}
+A.~Nayak, N.~Santoro, and R.~Tan.
+\newblock Fault-intolerance of reconfigurable systolic arrays.
+\newblock In {\em Fault-Tolerant Computing, 1990. FTCS-20. Digest of Papers.,
+  20th International Symposium}, pages 202--209, 1990.
+
+\bibitem{stoetal10}
+I.~Stoica, R.~Morris, D.~Liben-Nowell, D.~Karger, M.~Kaashoek, F.~Dabek, and
+  H.~Balakrishnan.
+\newblock Chord: a scalable peer-to-peer lookup protocol for internet
+  applications.
+\newblock {\em Networking, IEEE/ACM Transactions on}, pages 17--32, 2003.
+
+\end{thebibliography}

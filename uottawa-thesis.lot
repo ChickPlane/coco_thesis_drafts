@@ -1,0 +1,23 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Move complexity in double loops.}}{52}{table.4.1}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Greedy path without {\it black viruses.}}}{55}{table.4.2}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Greedy paths with {\it black viruses }when $\left \delimiter "026A30C {S_{area}}\right \delimiter "026A30C \ge k$ }}{56}{table.4.3}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Greedy paths with {\it black viruses }when $\left \delimiter "026A30C {S_{area}}\right \delimiter "026A30C < k$ }}{57}{table.4.4}
+\contentsline {table}{\numberline {4.5}{\ignorespaces Smart greedy paths with {\it black viruses }when $\left \delimiter "026A30C {S_{area}}\right \delimiter "026A30C \ge k$ }}{60}{table.4.5}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Smart greedy paths with {\it black viruses }when $\left \delimiter "026A30C {S_{area}}\right \delimiter "026A30C < k$ }}{61}{table.4.6}
+\contentsline {table}{\numberline {4.7}{\ignorespaces Comparison between the complexities of the three strategies.}}{62}{table.4.7}
+\contentsline {table}{\numberline {4.8}{\ignorespaces The overall move complexity of the two phases in the three strategies.}}{62}{table.4.8}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Move complexity in shortly-chorded triple loops.}}{74}{table.5.1}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Move complexity in shortly-chorded triple loops $C_n(1,2,k)$.}}{89}{table.5.2}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Move complexity in shortly-chorded triple loops $C_n(1,k-1,k)$.}}{103}{table.5.3}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Move complexity in triple loop rings in two different safe area sizes }}{105}{table.5.4}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces \relax \fontsize {10.95}{13.6}\selectfont \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {Move complexity of disinfecting a consecutive-chords according to location of $BV$.}}}{120}{table.6.1}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {8.1}{\ignorespaces A summary of the worst case complexities for various chordal ring types.}}{132}{table.8.1}
+\addvspace {10\p@ }
