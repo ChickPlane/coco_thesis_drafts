@@ -3,8 +3,7 @@
 \label{INTRO}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-A distributed system is a group of computational entities cooperating with each to achieve one or more tasks. This thesis deals with distributed computing by mobile agents in network. More specifically, we deal with the problem of deploying a group of mobile agents who follow the same protocol to explore the network and decontaminate the dangerous virus (called Black Virus) present on the network nodes.
-
+  A distributed system is a group of computational entities cooperating with each to achieve one or more tasks. This thesis deals with distributed computing by mobile agents in network. More specifically, we deal with the problem of deploying a group of mobile agents who follow the same protocol to explore the network and decontaminate the dangerous virus (called Black Virus) present on the network nodes.
   In this chapter, the motivations of the problem are provided, following is a brief summary of the contributions.Finally, an overview of the organization of the thesis is presented.
 
 
@@ -29,7 +28,19 @@ Some important cost measure is the number of node infections by the BVs (casualt
 
 \section{Thesis Organization} 
 
+The thesis is organized as followed:
 
+Chapter 2 contains a literature review on related problems. We begin by reviewing the Black Hole Search and Intruder Capture problem, and then focus on the solution of BVD problem where the mobile agents explore the network in sequence, the issue has been studies in different topologies: two-dimensional grids, three-dimensional grids, tori, chordal rings, hypercubes and arbitrary network. Also, the variant of this problem, which is decontamination of an arbitrary network from multiple black virus is also reviewed. We also present our assumption and the topologies ( meshes, tori, chordal rings).
+
+Chapter 3 introduces terminology, definitions and model for the BVD problem used in the rest of the thesis. Also we describe the high level ideas that serve as the basic of all our solutions. Since monontone is the necessary condition for spread optimality, we go through the principle and finally make a conclusion.
+
+Chapter 4 focus on the BVD problem for two simple classes of network topologies: {\em meshes} and {\em tori}. For each kind of network, an optimal algorithm in terms of casualties and TWT is developed.Some comparision and analysis are made between our solution and \cite{Cai}.
+
+Chapter 5 presents the BVD problem for the chordal ring topology. In this chapter, we introduce the {\em Three Jump Notifying Technique} (TJNT) to manipulate each mobile agent efficiently go through their route in the exploring phase and avoid any new-formed BV after the original BV is triggered. Based on this technique, we develop the parallel strategy for the mobile agents to decontaminate the choral ring from BV. Finally some comparison and analysis are made between our solution and \cite{Alotaibi}.
+
+Chapter 6 summaries the main conclusion of our work and present some open problems and future work.
+  
+  
 In this section, we will present the organization of the thesis. After this chapter we review literature on topics related to our problem. We begin by reviewing some papers that address the black hole search problem in different settings, variations and topologies. We then review some papers concerning the decontamination problem, sometimes referred to as intruder capture, in different settings and variations. Finally, we review the only paper that investigates black virus disinfection in several topologies.
 
 In chapter  3  we introduce the problem in question and provide definitions and terminology regarding black virus disinfection. We also present our assumptions and topology (the chordal ring) and describe the high level ideas that serve as the basis for all of our solutions.
