@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  24 OCT 2017 15:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  24 OCT 2017 15:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1267,69 +1267,69 @@ Package natbib Warning: Citation `Cai' on page 4 undefined on input line 37.
 Package natbib Warning: Citation `Alotaibi' on page 4 undefined on input line 3
 9.
 
-[4]) (./parts/chapter2.tex [5]
+) (./parts/chapter2.tex [4]
 Chapter 2.
-[6
+[5
 
 
-] [7] [8] [9] [10] [11]
+] [6] [7] [8] [9] [10]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 72.
 
-[12] [13] [14] [15] [16] [17]) (./parts/chapter3.tex [18]
+[11] [12] [13] [14] [15] [16]) (./parts/chapter3.tex [17]
 Chapter 3.
-[19
+[18
 
 
-] [20] [21] [22] [23] <figures/dloop.jpg, id=602, 600.2425pt x 596.2275pt>
+] [19] [20] [21] [22] <figures/dloop.jpg, id=597, 600.2425pt x 596.2275pt>
 File: figures/dloop.jpg Graphic file (type jpg)
 
 <use figures/dloop.jpg>
 Package pdftex.def Info: figures/dloop.jpg used on input line 152.
 (pdftex.def)             Requested size: 184.28568pt x 183.05457pt.
 
-<figures/tloop.jpg, id=603, 1147.28625pt x 1147.28625pt>
+<figures/tloop.jpg, id=598, 1147.28625pt x 1147.28625pt>
 File: figures/tloop.jpg Graphic file (type jpg)
 
 <use figures/tloop.jpg>
 Package pdftex.def Info: figures/tloop.jpg used on input line 160.
 (pdftex.def)             Requested size: 184.28568pt x 184.26979pt.
- [24 <./figures/dloop.jpg>]
-<figures/cloop.jpg, id=608, 1147.28625pt x 1147.28625pt>
+ [23 <./figures/dloop.jpg>]
+<figures/cloop.jpg, id=604, 1147.28625pt x 1147.28625pt>
 File: figures/cloop.jpg Graphic file (type jpg)
 
 <use figures/cloop.jpg>
 Package pdftex.def Info: figures/cloop.jpg used on input line 169.
 (pdftex.def)             Requested size: 184.28568pt x 184.26979pt.
- [25 <./figures/tloop.jpg> <./figures/cloop.jpg>]
-[26] <figures/dloop_ph1.jpg, id=618, 859.21pt x 647.41875pt>
+ [24 <./figures/tloop.jpg> <./figures/cloop.jpg>]
+[25] <figures/dloop_ph1.jpg, id=614, 859.21pt x 647.41875pt>
 File: figures/dloop_ph1.jpg Graphic file (type jpg)
 
 <use figures/dloop_ph1.jpg>
 Package pdftex.def Info: figures/dloop_ph1.jpg used on input line 213.
 (pdftex.def)             Requested size: 276.43555pt x 208.29453pt.
- [27 <./figures/dloop_ph1.jpg>] [28]
-<figures/dloop_ph2.jpg, id=628, 859.21pt x 611.28375pt>
+ [26 <./figures/dloop_ph1.jpg>] [27]
+<figures/dloop_ph2.jpg, id=624, 859.21pt x 611.28375pt>
 File: figures/dloop_ph2.jpg Graphic file (type jpg)
 
 <use figures/dloop_ph2.jpg>
 Package pdftex.def Info: figures/dloop_ph2.jpg used on input line 282.
 (pdftex.def)             Requested size: 276.43555pt x 196.6688pt.
- [29 <./figures/dloop_ph2.jpg>] [30])
-(./parts/chapter4.tex [31]
+ [28 <./figures/dloop_ph2.jpg>] [29])
+(./parts/chapter4.tex [30]
 Chapter 4.
-[32
+[31
 
 
-] [33] [34] [35] <figures/dloop_seg.jpg, id=664, 859.21pt x 601.24625pt>
+] [32] [33] [34] <figures/dloop_seg.jpg, id=659, 859.21pt x 601.24625pt>
 File: figures/dloop_seg.jpg Graphic file (type jpg)
 
 <use figures/dloop_seg.jpg>
 Package pdftex.def Info: figures/dloop_seg.jpg used on input line 195.
 (pdftex.def)             Requested size: 276.43555pt x 193.4394pt.
- [36] [37 <./figures/dloop_seg.jpg>] [38] [39]
+ [35] [36 <./figures/dloop_seg.jpg>] [37] [38]
 Overfull \hbox (5.31651pt too wide) in paragraph at lines 327--328
 \OT1/cmr/m/it/12 black virus \OT1/cmr/m/n/12 cre-ates two more \OT1/cmr/m/it/12
  black viruses\OT1/cmr/m/n/12 : $\OML/cmm/m/it/12 x[]$ \OT1/cmr/m/n/12 and $\OM
@@ -1343,52 +1343,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 332--334
 
  []
 
-[40]
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 368--370
 
  []
 
-[41] [42] [43] [44] <figures/dloop_window2.jpg, id=707, 654.445pt x 654.445pt>
+[40] [41] [42] [43] <figures/dloop_window2.jpg, id=703, 654.445pt x 654.445pt>
 File: figures/dloop_window2.jpg Graphic file (type jpg)
 
 <use figures/dloop_window2.jpg>
 Package pdftex.def Info: figures/dloop_window2.jpg used on input line 593.
 (pdftex.def)             Requested size: 230.36061pt x 230.35736pt.
- [45 <./figures/dloop_window2.jpg>] [46]
-[47] [48]
+ [44 <./figures/dloop_window2.jpg>] [45]
+[46] [47]
 Underfull \hbox (badness 10000) in paragraph at lines 752--753
 
  []
 
-[49] [50] [51] [52] [53] [54] [55] [56] [57]
+[48] [49] [50] [51] [52] [53] [54] [55] [56]
 Overfull \hbox (0.69055pt too wide) in paragraph at lines 1195--1196
  [] 
  []
 
-[58] [59] [60] [61]
+[57] [58] [59] [60]
 Overfull \hbox (8.29942pt too wide) in paragraph at lines 1391--1392
  [] 
  []
 
-[62]) (./parts/chapter5.tex [63]
+[61]) (./parts/chapter5.tex [62]
 Chapter 5.
-[64
+[63
 
 
-] [65] [66] [67] <figures/tloop_seg.jpg, id=829, 859.21pt x 627.34375pt>
+] [64] [65] [66] <figures/tloop_seg.jpg, id=825, 859.21pt x 627.34375pt>
 File: figures/tloop_seg.jpg Graphic file (type jpg)
 
 <use figures/tloop_seg.jpg>
 Package pdftex.def Info: figures/tloop_seg.jpg used on input line 199.
 (pdftex.def)             Requested size: 276.43555pt x 201.83578pt.
- [68] [69 <./figures/tloop_seg.jpg>] [70]
+ [67] [68 <./figures/tloop_seg.jpg>] [69]
 Overfull \hbox (3.25925pt too wide) in paragraph at lines 244--246
 \OT1/cmr/m/n/12 guarded by $\OML/cmm/m/it/12 SH$\OT1/cmr/m/n/12 s. Sub-se-quent
 ly, in ad-di-tion to the $\OML/cmm/m/it/12 SH$ \OT1/cmr/m/n/12 at $\OML/cmm/m/i
 t/12 x[]; x[]; x[]; x[]$\OT1/cmr/m/n/12 ,
  []
 
-[71] [72] [73] [74] [75]
+[70] [71] [72] [73] [74]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 415.
@@ -1401,7 +1401,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 415.
 
-[76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90]
+[75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 978.
@@ -1414,10 +1414,10 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 978.
 
-[91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104]
-[105] [106]) (./parts/chapter6.tex [107]
+[90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103]
+[104] [105]) (./parts/chapter6.tex [106]
 Chapter 6.
-[108
+[107
 
 
 ]
@@ -1425,20 +1425,20 @@ Overfull \hbox (8.09685pt too wide) in paragraph at lines 71--72
  [] 
  []
 
-[109] [110] <figures/cloop_seg.jpg, id=1037, 859.21pt x 666.49pt>
+[108] [109] <figures/cloop_seg.jpg, id=1033, 859.21pt x 666.49pt>
 File: figures/cloop_seg.jpg Graphic file (type jpg)
 
 <use figures/cloop_seg.jpg>
 Package pdftex.def Info: figures/cloop_seg.jpg used on input line 188.
 (pdftex.def)             Requested size: 276.43555pt x 214.43034pt.
- [111] [112 <./figures/cloop_seg.jpg>] [113]
-<figures/onedirec_cloop.jpg, id=1053, 1147.28625pt x 1198.4775pt>
+ [110] [111 <./figures/cloop_seg.jpg>] [112]
+<figures/onedirec_cloop.jpg, id=1048, 1147.28625pt x 1198.4775pt>
 File: figures/onedirec_cloop.jpg Graphic file (type jpg)
 
 <use figures/onedirec_cloop.jpg>
 Package pdftex.def Info: figures/onedirec_cloop.jpg used on input line 268.
 (pdftex.def)             Requested size: 230.36061pt x 240.6239pt.
- [114] [115 <./figures/onedirec_cloop.jpg>]
+ [113] [114 <./figures/onedirec_cloop.jpg>]
 Overfull \hbox (1.59116pt too wide) in paragraph at lines 347--348
 [][]\OT1/cmr/bx/n/12 Theorem 33. []\OT1/cmr/m/it/12 In any consecutive-chords r
 ing $\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2
@@ -1447,7 +1447,7 @@ ing $\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2
 it/12 , when $\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 S[]\OMS/cmsy/m/n/12 j ^^U
  []
 
-[116]
+[115]
 Overfull \hbox (1.39659pt too wide) in paragraph at lines 388--389
 [][]\OT1/cmr/bx/n/12 Theorem 34. []\OT1/cmr/m/it/12 In any consecutive-chords r
 ing $\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2
@@ -1464,7 +1464,7 @@ nd and elim-i-nate the black viruses is $\OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12
 k\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 d[]e\OT1/cmr/m/n/12 ) +
  []
 
-[117]
+[116]
 Overfull \hbox (9.2429pt too wide) in paragraph at lines 393--394
 \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 x[]; x[]; x[]; :::; x[]\OMS/cmsy/m/n/12 g$\O
 T1/cmr/m/n/12 , there are more nodes to be guarded: $\OMS/cmsy/m/n/12 f\OML/cmm
@@ -1476,39 +1476,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 408--410
 
  []
 
-[118] [119]
+[117] [118]
 Overfull \hbox (18.16516pt too wide) in paragraph at lines 461--462
  [] 
  []
 
-) (./parts/chapter7.tex [120]
+) (./parts/chapter7.tex [119]
 Chapter 7.
-[121
+[120
 
 
-] [122] <figures/general_algo.jpg, id=1116, 1599.9775pt x 1625.07124pt>
+] [121] <figures/general_algo.jpg, id=1112, 1599.9775pt x 1625.07124pt>
 File: figures/general_algo.jpg Graphic file (type jpg)
 
 <use figures/general_algo.jpg>
 Package pdftex.def Info: figures/general_algo.jpg used on input line 126.
 (pdftex.def)             Requested size: 230.36061pt x 233.95552pt.
- [123] [124 <./figures/general_algo.jpg>]
+ [122] [123 <./figures/general_algo.jpg>]
 Overfull \hbox (23.80247pt too wide) in paragraph at lines 210--211
  [] 
  []
 
-[125] [126] [127] [128]) (./parts/chapter8.tex [129]
+[124] [125] [126] [127]) (./parts/chapter8.tex [128]
 Chapter 8.
-[130
+[129
 
 
-] [131] [132]) [133] (./uottawa-thesis.bbl [134
+] [130] [131]) [132] (./uottawa-thesis.bbl [133
 
 
 
 
-] [135] [136]) [137]
-[138
+] [134] [135]) [136]
+[137
 
 
 ]
@@ -1521,16 +1521,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
-[139
+[138
 
 
 
-] [140] [141] [142] [143] [144]
+] [139] [140] [141] [142] [143]
 Underfull \hbox (badness 10000) in paragraph at lines 231--233
 
  []
 
-[145] [146]) [147]
+[144] [145]) [146]
 
 Package natbib Warning: There were undefined citations.
 
@@ -1541,12 +1541,16 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 232.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 232.
 Package rerunfilecheck Info: File `uottawa-thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D757375D3FB54AC289D145CD50677EAF;3879.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 232.
  ) 
 Here is how much of TeX's memory you used:
- 10495 strings out of 492995
- 151023 string characters out of 6132704
- 265043 words of memory out of 5000000
+ 10494 strings out of 492995
+ 151015 string characters out of 6132704
+ 266043 words of memory out of 5000000
  13415 multiletter control sequences out of 15000+600000
  15233 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1570,10 +1574,10 @@ ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2017/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2
 017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on uottawa-thesis.pdf (155 pages, 1486378 bytes).
+Output written on uottawa-thesis.pdf (154 pages, 1484203 bytes).
 PDF statistics:
- 1377 PDF objects out of 1440 (max. 8388607)
- 1179 compressed objects within 12 object streams
- 350 named destinations out of 1000 (max. 500000)
+ 1373 PDF objects out of 1440 (max. 8388607)
+ 1176 compressed objects within 12 object streams
+ 349 named destinations out of 1000 (max. 500000)
  512 words of extra memory for PDF output out of 10000 (max. 10000000)
 

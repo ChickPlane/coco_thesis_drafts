@@ -34,31 +34,12 @@ Chapter 2 contains a literature review on related problems. We begin by reviewin
 
 Chapter 3 introduces terminology, definitions and model for the BVD problem used in the rest of the thesis. Also we describe the high level ideas that serve as the basic of all our solutions. Since monontone is the necessary condition for spread optimality, we go through the principle and finally make a conclusion.
 
-Chapter 4 focus on the BVD problem for two simple classes of network topologies: {\em meshes} and {\em tori}. For each kind of network, an optimal algorithm in terms of casualties and TWT is developed.Some comparision and analysis are made between our solution and \cite{Cai}.
+Chapter 4 focus on the BVD problem for two simple classes of network topologies: {\em meshes} and {\em tori}. For each kind of network, an optimal algorithm in terms of casualties and TWT is developed. Complexity analysis in terms of casualty and TWT are performed and obtained. Some comparison and analysis are also made between our solution and \cite{Cai} and the result shows that our solution is better.
 
-Chapter 5 presents the BVD problem for the chordal ring topology. In this chapter, we introduce the {\em Three Jump Notifying Technique} (TJNT) to manipulate each mobile agent efficiently go through their route in the exploring phase and avoid any new-formed BV after the original BV is triggered. Based on this technique, we develop the parallel strategy for the mobile agents to decontaminate the choral ring from BV. Finally some comparison and analysis are made between our solution and \cite{Alotaibi}.
+Chapter 5 presents the BVD problem for the chordal ring topology. In this chapter, we introduce the {\em Three Jump Notifying Technique} (TJNT) to manipulate each mobile agent efficiently go through their route in the exploring phase and avoid any new-formed BV after the original BV is triggered. Based on this technique, we develop the parallel strategy for the mobile agents to decontaminate the choral ring from BV. Complexity analysis in terms of  casualty and TWT are performed. Finally some comparison and analysis are made between our solution and \cite{Alotaibi} and the result shows that our solution performs better.
 
 Chapter 6 summaries the main conclusion of our work and present some open problems and future work.
   
-  
-In this section, we will present the organization of the thesis. After this chapter we review literature on topics related to our problem. We begin by reviewing some papers that address the black hole search problem in different settings, variations and topologies. We then review some papers concerning the decontamination problem, sometimes referred to as intruder capture, in different settings and variations. Finally, we review the only paper that investigates black virus disinfection in several topologies.
-
-In chapter  3  we introduce the problem in question and provide definitions and terminology regarding black virus disinfection. We also present our assumptions and topology (the chordal ring) and describe the high level ideas that serve as the basis for all of our solutions.
-
-In chapter 4 we go through our solution for double loop chordal rings. 
-We describe in detail the two phases and  their complexities. For the second phase, we  introduce  three deployment strategies: {\em Move-optimal}, {\em Simple greedy} and {\em Smart greedy}. For the move-optimal deployment strategy, we present the solution for two cases: shortly-chorded double loops (where the non-ring chord is small compared to the size of the ring) and the general double-loop.  Our bound on the move-complexity is tight for shortly chorded double loops.
-
-In chapter 5 we address the problem in  triple loop chordal rings. 
-We describe in detail the two phases and  their complexities. For the second phase, we  describe only the move-optimal strategy since the greedy approach does not always work for this type of chord structure. For simplicity, we only consider  the shortly-chorded triple loops in the calculation of the upper bound on the number of moves. We also show that the  bound is tight in  two special extreme cases.
-
-In chapter 6 we address the problem in chordal rings with consecutive chords.   For  the second phase, we describe only a local greedy strategy (One-direction greedy) because it also provides an optimal-move solution for this particular chordal ring.
-
-In chapter 7 we discuss the problem in  arbitrary chordal ring structures. 
-The surrounding solution that we propose is very general and works with any chord structure, however, it is not  optimal. We provide upper bounds to the path lengths. 
-
-
-In chapter 8 we conclude our thesis by summarizing all the results and discussing some open problems related to the \bv disinfection topic.
-
 
 
 
