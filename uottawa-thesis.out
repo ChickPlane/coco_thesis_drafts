@@ -6,52 +6,54 @@
 \BOOKMARK [1][-]{section.1.3}{Thesis Organization}{chapter.1}% 6
 \BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 7
 \BOOKMARK [1][-]{section.2.1}{Black Hole Search, BHS}{chapter.2}% 8
-\BOOKMARK [2][-]{subsection.2.1.1}{Synchronicity}{section.2.1}% 9
-\BOOKMARK [2][-]{subsection.2.1.2}{Topological Characteristics}{section.2.1}% 10
-\BOOKMARK [2][-]{subsection.2.1.3}{ Agent Capabilities}{section.2.1}% 11
-\BOOKMARK [2][-]{subsection.2.1.4}{Number of BHs}{section.2.1}% 12
-\BOOKMARK [1][-]{section.2.2}{Decontamination}{chapter.2}% 13
-\BOOKMARK [2][-]{subsection.2.2.1}{Synchronicity}{section.2.2}% 14
-\BOOKMARK [2][-]{subsection.2.2.2}{Agent Capabilities}{section.2.2}% 15
-\BOOKMARK [2][-]{subsection.2.2.3}{Topologies}{section.2.2}% 16
-\BOOKMARK [1][-]{section.2.3}{Black Virus Decontamination}{chapter.2}% 17
-\BOOKMARK [0][-]{chapter.3}{Definitions and Terminology}{}% 18
-\BOOKMARK [1][-]{section.3.1}{The Agent Model}{chapter.3}% 19
-\BOOKMARK [1][-]{section.3.2}{The Problem}{chapter.3}% 20
-\BOOKMARK [1][-]{section.3.3}{The Team of Agents}{chapter.3}% 21
-\BOOKMARK [1][-]{section.3.4}{Complexity}{chapter.3}% 22
-\BOOKMARK [1][-]{section.3.5}{The Topology}{chapter.3}% 23
-\BOOKMARK [1][-]{section.3.6}{General Strategy}{chapter.3}% 24
-\BOOKMARK [2][-]{subsection.3.6.1}{Phase 1: Exploring and Shadowing}{section.3.6}% 25
-\BOOKMARK [2][-]{subsection.3.6.2}{Phase 2: Surrounding and Eliminating}{section.3.6}% 26
-\BOOKMARK [1][-]{section.3.7}{Conclusions}{chapter.3}% 27
-\BOOKMARK [0][-]{chapter.4}{Black Virus Disinfection in Double Loops}{}% 28
-\BOOKMARK [1][-]{section.4.1}{Exploring and Shadowing}{chapter.4}% 29
-\BOOKMARK [1][-]{section.4.2}{Surrounding and Eliminating}{chapter.4}% 30
-\BOOKMARK [2][-]{subsection.4.2.1}{Move-Optimal Deployment}{section.4.2}% 31
-\BOOKMARK [2][-]{subsection.4.2.2}{Simple Greedy Deployment}{section.4.2}% 32
-\BOOKMARK [2][-]{subsection.4.2.3}{Smart Greedy Deployment}{section.4.2}% 33
-\BOOKMARK [1][-]{section.4.3}{Conclusion}{chapter.4}% 34
-\BOOKMARK [0][-]{chapter.5}{Black Virus Disinfection in Triple Loops}{}% 35
-\BOOKMARK [1][-]{section.5.1}{Triple Loops}{chapter.5}% 36
-\BOOKMARK [2][-]{subsection.5.1.1}{Exploring and Shadowing}{section.5.1}% 37
-\BOOKMARK [2][-]{subsection.5.1.2}{Surrounding and Eliminating}{section.5.1}% 38
-\BOOKMARK [1][-]{section.5.2}{Triple Loops: the Case of Cn\(1,2,k\) }{chapter.5}% 39
-\BOOKMARK [2][-]{subsection.5.2.1}{Exploring and Shadowing}{section.5.2}% 40
-\BOOKMARK [2][-]{subsection.5.2.2}{Surrounding and Eliminating}{section.5.2}% 41
-\BOOKMARK [1][-]{section.5.3}{ Triple Loops: the Case of Cn\(1,k-1,k\)}{chapter.5}% 42
-\BOOKMARK [2][-]{subsection.5.3.1}{Exploring and Shadowing}{section.5.3}% 43
-\BOOKMARK [2][-]{subsection.5.3.2}{Surrounding and Eliminating}{section.5.3}% 44
-\BOOKMARK [1][-]{section.5.4}{Discussion and Comparisons}{chapter.5}% 45
-\BOOKMARK [1][-]{section.5.5}{Conclusion}{chapter.5}% 46
-\BOOKMARK [0][-]{chapter.6}{Black Virus Disinfection in Consecutive-Chords Rings}{}% 47
-\BOOKMARK [1][-]{section.6.1}{Exploring and Shadowing}{chapter.6}% 48
-\BOOKMARK [1][-]{section.6.2}{Surrounding and Eliminating}{chapter.6}% 49
-\BOOKMARK [1][-]{section.6.3}{Conclusion }{chapter.6}% 50
-\BOOKMARK [0][-]{chapter.7}{General Chordal Rings}{}% 51
-\BOOKMARK [1][-]{section.7.1}{Exploring and Shadowing}{chapter.7}% 52
-\BOOKMARK [1][-]{section.7.2}{Surrounding and Eliminating}{chapter.7}% 53
-\BOOKMARK [1][-]{section.7.3}{Conclusion}{chapter.7}% 54
-\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 55
-\BOOKMARK [0][-]{appendix*.15}{APPENDICES}{}% 56
-\BOOKMARK [0][-]{appendix.A}{Detailed Paths Analysis in Triple Loops}{}% 57
+\BOOKMARK [1][-]{section.2.2}{Intruder Capture}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.3}{Black Virus Decontamination}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.3.1}{Agent Capabilities}{section.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.3.2}{Topologies}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.3}{ Agent Capabilities}{section.2.3}% 13
+\BOOKMARK [2][-]{subsection.2.3.4}{Number of BHs}{section.2.3}% 14
+\BOOKMARK [1][-]{section.2.4}{Decontamination}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.4.1}{Synchronicity}{section.2.4}% 16
+\BOOKMARK [2][-]{subsection.2.4.2}{Agent Capabilities}{section.2.4}% 17
+\BOOKMARK [2][-]{subsection.2.4.3}{Topologies}{section.2.4}% 18
+\BOOKMARK [1][-]{section.2.5}{Black Virus Decontamination}{chapter.2}% 19
+\BOOKMARK [0][-]{chapter.3}{Definitions and Terminology}{}% 20
+\BOOKMARK [1][-]{section.3.1}{The Agent Model}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.2}{The Problem}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.3}{The Team of Agents}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.4}{Complexity}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.5}{The Topology}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.6}{General Strategy}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.6.1}{Phase 1: Exploring and Shadowing}{section.3.6}% 27
+\BOOKMARK [2][-]{subsection.3.6.2}{Phase 2: Surrounding and Eliminating}{section.3.6}% 28
+\BOOKMARK [1][-]{section.3.7}{Conclusions}{chapter.3}% 29
+\BOOKMARK [0][-]{chapter.4}{Black Virus Disinfection in Double Loops}{}% 30
+\BOOKMARK [1][-]{section.4.1}{Exploring and Shadowing}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.2}{Surrounding and Eliminating}{chapter.4}% 32
+\BOOKMARK [2][-]{subsection.4.2.1}{Move-Optimal Deployment}{section.4.2}% 33
+\BOOKMARK [2][-]{subsection.4.2.2}{Simple Greedy Deployment}{section.4.2}% 34
+\BOOKMARK [2][-]{subsection.4.2.3}{Smart Greedy Deployment}{section.4.2}% 35
+\BOOKMARK [1][-]{section.4.3}{Conclusion}{chapter.4}% 36
+\BOOKMARK [0][-]{chapter.5}{Black Virus Disinfection in Triple Loops}{}% 37
+\BOOKMARK [1][-]{section.5.1}{Triple Loops}{chapter.5}% 38
+\BOOKMARK [2][-]{subsection.5.1.1}{Exploring and Shadowing}{section.5.1}% 39
+\BOOKMARK [2][-]{subsection.5.1.2}{Surrounding and Eliminating}{section.5.1}% 40
+\BOOKMARK [1][-]{section.5.2}{Triple Loops: the Case of Cn\(1,2,k\) }{chapter.5}% 41
+\BOOKMARK [2][-]{subsection.5.2.1}{Exploring and Shadowing}{section.5.2}% 42
+\BOOKMARK [2][-]{subsection.5.2.2}{Surrounding and Eliminating}{section.5.2}% 43
+\BOOKMARK [1][-]{section.5.3}{ Triple Loops: the Case of Cn\(1,k-1,k\)}{chapter.5}% 44
+\BOOKMARK [2][-]{subsection.5.3.1}{Exploring and Shadowing}{section.5.3}% 45
+\BOOKMARK [2][-]{subsection.5.3.2}{Surrounding and Eliminating}{section.5.3}% 46
+\BOOKMARK [1][-]{section.5.4}{Discussion and Comparisons}{chapter.5}% 47
+\BOOKMARK [1][-]{section.5.5}{Conclusion}{chapter.5}% 48
+\BOOKMARK [0][-]{chapter.6}{Black Virus Disinfection in Consecutive-Chords Rings}{}% 49
+\BOOKMARK [1][-]{section.6.1}{Exploring and Shadowing}{chapter.6}% 50
+\BOOKMARK [1][-]{section.6.2}{Surrounding and Eliminating}{chapter.6}% 51
+\BOOKMARK [1][-]{section.6.3}{Conclusion }{chapter.6}% 52
+\BOOKMARK [0][-]{chapter.7}{General Chordal Rings}{}% 53
+\BOOKMARK [1][-]{section.7.1}{Exploring and Shadowing}{chapter.7}% 54
+\BOOKMARK [1][-]{section.7.2}{Surrounding and Eliminating}{chapter.7}% 55
+\BOOKMARK [1][-]{section.7.3}{Conclusion}{chapter.7}% 56
+\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 57
+\BOOKMARK [0][-]{appendix*.15}{APPENDICES}{}% 58
+\BOOKMARK [0][-]{appendix.A}{Detailed Paths Analysis in Triple Loops}{}% 59
