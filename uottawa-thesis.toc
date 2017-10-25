@@ -11,21 +11,22 @@
 \contentsline {subsection}{\numberline {2.3.1}Agent Capabilities}{8}{subsection.2.3.1}
 \contentsline {paragraph}{Communication Mechanisms}{8}{section*.7}
 \contentsline {paragraph}{Knowledge of the topology}{8}{section*.8}
-\contentsline {subsection}{\numberline {2.3.2}Topologies}{8}{subsection.2.3.2}
-\contentsline {paragraph}{Directed or Undirected.}{8}{section*.9}
-\contentsline {paragraph}{One Homebase or Several. }{9}{section*.10}
+\contentsline {paragraph}{Other capabilities}{8}{section*.9}
+\contentsline {subsection}{\numberline {2.3.2}Topologies}{9}{subsection.2.3.2}
+\contentsline {paragraph}{Directed or Undirected.}{9}{section*.10}
+\contentsline {paragraph}{One Homebase or Several. }{9}{section*.11}
 \contentsline {subsection}{\numberline {2.3.3} Agent Capabilities}{10}{subsection.2.3.3}
-\contentsline {paragraph}{Communication Mechanisms.}{10}{section*.11}
-\contentsline {paragraph}{Topological Knowledge.}{10}{section*.12}
+\contentsline {paragraph}{Communication Mechanisms.}{10}{section*.12}
+\contentsline {paragraph}{Topological Knowledge.}{10}{section*.13}
 \contentsline {subsection}{\numberline {2.3.4}Number of BHs}{11}{subsection.2.3.4}
 \contentsline {section}{\numberline {2.4}Decontamination}{11}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Synchronicity}{12}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Agent Capabilities}{12}{subsection.2.4.2}
-\contentsline {paragraph}{ Visibility.}{12}{section*.13}
-\contentsline {paragraph}{ Cloning.}{13}{section*.14}
-\contentsline {paragraph}{ Immunity.}{13}{section*.15}
+\contentsline {subsection}{\numberline {2.4.2}Agent Capabilities}{13}{subsection.2.4.2}
+\contentsline {paragraph}{ Visibility.}{13}{section*.14}
+\contentsline {paragraph}{ Cloning.}{13}{section*.15}
+\contentsline {paragraph}{ Immunity.}{13}{section*.16}
 \contentsline {subsection}{\numberline {2.4.3}Topologies}{14}{subsection.2.4.3}
-\contentsline {section}{\numberline {2.5}Black Virus Decontamination}{17}{section.2.5}
+\contentsline {section}{\numberline {2.5}Black Virus Decontamination}{18}{section.2.5}
 \contentsline {chapter}{\numberline {3}Definitions and Terminology}{20}{chapter.3}
 \contentsline {section}{\numberline {3.1}The Agent Model}{20}{section.3.1}
 \contentsline {section}{\numberline {3.2}The Problem}{21}{section.3.2}
@@ -73,5 +74,5 @@
 \contentsline {section}{\numberline {7.2}Surrounding and Eliminating}{123}{section.7.2}
 \contentsline {section}{\numberline {7.3}Conclusion}{129}{section.7.3}
 \contentsline {chapter}{\numberline {8}Conclusion}{131}{chapter.8}
-\contentsline {chapter}{APPENDICES}{139}{appendix*.17}
+\contentsline {chapter}{APPENDICES}{139}{appendix*.18}
 \contentsline {chapter}{\numberline {A}Detailed Paths Analysis in Triple Loops}{140}{appendix.A}
