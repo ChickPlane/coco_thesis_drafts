@@ -8,68 +8,70 @@
 \contentsline {section}{\numberline {2.1}Black Hole Search, BHS}{6}{section.2.1}
 \contentsline {section}{\numberline {2.2}Intruder Capture}{6}{section.2.2}
 \contentsline {section}{\numberline {2.3}Black Virus Decontamination}{7}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Agent Capabilities}{7}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Topologies}{7}{subsection.2.3.2}
-\contentsline {paragraph}{Directed or Undirected.}{8}{section*.7}
-\contentsline {paragraph}{One Homebase or Several. }{8}{section*.8}
-\contentsline {subsection}{\numberline {2.3.3} Agent Capabilities}{9}{subsection.2.3.3}
-\contentsline {paragraph}{Communication Mechanisms.}{9}{section*.9}
-\contentsline {paragraph}{Topological Knowledge.}{9}{section*.10}
-\contentsline {subsection}{\numberline {2.3.4}Number of BHs}{10}{subsection.2.3.4}
-\contentsline {section}{\numberline {2.4}Decontamination}{10}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Synchronicity}{11}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Agent Capabilities}{11}{subsection.2.4.2}
-\contentsline {paragraph}{ Visibility.}{12}{section*.11}
-\contentsline {paragraph}{ Cloning.}{12}{section*.12}
-\contentsline {paragraph}{ Immunity.}{12}{section*.13}
-\contentsline {subsection}{\numberline {2.4.3}Topologies}{13}{subsection.2.4.3}
-\contentsline {section}{\numberline {2.5}Black Virus Decontamination}{16}{section.2.5}
-\contentsline {chapter}{\numberline {3}Definitions and Terminology}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}The Agent Model}{19}{section.3.1}
-\contentsline {section}{\numberline {3.2}The Problem}{20}{section.3.2}
-\contentsline {section}{\numberline {3.3}The Team of Agents}{21}{section.3.3}
-\contentsline {section}{\numberline {3.4}Complexity}{23}{section.3.4}
-\contentsline {section}{\numberline {3.5}The Topology}{23}{section.3.5}
-\contentsline {section}{\numberline {3.6}General Strategy}{25}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Phase 1: Exploring and Shadowing}{26}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Phase 2: Surrounding and Eliminating}{28}{subsection.3.6.2}
-\contentsline {section}{\numberline {3.7}Conclusions}{31}{section.3.7}
-\contentsline {chapter}{\numberline {4}Black Virus Disinfection in Double Loops}{32}{chapter.4}
-\contentsline {section}{\numberline {4.1}Exploring and Shadowing}{33}{section.4.1}
-\contentsline {section}{\numberline {4.2}Surrounding and Eliminating}{35}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Move-Optimal Deployment}{39}{subsection.4.2.1}
-\contentsline {subsubsection}{\numberline {4.2.1.1}Shortly-chorded Double Loops}{40}{subsubsection.4.2.1.1}
-\contentsline {subsubsection}{\numberline {4.2.1.2}General Double Loop}{44}{subsubsection.4.2.1.2}
-\contentsline {subsubsection}{\numberline {4.2.1.3}On Optimality and Other Observations}{53}{subsubsection.4.2.1.3}
-\contentsline {subsection}{\numberline {4.2.2}Simple Greedy Deployment}{53}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Smart Greedy Deployment}{58}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Conclusion}{62}{section.4.3}
-\contentsline {chapter}{\numberline {5}Black Virus Disinfection in Triple Loops}{64}{chapter.5}
-\contentsline {section}{\numberline {5.1}Triple Loops}{65}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Exploring and Shadowing}{65}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Surrounding and Eliminating}{67}{subsection.5.1.2}
-\contentsline {subsubsection}{\numberline {5.1.2.1}\bf Greedy Deployment.}{71}{subsubsection.5.1.2.1}
-\contentsline {subsubsection}{\numberline {5.1.2.2}\bf Move-Optimal Deployment.}{72}{subsubsection.5.1.2.2}
-\contentsline {section}{\numberline {5.2}Triple Loops: the Case of $C_n(1,2,k)$ }{76}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Exploring and Shadowing}{76}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Surrounding and Eliminating}{78}{subsection.5.2.2}
-\contentsline {subsubsection}{\numberline {5.2.2.1}Move-Optimal Deployment}{82}{subsubsection.5.2.2.1}
-\contentsline {subsubsection}{\numberline {5.2.2.2}On Optimality and Other Observations}{91}{subsubsection.5.2.2.2}
-\contentsline {section}{\numberline {5.3} Triple Loops: the Case of $C_n(1,k-1,k)$}{91}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Exploring and Shadowing}{91}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Surrounding and Eliminating}{93}{subsection.5.3.2}
-\contentsline {subsubsection}{\numberline {5.3.2.1}Move-Optimal Deployment}{97}{subsubsection.5.3.2.1}
-\contentsline {subsubsection}{\numberline {5.3.2.2}On Optimality and Other Observations}{104}{subsubsection.5.3.2.2}
-\contentsline {section}{\numberline {5.4}Discussion and Comparisons}{105}{section.5.4}
-\contentsline {section}{\numberline {5.5}Conclusion}{106}{section.5.5}
-\contentsline {chapter}{\numberline {6}Black Virus Disinfection in Consecutive-Chords Rings}{108}{chapter.6}
-\contentsline {section}{\numberline {6.1}Exploring and Shadowing}{109}{section.6.1}
-\contentsline {section}{\numberline {6.2}Surrounding and Eliminating}{110}{section.6.2}
-\contentsline {section}{\numberline {6.3}Conclusion }{119}{section.6.3}
-\contentsline {chapter}{\numberline {7}General Chordal Rings}{121}{chapter.7}
-\contentsline {section}{\numberline {7.1}Exploring and Shadowing}{121}{section.7.1}
-\contentsline {section}{\numberline {7.2}Surrounding and Eliminating}{122}{section.7.2}
-\contentsline {section}{\numberline {7.3}Conclusion}{128}{section.7.3}
-\contentsline {chapter}{\numberline {8}Conclusion}{130}{chapter.8}
-\contentsline {chapter}{APPENDICES}{138}{appendix*.15}
-\contentsline {chapter}{\numberline {A}Detailed Paths Analysis in Triple Loops}{139}{appendix.A}
+\contentsline {subsection}{\numberline {2.3.1}Agent Capabilities}{8}{subsection.2.3.1}
+\contentsline {paragraph}{Communication Mechanisms}{8}{section*.7}
+\contentsline {paragraph}{Knowledge of the topology}{8}{section*.8}
+\contentsline {subsection}{\numberline {2.3.2}Topologies}{8}{subsection.2.3.2}
+\contentsline {paragraph}{Directed or Undirected.}{8}{section*.9}
+\contentsline {paragraph}{One Homebase or Several. }{9}{section*.10}
+\contentsline {subsection}{\numberline {2.3.3} Agent Capabilities}{10}{subsection.2.3.3}
+\contentsline {paragraph}{Communication Mechanisms.}{10}{section*.11}
+\contentsline {paragraph}{Topological Knowledge.}{10}{section*.12}
+\contentsline {subsection}{\numberline {2.3.4}Number of BHs}{11}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}Decontamination}{11}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Synchronicity}{12}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Agent Capabilities}{12}{subsection.2.4.2}
+\contentsline {paragraph}{ Visibility.}{12}{section*.13}
+\contentsline {paragraph}{ Cloning.}{13}{section*.14}
+\contentsline {paragraph}{ Immunity.}{13}{section*.15}
+\contentsline {subsection}{\numberline {2.4.3}Topologies}{14}{subsection.2.4.3}
+\contentsline {section}{\numberline {2.5}Black Virus Decontamination}{17}{section.2.5}
+\contentsline {chapter}{\numberline {3}Definitions and Terminology}{20}{chapter.3}
+\contentsline {section}{\numberline {3.1}The Agent Model}{20}{section.3.1}
+\contentsline {section}{\numberline {3.2}The Problem}{21}{section.3.2}
+\contentsline {section}{\numberline {3.3}The Team of Agents}{22}{section.3.3}
+\contentsline {section}{\numberline {3.4}Complexity}{24}{section.3.4}
+\contentsline {section}{\numberline {3.5}The Topology}{24}{section.3.5}
+\contentsline {section}{\numberline {3.6}General Strategy}{26}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Phase 1: Exploring and Shadowing}{27}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Phase 2: Surrounding and Eliminating}{29}{subsection.3.6.2}
+\contentsline {section}{\numberline {3.7}Conclusions}{32}{section.3.7}
+\contentsline {chapter}{\numberline {4}Black Virus Disinfection in Double Loops}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}Exploring and Shadowing}{34}{section.4.1}
+\contentsline {section}{\numberline {4.2}Surrounding and Eliminating}{36}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Move-Optimal Deployment}{40}{subsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.1.1}Shortly-chorded Double Loops}{41}{subsubsection.4.2.1.1}
+\contentsline {subsubsection}{\numberline {4.2.1.2}General Double Loop}{45}{subsubsection.4.2.1.2}
+\contentsline {subsubsection}{\numberline {4.2.1.3}On Optimality and Other Observations}{54}{subsubsection.4.2.1.3}
+\contentsline {subsection}{\numberline {4.2.2}Simple Greedy Deployment}{54}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Smart Greedy Deployment}{59}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Conclusion}{63}{section.4.3}
+\contentsline {chapter}{\numberline {5}Black Virus Disinfection in Triple Loops}{65}{chapter.5}
+\contentsline {section}{\numberline {5.1}Triple Loops}{66}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Exploring and Shadowing}{66}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Surrounding and Eliminating}{68}{subsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.2.1}\bf Greedy Deployment.}{72}{subsubsection.5.1.2.1}
+\contentsline {subsubsection}{\numberline {5.1.2.2}\bf Move-Optimal Deployment.}{73}{subsubsection.5.1.2.2}
+\contentsline {section}{\numberline {5.2}Triple Loops: the Case of $C_n(1,2,k)$ }{77}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Exploring and Shadowing}{77}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Surrounding and Eliminating}{79}{subsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2.1}Move-Optimal Deployment}{83}{subsubsection.5.2.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2.2}On Optimality and Other Observations}{92}{subsubsection.5.2.2.2}
+\contentsline {section}{\numberline {5.3} Triple Loops: the Case of $C_n(1,k-1,k)$}{92}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Exploring and Shadowing}{92}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Surrounding and Eliminating}{94}{subsection.5.3.2}
+\contentsline {subsubsection}{\numberline {5.3.2.1}Move-Optimal Deployment}{98}{subsubsection.5.3.2.1}
+\contentsline {subsubsection}{\numberline {5.3.2.2}On Optimality and Other Observations}{105}{subsubsection.5.3.2.2}
+\contentsline {section}{\numberline {5.4}Discussion and Comparisons}{106}{section.5.4}
+\contentsline {section}{\numberline {5.5}Conclusion}{107}{section.5.5}
+\contentsline {chapter}{\numberline {6}Black Virus Disinfection in Consecutive-Chords Rings}{109}{chapter.6}
+\contentsline {section}{\numberline {6.1}Exploring and Shadowing}{110}{section.6.1}
+\contentsline {section}{\numberline {6.2}Surrounding and Eliminating}{111}{section.6.2}
+\contentsline {section}{\numberline {6.3}Conclusion }{120}{section.6.3}
+\contentsline {chapter}{\numberline {7}General Chordal Rings}{122}{chapter.7}
+\contentsline {section}{\numberline {7.1}Exploring and Shadowing}{122}{section.7.1}
+\contentsline {section}{\numberline {7.2}Surrounding and Eliminating}{123}{section.7.2}
+\contentsline {section}{\numberline {7.3}Conclusion}{129}{section.7.3}
+\contentsline {chapter}{\numberline {8}Conclusion}{131}{chapter.8}
+\contentsline {chapter}{APPENDICES}{139}{appendix*.17}
+\contentsline {chapter}{\numberline {A}Detailed Paths Analysis in Triple Loops}{140}{appendix.A}
