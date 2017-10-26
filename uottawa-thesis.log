@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  25 OCT 2017 16:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  25 OCT 2017 20:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1375,49 +1375,60 @@ Package natbib Warning: Citation `M.Huang' on page 8 undefined on input line 27
 .
 
 
-Package natbib Warning: Citation `M.Hunag' on page 8 undefined on input line 27
-.
+Package natbib Warning: Citation `M.Huang1' on page 8 undefined on input line 2
+7.
 
-[8]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 31.
+(amsmath)                 on input line 27.
 
-[9] [10] [11] [12] [13] [14] [15] [16] [17]) (./parts/chapter3.tex [18]
+
+Package natbib Warning: Citation `M.Huang1' on page 8 undefined on input line 2
+8.
+
+
+Package natbib Warning: Citation `Flocchini6' on page 8 undefined on input line
+ 30.
+
+
+Package natbib Warning: Citation `N.Santoro' on page 8 undefined on input line 
+30.
+
+[8] [9] [10] [11] [12] [13] [14] [15] [16] [17]) (./parts/chapter3.tex [18]
 Chapter 3.
 [19
 
 
-] [20] [21] [22] [23] <figures/dloop.jpg, id=577, 600.2425pt x 596.2275pt>
+] [20] [21] [22] [23] <figures/dloop.jpg, id=566, 600.2425pt x 596.2275pt>
 File: figures/dloop.jpg Graphic file (type jpg)
 
 <use figures/dloop.jpg>
 Package pdftex.def Info: figures/dloop.jpg used on input line 152.
 (pdftex.def)             Requested size: 184.28568pt x 183.05457pt.
 
-<figures/tloop.jpg, id=578, 1147.28625pt x 1147.28625pt>
+<figures/tloop.jpg, id=567, 1147.28625pt x 1147.28625pt>
 File: figures/tloop.jpg Graphic file (type jpg)
 
 <use figures/tloop.jpg>
 Package pdftex.def Info: figures/tloop.jpg used on input line 160.
 (pdftex.def)             Requested size: 184.28568pt x 184.26979pt.
  [24 <./figures/dloop.jpg>]
-<figures/cloop.jpg, id=583, 1147.28625pt x 1147.28625pt>
+<figures/cloop.jpg, id=572, 1147.28625pt x 1147.28625pt>
 File: figures/cloop.jpg Graphic file (type jpg)
 
 <use figures/cloop.jpg>
 Package pdftex.def Info: figures/cloop.jpg used on input line 169.
 (pdftex.def)             Requested size: 184.28568pt x 184.26979pt.
  [25 <./figures/tloop.jpg> <./figures/cloop.jpg>]
-[26] <figures/dloop_ph1.jpg, id=594, 859.21pt x 647.41875pt>
+[26] <figures/dloop_ph1.jpg, id=582, 859.21pt x 647.41875pt>
 File: figures/dloop_ph1.jpg Graphic file (type jpg)
 
 <use figures/dloop_ph1.jpg>
 Package pdftex.def Info: figures/dloop_ph1.jpg used on input line 213.
 (pdftex.def)             Requested size: 276.43555pt x 208.29453pt.
  [27 <./figures/dloop_ph1.jpg>] [28]
-<figures/dloop_ph2.jpg, id=605, 859.21pt x 611.28375pt>
+<figures/dloop_ph2.jpg, id=594, 859.21pt x 611.28375pt>
 File: figures/dloop_ph2.jpg Graphic file (type jpg)
 
 <use figures/dloop_ph2.jpg>
@@ -1429,7 +1440,7 @@ Chapter 4.
 [32
 
 
-] [33] [34] [35] <figures/dloop_seg.jpg, id=640, 859.21pt x 601.24625pt>
+] [33] [34] [35] <figures/dloop_seg.jpg, id=629, 859.21pt x 601.24625pt>
 File: figures/dloop_seg.jpg Graphic file (type jpg)
 
 <use figures/dloop_seg.jpg>
@@ -1454,7 +1465,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 368--370
 
  []
 
-[41] [42] [43] [44] <figures/dloop_window2.jpg, id=683, 654.445pt x 654.445pt>
+[41] [42] [43] [44] <figures/dloop_window2.jpg, id=672, 654.445pt x 654.445pt>
 File: figures/dloop_window2.jpg Graphic file (type jpg)
 
 <use figures/dloop_window2.jpg>
@@ -1481,7 +1492,7 @@ Chapter 5.
 [64
 
 
-] [65] [66] [67] <figures/tloop_seg.jpg, id=805, 859.21pt x 627.34375pt>
+] [65] [66] [67] <figures/tloop_seg.jpg, id=793, 859.21pt x 627.34375pt>
 File: figures/tloop_seg.jpg Graphic file (type jpg)
 
 <use figures/tloop_seg.jpg>
@@ -1531,14 +1542,14 @@ Overfull \hbox (8.09685pt too wide) in paragraph at lines 71--72
  [] 
  []
 
-[109] [110] <figures/cloop_seg.jpg, id=1013, 859.21pt x 666.49pt>
+[109] [110] <figures/cloop_seg.jpg, id=1001, 859.21pt x 666.49pt>
 File: figures/cloop_seg.jpg Graphic file (type jpg)
 
 <use figures/cloop_seg.jpg>
 Package pdftex.def Info: figures/cloop_seg.jpg used on input line 188.
 (pdftex.def)             Requested size: 276.43555pt x 214.43034pt.
  [111] [112 <./figures/cloop_seg.jpg>] [113]
-<figures/onedirec_cloop.jpg, id=1029, 1147.28625pt x 1198.4775pt>
+<figures/onedirec_cloop.jpg, id=1017, 1147.28625pt x 1198.4775pt>
 File: figures/onedirec_cloop.jpg Graphic file (type jpg)
 
 <use figures/onedirec_cloop.jpg>
@@ -1592,7 +1603,7 @@ Chapter 7.
 [121
 
 
-] [122] <figures/general_algo.jpg, id=1092, 1599.9775pt x 1625.07124pt>
+] [122] <figures/general_algo.jpg, id=1080, 1599.9775pt x 1625.07124pt>
 File: figures/general_algo.jpg Graphic file (type jpg)
 
 <use figures/general_algo.jpg>
@@ -1645,57 +1656,41 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 232.
 (./uottawa-thesis.aux (./parts/appendix.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 232.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 232.
-
-
-Package rerunfilecheck Warning: File `uottawa-thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `uottawa-thesis.out':
-(rerunfilecheck)             Before: 88DB649B0CF8B33E8ABCB55625DA4815;4014
-(rerunfilecheck)             After:  80F2BF565D6FFC0DCC212D3676540804;3941.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `uottawa-thesis.out' has not changed.
+(rerunfilecheck)             Checksum: D7118371963D513003D490655EC3677A;3941.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 232.
  ) 
 Here is how much of TeX's memory you used:
- 10525 strings out of 492995
- 151287 string characters out of 6132704
- 265048 words of memory out of 5000000
- 13440 multiletter control sequences out of 15000+600000
+ 10523 strings out of 492995
+ 151254 string characters out of 6132704
+ 266048 words of memory out of 5000000
+ 13441 multiletter control sequences out of 15000+600000
  15233 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  30i,18n,31p,2346b,586s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{appendix*.18} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.3.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
-/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2017/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/201
-7/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on uottawa-thesis.pdf (156 pages, 1486263 bytes).
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on uottawa-thesis.pdf (156 pages, 1487303 bytes).
 PDF statistics:
- 1366 PDF objects out of 1440 (max. 8388607)
- 1167 compressed objects within 12 object streams
- 355 named destinations out of 1000 (max. 500000)
- 528 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1351 PDF objects out of 1440 (max. 8388607)
+ 1152 compressed objects within 12 object streams
+ 352 named destinations out of 1000 (max. 500000)
+ 520 words of extra memory for PDF output out of 10000 (max. 10000000)
 

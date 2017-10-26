@@ -12,18 +12,17 @@
 \contentsline {paragraph}{Communication Mechanisms}{8}{section*.7}
 \contentsline {paragraph}{Knowledge of the topology}{8}{section*.8}
 \contentsline {paragraph}{Other capabilities}{8}{section*.9}
-\contentsline {paragraph}{ Visibility.}{9}{section*.10}
 \contentsline {subsection}{\numberline {2.3.2}Topologies}{9}{subsection.2.3.2}
-\contentsline {paragraph}{Topological Knowledge.}{9}{section*.11}
+\contentsline {paragraph}{Topological Knowledge.}{10}{section*.10}
 \contentsline {subsection}{\numberline {2.3.3}Number of BHs}{10}{subsection.2.3.3}
 \contentsline {section}{\numberline {2.4}Decontamination}{10}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Synchronicity}{11}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.1}Synchronicity}{12}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Agent Capabilities}{12}{subsection.2.4.2}
-\contentsline {paragraph}{ Visibility.}{12}{section*.12}
-\contentsline {paragraph}{ Cloning.}{12}{section*.13}
-\contentsline {paragraph}{ Immunity.}{12}{section*.14}
+\contentsline {paragraph}{ Visibility.}{12}{section*.11}
+\contentsline {paragraph}{ Cloning.}{12}{section*.12}
+\contentsline {paragraph}{ Immunity.}{13}{section*.13}
 \contentsline {subsection}{\numberline {2.4.3}Topologies}{13}{subsection.2.4.3}
-\contentsline {section}{\numberline {2.5}Black Virus Decontamination}{16}{section.2.5}
+\contentsline {section}{\numberline {2.5}Black Virus Decontamination}{17}{section.2.5}
 \contentsline {chapter}{\numberline {3}Definitions and Terminology}{19}{chapter.3}
 \contentsline {section}{\numberline {3.1}The Agent Model}{19}{section.3.1}
 \contentsline {section}{\numberline {3.2}The Problem}{20}{section.3.2}
@@ -71,5 +70,5 @@
 \contentsline {section}{\numberline {7.2}Surrounding and Eliminating}{122}{section.7.2}
 \contentsline {section}{\numberline {7.3}Conclusion}{128}{section.7.3}
 \contentsline {chapter}{\numberline {8}Conclusion}{130}{chapter.8}
-\contentsline {chapter}{APPENDICES}{138}{appendix*.16}
+\contentsline {chapter}{APPENDICES}{138}{appendix*.15}
 \contentsline {chapter}{\numberline {A}Detailed Paths Analysis in Triple Loops}{139}{appendix.A}
