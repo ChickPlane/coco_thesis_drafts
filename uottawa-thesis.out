@@ -7,15 +7,15 @@
 \BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 7
 \BOOKMARK [1][-]{section.2.1}{Black Hole Search, BHS}{chapter.2}% 8
 \BOOKMARK [1][-]{section.2.2}{Intruder Capture}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.3}{Black Virus Decontamination}{chapter.2}% 10
-\BOOKMARK [2][-]{subsection.2.3.1}{Agent Capabilities}{section.2.3}% 11
-\BOOKMARK [2][-]{subsection.2.3.2}{Topologies}{section.2.3}% 12
-\BOOKMARK [2][-]{subsection.2.3.3}{Number of BHs}{section.2.3}% 13
-\BOOKMARK [1][-]{section.2.4}{Decontamination}{chapter.2}% 14
-\BOOKMARK [2][-]{subsection.2.4.1}{Synchronicity}{section.2.4}% 15
-\BOOKMARK [2][-]{subsection.2.4.2}{Agent Capabilities}{section.2.4}% 16
-\BOOKMARK [2][-]{subsection.2.4.3}{Topologies}{section.2.4}% 17
-\BOOKMARK [1][-]{section.2.5}{Black Virus Decontamination}{chapter.2}% 18
+\BOOKMARK [1][-]{section.2.3}{Agent Capabilities}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.4}{Synchrony}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.5}{Black Virus Decontamination}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.5.1}{Overview}{section.2.5}% 13
+\BOOKMARK [2][-]{subsection.2.5.2}{BVD in different topologies}{section.2.5}% 14
+\BOOKMARK [2][-]{subsection.2.5.3}{Synchronicity}{section.2.5}% 15
+\BOOKMARK [2][-]{subsection.2.5.4}{Agent Capabilities}{section.2.5}% 16
+\BOOKMARK [2][-]{subsection.2.5.5}{Topologies}{section.2.5}% 17
+\BOOKMARK [1][-]{section.2.6}{Black Virus Decontamination}{chapter.2}% 18
 \BOOKMARK [0][-]{chapter.3}{Definitions and Terminology}{}% 19
 \BOOKMARK [1][-]{section.3.1}{The Agent Model}{chapter.3}% 20
 \BOOKMARK [1][-]{section.3.2}{The Problem}{chapter.3}% 21
@@ -54,5 +54,5 @@
 \BOOKMARK [1][-]{section.7.2}{Surrounding and Eliminating}{chapter.7}% 54
 \BOOKMARK [1][-]{section.7.3}{Conclusion}{chapter.7}% 55
 \BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 56
-\BOOKMARK [0][-]{appendix*.15}{APPENDICES}{}% 57
+\BOOKMARK [0][-]{appendix*.14}{APPENDICES}{}% 57
 \BOOKMARK [0][-]{appendix.A}{Detailed Paths Analysis in Triple Loops}{}% 58
