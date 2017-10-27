@@ -39,119 +39,11 @@ Protocols regarding to BVD problems in grid are BVD-2G and BVD-qG which deal wit
 
 In \cite{Alotaibi}, solution for BVD in chordal ring is discussed. In Alotaibi's thesis, she discuss solutions based on different kinds of chordal ring: double loops, triple loops, consecutive-chords rings and finally general chordal ring. In double loops, she proposed three strategies in elimination phase and the upper bound of moves is $4n-7$ in the whole protocol and a maximum of 12 agents are employed.In triple loops, she discusses two classes of chordal ring: $C_n(1,p,k)$ and $C_n(1,k-1,k)$. In any triple loop $C_n(1,p,k)$, a maximum of $5n-6k+22$ moves and 24 agents are needed for the decontamination while in any triple loop $C_n(1,k-1,k)$, a maximum of $5n-7k+22$ moves and 19 agents are needed. Finally in the consecutive-chords ring, a maximum of $(k+2)n-2k-3$ moves and $4k+1$ agents are needed. She described the decontamination strategies in synchronous setting but only with a cost of $O(n)$ moves can the strategies be used in asynchronous setting.
 
-Chapter 2 end 
-
-
-%\section{Decontamination}
-
-%Because of network connectivity, a moving object can contaminate an entire network, resulting in dysfunctional performance. This scenario is considered to be one of the most critical threads in network security (ie.,  viruses and how they attack devices on the Internet). As a result, there is a need for a cleaning and protecting process ({\em Decontamination}). This problem has been extensively studied in graph theory under several names: graph search, intruder capture and decontamination. This problem was first introduced in 1967 by \cite{bre4}. The decontamination process can be conducted internally or externally. Internal decontamination allows a node to perform the task without external help. In other words, the nodes are able to decontaminate themselves locally. For example, running an Anti-virus program on an infected device could rid that device from viruses it got from the Internet. On the other hand, external decontamination requires external intervention, such as mobile agents. An agent decontaminates infected nodes by passing through them, yet the nodes are vulnerable to recontamination once the agents depart. 
-
-
-The Mobile Agents Model is a form of external decontamination in which moving agents are used to disinfect a contaminated network.
-The mobile agents must decontaminate the network in a way that prevents recontamination. In this model, nodes have three states: contaminated, decontaminated or guarded. A node is decontaminated once an agent passes through it, guarded once an agent resides in it and otherwise contaminated. Initially, all nodes are contaminated with the exception of the homebase which is guarded. This model has many variations and parameters that have a significant impact on the overall complexity. As a result, there are many protocols and strategies that handle this problem in various topologies. These protocols were designed to be {\em monotone}, that is, once a node is decontaminated, it can not be re-infected.
-
-Usually, the complexity of such protocols is measured by the number of agents used in the decontamination process, the number of moves the agents make and the amount of time needed to decontaminate an entire network.
-
-The following variations have a significant impact on protocol performance and complexity: synchronicity, agent capabilities and topological characteristics.
-\subsection{Synchronicity}
-For synchronous execution many papers address the problem of decontamination where agents synchronize their movements in such a way that the explored nodes never get re-contaminated  (see \cite{lucetal22,floc21,baretal24}). In the case of asynchronous execution, there is a need for a coordinator who organizes other agents, ensuring that all agents are in the correct positions before starting a new step (see \cite{floetal13,lucetal22,floetal20,floetal19,floetal17}).
-
-
-\subsection{Agent Capabilities}
-In this problem, agents have been given certain capabilities including cloning, visibility and immunity.
-
-\paragraph{ Visibility.}  Some studies have granted agents the visibility, which is the ability to see whether the neighbouring nodes are clean or contaminated (see \cite{floetal17,floetal20}). Some studies have only employed the local model in which agents only know the information (state, ports) for the node in which they reside (\cite{floetal19,floetal17,floetal20}). Visibility impacts complexity since the agents are able to move in an autonomous fashion, without the need for coordination. In \cite{floetal17}, Flocchini et al. demonstrate that to decontaminate a chordal ring $C_n\{d_1=1,d_2,...,d_k\}$ in the local model, the number of agents required is $(2d_k+1)$, while in the visibility model, the number of agents required is $(2  d_k)$.
-
- In \cite{floetal20}, Flocchini et al. compare the complexity of  decontaminating a hypercube in both models. In the local model, they propose an algorithm that requires  $\Theta$  ($n \over { \sqrt {log n}} $) number of agents and  $O(n \log n)$  moves. In the  visibility model, they propose an algorithm that requires ($n\over2$) agents and $O(n \log n)$ moves.
-
-
-
-\paragraph{ Cloning.}
-Cloning refers to an agent's ability to make copies of itself. This feature would reduce the number of moves but would not produce an optimal number of agents. In \cite{floetal20}, Flocchini et al. study the impact of the cloning feature on the decontamination of a hypercube. They demonstrate that using cloning, the number of moves is drastically reduced: ($n-1$) in both the visibility and local models.
-
-
-\paragraph{ Immunity.}
-Immunity means that a node is immune from recontamination after an agent departs. In the literature, there are two types of immunity: local and temporal. In local immunity, the immunity of a node is determined by the state of its neighbours. For instance, a node stays clean after the departure of an agent unless the majority of its neighbours are contaminated. If the majority of its neighbours are contaminated, that node gets re-contaminated. In other words, the immunity level in this model is about half of the node’s degree. If the contamination reaches more than half, the node gets re-contaminated (see \cite{lucetal22,floc21}). In temporal immunity, a node is immune for a specified amount of time $(t)$. After the departure of an agent, the node is clean for $t$ time regardless of the state of its neighbours. After the time elapses, the node is vulnerable to recontamination if it has at least one contaminated neighbour (see \cite{floetal13}). The two types of immunity provide a network with some resistance to recontamination.  In the absense of these two models, the immunity of the nodes is nil, meaning that the node can be recontaminated if any of its neighbours are contaminated.
-
-
-
-\subsection{Topologies}
-
-The mobile agent decontamination model has been studied in various topologies. In this section we list the results of decontamination protocols in some common topologies.
-
- 
-\noindent{\bf Tree.}  
-Many researchers have studied the decontamination process in trees. The basic strategy for decontaminating a tree is to divide the tree into sub-trees starting from a single homebase (the root), see \cite{floetal13,lucetal22}. 
-
-The best case scenario in terms of the number of agents required occurs when the homebase is the first or last node and we have a line that requires one agent for decontamination. If the homebase is any other node, we require two agents. The worst possible case is the decontamination of a complete binary tree.
-
-
-In \cite{lucetal22}, Luccio et al. consider an asynchronous environment, continuous search, visibility mode, local immunity, single homebase, and a monotone strategy. In order to enforce local immunity there are three basic rules controlling agent departure from a node. If the number of clean neighbours is lower than half of the total number of neighbours (i.e. the majority), the agent does not depart. If the number of clean neighbours is equal to half of the total number of neighbours, the agent only moves to a contaminated neighbour. If the number of clean neighbours is greater than half of the total number of neighbours, the agent moves to any neighbour.
-To identify the minimum number of cleaning agents, this paper divides trees into two classes: trees with degree $d \leq 3$ (e.g. binary tree, line) and general arbitrary trees.
-\begin{itemize}
-
-\item Trees with degree $d \leq 3$ can be decontaminated using a maximum of two agents,
-%Obviously, we need only one agent to decontaminate a line; also we need only one agent to decontaminate any n-node binary tree, 
-while the number of moves is $(2(n-1) - diam)$, where $diam$ represents the diameter. 
-\item For general arbitrary trees with degree $d >3$, this paper introduces the state of stability. A node x is stable if it satisfies the following two conditions: x is immune to recontamination whether it is guarded or not, and the majority of its children are stable. 
-The authors use these conditions to determine the minimum number of cleaners needed to keep a node stable. As a result, we can determine the minimum number of agents required to decontaminate the entire tree. Any lower bound on the minimum number of agents needed to stabilize x provides a lower bound on the minimum number of agents needed to decontaminate a tree rooted in the homebase. In this protocol, the agent stabilizes the root and then recursively moves to unstable nodes and stabilizes them until all nodes are stable. The number of moves in this protocol is not proven. This study demonstrates how local immunity improves complexity (minimum number of cleaners), especially in a binary tree.
- \end{itemize}
-In \cite{floetal13}, the authors consider a synchronous environment, continuous search, temporal immunity (i.e. $t>0$), single homebase and a monotone strategy. In this case, any node is immune from recontamination when it is guarded and during the immunity time $t$ after the agent leaves. Therefore, agents can move back and forth during period t. In other words, an agent can leave a node and traverse a path of length up to t/2 and go back to that node without worrying about recontamination. Using this property, the Depth-First traversal strategy, and a decontaminating leader (i.e., an agent), this paper demonstrates that a tree requires at least $2h\over(t+1)$ agents, where $h$ is the height of the tree, and $t$ is the immunity time. We can see that the temporal immunity has a significant impact on the process of decontamination. 
-
-
-\noindent{\bf  Hypercube.}
-The hypercube is thoroughly studied in \cite{floetal20}. This paper discusses several strategies for decontaminating a hypercube. The authors consider the local and visibility models, with and without cloning as we mentioned in the previous section.
-
-%For the first strategy, the authors assume local model, asynchronous environment, single homebase, continuous search, and monotone strategy. This strategy relies on the existence of a coordinator (agent) that directs how the other agents move since the agents don’t have the capability to see the states of neighbours. This decontaminating strategy is performed on the broadcast tree of the hypercube level by level.
-%It is proven that this strategy requires number of agents= Θ(n/(log n)1/2) ,and number of moves= O(n log n), where n is the number of nodes.
-%The second strategy is the same as the first one except that this strategy considers the visibility model. This strategy uses (n/2) agents and O(n log n) moves to decontaminate the network. We can notice the drop in the number of agents in the visibility model. Lastly, the third strategy considers the visibility model and cloning. However, in this case no coordinator is needed. In this protocol, Initially, one agent starts from the homebase, then it clones agents as many as the number of dimensions -1, and send one agent through each link. After an agent cleans a node, it clones enough agents to clean all neighbors that are not clean or guarded. As a result the number of moves performed by agents is decreased to (n-1), where the minimum number of agents required for monotone decontamination is n/2. The following table shows a comparison between the previous three strategies in terms of complexity. Hence the table shows the time complexity.
 
 
 
 
 
-
-\noindent{\bf Mesh.}
-As seen in \cite{floetal19}, to decontaminate a mesh (grid) of $M\times N$ nodes, there two possible strategies. The authors assume an asynchronous environment, continuous search, single homebase, and monotone protocol. In the first strategy the authors use the local model in which the agents cannot see neighbouring states but have the ability to exchange information using whiteboard. In this strategy there is a need for a synchronizer that coordinates the protocol execution. Beginning from the homebase, $M$ agents (except one agent that remains at the homebase) move south in order to guard each node in the first column. The synchronizer then coordinates the moves of all agents in such a way that all the agents are moving east at the same time.  This process goes on column by column until the whole graph is decontaminated. This protocol requires $M+1$ agents and ${M^2+4MN-5M-2}\over 2$ moves. In the second strategy, the authors use the visibility model, eliminating the need for a synchronizer. In this case, agents depend on what has been written in the whiteboard to decide the next step. This strategy requires $M$ agents (no synchronizer here) and ${M^2+2MN-3M}\over 2$ moves.
-
-In the previous two protocols, the authors assume a mesh M×N, where $M\leq N$, so the protocols carry on column by column. In the case of  $N < M$, it is better to proceed row by row to obtain a lower number of agents.
-
-\noindent{\bf Tori.}
-A torus $h\times k$ ($h<=k$) is a mesh where the nodes in the last row are connected to nodes in the first row, and nodes in the first column are connected to nodes in the last column. In order to decontaminate a torus we can use the strategies used to decontaminate a mesh with some slight modifications.  In \cite{floetal17}, Flocchini et al. use strategies similar to those used for the mesh. Instead of deploying agents to cover one column, agents are deployed to cover two successive columns. One column of agents then stays to guard the nodes from recontamination while the other column of agents moves through the torus. In the local model there is a need for a synchronizer. The complexity of this strategy is $2h+1$ agents and ($2hk-4h-1$) moves. In the visibility model, there is no need for a synchronizer, and the complexity is $2h$ agents and ($hk-2h$) moves. In \cite{lucetal22}, the authors demonstrate that in order to decontaminate a  k-dimensional tori ($k>2$) in the presence of local immunity, we need at least $2k$ synchronous agents and ($n+2k-2k-2$) moves.
-
-\noindent{\bf Rings.}
-When we have a ring  it is easy to find the minimum number of agents required for monotone decontamination. 
-
-In the local model, two agents are sufficient to perform the decontamination if they start from a single homebase and move in opposite directions until they are reunited. The number of moves would therefore be n, where n represents the number of nodes, if we assume that an agent needs one time unit to traverse a link. In the visibility model, the two agents move in opposite directions until they reach two consecutive nodes. The number of moves is therefore $n-1$ (see  \cite{lucetal22}).
-
-
-\noindent{\bf Chordal Rings.}
-In \cite{floetal17}, Flocchini et al. provide the results of decontaminating a chordal ring $C_n\{d_1=1,d_2,...,d_k\}$ using the local and visibility models. In the local model, the complexity required to decontaminate the chordal ring using  asynchronous execution is $ (2d_k+1)$ agents and $4n-6d_k-1$ number of moves. In the visibility model, the number of agents is $(2  d_k)$  and the number of moves is ($n-2d_k$). 
-
-
-
-
-
-%\section{Fault Tolerance in Chordal Rings}
-
-\section{Black Virus Decontamination}
-This term was initially introduced by Cai el al. in \cite{caietal18}. The {\it Black Virus} ($BV$) is a hostile node that resides in an unknown location, causing the destruction of any visiting mobile agent. The black virus also causes more damage by moving to neighbouring nodes. Therefore, we need a strategy to locate the hostile node and to disinfect the entire topology from its spread.
-In \cite{caietal18}, the authors present the {\it Black Virus} (BV) threat by combining the statical feature of the {\it Black Hole} and the mobility feature of the {\it Intruder Capture}. They also propose a solution to the $BVD$ problem using a team of mobile agents. 
-
-The authors assume that there is initially only one $BV$ in the network. Like $BH$, the location of $BV$ is unknown a priori and the $BV$  stays inactive (unharmful) unless it is triggered. The $BV$ is activated when a mobile agent arrives at its location. The mobile agent is then destroyed and the $BV$ clones itself into as many $BV$s as its number of degrees. The copies retain the same features as the original and each copy moves to a neighbouring node and remains inactive until triggered. According to \cite{caietal18}, the \bv is only deactivated when it moves to a node that is occupied by an agent. To the best of our knowledge, this problem has only been studied by Cai et al. in \cite{caietal18}.
-
-In \cite{caietal18}, the proposed protocol consists of two phases: '{\em shadowed exploration}' and '{\em surround and eliminate}'. As the names suggest, the first phase involves exploring  the network, locating the \bv and triggering it. The second phase involves surrounding the newly created $BV$s and then triggering them to remove them from the network. This protocol is monotone, meaning that once a node is explored, it is immune from recontamination. The measures of efficiency considered include:  the spread ($spread$), the number of agents ($size$) and the number of moves.
-The $BVD$ problem is solved when the network is completely decontaminated and at least one agent survives.
- The authors conduct their research using common topologies such as rings, multi-dimensional grids, multi-dimensional tori and hypercubes.
-
-\noindent{\bf Ring(R).} The authors demonstrate that, regardless of the number of nodes ($n$), the monotone protocol requires ($size(R)= 4$) and ($spread(R)= 2$). It is possible that these results are not quite accurate. If the  \bv resides in node $n-1$, we either have a non-monotone protocol in which an explored node gets contaminated or  less complexity where ($size\leq 4$) and ($spread \leq 2$).
-
-\noindent{\bf Grid(G).}The paper considers a 2-dimensional grid and a q-dimensional grid. In a 2-dimensional grid of size $d_1\times d_2$, they prove that regardless of $n$ their proposed optimal algorithm would cost ($spread(G)=3$), ($size(G)=7$), and at most ($5n+O(1)$) number of moves . While in a q-dimensional grid, the complexity would be ($spread(G)=q+1$), ($size(G)=3q+1$), and at most ($O(qn)$)  number of moves. 
-
-\noindent{\bf Torus(T).} According to the protocol, decontaminating a q-dimensional torus from $BV$  requires  ($spread(T)=2q$), ($size(T)=4q$) and  ($O(qn)$) moves.
-
-\noindent{\bf Hypercubes(H).} According to the protocol, decontaminating a hypercube from $BV$s requires ($spread(H)=3$), ($size(H)=6$) and at maximum of $34$ moves.
- 
 
  
 

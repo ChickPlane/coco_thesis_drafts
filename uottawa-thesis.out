@@ -11,50 +11,46 @@
 \BOOKMARK [1][-]{section.2.4}{Black Virus Decontamination}{chapter.2}% 11
 \BOOKMARK [2][-]{subsection.2.4.1}{Overview}{section.2.4}% 12
 \BOOKMARK [2][-]{subsection.2.4.2}{BVD in different topologies}{section.2.4}% 13
-\BOOKMARK [2][-]{subsection.2.4.3}{Synchronicity}{section.2.4}% 14
-\BOOKMARK [2][-]{subsection.2.4.4}{Agent Capabilities}{section.2.4}% 15
-\BOOKMARK [2][-]{subsection.2.4.5}{Topologies}{section.2.4}% 16
-\BOOKMARK [1][-]{section.2.5}{Black Virus Decontamination}{chapter.2}% 17
-\BOOKMARK [0][-]{chapter.3}{Definitions and Terminology}{}% 18
-\BOOKMARK [1][-]{section.3.1}{Model}{chapter.3}% 19
-\BOOKMARK [2][-]{subsection.3.1.1}{Network, Agent, Black Virus}{section.3.1}% 20
-\BOOKMARK [1][-]{section.3.2}{Synchrony}{chapter.3}% 21
-\BOOKMARK [1][-]{section.3.3}{The Agent Model}{chapter.3}% 22
-\BOOKMARK [1][-]{section.3.4}{The Problem}{chapter.3}% 23
-\BOOKMARK [1][-]{section.3.5}{The Team of Agents}{chapter.3}% 24
-\BOOKMARK [1][-]{section.3.6}{Complexity}{chapter.3}% 25
-\BOOKMARK [1][-]{section.3.7}{The Topology}{chapter.3}% 26
-\BOOKMARK [1][-]{section.3.8}{General Strategy}{chapter.3}% 27
-\BOOKMARK [2][-]{subsection.3.8.1}{Phase 1: Exploring and Shadowing}{section.3.8}% 28
-\BOOKMARK [2][-]{subsection.3.8.2}{Phase 2: Surrounding and Eliminating}{section.3.8}% 29
-\BOOKMARK [1][-]{section.3.9}{Conclusions}{chapter.3}% 30
-\BOOKMARK [0][-]{chapter.4}{Black Virus Disinfection in Double Loops}{}% 31
-\BOOKMARK [1][-]{section.4.1}{Exploring and Shadowing}{chapter.4}% 32
-\BOOKMARK [1][-]{section.4.2}{Surrounding and Eliminating}{chapter.4}% 33
-\BOOKMARK [2][-]{subsection.4.2.1}{Move-Optimal Deployment}{section.4.2}% 34
-\BOOKMARK [2][-]{subsection.4.2.2}{Simple Greedy Deployment}{section.4.2}% 35
-\BOOKMARK [2][-]{subsection.4.2.3}{Smart Greedy Deployment}{section.4.2}% 36
-\BOOKMARK [1][-]{section.4.3}{Conclusion}{chapter.4}% 37
-\BOOKMARK [0][-]{chapter.5}{Black Virus Disinfection in Triple Loops}{}% 38
-\BOOKMARK [1][-]{section.5.1}{Triple Loops}{chapter.5}% 39
-\BOOKMARK [2][-]{subsection.5.1.1}{Exploring and Shadowing}{section.5.1}% 40
-\BOOKMARK [2][-]{subsection.5.1.2}{Surrounding and Eliminating}{section.5.1}% 41
-\BOOKMARK [1][-]{section.5.2}{Triple Loops: the Case of Cn\(1,2,k\) }{chapter.5}% 42
-\BOOKMARK [2][-]{subsection.5.2.1}{Exploring and Shadowing}{section.5.2}% 43
-\BOOKMARK [2][-]{subsection.5.2.2}{Surrounding and Eliminating}{section.5.2}% 44
-\BOOKMARK [1][-]{section.5.3}{ Triple Loops: the Case of Cn\(1,k-1,k\)}{chapter.5}% 45
-\BOOKMARK [2][-]{subsection.5.3.1}{Exploring and Shadowing}{section.5.3}% 46
-\BOOKMARK [2][-]{subsection.5.3.2}{Surrounding and Eliminating}{section.5.3}% 47
-\BOOKMARK [1][-]{section.5.4}{Discussion and Comparisons}{chapter.5}% 48
-\BOOKMARK [1][-]{section.5.5}{Conclusion}{chapter.5}% 49
-\BOOKMARK [0][-]{chapter.6}{Black Virus Disinfection in Consecutive-Chords Rings}{}% 50
-\BOOKMARK [1][-]{section.6.1}{Exploring and Shadowing}{chapter.6}% 51
-\BOOKMARK [1][-]{section.6.2}{Surrounding and Eliminating}{chapter.6}% 52
-\BOOKMARK [1][-]{section.6.3}{Conclusion }{chapter.6}% 53
-\BOOKMARK [0][-]{chapter.7}{General Chordal Rings}{}% 54
-\BOOKMARK [1][-]{section.7.1}{Exploring and Shadowing}{chapter.7}% 55
-\BOOKMARK [1][-]{section.7.2}{Surrounding and Eliminating}{chapter.7}% 56
-\BOOKMARK [1][-]{section.7.3}{Conclusion}{chapter.7}% 57
-\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 58
-\BOOKMARK [0][-]{appendix*.16}{APPENDICES}{}% 59
-\BOOKMARK [0][-]{appendix.A}{Detailed Paths Analysis in Triple Loops}{}% 60
+\BOOKMARK [0][-]{chapter.3}{Definitions and Terminology}{}% 14
+\BOOKMARK [1][-]{section.3.1}{Model}{chapter.3}% 15
+\BOOKMARK [2][-]{subsection.3.1.1}{Network, Agent, Black Virus}{section.3.1}% 16
+\BOOKMARK [1][-]{section.3.2}{Synchrony}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.3}{The Agent Model}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.4}{The Problem}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.5}{The Team of Agents}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.6}{Complexity}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.7}{The Topology}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.8}{General Strategy}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.8.1}{Phase 1: Exploring and Shadowing}{section.3.8}% 24
+\BOOKMARK [2][-]{subsection.3.8.2}{Phase 2: Surrounding and Eliminating}{section.3.8}% 25
+\BOOKMARK [1][-]{section.3.9}{Conclusions}{chapter.3}% 26
+\BOOKMARK [0][-]{chapter.4}{Black Virus Disinfection in Double Loops}{}% 27
+\BOOKMARK [1][-]{section.4.1}{Exploring and Shadowing}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.2}{Surrounding and Eliminating}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.2.1}{Move-Optimal Deployment}{section.4.2}% 30
+\BOOKMARK [2][-]{subsection.4.2.2}{Simple Greedy Deployment}{section.4.2}% 31
+\BOOKMARK [2][-]{subsection.4.2.3}{Smart Greedy Deployment}{section.4.2}% 32
+\BOOKMARK [1][-]{section.4.3}{Conclusion}{chapter.4}% 33
+\BOOKMARK [0][-]{chapter.5}{Black Virus Disinfection in Triple Loops}{}% 34
+\BOOKMARK [1][-]{section.5.1}{Triple Loops}{chapter.5}% 35
+\BOOKMARK [2][-]{subsection.5.1.1}{Exploring and Shadowing}{section.5.1}% 36
+\BOOKMARK [2][-]{subsection.5.1.2}{Surrounding and Eliminating}{section.5.1}% 37
+\BOOKMARK [1][-]{section.5.2}{Triple Loops: the Case of Cn\(1,2,k\) }{chapter.5}% 38
+\BOOKMARK [2][-]{subsection.5.2.1}{Exploring and Shadowing}{section.5.2}% 39
+\BOOKMARK [2][-]{subsection.5.2.2}{Surrounding and Eliminating}{section.5.2}% 40
+\BOOKMARK [1][-]{section.5.3}{ Triple Loops: the Case of Cn\(1,k-1,k\)}{chapter.5}% 41
+\BOOKMARK [2][-]{subsection.5.3.1}{Exploring and Shadowing}{section.5.3}% 42
+\BOOKMARK [2][-]{subsection.5.3.2}{Surrounding and Eliminating}{section.5.3}% 43
+\BOOKMARK [1][-]{section.5.4}{Discussion and Comparisons}{chapter.5}% 44
+\BOOKMARK [1][-]{section.5.5}{Conclusion}{chapter.5}% 45
+\BOOKMARK [0][-]{chapter.6}{Black Virus Disinfection in Consecutive-Chords Rings}{}% 46
+\BOOKMARK [1][-]{section.6.1}{Exploring and Shadowing}{chapter.6}% 47
+\BOOKMARK [1][-]{section.6.2}{Surrounding and Eliminating}{chapter.6}% 48
+\BOOKMARK [1][-]{section.6.3}{Conclusion }{chapter.6}% 49
+\BOOKMARK [0][-]{chapter.7}{General Chordal Rings}{}% 50
+\BOOKMARK [1][-]{section.7.1}{Exploring and Shadowing}{chapter.7}% 51
+\BOOKMARK [1][-]{section.7.2}{Surrounding and Eliminating}{chapter.7}% 52
+\BOOKMARK [1][-]{section.7.3}{Conclusion}{chapter.7}% 53
+\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 54
+\BOOKMARK [0][-]{appendix*.13}{APPENDICES}{}% 55
+\BOOKMARK [0][-]{appendix.A}{Detailed Paths Analysis in Triple Loops}{}% 56
