@@ -2,11 +2,16 @@
 \chapter {Definitions and Terminology}
 \label{PM}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Model}
+\subsection{Network, Agent, Black Virus}
+\paragraph{Network} The environment in which mobile agents operate is a network modelled as simple undirected connected graph with $n = \left |V\right |$ nodes (or sites) and $m = \left |E\right |$ edges (or links). We denote by $E (v)\subseteq E$ the set of edges incident on $v\in V$, by $d (v) = \left|E (v)\right|$ its degree, and by$\Delta(G)$ (or simply $\Delta$) the maximum degree of G. Each node v in the graph has a distinct $id(v)$. The links incident to a node are labelled with distinct port numbers. The labelling mechanism could be totally arbitrary among different nodes; without loss of generality, we assume the link labelling for node $v$ is represented by set $l_v =1,2,3,...,d(v)$.
 
+\section{Synchrony}
+Asynchrony refers to the execution timing of agent movement and computations. The timing can be {\em Synchronous} or{\em Asynchronous}. When the timing is synchronous, there is a global clock indicating discrete time unit; it takes one unit for each movement (by agent or BV); computing and processing is negligible.
+When we have asynchronous agents, there is no global clock, and the duration of any activity (e.g., processing, communication, moving) by the agents, the BV, and its clones is finite but unpredictable.
 In this chapter we  introduce the primary definitions and terminologies needed for the remainder of this thesis.
 In particular, we define the mobile agent model, the black virus  disinfection problem,  and the chordal ring topology. We also describe a general technique used to solve this problem that will serve as the basis for the solutions described in the rest of the thesis.
-%
-%
+
 %  in general and how it affects the chordal rings in particular. In this thesis, we mainly focus on the existence of only one \bv and how to minimize its disruptive effect on the whole topology. However, the existence of more than one \bv is possible and might disconnect the network.
 %Moreover, we will introduce our model and some other suggested strategies under different settings. The problem of \bv is fairly new, and it has not been studied thoroughly in the literature.  In the proposed model, we use mobile agents to decontaminate a chordal ring from the \bv in such away that the topology will not get recontaminated,which is called monotone protocol. We also try to optimize the complexity in terms of moves, agents and casualties as you will see later.
 
