@@ -11,27 +11,30 @@
 \contentsline {paragraph}{Communication Mechanisms}{7}{section*.7}
 \contentsline {paragraph}{Knowledge of the topology}{7}{section*.8}
 \contentsline {paragraph}{Other capabilities}{7}{section*.9}
-\contentsline {section}{\numberline {2.4}Synchrony}{8}{section.2.4}
-\contentsline {section}{\numberline {2.5}Black Virus Decontamination}{9}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Overview}{9}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}BVD in different topologies}{10}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {2.5.3}Synchronicity}{12}{subsection.2.5.3}
-\contentsline {subsection}{\numberline {2.5.4}Agent Capabilities}{12}{subsection.2.5.4}
+\contentsline {section}{\numberline {2.4}Black Virus Decontamination}{9}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Overview}{9}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}BVD in different topologies}{10}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Synchronicity}{12}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Agent Capabilities}{12}{subsection.2.4.4}
 \contentsline {paragraph}{ Visibility.}{12}{section*.10}
-\contentsline {paragraph}{ Cloning.}{13}{section*.11}
+\contentsline {paragraph}{ Cloning.}{12}{section*.11}
 \contentsline {paragraph}{ Immunity.}{13}{section*.12}
-\contentsline {subsection}{\numberline {2.5.5}Topologies}{13}{subsection.2.5.5}
-\contentsline {section}{\numberline {2.6}Black Virus Decontamination}{17}{section.2.6}
+\contentsline {subsection}{\numberline {2.4.5}Topologies}{13}{subsection.2.4.5}
+\contentsline {section}{\numberline {2.5}Black Virus Decontamination}{17}{section.2.5}
 \contentsline {chapter}{\numberline {3}Definitions and Terminology}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}The Agent Model}{19}{section.3.1}
-\contentsline {section}{\numberline {3.2}The Problem}{20}{section.3.2}
-\contentsline {section}{\numberline {3.3}The Team of Agents}{21}{section.3.3}
-\contentsline {section}{\numberline {3.4}Complexity}{23}{section.3.4}
-\contentsline {section}{\numberline {3.5}The Topology}{23}{section.3.5}
-\contentsline {section}{\numberline {3.6}General Strategy}{25}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Phase 1: Exploring and Shadowing}{26}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Phase 2: Surrounding and Eliminating}{28}{subsection.3.6.2}
-\contentsline {section}{\numberline {3.7}Conclusions}{31}{section.3.7}
+\contentsline {section}{\numberline {3.1}Model}{19}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Network, Agent, Black Virus}{19}{subsection.3.1.1}
+\contentsline {paragraph}{Network}{19}{section*.13}
+\contentsline {section}{\numberline {3.2}Synchrony}{19}{section.3.2}
+\contentsline {section}{\numberline {3.3}The Agent Model}{20}{section.3.3}
+\contentsline {section}{\numberline {3.4}The Problem}{21}{section.3.4}
+\contentsline {section}{\numberline {3.5}The Team of Agents}{22}{section.3.5}
+\contentsline {section}{\numberline {3.6}Complexity}{23}{section.3.6}
+\contentsline {section}{\numberline {3.7}The Topology}{24}{section.3.7}
+\contentsline {section}{\numberline {3.8}General Strategy}{26}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}Phase 1: Exploring and Shadowing}{26}{subsection.3.8.1}
+\contentsline {subsection}{\numberline {3.8.2}Phase 2: Surrounding and Eliminating}{29}{subsection.3.8.2}
+\contentsline {section}{\numberline {3.9}Conclusions}{31}{section.3.9}
 \contentsline {chapter}{\numberline {4}Black Virus Disinfection in Double Loops}{32}{chapter.4}
 \contentsline {section}{\numberline {4.1}Exploring and Shadowing}{33}{section.4.1}
 \contentsline {section}{\numberline {4.2}Surrounding and Eliminating}{35}{section.4.2}
@@ -69,5 +72,5 @@
 \contentsline {section}{\numberline {7.2}Surrounding and Eliminating}{122}{section.7.2}
 \contentsline {section}{\numberline {7.3}Conclusion}{128}{section.7.3}
 \contentsline {chapter}{\numberline {8}Conclusion}{130}{chapter.8}
-\contentsline {chapter}{APPENDICES}{138}{appendix*.14}
+\contentsline {chapter}{APPENDICES}{138}{appendix*.15}
 \contentsline {chapter}{\numberline {A}Detailed Paths Analysis in Triple Loops}{139}{appendix.A}
