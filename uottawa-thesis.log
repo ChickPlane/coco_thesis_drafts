@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  27 OCT 2017 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  28 OCT 2017 17:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1196,16 +1196,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-] [5]
-[6])
+] [5])
 \tf@toc=\write5
 \openout5 = `uottawa-thesis.toc'.
 
- [7] (./uottawa-thesis.lot)
+
+[6] (./uottawa-thesis.lot)
 \tf@lot=\write6
 \openout6 = `uottawa-thesis.lot'.
 
- [8
+ [7
 
 
 
@@ -1214,7 +1214,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@lof=\write7
 \openout7 = `uottawa-thesis.lof'.
 
- [9
+ [8
 
 
 
@@ -1423,7 +1423,7 @@ Chapter 4.
 [17
 
 
-] [18] [19] [20] <figures/dloop_seg.jpg, id=504, 859.21pt x 601.24625pt>
+] [18] [19] [20] <figures/dloop_seg.jpg, id=438, 859.21pt x 601.24625pt>
 File: figures/dloop_seg.jpg Graphic file (type jpg)
 
 <use figures/dloop_seg.jpg>
@@ -1448,7 +1448,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 368--370
 
  []
 
-[26] [27] [28] [29] <figures/dloop_window2.jpg, id=548, 654.445pt x 654.445pt>
+[26] [27] [28] [29] <figures/dloop_window2.jpg, id=483, 654.445pt x 654.445pt>
 File: figures/dloop_window2.jpg Graphic file (type jpg)
 
 <use figures/dloop_window2.jpg>
@@ -1475,49 +1475,49 @@ Chapter 5.
 [49
 
 
-] [50] [51] [52] <figures/tloop_seg.jpg, id=669, 859.21pt x 627.34375pt>
+] [50] [51] <figures/tloop_seg.jpg, id=598, 859.21pt x 627.34375pt>
 File: figures/tloop_seg.jpg Graphic file (type jpg)
 
 <use figures/tloop_seg.jpg>
-Package pdftex.def Info: figures/tloop_seg.jpg used on input line 199.
+Package pdftex.def Info: figures/tloop_seg.jpg used on input line 124.
 (pdftex.def)             Requested size: 276.43555pt x 201.83578pt.
- [53] [54 <./figures/tloop_seg.jpg>] [55]
-Overfull \hbox (3.25925pt too wide) in paragraph at lines 244--246
+ [52] [53 <./figures/tloop_seg.jpg>] [54]
+Overfull \hbox (3.25925pt too wide) in paragraph at lines 169--171
 \OT1/cmr/m/n/12 guarded by $\OML/cmm/m/it/12 SH$\OT1/cmr/m/n/12 s. Sub-se-quent
 ly, in ad-di-tion to the $\OML/cmm/m/it/12 SH$ \OT1/cmr/m/n/12 at $\OML/cmm/m/i
 t/12 x[]; x[]; x[]; x[]$\OT1/cmr/m/n/12 ,
  []
 
-[56] [57] [58] [59] [60]
+[55] [56] [57] [58] [59]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 415.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 415.
+(hyperref)                removing `math shift' on input line 340.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 415.
-
-[61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 978.
+(hyperref)                removing `subscript' on input line 340.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 978.
+(hyperref)                removing `math shift' on input line 340.
+
+[60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 903.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 978.
+(hyperref)                removing `subscript' on input line 903.
 
-[76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90]
-[91]) (./parts/chapter6.tex [92]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 903.
+
+[75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89]
+[90]) (./parts/chapter6.tex [91]
 Chapter 6.
-[93
+[92
 
 
 ]
@@ -1525,20 +1525,20 @@ Overfull \hbox (8.09685pt too wide) in paragraph at lines 71--72
  [] 
  []
 
-[94] [95] <figures/cloop_seg.jpg, id=877, 859.21pt x 666.49pt>
+[93] [94] <figures/cloop_seg.jpg, id=809, 859.21pt x 666.49pt>
 File: figures/cloop_seg.jpg Graphic file (type jpg)
 
 <use figures/cloop_seg.jpg>
 Package pdftex.def Info: figures/cloop_seg.jpg used on input line 188.
 (pdftex.def)             Requested size: 276.43555pt x 214.43034pt.
- [96] [97 <./figures/cloop_seg.jpg>] [98]
-<figures/onedirec_cloop.jpg, id=892, 1147.28625pt x 1198.4775pt>
+ [95] [96 <./figures/cloop_seg.jpg>] [97]
+<figures/onedirec_cloop.jpg, id=826, 1147.28625pt x 1198.4775pt>
 File: figures/onedirec_cloop.jpg Graphic file (type jpg)
 
 <use figures/onedirec_cloop.jpg>
 Package pdftex.def Info: figures/onedirec_cloop.jpg used on input line 268.
 (pdftex.def)             Requested size: 230.36061pt x 240.6239pt.
- [99] [100 <./figures/onedirec_cloop.jpg>]
+ [98] [99 <./figures/onedirec_cloop.jpg>]
 Overfull \hbox (1.59116pt too wide) in paragraph at lines 347--348
 [][]\OT1/cmr/bx/n/12 Theorem 33. []\OT1/cmr/m/it/12 In any consecutive-chords r
 ing $\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2
@@ -1547,7 +1547,7 @@ ing $\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2
 it/12 , when $\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 S[]\OMS/cmsy/m/n/12 j ^^U
  []
 
-[101]
+[100]
 Overfull \hbox (1.39659pt too wide) in paragraph at lines 388--389
 [][]\OT1/cmr/bx/n/12 Theorem 34. []\OT1/cmr/m/it/12 In any consecutive-chords r
 ing $\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2
@@ -1564,7 +1564,7 @@ nd and elim-i-nate the black viruses is $\OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12
 k\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 d[]e\OT1/cmr/m/n/12 ) +
  []
 
-[102]
+[101]
 Overfull \hbox (9.2429pt too wide) in paragraph at lines 393--394
 \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 x[]; x[]; x[]; :::; x[]\OMS/cmsy/m/n/12 g$\O
 T1/cmr/m/n/12 , there are more nodes to be guarded: $\OMS/cmsy/m/n/12 f\OML/cmm
@@ -1576,39 +1576,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 408--410
 
  []
 
-[103] [104]
+[102] [103]
 Overfull \hbox (18.16516pt too wide) in paragraph at lines 461--462
  [] 
  []
 
-) (./parts/chapter7.tex [105]
+) (./parts/chapter7.tex [104]
 Chapter 7.
-[106
+[105
 
 
-] [107] <figures/general_algo.jpg, id=956, 1599.9775pt x 1625.07124pt>
+] [106] <figures/general_algo.jpg, id=888, 1599.9775pt x 1625.07124pt>
 File: figures/general_algo.jpg Graphic file (type jpg)
 
 <use figures/general_algo.jpg>
 Package pdftex.def Info: figures/general_algo.jpg used on input line 126.
 (pdftex.def)             Requested size: 230.36061pt x 233.95552pt.
- [108] [109 <./figures/general_algo.jpg>]
+ [107] [108 <./figures/general_algo.jpg>]
 Overfull \hbox (23.80247pt too wide) in paragraph at lines 210--211
  [] 
  []
 
-[110] [111] [112] [113]) (./parts/chapter8.tex [114]
+[109] [110] [111] [112]) (./parts/chapter8.tex [113]
 Chapter 8.
-[115
+[114
 
 
-] [116] [117]) [118] (./uottawa-thesis.bbl [119
+] [115] [116]) [117] (./uottawa-thesis.bbl [118
 
 
 
 
-] [120] [121]) [122]
-[123
+] [119] [120]) [121]
+[122
 
 
 ]
@@ -1621,16 +1621,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
-[124
+[123
 
 
 
-] [125] [126] [127] [128] [129]
+] [124] [125] [126] [127] [128]
 Underfull \hbox (badness 10000) in paragraph at lines 231--233
 
  []
 
-[130] [131]) [132]
+[129] [130]) [131]
 
 Package natbib Warning: There were undefined citations.
 
@@ -1646,62 +1646,29 @@ Package rerunfilecheck Warning: File `uottawa-thesis.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `uottawa-thesis.out':
-(rerunfilecheck)             Before: 663FFD8EC358CACF5507F867BFCE2A9A;4002
-(rerunfilecheck)             After:  712847880EFB102167D5BD37A2407718;3403.
+(rerunfilecheck)             Before: 54AF903DB5E025AC6023CB570B537F94;3326
+(rerunfilecheck)             After:  2CA31A4CC8185A867E127A9FE413E51D;3393.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 232.
  ) 
 Here is how much of TeX's memory you used:
- 10481 strings out of 492995
- 150579 string characters out of 6132704
- 266048 words of memory out of 5000000
- 13422 multiletter control sequences out of 15000+600000
+ 10456 strings out of 492995
+ 150279 string characters out of 6132704
+ 264855 words of memory out of 5000000
+ 13410 multiletter control sequences out of 15000+600000
  15233 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  30i,18n,31p,2402b,586s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{figure.3.5} has been referenced but does not exis
-t, replaced by a fixed one
+pdfTeX warning (dest): name{subsubsection.5.1.1.1} has been referenced but do
+es not exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{figure.3.4} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.3} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.2} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.3.1} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.10} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.9.2} has been referenced but does not 
+pdfTeX warning (dest): name{subsection.5.2.2} has been referenced but does not 
 exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{subsection.3.9.1} has been referenced but does not 
+pdfTeX warning (dest): name{subsection.5.1.1} has been referenced but does not 
 exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.9} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.8} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.7} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.6} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.5} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.4} has been referenced but does not exist
-, replaced by a fixed one
 
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
@@ -1722,10 +1689,10 @@ e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2017/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/201
 7/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on uottawa-thesis.pdf (141 pages, 932858 bytes).
+Output written on uottawa-thesis.pdf (139 pages, 929873 bytes).
 PDF statistics:
- 1235 PDF objects out of 1440 (max. 8388607)
- 1057 compressed objects within 11 object streams
- 334 named destinations out of 1000 (max. 500000)
- 503 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1165 PDF objects out of 1200 (max. 8388607)
+ 990 compressed objects within 10 object streams
+ 321 named destinations out of 1000 (max. 500000)
+ 423 words of extra memory for PDF output out of 10000 (max. 10000000)
 

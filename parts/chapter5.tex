@@ -7,96 +7,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
  
 
+\section{Introduction}
+In this chapter, we discuss parallel strategy on BVD problem in chordal ring. A chordal ring is a circulant graph with $d_1=1$, i.e., it is an augmented ring, and will be denoted by $C_n(1, d_2, ..., d_k)$. More specifically, in chordal ring each node is directly connected to the nodes at distance $d_i$ and $n-d_i$ by additional links called chords. The link connecting two nodes is labeled by the distance that separate these two nodes on the ring. For convenience, if we say the agents or the clones move along chord $i$, then they actually move along $d_i$. If we say the agents or the clones move $i$, then they actually move along chord $d_x$ with its length equal to $i$. Let us donated by $d$ the half degree of the chordal ring (for example, for the chordal ring structure $C_n(1,2,4,5)$, $d=4$), by $l$ the length of the longest chord of the chordal ring (for example, for the chordal ring structure $C_n(1,2,4,5)$, $l=5$). In order to simplify the process, we assume that all the nodes in the network are marked with a number: the starting point is marked 0, then the second node is marked 1... Our goal is to minimize the time to complete the whole decontamination process and at the same time the casualties (number of agents destroyed by the BV) In order to do that, we propose parallel strategy for decontaminating the chordal ring.
+In the elimination phase, we propose two strategies to surround the neighbours of the clones sequentially and parallelly. In the parallel case, an tricky situation might happen: supposing that the sites of the two clones are connected, in this case, after these two clones are triggered, one of their clones spread to another sites and since the agents sent to destroy them die, these two sites are empty when the second round clones arrive, which make our decontamination invalid. In order to solve this problem, we make an assumption when we talk about parallel strategy in elimination phase in chordal rings: when a BV is trigger at $T_i$, it take negligible time for its clones to move to all its neighbours, for example, at $T_i$. 
 
-In this chapter, the process of locating and clearing the {\it Black Virus} using agents is considered in the shortly chorded {\it triple loop} chordal ring $C_n(1,p,k)$, where $1<p<<k$ and $k <<n$,  in a {\it synchronous} environment.  Thee {\it triple loop}   is a    ring of $n$ nodes $v_0, \ldots v_{n-1}$, where each node is connected to four additional neighbours at a distance of $p$ and $k$. Thus, the neighbourhood of node $v_i$ is obtained using: $N(v_{i})=\{v_{i\pm1},v_{i\pm p},v_{i\pm k}\}$.
+\section{Shadowed Exploration}
+\noindent{\bf Initialization }
+The chordal ring is a complete symmetrical structure, so we can randomly choose a node $x_0$ as the start node. Initially, we place $2d$ agents at node 0, 1, ?, $2d-1$ (first round). Agents residing in nodes from $0$ to $d-1$ are in shadowing group, while from $d$ to $2d-1$ are in exploring group. If none of the agent is destroyed, we then place $d$ agents at nodes 0,1, ..., $d-1$ (second round). If not, we can easily know the location of the BV and employ agents to surround the new formed BVs, then destroy them permanently. Only the agents employed in the first round move in the exploring phase. The agents employed in the second round remain dormant, guarding the nodes to guarantee the monotone. 
+\noindent{\bf Route of the agent in exploring phase}
 
-The exploration phase used to detect the black virus is the same as the one described for the double loop. We will see in this chapter that the surrounding phase, cannot be done using a local greedy algorithm for triple loops. Instead, we propose the use of a non-local move-optimal algorithm directed by the leader. 
-Because of the complicated nature of exhaustively considering all possible combinations of  $p$ an $k$ in the general case, we only provided the upper bounds of the optimal path lengths for the surrounding phase. We did however provide exact bounds for   special  triple loops  corresponding to two   extreme situations: $C_n(1,2,k)$   and $C_n(1,k-1,k)$.   
+\noindent{\bf Three Jump Notifying Technique}
+\noindent{\bf Safe Exploring with Three Jump Notifying Technique}
 
- 
-
-% As for all the other topologies,  the exploration team locates the  {\it black virus}, then surrounding agents are sent to surround the newly created viruses  and to eliminate them in order to disinfect  the whole topology.
-
-%We investigate several variants of the main strategy, depending on the routing procedure followed to surround the new triggered viruses.
-%We evaluate the complexity 
-% by considering the  overall number of agents employed, $Size(C)$, the total number of black viruses, $Spread(C)$, and the number of moves, $Move(C)$.
-
-  
- 
-
-
-\begin{comment}
-\begin{center}
-  \begin{tabular}{|c|c|c|c|}
- \hline
-   Triple Loop      & Casualties & Agents & Moves    \\
- &W.C&W.C&Corresponding\\
- \hline
- Move-Optimal   &  ?  & ? & $?$  \\ %$4n-6$  \\ %3k-5 to reach node k-1 then phase 2=35 since it's %shortlychorded and s_area<k
- \hline
- Greedy   &  ? & ? &   $?$\\
- \hline
- Smart Greedy   &  ? & ? &   $?$ \\
- \hline
- \end{tabular} 
- \end{center}
-\end{comment}
-
-%#################################################################
- 
-
-
-
-\section{Triple Loops}
-In this section we discuss triple loop chordal rings $C_n(1,p,k)$ with arbitrary numbers of $p$, $k$ and $k<<n$.
-\subsection{Exploring and Shadowing}
-
-As previously explained in the double loop section, this phase is fixed regardless of the surrounding method or the structure of the chords.
-The $LEA$ and $EA$ agents explore each node on the outer ring in a clockwise fashion  using the {\em safe exploration} technique.
-In order to achieve monotonicity and  diminish the effect of the $BV$,  shadow agents are deployed to guard the explored neighbours of the next node to be visited. This cannot happen unless $LEA$ and $EA$ have passed through at least $p$ nodes. In other words, if the safe area is $\ge p$. 
-  
-The correctness of this phase stems from the fact that the exploring team follows the outer ring and that $EA$ always precedes $LEA$, so that the \bv is eventually detected in a monotone fashion. As we discussed in \ref{monotone_ph1},  monotonicity is achieved since the maximum number of $SH$s recruited from the beginning is five (i.e., as many as the number of neighbours in the worst case $v=n-1$).
- \begin{center}
-\fbox{
-\begin{minipage}{6cm}
-{\sc  Exploring and Shadowing}
-
-  \begin{tabbing}
-let $HB= v_0$ \\
-  Age\= nts $EA $ and $$LEA$$ at safe node  $v_i$.\\
-\\
-if ($1\leq i+1 <p$)\\
-\>   $N_{ex}(v_{i+1}) = \{ v_{i}\}$ \\
-\>   no $SH$ is deployed  \\ 
-
-if ($p \leq i+1 < k$)\\
-\>   $N_{ex}(v_{i+1}) = \{ v_{i},v_{i+1-p} \}$ \\
-\>  1 $SH$ is deployed to protect $v_{i+1-p}$\\ 
-
-if ($k \leq i+1 < n-k$)\\
-\>   $N_{ex}(v_{i+1}) = \{ v_{i},v_{i+1-p},v_{i+1-k} \}$ \\
-\>  2 $SH$s are deployed to protect $v_{i+1-p},v_{i+1-k}$\\ 
-
-if ($n-k \leq i+1 < n-p$)\\
-\>   $N_{ex}(v_{i+1}) = \{ v_{i},v_{i+1-p},v_{i+1-k},v_{i+1+k} \}$ \\
-\>  3 $SH$s are deployed to protect $v_{i+1-p},v_{i+1-k},v_{i+1+k}$\\ 
-
-if ($n-p \leq i+1 < n-1$)\\
-\>   $N_{ex}(v_{i+1}) = \{ v_{i},v_{i+1-p},v_{i+1-k},v_{i+1+k},v_{i+1+p} \}$ \\
-\>  $4$ $SH$s are deployed to protect $v_{i+1-p},v_{i+1-k},v_{i+1+k},v_{i+1+p}$\\ 
-
-
-if ($i= n-2$)\\
-\>   $N_{ex}(v_{i+1}) =  \{ v_{i},v_{i+1-p},v_{i+1-k},v_{i+1+k},v_{i+1+p},v_{0} \}$ \\
-\>  $5$ $SH$s are deployed to protect $v_{i+1-p},v_{i+1-k},v_{i+1+k},v_{i+1+p},v_{0}$\\ \\
- EA moves to $v_{i+1}$.\\ 
- \end{tabbing}
-\end{minipage}
-}
-\end{center}
-
-
-\noindent After employing this strategy we made the following observations: 
+ \noindent After employing this strategy we made the following observations: 
 \begin{theorem}
 In the worst case scenario, the \bv is detected in $5n-9$ moves.
  
