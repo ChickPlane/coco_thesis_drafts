@@ -19,11 +19,48 @@ The chordal ring is a complete symmetrical structure, so we can randomly choose 
 \noindent{\bf Route of the agent in exploring phase}
 We separate the time of exploring phase into two part: moving time and notice time. In the whole phase of exploring phase, they are arranged as below: $T_{move\_1}$, $T_{notice\_1}$, $T_{notice\_1'}$, $T_{notice\_1''}$, $T_{move\_2}$, $T_{notice\_2}$, $T_{notice\_2'}$, $T_{notice\_2''}$ ...More specifically, every cycle contains one unit of time for moving and three units of time for notice. We discuss why we arrange the time as above and what exactly the agents do in the notice time later. 
 
-In chord ring $C_n(1, d_2, ..., d_k)$, all the agents in the array move along their longest chord $d_k$ in $T_{move\_i}$. That is, agents move along $d_k$ in $T=1+4t$ $(t\in \mathbb{N})$. 
-% An example of how agents move in chordal ring C<1,2,4,5> at $T_{move\_i}$ in exploring phase is shown in Fig.1. In this report, in some case for convenience, we consider the chordal ring as arranged in rows of dk where the last node of a row is connected to the first node of the following row and the last node is connected to the first. Depending on the size of the chordal, the last row could be incomplete. So in this matrix, moving down a column corresponding to using the longest chord dk. In the ?matrix?, we also mark the number of nodes.
-\noindent{\bf Three Jump Notifying Technique}
+In chord ring $C_n(1, d_2, ..., d_k)$, all the agents in the array move along their longest chord $d_k$ in $T_{move\_i}$. That is, agents move along $d_k$ in $T=1+4t$ $(t\in \mathbb{N})$.  An example of how agents move in chordal ring $C_n(1, 2 , 4, 5)$ at $T_{move\_i}$ in exploring phase is shown in figure \ref{fig:chordal_a_l, chordal_a1_l}. For our convenience, in some case, we consider the chordal ring as arranged in rows of $d_k$ where the last node of a row is connected to the first node of the following row and the last node is connected to the first. Depending on the size of the chordal, the last row could be incomplete. So in this matrix, moving down a column corresponding to using the longest chord $d_k$. In the matrix, we also mark the number of nodes.
 
-\noindent{\bf Safe Exploring with Three Jump Notifying Technique}
+\begin{figure} [H]
+  \centering 
+  \subfigure[Arrangement of agents at $T_{move\_i}$]{ 
+    \label{fig:subfig:a} %% label for first subfigure 
+    \includegraphics[width=3.0in]{figures/chordal_a_l.jpg}} 
+  \hspace{1in} 
+  \subfigure[Arrangement of agents at $T_{move\_{i+1}}$]{ 
+    \label{fig:subfig:b} %% label for second subfigure 
+    \includegraphics[width=3.0in]{figures/chordal_a1_l.jpg}}
+  \caption{Arrangement of agents when moving} 
+  \label{fig:subfig} %% label for entire figure 
+\end{figure}
+
+\noindent{\bf Three Jump NotificationTechnique}
+In the model of BV decontamination exploring the network sequentially, explore agent moves forward for one step. If the node is safe, it move back to the leader agent, and then move forward to the safe node together. In this case, if the leader agent does not meet the leader in next $T$ after it moves forward, the leader agent learns that the original BV resides in the next node so it stop moving. But in our model, we employ $2d$ agents in the exploring phase, if they are not properly informed when one agent is destroyed by BV, in their next step of moving, some of them may be destroyed by the new formed BVs. In order to avoid the casualties, we propose $Three\,Jump\,Notification\,Technique$ to properly notice the agents who will move to the new formed BVs.
+For convenience, let us take the node where the original BV resides as the original of the one-dimensional coordinate system. In a chordal ring $C_n(1, d_2, \ldots,  d_k)$, if the original BV is triggered, the clones of it spread to nodes whose coordinates are $-d_k$, $-d_{k-1}$, \ldots, $-d_2$, $-1$, $1$, $d_2$, \ldots, $d_{k-1}$, $d_k$. Obviously the nodes whose coordinates are $1$, $d_2$, \dots, $d_{k-1}$, $d_k$ may become the BV (Possible BV Nodes) now, our goal is to notify the agents which will move to these nodes to stop (Risky Agent). The coordinates of them are $1- d_k$, $d_2-d_k$, \ldots, $d_{k-1}-d_k$, $d_k-d_k$ (which is exactly the coordinate of the original BV) respectively. It is obvious that not all of the nodes from $1$ to $d_k$ become BV nodes after the triggering because there might be some agents already there, but since notifying all the $Risky\,Agents$(RAs) does not add more cost comparing to notifying some of them, in our strategy, we notify all of the RAs. Let us donate one of the Possible BV Nodes by $d_i$, and in our $ Three\,Jump\,Notification\,Technique$, agent residing in node $-d_i$ (Notification Agent) is employed to notify the agent residing in node $-d_k+\left |d_i\right |$ (RA) who will move to the BV node. 
+
+We show that $Notification\,Agent$ are able to meet $Risky\,Agent$ in three steps: $-d_i\xrightarrow[]{move\left | d_i \right |}0\xrightarrow[]{move\,along\,chord\,k}-d_k\xrightarrow[]{move\,\left | d_i \right |}-d_k+\left|d_i\right|$. In this case, the notifying route of the $Notification\,\\Agent$ whose coordinate is $-d_k$ is $-d_k{\rightarrow}0{\rightarrow}-d_k{\rightarrow}0$ . We would make some modification in the $Surrounding\,and\,Elimination$ phase, but now let us assume it still follow the route above. The whole process of $Three\,Jump\,Notification\, Technique$ in chordal ring $C_n(1, 2, 4, 5)$ is shown in figure \ref{fig:tjt1, tjt2, tjt3, tjt4}. 
+
+\begin{figure} [H]
+  \centering 
+  \subfigure[Arrangement of agents at $T_{move_i}$]{ 
+    \label{fig:subfig:a} %% label for first subfigure 
+    \includegraphics[width=2.5in]{figures/tjt1.png}} 
+  \hspace{1in} 
+  \subfigure[Arrangement of agents at $T_{notification_i}$]{ 
+    \label{fig:subfig:b} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/tjt2.png}} \
+  \hspace{1in} 
+  \subfigure[Arrangement of agents at $T_{notification_i'}$]{ 
+    \label{fig:subfig:c} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/tjt3.png}} 
+  \hspace{1in} 
+  \subfigure[Arrangement of agents at $T_{notification_i''}$]{ 
+    \label{fig:subfig:d} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/tjt4.png}} 
+  \caption{The whole process of the Three Notifying Technique in chordal ring $C_n{1, 2, 4, 5}$} 
+  \label{fig:subfig} %% label for entire figure 
+\end{figure}
+\noindent{\bf Safe Exploring with Three Jump Notifying Technique}
 
 
  \noindent After employing this strategy we made the following observations: 

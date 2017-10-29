@@ -34,29 +34,29 @@
 \contentsline {chapter}{\numberline {5}Black Virus Disinfection in Triple Loops}{49}{chapter.5}
 \contentsline {section}{\numberline {5.1}Introduction}{49}{section.5.1}
 \contentsline {section}{\numberline {5.2}Shadowed Exploration}{50}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Surrounding and Eliminating}{52}{subsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.1.1}\bf Greedy Deployment.}{55}{subsubsection.5.2.1.1}
-\contentsline {subsubsection}{\numberline {5.2.1.2}\bf Move-Optimal Deployment.}{56}{subsubsection.5.2.1.2}
-\contentsline {section}{\numberline {5.3}Triple Loops: the Case of $C_n(1,2,k)$ }{60}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Exploring and Shadowing}{60}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Surrounding and Eliminating}{62}{subsection.5.3.2}
-\contentsline {subsubsection}{\numberline {5.3.2.1}Move-Optimal Deployment}{66}{subsubsection.5.3.2.1}
-\contentsline {subsubsection}{\numberline {5.3.2.2}On Optimality and Other Observations}{75}{subsubsection.5.3.2.2}
-\contentsline {section}{\numberline {5.4} Triple Loops: the Case of $C_n(1,k-1,k)$}{75}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Exploring and Shadowing}{75}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Surrounding and Eliminating}{77}{subsection.5.4.2}
-\contentsline {subsubsection}{\numberline {5.4.2.1}Move-Optimal Deployment}{81}{subsubsection.5.4.2.1}
-\contentsline {subsubsection}{\numberline {5.4.2.2}On Optimality and Other Observations}{88}{subsubsection.5.4.2.2}
-\contentsline {section}{\numberline {5.5}Discussion and Comparisons}{89}{section.5.5}
-\contentsline {section}{\numberline {5.6}Conclusion}{90}{section.5.6}
-\contentsline {chapter}{\numberline {6}Black Virus Disinfection in Consecutive-Chords Rings}{92}{chapter.6}
-\contentsline {section}{\numberline {6.1}Exploring and Shadowing}{93}{section.6.1}
-\contentsline {section}{\numberline {6.2}Surrounding and Eliminating}{94}{section.6.2}
-\contentsline {section}{\numberline {6.3}Conclusion }{103}{section.6.3}
-\contentsline {chapter}{\numberline {7}General Chordal Rings}{105}{chapter.7}
-\contentsline {section}{\numberline {7.1}Exploring and Shadowing}{105}{section.7.1}
-\contentsline {section}{\numberline {7.2}Surrounding and Eliminating}{106}{section.7.2}
-\contentsline {section}{\numberline {7.3}Conclusion}{112}{section.7.3}
-\contentsline {chapter}{\numberline {8}Conclusion}{114}{chapter.8}
-\contentsline {chapter}{APPENDICES}{122}{appendix*.11}
-\contentsline {chapter}{\numberline {A}Detailed Paths Analysis in Triple Loops}{123}{appendix.A}
+\contentsline {subsection}{\numberline {5.2.1}Surrounding and Eliminating}{53}{subsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.1.1}\bf Greedy Deployment.}{57}{subsubsection.5.2.1.1}
+\contentsline {subsubsection}{\numberline {5.2.1.2}\bf Move-Optimal Deployment.}{58}{subsubsection.5.2.1.2}
+\contentsline {section}{\numberline {5.3}Triple Loops: the Case of $C_n(1,2,k)$ }{62}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Exploring and Shadowing}{62}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Surrounding and Eliminating}{64}{subsection.5.3.2}
+\contentsline {subsubsection}{\numberline {5.3.2.1}Move-Optimal Deployment}{68}{subsubsection.5.3.2.1}
+\contentsline {subsubsection}{\numberline {5.3.2.2}On Optimality and Other Observations}{77}{subsubsection.5.3.2.2}
+\contentsline {section}{\numberline {5.4} Triple Loops: the Case of $C_n(1,k-1,k)$}{77}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Exploring and Shadowing}{77}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Surrounding and Eliminating}{79}{subsection.5.4.2}
+\contentsline {subsubsection}{\numberline {5.4.2.1}Move-Optimal Deployment}{83}{subsubsection.5.4.2.1}
+\contentsline {subsubsection}{\numberline {5.4.2.2}On Optimality and Other Observations}{90}{subsubsection.5.4.2.2}
+\contentsline {section}{\numberline {5.5}Discussion and Comparisons}{91}{section.5.5}
+\contentsline {section}{\numberline {5.6}Conclusion}{92}{section.5.6}
+\contentsline {chapter}{\numberline {6}Black Virus Disinfection in Consecutive-Chords Rings}{94}{chapter.6}
+\contentsline {section}{\numberline {6.1}Exploring and Shadowing}{95}{section.6.1}
+\contentsline {section}{\numberline {6.2}Surrounding and Eliminating}{96}{section.6.2}
+\contentsline {section}{\numberline {6.3}Conclusion }{105}{section.6.3}
+\contentsline {chapter}{\numberline {7}General Chordal Rings}{107}{chapter.7}
+\contentsline {section}{\numberline {7.1}Exploring and Shadowing}{107}{section.7.1}
+\contentsline {section}{\numberline {7.2}Surrounding and Eliminating}{108}{section.7.2}
+\contentsline {section}{\numberline {7.3}Conclusion}{114}{section.7.3}
+\contentsline {chapter}{\numberline {8}Conclusion}{116}{chapter.8}
+\contentsline {chapter}{APPENDICES}{124}{appendix*.11}
+\contentsline {chapter}{\numberline {A}Detailed Paths Analysis in Triple Loops}{125}{appendix.A}
