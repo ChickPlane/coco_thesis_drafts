@@ -5,7 +5,12 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Dividing the double loop into three segments.}}{22}{figure.4.1}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Dividing the outer ring into 4 windows of size $k+1$.}}{30}{figure.4.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Dividing the triple loop into five segments.}}{53}{figure.5.1}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Two Subfigures}}{52}{figure.5.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Small Box with a Long Caption}}}{52}{figure.5.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Big Box}}}{52}{figure.5.1}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Big Box222}}}{52}{figure.5.1}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Big Box333}}}{52}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Dividing the triple loop into five segments.}}{53}{figure.5.2}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Dividing the consecutive-chords into four segments.}}{96}{figure.6.1}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces \relax \fontsize {10.95}{13.6}\selectfont \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {An example of One-direction strategy where red links show the paths to the targets.}}}{99}{figure.6.2}

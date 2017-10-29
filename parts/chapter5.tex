@@ -8,18 +8,25 @@
  
 
 \section{Introduction}
-In this chapter, we discuss parallel strategy on BVD problem in chordal ring. A chordal ring is a circulant graph with $d_1=1$, i.e., it is an augmented ring, and will be denoted by $C_n(1, d_2, ..., d_k)$. More specifically, in chordal ring each node is directly connected to the nodes at distance $d_i$ and $n-d_i$ by additional links called chords. The link connecting two nodes is labeled by the distance that separate these two nodes on the ring. For convenience, if we say the agents or the clones move along chord $i$, then they actually move along $d_i$. If we say the agents or the clones move $i$, then they actually move along chord $d_x$ with its length equal to $i$. Let us donated by $d$ the half degree of the chordal ring (for example, for the chordal ring structure $C_n(1,2,4,5)$, $d=4$), by $l$ the length of the longest chord of the chordal ring (for example, for the chordal ring structure $C_n(1,2,4,5)$, $l=5$). In order to simplify the process, we assume that all the nodes in the network are marked with a number: the starting point is marked 0, then the second node is marked 1... Our goal is to minimize the time to complete the whole decontamination process and at the same time the casualties (number of agents destroyed by the BV) In order to do that, we propose parallel strategy for decontaminating the chordal ring.
+In this chapter, we discuss parallel strategy on BVD problem in chordal ring. A chordal ring is a circulant graph with $d_1=1$, i.e., it is an augmented ring, and will be denoted by $C_n(1, d_2, ..., d_k)$. More specifically, in chordal ring each node is directly connected to the nodes at distance $d_i$ and $n-d_i$ by additional links called chords. The link connecting two nodes is labeled by the distance that separate these two nodes on the ring. 
+For convenience, if we say the agents or the clones move along chord $i$, then they actually move along $d_i$. If we say the agents or the clones move $i$, then they actually move along chord $d_x$ with its length equal to $i$. Let us donated by $d$ the half degree of the chordal ring (for example, for the chordal ring structure $C_n(1,2,4,5)$, $d=4$), by $l$ the length of the longest chord of the chordal ring (for example, for the chordal ring structure $C_n(1,2,4,5)$, $l=5$). In order to simplify the process, we assume that all the nodes in the network are marked with a number: the starting point is marked 0, then the second node is marked 1... Our goal is to minimize the time to complete the whole decontamination process and at the same time the casualties (number of agents destroyed by the BV) In order to do that, we propose parallel strategy for decontaminating the chordal ring.
 In the elimination phase, we propose two strategies to surround the neighbours of the clones sequentially and parallelly. In the parallel case, an tricky situation might happen: supposing that the sites of the two clones are connected, in this case, after these two clones are triggered, one of their clones spread to another sites and since the agents sent to destroy them die, these two sites are empty when the second round clones arrive, which make our decontamination invalid. In order to solve this problem, we make an assumption when we talk about parallel strategy in elimination phase in chordal rings: when a BV is trigger at $T_i$, it take negligible time for its clones to move to all its neighbours, for example, at $T_i$. 
 
 \section{Shadowed Exploration}
 \noindent{\bf Initialization }
 The chordal ring is a complete symmetrical structure, so we can randomly choose a node $x_0$ as the start node. Initially, we place $2d$ agents at node 0, 1, ?, $2d-1$ (first round). Agents residing in nodes from $0$ to $d-1$ are in shadowing group, while from $d$ to $2d-1$ are in exploring group. If none of the agent is destroyed, we then place $d$ agents at nodes 0,1, ..., $d-1$ (second round). If not, we can easily know the location of the BV and employ agents to surround the new formed BVs, then destroy them permanently. Only the agents employed in the first round move in the exploring phase. The agents employed in the second round remain dormant, guarding the nodes to guarantee the monotone. 
-\noindent{\bf Route of the agent in exploring phase}
 
+\noindent{\bf Route of the agent in exploring phase}
+We separate the time of exploring phase into two part: moving time and notice time. In the whole phase of exploring phase, they are arranged as below: $T_{move\_1}$, $T_{notice\_1}$, $T_{notice\_1'}$, $T_{notice\_1''}$, $T_{move\_2}$, $T_{notice\_2}$, $T_{notice\_2'}$, $T_{notice\_2''}$ ...More specifically, every cycle contains one unit of time for moving and three units of time for notice. We discuss why we arrange the time as above and what exactly the agents do in the notice time later. 
+
+In chord ring $C_n(1, d_2, ..., d_k)$, all the agents in the array move along their longest chord $d_k$ in $T_{move\_i}$. That is, agents move along $d_k$ in $T=1+4t$ $(t\in \mathbb{N})$. 
+% An example of how agents move in chordal ring C<1,2,4,5> at $T_{move\_i}$ in exploring phase is shown in Fig.1. In this report, in some case for convenience, we consider the chordal ring as arranged in rows of dk where the last node of a row is connected to the first node of the following row and the last node is connected to the first. Depending on the size of the chordal, the last row could be incomplete. So in this matrix, moving down a column corresponding to using the longest chord dk. In the ?matrix?, we also mark the number of nodes.
 \noindent{\bf Three Jump Notifying Technique}
+
 \noindent{\bf Safe Exploring with Three Jump Notifying Technique}
 
- \noindent After employing this strategy we made the following observations: 
+
+ \noindent After employing this strategy we made the following observations: 
 \begin{theorem}
 In the worst case scenario, the \bv is detected in $5n-9$ moves.
  
@@ -61,62 +68,29 @@ As with double loops, the $LEA$ creates $SA$(s) to be sent to specific targets, 
 
 
 
-  \begin{center}
-\fbox{
-\begin{minipage}{7.5cm}
-{\sc Surrounding and Eliminating} 
-  \begin{tabbing}
-   $$LEA$$ \= and  $SH$s  covering all $N_{ex}(v)$ \\
- $BV$ comes back from $v=x_0$. \\ \\
-
-if ($|S_{area}|<p$) (*$$LEA$$ is covering $x_{-1}$*) \\
- 
-
-  \tab   $N_{un}(x_0) =\{x_{1},x_{p},x_{k},x_{-p},x_{-k} \}$ \\ 
-
-
- if ($p\leq |S_{area}|<k$) (*$$LEA$$ and  $SH$  covering $x_{-1},x_{-p}$*)\\ 
- 
-  \tab   $N_{un}(x_0) =\{x_{1},x_{k},x_{p},x_{-k} \}$ \\ 
-
-if  ($k\leq |S_{area}| <n-k$) (*$$LEA$$ \= and  2$SH$s  covering $x_{-1},x_{-p},x_{-k}$*) \\
-  
-  \tab  $N_{un}(x_0) =\{x_{1},x_{p},x_{k}\}$  \\ 
-
-if  ($n-k\leq |S_{area}| <n-p$) (*$$LEA$$ \= and  $SH$s  covering $x_{-1},x_{-p},x_{-k},x_{k}$*) \\
-
-  \tab  $N_{un}(x_0) =\{x_{1},x_{p},\}$  \\ 
-
-if  ($n-p\leq |S_{area}| <n-1$)(*$$LEA$$ \= and  $SH$s  covering $x_{-1},x_{-p},x_{-k},x_{k},x_{p}$*) \\
-
-  \tab  $N_{un}(x_0) =\{x_{1}\}$  \\ 
-
-
-Else (*$$LEA$$ \= and  $SH$s  covering $x_{-1},x_{-p},x_{-k},x_{k},x_{p},x_1$*) \\
-
-  \tab  $N_{un}(x_0) =\emptyset $ \\ 
-
-   \\
- All $SH$ make one move in the clockwise direction.\\ %when they receive bv, they make 1 move and  stay there
- For \= each $u \in   N_{un}(x_0)$:\\
-\>  {\sc Deploy}  an  agent   to each  $z\in \{N(u)\setminus  N_{un}(x_0)\}$\\
-
-  Wh\=en $N(u)$ is covered:\\
- \> {\sc Deploy} one agent to   $u$
-  \end{tabbing}
-\end{minipage}
-}
-\end{center}
-
-
-
-
-
-  
-
-
-
 For our convenience, we separated the topology into five segments, where the  \bv at ($v_i$) is located in one of those five segments as seen in figure \ref{fig:tloop-seg}.
+
+\begin{figure} 
+  \centering 
+  \subfigure[Small Box with a Long Caption]{ 
+    \label{fig:subfig:a} %% label for first subfigure 
+    \includegraphics[width=1.5in]{figures/tloop_seg.jpg}} 
+  \hspace{1in} 
+  \subfigure[Big Box]{ 
+    \label{fig:subfig:b} %% label for second subfigure 
+    \includegraphics[width=1.5in]{figures/tloop_seg.jpg}} \
+  \hspace{1in} 
+  \subfigure[Big Box222]{ 
+    \label{fig:subfig:b} %% label for second subfigure 
+    \includegraphics[width=1.5in]{figures/tloop_seg.jpg}} 
+  \hspace{1in} 
+  \subfigure[Big Box333]{ 
+    \label{fig:subfig:b} %% label for second subfigure 
+    \includegraphics[width=1.5in]{figures/tloop_seg.jpg}} 
+  \caption{Two Subfigures} 
+  \label{fig:subfig} %% label for entire figure 
+\end{figure}
+
 \begin{figure}[H]
   \centering  
   \includegraphics[width=0.6\textwidth]{figures/tloop_seg.jpg}

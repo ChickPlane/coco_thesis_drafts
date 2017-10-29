@@ -34,7 +34,7 @@
 \contentsline {chapter}{\numberline {5}Black Virus Disinfection in Triple Loops}{49}{chapter.5}
 \contentsline {section}{\numberline {5.1}Introduction}{49}{section.5.1}
 \contentsline {section}{\numberline {5.2}Shadowed Exploration}{50}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Surrounding and Eliminating}{51}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.1}Surrounding and Eliminating}{52}{subsection.5.2.1}
 \contentsline {subsubsection}{\numberline {5.2.1.1}\bf Greedy Deployment.}{55}{subsubsection.5.2.1.1}
 \contentsline {subsubsection}{\numberline {5.2.1.2}\bf Move-Optimal Deployment.}{56}{subsubsection.5.2.1.2}
 \contentsline {section}{\numberline {5.3}Triple Loops: the Case of $C_n(1,2,k)$ }{60}{section.5.3}
