@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  29 OCT 2017 18:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  29 OCT 2017 19:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1583,32 +1583,32 @@ jt4.png>] [53] <figures/tloop_seg.jpg, id=639, 859.21pt x 627.34375pt>
 File: figures/tloop_seg.jpg Graphic file (type jpg)
 
 <use figures/tloop_seg.jpg>
-Package pdftex.def Info: figures/tloop_seg.jpg used on input line 116.
+Package pdftex.def Info: figures/tloop_seg.jpg used on input line 119.
 (pdftex.def)             Requested size: 108.405pt x 79.14528pt.
 
-Underfull \hbox (badness 3861) in paragraph at lines 116--116
+Underfull \hbox (badness 3861) in paragraph at lines 119--119
 []\OT1/cmr/m/n/10 (a) Small Box with a
  []
 
 File: figures/tloop_seg.jpg Graphic file (type jpg)
 <use figures/tloop_seg.jpg>
-Package pdftex.def Info: figures/tloop_seg.jpg used on input line 120.
+Package pdftex.def Info: figures/tloop_seg.jpg used on input line 123.
 (pdftex.def)             Requested size: 108.405pt x 79.14528pt.
 File: figures/tloop_seg.jpg Graphic file (type jpg)
  <use figures/tloop_seg.jpg>
-Package pdftex.def Info: figures/tloop_seg.jpg used on input line 124.
+Package pdftex.def Info: figures/tloop_seg.jpg used on input line 127.
 (pdftex.def)             Requested size: 108.405pt x 79.14528pt.
 File: figures/tloop_seg.jpg Graphic file (type jpg)
 
 <use figures/tloop_seg.jpg>
-Package pdftex.def Info: figures/tloop_seg.jpg used on input line 128.
+Package pdftex.def Info: figures/tloop_seg.jpg used on input line 131.
 (pdftex.def)             Requested size: 108.405pt x 79.14528pt.
 File: figures/tloop_seg.jpg Graphic file (type jpg)
  <use figures/tloop_seg.jpg>
-Package pdftex.def Info: figures/tloop_seg.jpg used on input line 135.
+Package pdftex.def Info: figures/tloop_seg.jpg used on input line 138.
 (pdftex.def)             Requested size: 276.43555pt x 201.83578pt.
- [54 <./figures/tloop_seg.jpg>] [55] [56]
-Overfull \hbox (3.25925pt too wide) in paragraph at lines 180--182
+ [54] [55 <./figures/tloop_seg.jpg>] [56]
+Overfull \hbox (3.25925pt too wide) in paragraph at lines 183--185
 \OT1/cmr/m/n/12 guarded by $\OML/cmm/m/it/12 SH$\OT1/cmr/m/n/12 s. Sub-se-quent
 ly, in ad-di-tion to the $\OML/cmm/m/it/12 SH$ \OT1/cmr/m/n/12 at $\OML/cmm/m/i
 t/12 x[]; x[]; x[]; x[]$\OT1/cmr/m/n/12 ,
@@ -1617,28 +1617,28 @@ t/12 x[]; x[]; x[]; x[]$\OT1/cmr/m/n/12 ,
 [57] [58] [59] [60] [61]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 351.
+(hyperref)                removing `math shift' on input line 354.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 351.
+(hyperref)                removing `subscript' on input line 354.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 351.
+(hyperref)                removing `math shift' on input line 354.
 
 [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 914.
+(hyperref)                removing `math shift' on input line 917.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 914.
+(hyperref)                removing `subscript' on input line 917.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 914.
+(hyperref)                removing `math shift' on input line 917.
 
 [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91]
 [92]) (./parts/chapter6.tex [93]
@@ -1779,7 +1779,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 232.
 Here is how much of TeX's memory you used:
  10525 strings out of 492995
  151409 string characters out of 6132704
- 265352 words of memory out of 5000000
+ 266352 words of memory out of 5000000
  13456 multiletter control sequences out of 15000+600000
  16736 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1807,7 +1807,7 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2017/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on uottawa-thesis.pdf (141 pages, 1057768 bytes).
+Output written on uottawa-thesis.pdf (141 pages, 1059807 bytes).
 PDF statistics:
  1221 PDF objects out of 1440 (max. 8388607)
  1029 compressed objects within 11 object streams

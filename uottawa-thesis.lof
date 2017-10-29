@@ -6,18 +6,18 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Dividing the outer ring into 4 windows of size $k+1$.}}{30}{figure.4.2}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Arrangement of agents when moving}}{51}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces The whole process of the Three Notifying Technique in chordal ring $C_n{1, 2, 4, 5}$}}{52}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Two Subfigures}}{54}{figure.5.3}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Arrangement of agents at $T_{move\_i}$}}}{54}{figure.5.3}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Arrangement of agents at $T_{move\_{i+1}}$}}}{54}{figure.5.3}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Arrangement of agents at $T_{move_i}$}}}{54}{figure.5.3}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Arrangement of agents at $T_{notification_i}$}}}{54}{figure.5.3}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Arrangement of agents at $T_{notification_i'}$}}}{54}{figure.5.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Arrangement of agents at $T_{notification_i''}$}}}{54}{figure.5.3}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Small Box with a Long Caption}}}{54}{figure.5.3}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Big Box}}}{54}{figure.5.3}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Big Box222}}}{54}{figure.5.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Big Box333}}}{54}{figure.5.3}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces The whole process of the Three Notifying Technique in chordal ring $C_n(1, 2, 4, 5)$}}{52}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Two Subfigures}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Arrangement of agents at $T_{move\_i}$}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Arrangement of agents at $T_{move\_{i+1}}$}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Arrangement of agents at $T_{move_i}$}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Arrangement of agents at $T_{notification_i}$}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Arrangement of agents at $T_{notification_i'}$}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Arrangement of agents at $T_{notification_i''}$}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Small Box with a Long Caption}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Big Box}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Big Box222}}}{55}{figure.5.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Big Box333}}}{55}{figure.5.3}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Dividing the triple loop into five segments.}}{55}{figure.5.4}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Dividing the consecutive-chords into four segments.}}{98}{figure.6.1}
