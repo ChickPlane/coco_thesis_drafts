@@ -75,10 +75,12 @@ In this section, we introduce the process of eliminating the BVs after the origi
 \subsection{Chasing Moving Agents Technique}
 
 \noindent{\bf Overview of the Chasing Moving Agents Technique}
+
 When the $Shadowed\,Exploring$ ends, it is possible that some of the agents in the array are not informed and do not realize the existence of the BV, so they keep moving following the routes in $Shadowed\,Exploring$  phase but it is obvious that they would not encounter any BV. In order to reduce waste, we employ the agent who receives the clone from chord $d_k$ ($Coordinate\,Agent$) to notice the other $Keep\,Moving$ agents to move back to their position when the BV is triggered. Now we introduce how we choose the $Coordinate\,Agent$ and how the $Coordinate\,Agent$ notify the other agents.
 
 
 \noindent{\bf The Process of the Chasing Phase of the Coordination Agent}
+
 We can see that the relative position of agents does not change when they keep moving along the longest chord. For example, agents residing in nodes 1, 5, 10 (noted as $A1$, $A5$, $A10$) move along the longest chord and then $A5$ moves forward for one step. The relative position of them would be exactly the same as the situation where all of them remain dormant except $A5$ moves forward for one step. So now we discuss how to notify all the $Keep\,Moving$ agents assuming they are dormant and then make some modification to fit the scenario where the $Coordinate\,Agent$ notifies the $Keep\,Moving$ agents. The problem we need to solve is that given a range which the agents are in and a $Coordinate\,Agent$ located in this range, let the $Coordinate\,Agent$ to notify all the agents in this range. In a chord ring $C_n(1, d_2, \ldots, d_k)$, the $Coordinate\,Agent$ sets a $Notification\,Window$ using the modular arithmetic. Let us assume the number of the node where the $Coordinate_Agent$ resides in is $x$, the number of the nodes where should be marked the $Beginning\,Flag$ and the $End\,Flag$ are $y$ and $z$. 
 
 The relations between $x$, $y$, $z$ should be as follow: 
@@ -89,7 +91,8 @@ The relations between $x$, $y$, $z$ should be as follow:
 \end{itemize} 
 
 When the agent is chosen to be the $Coordinate\,Agent$, it computes its $Notification\,Window$. When we mention marking a flag, it does not mean that the agent has to move to the node to do that but only needs to remember the positions of the two flags in its memory. Also, after the position of the notice window is set, it remains stable. More specifically, when the $Coordinate\,Agent$ moves, he does not set another notice window using its new position. The $Coordinate\,Agent$ moves step by step to every possible position and notifies the agents to go back if there is one until it realizes that it just passes the $End\,Flag$. After that, he moves along the longest chord anticlockwise to the node marked a $Beginning\,Flag$ and continues moving again step by step to notify agents until it arrives its relative departing node. For example, if the $Coordinate\,Agent$ starts to notify other from node $x$, then its relative departing node is $x'=x+t\times{d_k}$ ($t\in \mathbb{N}$).
-We make some modifications to let the solution fit the real scenario where the agents move along the longest chord: 
+
+We make some modifications to let the solution fit the real scenario where the agents move along the longest chord: 
 \begin{itemize}
 \item The Beginning Flag and the End Flag move along the longest chord also to keep the relative position the same. 
 \item  When one agent $A1$ moves to a node where there is an agent $A2$ knowing the position of the original BV, $A1$ would be informed and directly moves along the longest chord to its own position. 
@@ -97,11 +100,34 @@ When the agent is chosen to be the $Coordinate\,Agent$, it computes its $Notific
 \item When arriving its relative departing position at $T_{move\_a}$, the $Coordinate\,Agent$ knows that it has finished the task and moves along $d_k$ for $T_{move\_a}- T_{trigger}+1$ times to its position when the original BV is triggered.
 \item Let us assume that the time when the BV is triggered is $T_{move\_i}$, the $Coordinate\,Agent$ starts to move step by step to notify other agents after $T_{move\_{i+2}}$, because we want to ensure the security of the $Coordinate\,Agent$. If it starts to notify other agents at $T_{move\_{i+1}}$, it might encounter a BV. Also, it should be ensured that the $Keep\,Moving$ agents in the exploring group are in the $Notice\,Window$ of the $Coordinate\,Agent$, or the $Coordinate\,Agent$ would never encounter them. We would talk about how to ensure this in next section.
 \end{itemize} 
-\noindent{\bf Election of the Coordination Agent}
-We choose the agent who receives a BV clone from its chord $d_k$ to be the $Coordinate\,Agent$, which means when an agent receives a BV clone from its longest chord, then it realizes that it is chosen as the $Coordinate\, Agent$. We know that, the notice phase starts from $T_{move\_{i+2}}$ assuming the time when the BV is triggered is $T_{move\_i}$, which means the Chasing Phase begins only after all the $Keep\,Moving$ agents move twice. At $T_{move\_{i+2}}$, all the $Keep\,Moving$ agents are in a notice window from nodes $d_k\times(move\_{i}+1) to d_k\times(move\_{i}+1) + d_{k}-1$, and let us donate it by $Initial\,Notice\,Window$. The $Coordinate\,Agent$ would directly move to any node in $Initial\,Notice\,Window$ which is nearest to him (if there are more than one nodes satisfying the requirement, then it randomly choose one node as the destination). Here when we say the nearest, it means the route between the node and the $Coordinate\,Agent$ is shortest among that between all the nodes and the $Coordinate\,Agent$. Now we talk about how to choose the shortest route. 
-Dijkstra Algorithm can be used to compute the shortest route between two nodes in the chordal ring. First, we need to build a graph to be the input of the algorithm. We can design different graphs in different specific situations. For example, we can decide which nodes or which edges are included in our graph according our requirement. In this case, we include nodes from the $Coordinate\,Agent$ to the last node in the $Initial\,Notice\, Window$ and the edges within this area but deleting edges from the BVs.
-An example of how we build the graph for the $Coordinate\,Agent$ (agent residing in node 29) in chordal ring $C_n(1,2,7,11)$ is shown in \ref{fig:DAGraph}.
- \begin{figure}[H]  \centering    \includegraphics[width=0.6\textwidth]{figures/DAGraph.png}  \caption{The graph for the Coordinate Agent in chordal ring $C_n(1,2,7,11)$}\label{fig:DAGraph}\end{figure}\begin{theorem}
+
+\noindent{\bf Election of the Coordination Agent}
+
+We choose the agent who receives a BV clone from its chord $d_k$ to be the $Coordinate\,Agent$, which means when an agent receives a BV clone from its longest chord, then it realizes that it is chosen as the $Coordinate\, Agent$. We know that, the notice phase starts from $T_{move\_{i+2}}$ assuming the time when the BV is triggered is $T_{move\_i}$, which means the Chasing Phase begins only after all the $Keep\,Moving$ agents move twice. At $T_{move\_{i+2}}$, all the $Keep\,Moving$ agents are in a notice window from nodes $d_k\times(move\_{i}+1)\,to\,d_k\times(move\_{i}+1) + d_{k}-1$, and let us donate it by $Initial\,Notice\,Window$. The $Coordinate\,Agent$ would directly move to any node in $Initial\,Notice\,Window$. Now we propose two kings of routes for the $Coordinate\,Agent$ to move to his destination:
+The coordinates of the positions where the clones spread are: $x-d_k$ (which is the coordinate of the $Coordinate\,Agent$), $x-d_{k-1}$, $x-d_{k-2}$, \ldots, $x-1$, $x+1$, $x+d_2$, \ldots, $x+d_{k-1}$, $x+d_{k}$ supposing the coordinate of the original BV is $x$ and we are in a chordal ring $C_n(1, d_2,\ldots, d_k)$.
+ Now we describe three scenarios:
+\begin{itemize}
+\item Scenario 1: The last agent of the $Exploring\,Group$ is destroyed by the BV and the positions of the clones satisfy: $x-d_{k-1}=x+1$, $x-d_{k-2}=x+d_2$, \ldots, $x-1=x+d_{k-1}$. 
+\item Scenario 2: The last agent of the $Exploring\,Group$ is destroyed by the BV and the at least one pair of the positions of the clones does not satisfy: $x-d_{k-1}=x+1$, $x-d_{k-2}=x+d_2$, \ldots, $x-1=x+d_{k-1}$. 
+\item Scenario 3: One of the agents in the $Exploring\,Group$ except the last agent is destroyed by the BV.
+\end{itemize}
+
+In scenario 1, the $Coordinate\,Agent$ needs to move for 5 steps to reach its destination while in the other two scenarios, it only needs to move for 4 steps to arrive the destination. Now we propose the route for each scenario.
+\begin{itemize}
+\item For $CA$ in scenario 1: Let us donate by $y$ the coordinate of the node in the $Notice\,Window$ set by the original BV which does not receive any clone and his left neighbour receives a clone (the coordinate of it is $y-1$). The $CA$ first moves to the original BV, then to node $y-1$, finally to $y$. After that it only need to move along the chord $d_k$ for twice to reach its destination.
+\item For $CA$ in scenario 2: There is at least one pair of the positions of the clones does not satisfy the equations so there should be one node (assuming its coordinate is $z$) who receives a clone from the original BV but node $z+d_k$ is empty. The route now for the $CA$ is first move to the BV, then to node $z$, and then moves along the chord $d_k$ for twice to reach its destination.
+\item For $CA$ in scenario 3: The $CA$ here simply need to move for one step to its right neighbour and move along the chord $d_k$ for three times to reach its destination.
+\end{itemize}
+
+
+An example of how we build the graph for the $Coordinate\,Agent$ (agent residing in node 29) in chordal ring $C_n(1,2,7,11)$ is shown in \ref{fig:DAGraph}.
+ \begin{figure}[H]
+  \centering  
+  \includegraphics[width=0.6\textwidth]{figures/DAGraph.png}
+  \caption{The graph for the Coordinate Agent in chordal ring $C_n(1,2,7,11)$}\label{fig:DAGraph}
+\end{figure}
+
+\begin{theorem}
 In the worst case scenario, the \bv is detected in $5n-9$ moves.
  
 %When the BV is detected in the worst case scenario, three new black viruses are  triggered.
