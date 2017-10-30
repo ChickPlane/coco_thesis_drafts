@@ -7,22 +7,23 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Arrangement of agents when moving}}{51}{figure.5.1}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces The whole process of the Three Notifying Technique in chordal ring $C_n(1, 2, 4, 5)$}}{52}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Two Subfigures}}{55}{figure.5.3}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Arrangement of agents at $T_{move\_i}$}}}{55}{figure.5.3}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Arrangement of agents at $T_{move\_{i+1}}$}}}{55}{figure.5.3}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Arrangement of agents at $T_{move_i}$}}}{55}{figure.5.3}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Arrangement of agents at $T_{notification_i}$}}}{55}{figure.5.3}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Arrangement of agents at $T_{notification_i'}$}}}{55}{figure.5.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Arrangement of agents at $T_{notification_i''}$}}}{55}{figure.5.3}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Small Box with a Long Caption}}}{55}{figure.5.3}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Big Box}}}{55}{figure.5.3}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Big Box222}}}{55}{figure.5.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Big Box333}}}{55}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Dividing the triple loop into five segments.}}{55}{figure.5.4}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces The graph for the Coordinate Agent in chordal ring $C_n(1,2,7,11)$}}{57}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Two Subfigures}}{59}{figure.5.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Arrangement of agents at $T_{move\_i}$}}}{59}{figure.5.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Arrangement of agents at $T_{move\_{i+1}}$}}}{59}{figure.5.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Arrangement of agents at $T_{move_i}$}}}{59}{figure.5.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Arrangement of agents at $T_{notification_i}$}}}{59}{figure.5.4}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Arrangement of agents at $T_{notification_i'}$}}}{59}{figure.5.4}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Arrangement of agents at $T_{notification_i''}$}}}{59}{figure.5.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Small Box with a Long Caption}}}{59}{figure.5.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Big Box}}}{59}{figure.5.4}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Big Box222}}}{59}{figure.5.4}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Big Box333}}}{59}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Dividing the triple loop into five segments.}}{59}{figure.5.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Dividing the consecutive-chords into four segments.}}{98}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces \relax \fontsize {10.95}{13.6}\selectfont \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {An example of One-direction strategy where red links show the paths to the targets.}}}{101}{figure.6.2}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Dividing the consecutive-chords into four segments.}}{102}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces \relax \fontsize {10.95}{13.6}\selectfont \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {An example of One-direction strategy where red links show the paths to the targets.}}}{105}{figure.6.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces The paths to reach some targets using the general strategy.}}{110}{figure.7.1}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces The paths to reach some targets using the general strategy.}}{114}{figure.7.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
