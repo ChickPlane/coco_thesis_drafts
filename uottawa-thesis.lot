@@ -11,13 +11,9 @@
 \contentsline {table}{\numberline {4.7}{\ignorespaces Comparison between the complexities of the three strategies.}}{47}{table.4.7}
 \contentsline {table}{\numberline {4.8}{\ignorespaces The overall move complexity of the two phases in the three strategies.}}{47}{table.4.8}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Move complexity in shortly-chorded triple loops.}}{65}{table.5.1}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Move complexity in shortly-chorded triple loops $C_n(1,2,k)$.}}{80}{table.5.2}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Move complexity in shortly-chorded triple loops $C_n(1,k-1,k)$.}}{94}{table.5.3}
-\contentsline {table}{\numberline {5.4}{\ignorespaces Move complexity in triple loop rings in two different safe area sizes }}{96}{table.5.4}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces \relax \fontsize {10.95}{13.6}\selectfont \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {Move complexity of disinfecting a consecutive-chords according to location of $BV$.}}}{111}{table.6.1}
+\contentsline {table}{\numberline {6.1}{\ignorespaces \relax \fontsize {10.95}{13.6}\selectfont \abovedisplayskip 11\p@ plus3\p@ minus6\p@ \abovedisplayshortskip \z@ plus3\p@ \belowdisplayshortskip 6.5\p@ plus3.5\p@ minus3\p@ \def \leftmargin \leftmargini \parsep 5\p@ plus2.5\p@ minus\p@ \topsep 10\p@ plus4\p@ minus6\p@ \itemsep 5\p@ plus2.5\p@ minus\p@ {\leftmargin \leftmargini \topsep 9\p@ plus3\p@ minus5\p@ \parsep 4.5\p@ plus2\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip {Move complexity of disinfecting a consecutive-chords according to location of $BV$.}}}{77}{table.6.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {8.1}{\ignorespaces A summary of the worst case complexities for various chordal ring types.}}{123}{table.8.1}
+\contentsline {table}{\numberline {8.1}{\ignorespaces A summary of the worst case complexities for various chordal ring types.}}{89}{table.8.1}
 \addvspace {10\p@ }

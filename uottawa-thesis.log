@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 OCT 2017 19:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  30 OCT 2017 20:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1218,53 +1218,30 @@ LaTeX Info: Redefining \nameref on input line 89.
 
 
 ])
-(./private/toc-lot-lof.tex (./uottawa-thesis.toc
-LaTeX Font Info:    Try loading font information for U+lasy on input line 4.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-LaTeX Font Info:    Try loading font information for U+msa on input line 4.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 4.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [4
-
-
-
-
-] [5])
+(./private/toc-lot-lof.tex (./uottawa-thesis.toc)
 \tf@toc=\write5
 \openout5 = `uottawa-thesis.toc'.
 
+ [4
 
-[6] (./uottawa-thesis.lot)
+
+
+
+] (./uottawa-thesis.lot)
 \tf@lot=\write6
 \openout6 = `uottawa-thesis.lot'.
 
- [7
+
+[5
 
 
 
 
-] (./uottawa-thesis.lof
-Overfull \hbox (3.22276pt too wide) in paragraph at lines 9--9
- [][] [][][]\OT1/cmr/m/n/12 The whole pro-cess of the Three No-ti-fy-ing Tech-n
-ique in chordal ring $\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (1\OML/cmm/m/it/12 ; 
-\OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 4\OML/cmm/m/it/12 ; \OT1/cm
-r/m/n/12 5)$[][] [][]  
- []
-
-)
+] (./uottawa-thesis.lof)
 \tf@lof=\write7
 \openout7 = `uottawa-thesis.lof'.
 
- [8
+ [6
 
 
 
@@ -1423,6 +1400,20 @@ Package natbib Warning: Citation `M.Huang' on page 7 undefined on input line 24
 Package natbib Warning: Citation `M.Huang1' on page 7 undefined on input line 2
 4.
 
+LaTeX Font Info:    Try loading font information for U+lasy on input line 24.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 24.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 24.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
@@ -1472,7 +1463,7 @@ Chapter 4.
 [17
 
 
-] [18] [19] [20] <figures/dloop_seg.jpg, id=462, 859.21pt x 601.24625pt>
+] [18] [19] [20] <figures/dloop_seg.jpg, id=165, 859.21pt x 601.24625pt>
 File: figures/dloop_seg.jpg Graphic file (type jpg)
 
 <use figures/dloop_seg.jpg>
@@ -1497,7 +1488,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 368--370
 
  []
 
-[26] [27] [28] [29] <figures/dloop_window2.jpg, id=506, 654.445pt x 654.445pt>
+[26] [27] [28] [29] <figures/dloop_window2.jpg, id=210, 654.445pt x 654.445pt>
 File: figures/dloop_window2.jpg Graphic file (type jpg)
 
 <use figures/dloop_window2.jpg>
@@ -1529,14 +1520,14 @@ Chapter 5.
 LaTeX Warning: Reference `fig:chordal_a_l, chordal_a1_l' on page 50 undefined o
 n input line 22.
 
-[50] <figures/chordal_a_l.jpg, id=614, 217.81375pt x 34.1275pt>
+[50] <figures/chordal_a_l.jpg, id=334, 217.81375pt x 34.1275pt>
 File: figures/chordal_a_l.jpg Graphic file (type jpg)
 
 <use figures/chordal_a_l.jpg>
 Package pdftex.def Info: figures/chordal_a_l.jpg used on input line 28.
 (pdftex.def)             Requested size: 216.81pt x 33.97012pt.
 
-<figures/chordal_a1_l.jpg, id=615, 207.77625pt x 32.12pt>
+<figures/chordal_a1_l.jpg, id=335, 207.77625pt x 32.12pt>
 File: figures/chordal_a1_l.jpg Graphic file (type jpg)
 
 <use figures/chordal_a1_l.jpg>
@@ -1561,25 +1552,25 @@ Overfull \hbox (8.13977pt too wide) in paragraph at lines 42--43
 g route of the $\OML/cmm/m/it/12 Notification[] 
  []
 
-<figures/tjt1.png, id=624, 226.9278pt x 53.4798pt>
+<figures/tjt1.png, id=347, 226.9278pt x 53.4798pt>
 File: figures/tjt1.png Graphic file (type png)
  <use figures/tjt1.png>
 Package pdftex.def Info: figures/tjt1.png used on input line 48.
 (pdftex.def)             Requested size: 180.67499pt x 42.57988pt.
 
-<figures/tjt2.png, id=626, 225.4824pt x 74.1972pt>
+<figures/tjt2.png, id=349, 225.4824pt x 74.1972pt>
 File: figures/tjt2.png Graphic file (type png)
  <use figures/tjt2.png>
 Package pdftex.def Info: figures/tjt2.png used on input line 52.
 (pdftex.def)             Requested size: 180.67499pt x 59.45518pt.
 
-<figures/tjt3.png, id=627, 210.5466pt x 73.2336pt>
+<figures/tjt3.png, id=350, 210.5466pt x 73.2336pt>
 File: figures/tjt3.png Graphic file (type png)
  <use figures/tjt3.png>
 Package pdftex.def Info: figures/tjt3.png used on input line 56.
 (pdftex.def)             Requested size: 180.67499pt x 62.84778pt.
 
-<figures/tjt4.png, id=628, 229.8186pt x 58.7796pt>
+<figures/tjt4.png, id=351, 229.8186pt x 58.7796pt>
 File: figures/tjt4.png Graphic file (type png)
  <use figures/tjt4.png>
 Package pdftex.def Info: figures/tjt4.png used on input line 60.
@@ -1594,91 +1585,88 @@ dow$\OT1/cmr/m/n/12 .
  []
 
 [55]
-Overfull \hbox (12.42511pt too wide) in paragraph at lines 106--109
+Overfull \hbox (12.42511pt too wide) in paragraph at lines 106--107
 []\OT1/cmr/m/n/12 We choose the agent who re-ceives a BV clone from its chord $
 \OML/cmm/m/it/12 d[]$ \OT1/cmr/m/n/12 to be the $\OML/cmm/m/it/12 Coordinate Ag
 ent$\OT1/cmr/m/n/12 ,
  []
 
 [56]
-Overfull \hbox (19.6201pt too wide) in paragraph at lines 117--118
+Overfull \hbox (19.6201pt too wide) in paragraph at lines 118--119
 []\OT1/cmr/m/n/12 For $\OML/cmm/m/it/12 CA$ \OT1/cmr/m/n/12 in sce-nario 1: Let
  us do-nate by $\OML/cmm/m/it/12 y$ \OT1/cmr/m/n/12 the co-or-di-nate of the no
 de in the $\OML/cmm/m/it/12 Notice Window$
  []
 
-[57] <figures/DAGraph.png, id=665, 330.9966pt x 50.589pt>
-File: figures/DAGraph.png Graphic file (type png)
+[57]
 
-<use figures/DAGraph.png>
-Package pdftex.def Info: figures/DAGraph.png used on input line 126.
-(pdftex.def)             Requested size: 276.43555pt x 42.25284pt.
- [58 <./figures/DAGraph.png>]
-<figures/tloop_seg.jpg, id=674, 859.21pt x 627.34375pt>
-File: figures/tloop_seg.jpg Graphic file (type jpg)
+LaTeX Warning: Reference `fig:T29' on page 58 undefined on input line 125.
 
-<use figures/tloop_seg.jpg>
-Package pdftex.def Info: figures/tloop_seg.jpg used on input line 177.
-(pdftex.def)             Requested size: 108.405pt x 79.14528pt.
+<figures/T29.png, id=390, 254.3904pt x 92.0238pt>
+File: figures/T29.png Graphic file (type png)
+ <use figures/T29.png>
+Package pdftex.def Info: figures/T29.png used on input line 128.
+(pdftex.def)             Requested size: 276.43555pt x 100.00345pt.
 
-Underfull \hbox (badness 3861) in paragraph at lines 177--177
-[]\OT1/cmr/m/n/10 (a) Small Box with a
- []
+<figures/T50.png, id=391, 254.3904pt x 106.4778pt>
+File: figures/T50.png Graphic file (type png)
+ <use figures/T50.png>
+Package pdftex.def Info: figures/T50.png used on input line 136.
+(pdftex.def)             Requested size: 276.43555pt x 115.71078pt.
 
-File: figures/tloop_seg.jpg Graphic file (type jpg)
-<use figures/tloop_seg.jpg>
-Package pdftex.def Info: figures/tloop_seg.jpg used on input line 181.
-(pdftex.def)             Requested size: 108.405pt x 79.14528pt.
-File: figures/tloop_seg.jpg Graphic file (type jpg)
- <use figures/tloop_seg.jpg>
-Package pdftex.def Info: figures/tloop_seg.jpg used on input line 185.
-(pdftex.def)             Requested size: 108.405pt x 79.14528pt.
-File: figures/tloop_seg.jpg Graphic file (type jpg)
+[58 <./figures/T29.png>] <figures/T611.png, id=398, 254.3904pt x 105.5142pt>
+File: figures/T611.png Graphic file (type png)
 
-<use figures/tloop_seg.jpg>
-Package pdftex.def Info: figures/tloop_seg.jpg used on input line 189.
-(pdftex.def)             Requested size: 108.405pt x 79.14528pt.
-File: figures/tloop_seg.jpg Graphic file (type jpg)
- <use figures/tloop_seg.jpg>
-Package pdftex.def Info: figures/tloop_seg.jpg used on input line 196.
-(pdftex.def)             Requested size: 276.43555pt x 201.83578pt.
- [59 <./figures/tloop_seg.jpg>] [60] [61]
-Overfull \hbox (3.25925pt too wide) in paragraph at lines 241--243
-\OT1/cmr/m/n/12 guarded by $\OML/cmm/m/it/12 SH$\OT1/cmr/m/n/12 s. Sub-se-quent
-ly, in ad-di-tion to the $\OML/cmm/m/it/12 SH$ \OT1/cmr/m/n/12 at $\OML/cmm/m/i
-t/12 x[]; x[]; x[]; x[]$\OT1/cmr/m/n/12 ,
- []
+<use figures/T611.png>
+Package pdftex.def Info: figures/T611.png used on input line 144.
+(pdftex.def)             Requested size: 276.43555pt x 114.66365pt.
+ <figures/T612.png, id=399, 254.3904pt x 105.5142pt>
+File: figures/T612.png Graphic file (type png)
 
-[62] [63] [64] [65] [66]
+<use figures/T612.png>
+Package pdftex.def Info: figures/T612.png used on input line 150.
+(pdftex.def)             Requested size: 276.43555pt x 114.66365pt.
+ [59 <./figures/T50.png> <./figures/T611.png> <./figures/T612.png>] <figures/T7
+5.png, id=410, 254.3904pt x 119.9682pt>
+File: figures/T75.png Graphic file (type png)
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 412.
+<use figures/T75.png>
+Package pdftex.def Info: figures/T75.png used on input line 157.
+(pdftex.def)             Requested size: 276.43555pt x 130.37099pt.
+ <figures/T66.png, id=411, 254.3904pt x 119.9682pt>
+File: figures/T66.png Graphic file (type png)
 
+<use figures/T66.png>
+Package pdftex.def Info: figures/T66.png used on input line 164.
+(pdftex.def)             Requested size: 276.43555pt x 130.37099pt.
+ [60 <./figures/T75.png>]
+<figures/T94.png, id=418, 254.3904pt x 148.8762pt>
+File: figures/T94.png Graphic file (type png)
+ <use figures/T94.png>
+Package pdftex.def Info: figures/T94.png used on input line 170.
+(pdftex.def)             Requested size: 276.43555pt x 161.7857pt.
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 412.
+[61 <./figures/T66.png> <./figures/T94.png>]
 
+LaTeX Warning: Reference `fig:D1' on page 62 undefined on input line 181.
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 412.
+<figures/D1.png, id=429, 347.3778pt x 73.7154pt>
+File: figures/D1.png Graphic file (type png)
+ <use figures/D1.png>
+Package pdftex.def Info: figures/D1.png used on input line 184.
+(pdftex.def)             Requested size: 276.43555pt x 58.6608pt.
+ [62]
 
-[67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81]
+LaTeX Warning: Reference `fig:D2' on page 63 undefined on input line 189.
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 975.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 975.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 975.
-
-[82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96]
-[97]) (./parts/chapter6.tex [98]
+<figures/D2.png, id=436, 320.397pt x 80.9424pt>
+File: figures/D2.png Graphic file (type png)
+ <use figures/D2.png>
+Package pdftex.def Info: figures/D2.png used on input line 192.
+(pdftex.def)             Requested size: 276.43555pt x 69.84006pt.
+ [63 <./figures/D1.png> <./figures/D2.png>]) (./parts/chapter6.tex [64]
 Chapter 6.
-[99
+[65
 
 
 ]
@@ -1686,31 +1674,31 @@ Overfull \hbox (8.09685pt too wide) in paragraph at lines 71--72
  [] 
  []
 
-[100] [101] <figures/cloop_seg.jpg, id=887, 859.21pt x 666.49pt>
+[66] [67] <figures/cloop_seg.jpg, id=468, 859.21pt x 666.49pt>
 File: figures/cloop_seg.jpg Graphic file (type jpg)
 
 <use figures/cloop_seg.jpg>
 Package pdftex.def Info: figures/cloop_seg.jpg used on input line 188.
 (pdftex.def)             Requested size: 276.43555pt x 214.43034pt.
- [102] [103 <./figures/cloop_seg.jpg>] [104]
-<figures/onedirec_cloop.jpg, id=902, 1147.28625pt x 1198.4775pt>
+ [68] [69 <./figures/cloop_seg.jpg>] [70]
+<figures/onedirec_cloop.jpg, id=484, 1147.28625pt x 1198.4775pt>
 File: figures/onedirec_cloop.jpg Graphic file (type jpg)
 
 <use figures/onedirec_cloop.jpg>
 Package pdftex.def Info: figures/onedirec_cloop.jpg used on input line 268.
 (pdftex.def)             Requested size: 230.36061pt x 240.6239pt.
- [105] [106 <./figures/onedirec_cloop.jpg>]
+ [71] [72 <./figures/onedirec_cloop.jpg>]
 Overfull \hbox (1.59116pt too wide) in paragraph at lines 347--348
-[][]\OT1/cmr/bx/n/12 Theorem 33. []\OT1/cmr/m/it/12 In any consecutive-chords r
+[][]\OT1/cmr/bx/n/12 Theorem 18. []\OT1/cmr/m/it/12 In any consecutive-chords r
 ing $\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2
 \OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 3\OML/cmm/m/it/12 ; :::; k\OT1/cmr/m/n/12 )$
 \OT1/cmr/m/it/12 , with $\OML/cmm/m/it/12 k < \OMS/cmsy/m/n/12 b[]c$\OT1/cmr/m/
 it/12 , when $\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 S[]\OMS/cmsy/m/n/12 j ^^U
  []
 
-[107]
+[73]
 Overfull \hbox (1.39659pt too wide) in paragraph at lines 388--389
-[][]\OT1/cmr/bx/n/12 Theorem 34. []\OT1/cmr/m/it/12 In any consecutive-chords r
+[][]\OT1/cmr/bx/n/12 Theorem 19. []\OT1/cmr/m/it/12 In any consecutive-chords r
 ing $\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2
 \OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 3\OML/cmm/m/it/12 ; :::; k\OT1/cmr/m/n/12 )$
 \OT1/cmr/m/it/12 , with $\OML/cmm/m/it/12 k < \OMS/cmsy/m/n/12 b[]c$\OT1/cmr/m/
@@ -1725,7 +1713,7 @@ nd and elim-i-nate the black viruses is $\OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12
 k\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 d[]e\OT1/cmr/m/n/12 ) +
  []
 
-[108]
+[74]
 Overfull \hbox (9.2429pt too wide) in paragraph at lines 393--394
 \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 x[]; x[]; x[]; :::; x[]\OMS/cmsy/m/n/12 g$\O
 T1/cmr/m/n/12 , there are more nodes to be guarded: $\OMS/cmsy/m/n/12 f\OML/cmm
@@ -1737,61 +1725,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 408--410
 
  []
 
-[109] [110]
+[75] [76]
 Overfull \hbox (18.16516pt too wide) in paragraph at lines 461--462
  [] 
  []
 
-) (./parts/chapter7.tex [111]
+) (./parts/chapter7.tex [77]
 Chapter 7.
-[112
+[78
 
 
-] [113] <figures/general_algo.jpg, id=966, 1599.9775pt x 1625.07124pt>
+] [79] <figures/general_algo.jpg, id=553, 1599.9775pt x 1625.07124pt>
 File: figures/general_algo.jpg Graphic file (type jpg)
 
 <use figures/general_algo.jpg>
 Package pdftex.def Info: figures/general_algo.jpg used on input line 126.
 (pdftex.def)             Requested size: 230.36061pt x 233.95552pt.
- [114] [115 <./figures/general_algo.jpg>]
+ [80] [81 <./figures/general_algo.jpg>]
 Overfull \hbox (23.80247pt too wide) in paragraph at lines 210--211
  [] 
  []
 
-[116] [117] [118] [119]) (./parts/chapter8.tex [120]
+[82] [83] [84] [85]) (./parts/chapter8.tex [86]
 Chapter 8.
-[121
+[87
 
 
-] [122] [123]) [124] (./uottawa-thesis.bbl [125
+] [88] [89]) [90] (./uottawa-thesis.bbl [91
 
 
 
 
-] [126] [127]) [128]
-[129
+] [92] [93]) [94] [95
 
 
 ]
 \openout2 = `parts/appendix.aux'.
 
- (./parts/appendix.tex
+
+(./parts/appendix.tex
 Appendix A.
 
 Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
-[130
+[96
 
 
 
-] [131] [132] [133] [134] [135]
+] [97] [98] [99] [100] [101]
 Underfull \hbox (badness 10000) in paragraph at lines 231--233
 
  []
 
-[136] [137]) [138]
+[102] [103]) [104]
 
 Package natbib Warning: There were undefined citations.
 
@@ -1800,9 +1788,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 232.
 (./uottawa-thesis.aux (./parts/appendix.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 232.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 232.
-Package rerunfilecheck Info: File `uottawa-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: CF86B5570EC5C54B2287F9B2C66B703A;3552.
 
+
+Package rerunfilecheck Warning: File `uottawa-thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `uottawa-thesis.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  17CC03A473D64E3E8D0C675DCB07530D;3026.
 
 LaTeX Warning: There were undefined references.
 
@@ -1812,40 +1806,43 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 232.
  ) 
 Here is how much of TeX's memory you used:
- 10541 strings out of 492995
- 151636 string characters out of 6132704
- 265447 words of memory out of 5000000
- 13463 multiletter control sequences out of 15000+600000
- 16736 words of font info for 69 fonts, out of 8000000 for 9000
+ 10461 strings out of 492995
+ 150709 string characters out of 6132704
+ 251447 words of memory out of 5000000
+ 13441 multiletter control sequences out of 15000+600000
+ 15383 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,18n,31p,2402b,586s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local
-/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/201
-7/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2017/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2017/texmf-dis
-t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2017/texmf
--dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on uottawa-thesis.pdf (146 pages, 1097609 bytes).
+ 30i,18n,30p,2402b,586s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{subsubsection.5.3.2.1} has been referenced but do
+es not exist, replaced by a fixed one
+
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2017/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on uottawa-thesis.pdf (110 pages, 1241379 bytes).
 PDF statistics:
- 1259 PDF objects out of 1440 (max. 8388607)
- 1060 compressed objects within 11 object streams
- 341 named destinations out of 1000 (max. 500000)
- 482 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 838 PDF objects out of 1000 (max. 8388607)
+ 664 compressed objects within 7 object streams
+ 276 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

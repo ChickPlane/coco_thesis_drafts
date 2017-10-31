@@ -1,5 +1,5 @@
-\contentsline {chapter}{List of Tables}{vii}{section*.2}
-\contentsline {chapter}{List of Figures}{viii}{section*.4}
+\contentsline {chapter}{List of Tables}{v}{section*.2}
+\contentsline {chapter}{List of Figures}{vi}{section*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Problem and Motivation}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Our Contribution}{3}{section.1.2}
@@ -35,30 +35,17 @@
 \contentsline {section}{\numberline {5.1}Introduction}{49}{section.5.1}
 \contentsline {section}{\numberline {5.2}Shadowed Exploration}{50}{section.5.2}
 \contentsline {section}{\numberline {5.3}Surrounding and Elimination}{53}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Chasing Moving Agents Technique}{54}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Surrounding and Eliminating}{59}{subsection.5.3.2}
-\contentsline {subsubsection}{\numberline {5.3.2.1}\bf Greedy Deployment.}{62}{subsubsection.5.3.2.1}
-\contentsline {subsubsection}{\numberline {5.3.2.2}\bf Move-Optimal Deployment.}{63}{subsubsection.5.3.2.2}
-\contentsline {section}{\numberline {5.4}Triple Loops: the Case of $C_n(1,2,k)$ }{67}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Exploring and Shadowing}{67}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Surrounding and Eliminating}{69}{subsection.5.4.2}
-\contentsline {subsubsection}{\numberline {5.4.2.1}Move-Optimal Deployment}{73}{subsubsection.5.4.2.1}
-\contentsline {subsubsection}{\numberline {5.4.2.2}On Optimality and Other Observations}{82}{subsubsection.5.4.2.2}
-\contentsline {section}{\numberline {5.5} Triple Loops: the Case of $C_n(1,k-1,k)$}{82}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Exploring and Shadowing}{82}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Surrounding and Eliminating}{84}{subsection.5.5.2}
-\contentsline {subsubsection}{\numberline {5.5.2.1}Move-Optimal Deployment}{88}{subsubsection.5.5.2.1}
-\contentsline {subsubsection}{\numberline {5.5.2.2}On Optimality and Other Observations}{95}{subsubsection.5.5.2.2}
-\contentsline {section}{\numberline {5.6}Discussion and Comparisons}{96}{section.5.6}
-\contentsline {section}{\numberline {5.7}Conclusion}{97}{section.5.7}
-\contentsline {chapter}{\numberline {6}Black Virus Disinfection in Consecutive-Chords Rings}{99}{chapter.6}
-\contentsline {section}{\numberline {6.1}Exploring and Shadowing}{100}{section.6.1}
-\contentsline {section}{\numberline {6.2}Surrounding and Eliminating}{101}{section.6.2}
-\contentsline {section}{\numberline {6.3}Conclusion }{110}{section.6.3}
-\contentsline {chapter}{\numberline {7}General Chordal Rings}{112}{chapter.7}
-\contentsline {section}{\numberline {7.1}Exploring and Shadowing}{112}{section.7.1}
-\contentsline {section}{\numberline {7.2}Surrounding and Eliminating}{113}{section.7.2}
-\contentsline {section}{\numberline {7.3}Conclusion}{119}{section.7.3}
-\contentsline {chapter}{\numberline {8}Conclusion}{121}{chapter.8}
-\contentsline {chapter}{APPENDICES}{129}{appendix*.11}
-\contentsline {chapter}{\numberline {A}Detailed Paths Analysis in Triple Loops}{130}{appendix.A}
+\contentsline {subsection}{\numberline {5.3.1}notification Moving Agents Technique}{54}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Overview of the Elimination}{61}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Destination Table and Elimination}{62}{subsection.5.3.3}
+\contentsline {chapter}{\numberline {6}Black Virus Disinfection in Consecutive-Chords Rings}{65}{chapter.6}
+\contentsline {section}{\numberline {6.1}Exploring and Shadowing}{66}{section.6.1}
+\contentsline {section}{\numberline {6.2}Surrounding and Eliminating}{67}{section.6.2}
+\contentsline {section}{\numberline {6.3}Conclusion }{76}{section.6.3}
+\contentsline {chapter}{\numberline {7}General Chordal Rings}{78}{chapter.7}
+\contentsline {section}{\numberline {7.1}Exploring and Shadowing}{78}{section.7.1}
+\contentsline {section}{\numberline {7.2}Surrounding and Eliminating}{79}{section.7.2}
+\contentsline {section}{\numberline {7.3}Conclusion}{85}{section.7.3}
+\contentsline {chapter}{\numberline {8}Conclusion}{87}{chapter.8}
+\contentsline {chapter}{APPENDICES}{95}{appendix*.11}
+\contentsline {chapter}{\numberline {A}Detailed Paths Analysis in Triple Loops}{96}{appendix.A}
