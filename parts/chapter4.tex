@@ -10,7 +10,7 @@ In this chapter, we discuss parallel strategy on BVD problem in meshes. A mesh o
 Initially, 2$d_1$ agents are placed at the first two columns at $T_0$. More specifically, the coordinate of them are (1, $x_i$) and (2,$x_i$) where $1\leq x_i\leq d_1$. If the BV resides in a node in the first column, then all of its clones are destroyed. If the BV resides in a node in the second column, then the elimination phase begins. Let's assume that the we starts at $T_0$. Agents residing in nodes in the second column moves EAST at the beginning of T(2n), $n=0,1, \ldots ,d_2-1$. More precisely, node (x, y) move to (x+1, y) at the beginning of T(2n), $n=0,1, \dots , d_2-1$. Agents residing in the first column simply follow the node in the second column (see  Fig.\ref{fig:TShE}). When one of the node in the former column is destroyed by a BV, the second phase starts.
 \begin{figure}[H]
   \centering  
-  \includegraphics[width=0.6\textwidth]{figures/TShE.png}
+  \includegraphics[width=2.5in]{figures/TShE.png}
   \caption{Agents move at time $T_0$}\label{fig:TShE}
 \end{figure}
 \noindent{\bf Elimination Phase}
