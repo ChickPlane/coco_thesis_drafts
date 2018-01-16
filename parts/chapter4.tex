@@ -21,9 +21,8 @@ route of $d$: $(x, y+1)(at\ T(2(x_i+2)){\rightarrow}(x+1,y+1)(at\ T(2(x_i+2)+1){
 route of $e$: $(x, y-1)(at\ T(2(x_i+2)){\rightarrow}(x, y)(at\ T(2(x_i+3)+1))$.
 The routes of agents are showed in Fig.\ref{fig:subfigmesh1}.
 
-
 %\iffalse
-\begin{figure} [hbtp]
+\begin{figure} [H]
   \centering 
   \subfigure[$T(2x_i+1)$]{ 
     \label{fig:subfigmesh1:a} %% label for first subfigure 
@@ -51,9 +50,69 @@ The routes of agents are showed in Fig.\ref{fig:subfigmesh1}.
 
 
 \item Case 2: When $x=d_1$, $2<y<d_2-1$ (a border node becomes a new formed BV), then agents (let's say agents $a,b,c$) residing in node $(x-1, y+1)$, $(x-1, y-1)$ and $(x-2, y)$ receive a BV clone at T(2$x_i$+1). As above, they move EAST for one step and stop. Agents residing in nodes $(x-2, y+1)$ and $(x-2, y-1)$ (let's say agents $a,b$) at T(2$x_i$) have no knowledge of the BV, so they keep moving and arrive at nodes $(x, y+1)$ and $(x, y-1)$ at T(2($x_i$+2)) when they are informed of the location of the new formed BV. One of agents $a$ and $b$ should move to the new formed BV to decontaminate it while the other one stop moving. In order to avoid conflict, we always employ the agent $a$ to move to the new formed BV.
+\begin{figure} [H]
+  \centering 
+  \subfigure[$T(2x_i+1)$]{ 
+    \label{fig:subfigmesh2:a} %% label for first subfigure 
+    \includegraphics[width=2.5in]{figures/meshborderx1.png}} 
+%  \hspace{1in} 
+  \subfigure[$T(2(x_i+1))$]{ 
+    \label{fig:subfigmesh2:b} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/meshborderx2.png}}
+    \hspace{1in} 
+  \subfigure[$T(2(x_i+2))$]{ 
+    \label{fig:subfigmesh2:c} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/meshborderx3.png}}
+%      \hspace{1in} 
+    \caption{Arrangement of agents in elimination phase when the new formed BV resides in a border node (when $x=d_1$)} 
+  \label{fig:subfigmesh2} %% label for entire figure 
+\end{figure}
 
 \item Case 3: When $2<x<d_1$, $y=1$ or $y=d_2-1$ (a border node becomes a new formed BV). For convenience, we only discuss the situation when $y=1$(the solution can be easily modified to fit the scenario when $y=d_2-1$). In this case, agents residing in nodes $(x-1, y+1)$ and $(x-2, y)$ (let's say agents a,b) receive a BV clone at T(2$x_i$+1). Agents $a$ and $b$ move EAST for one step and arrive at node $(x, y+1)$ and node $(x-1, y)$ at T($2(x_i+1)$). Since the number of agents who can be informed of the location of the new formed BV is not enough for decontaminating the BV, we should notify one more agent to participate in the elimination phase. We employ agent $a$ who resides in node $(x, y+1)$ at T(2$x_i$+1) to notify agent residing in node $(x, y+1)$ (let's say agent $c$), so it move NORTH for one step and arrive at node $(x, y+2)$ at T($2(x_i+1)+1$). Then both of agents $a$ and $c$ move SOUTH and reach node $(x, y+1)$ at T($2(x_i+2)$) when the they meet the agent who move from node $(x-1, y+1)$ (let's say agent $d$) and notify it to stop moving. Then agent $a$ move EAST and then SOUTH to reach node $(x+1, y)$ at T($2(x_i+3)$). Finally, at T($2(x_i+3)+1$), agent $d$ move SOUTH to permanently eliminate the BV.
+
+\begin{figure} [H]
+  \centering 
+  \subfigure[$T(2x_i+1)$]{ 
+    \label{fig:subfigmesh3:a} %% label for first subfigure 
+    \includegraphics[width=2.5in]{figures/meshbordery1.png}} 
+%  \hspace{1in} 
+  \subfigure[$T(2(x_i+1))$]{ 
+    \label{fig:subfigmesh3:b} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/meshbordery2.png}}
+    \hspace{1in} 
+  \subfigure[$T(2(x_i+2))$]{ 
+    \label{fig:subfigmesh3:c} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/meshbordery3.png}}
+%      \hspace{1in} 
+  \subfigure[$T(2(x_i+3))$]{ 
+    \label{fig:subfigmesh3:d} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/meshbordery4.png}}
+      \hspace{1in} 
+  \subfigure[$T(2(x_i+3)+1)$]{ 
+    \label{fig:subfigmesh3:e} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/meshbordery5.png}}
+  \caption{Arrangement of agents in elimination phase when the new formed BV resides in a border node (when $y=1$ or $y=d_2-1$ ) } 
+  \label{fig:subfigmesh3} %% label for entire figure 
+\end{figure}
+
 \item Case 4: When $x=d_1$ and $y=1$ or $y=d_2-1$ (a corner node becomes a new formed BV). For convenience, we only discuss the situation when $y=1$. In this case, agents residing in node $(x-1, y+1)$ and $(x-2, y)$ (let's say agents a,b) receive a BV clone at T(2$x_i$+1). Both of them keep moving for one step and arrive at nodes $(x, y+1)$ and $(x-1, y)$ at T$(2(x_i+1))$.
+\begin{figure} [H]
+  \centering 
+  \subfigure[$T(2x_i+1)$]{ 
+    \label{fig:subfigmesh4:a} %% label for first subfigure 
+    \includegraphics[width=2.5in]{figures/meshcorner1.png}} 
+%  \hspace{1in} 
+  \subfigure[$T(2(x_i+1))$]{ 
+    \label{fig:subfigmesh4:b} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/meshcorner2.png}}
+    \hspace{1in} 
+  \subfigure[$T(2(x_i+2))$]{ 
+    \label{fig:subfigmesh4:c} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/meshcorner3.png}}
+%      \hspace{1in} 
+    \caption{Arrangement of agents in elimination phase when the new formed BV resides in a corner (when $x=d_1$ and $y=1$ or $y=d_2-1$)} 
+  \label{fig:subfigmesh4} %% label for entire figure 
+\end{figure}
 
 \end{itemize}
 
