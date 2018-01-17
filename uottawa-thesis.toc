@@ -1,5 +1,5 @@
-\contentsline {chapter}{List of Tables}{vi}{section*.2}
-\contentsline {chapter}{List of Figures}{vii}{section*.4}
+\contentsline {chapter}{List of Tables}{v}{section*.2}
+\contentsline {chapter}{List of Figures}{vi}{section*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Problem and Motivation}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Our Contribution}{3}{section.1.2}
@@ -24,13 +24,16 @@
 \contentsline {chapter}{\numberline {4}Parallel Black Virus Decontamination in Meshes}{17}{chapter.4}
 \contentsline {section}{\numberline {4.1}Introduction}{17}{section.4.1}
 \contentsline {section}{\numberline {4.2}Shadowed Exploration and Elimination}{18}{section.4.2}
-\contentsline {chapter}{\numberline {5}Parallel Black Virus Decontamination in Chordal Ring}{25}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{25}{section.5.1}
-\contentsline {section}{\numberline {5.2}Shadowed Exploration}{27}{section.5.2}
-\contentsline {section}{\numberline {5.3}Surrounding and Elimination}{30}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Notifying Moving Agents}{31}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Overview of the Elimination}{38}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Destination Table and Elimination}{40}{subsection.5.3.3}
-\contentsline {section}{\numberline {5.4}Analysis and Comparing}{41}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Theorem and Proof}{41}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Analysis and Comparing}{42}{subsection.5.4.2}
+\contentsline {section}{\numberline {4.3}Analysis and Comparing}{25}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Theorem and proof}{25}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Analysis and Comparing}{26}{subsection.4.3.2}
+\contentsline {chapter}{\numberline {5}Parallel Black Virus Decontamination in Chordal Ring}{27}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{27}{section.5.1}
+\contentsline {section}{\numberline {5.2}Shadowed Exploration}{29}{section.5.2}
+\contentsline {section}{\numberline {5.3}Surrounding and Elimination}{32}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Notifying Moving Agents}{33}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Overview of the Elimination}{40}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Destination Table and Elimination}{42}{subsection.5.3.3}
+\contentsline {section}{\numberline {5.4}Analysis and Comparing}{43}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Theorem and Proof}{43}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Analysis and Comparing}{44}{subsection.5.4.2}

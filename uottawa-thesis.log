@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 JAN 2018 15:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 JAN 2018 20:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1052,7 +1052,8 @@ Package hyperref Info: Option `pdfmenubar' set `true' on input line 118.
 Package hyperref Info: Option `pdffitwindow' set `false' on input line 118.
 Package hyperref Info: Option `pdfnewwindow' set `true' on input line 118.
 Package hyperref Info: Option `colorlinks' set `true' on input line 118.
-) (./private/thesis-margins-and-spaces.tex) (./uottawa-thesis.aux)
+) (./private/thesis-margins-and-spaces.tex)
+No file uottawa-thesis.aux.
 \openout1 = `uottawa-thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
@@ -1069,7 +1070,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
 LaTeX Font Info:    ... okay on input line 89.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 89.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 89.
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
@@ -1175,51 +1175,43 @@ LaTeX Info: Redefining \nameref on input line 89.
 
 
 ])
-(./private/toc-lot-lof.tex (./uottawa-thesis.toc
-LaTeX Font Info:    Try loading font information for U+lasy on input line 4.
+(./private/toc-lot-lof.tex
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-LaTeX Font Info:    Try loading font information for U+msa on input line 4.
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 4.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [4
-
-
-
-
-])
 \tf@toc=\write5
 \openout5 = `uottawa-thesis.toc'.
 
- [5]
-(./uottawa-thesis.lot)
+[4
+
+
+
+
+]
+
+Package hyperref Warning: old lot file detected, not used; run LaTeX again.
+
 \tf@lot=\write6
 \openout6 = `uottawa-thesis.lot'.
 
- [6
+[5
 
 
 
 
-] (./uottawa-thesis.lof)
+]
+
+Package hyperref Warning: old lof file detected, not used; run LaTeX again.
+
 \tf@lof=\write7
 \openout7 = `uottawa-thesis.lof'.
 
- [7
+[6
 
 
 
 
-] [8])
-(./parts/chapter1.tex
+]) (./parts/chapter1.tex
 Chapter 1.
 
 Package natbib Warning: Citation `Cai' on page 1 undefined on input line 13.
@@ -1373,6 +1365,20 @@ Package natbib Warning: Citation `M.Huang' on page 7 undefined on input line 24
 Package natbib Warning: Citation `M.Huang1' on page 7 undefined on input line 2
 4.
 
+LaTeX Font Info:    Try loading font information for U+lasy on input line 24.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 24.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 24.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
@@ -1422,154 +1428,175 @@ Chapter 4.
 [17
 
 
-] <figures/TShE.png, id=333, 143.5764pt x 99.7326pt>
+]
+
+LaTeX Warning: Reference `fig:TShE' on page 18 undefined on input line 10.
+
+<figures/TShE.png, id=146, 143.5764pt x 99.7326pt>
 File: figures/TShE.png Graphic file (type png)
  <use figures/TShE.png>
 Package pdftex.def Info: figures/TShE.png used on input line 13.
 (pdftex.def)             Requested size: 180.67499pt x 125.51306pt.
 
-[18] [19 <./figures/TShE.png>]
-<figures/meshinterior.png, id=345, 301.79951pt x 226.63872pt>
+[18]
+
+LaTeX Warning: Reference `fig:subfigmesh1' on page 19 undefined on input line 2
+2.
+
+[19 <./figures/TShE.png>]
+<figures/meshinterior.png, id=160, 301.79951pt x 226.63872pt>
 File: figures/meshinterior.png Graphic file (type png)
 
 <use figures/meshinterior.png>
 Package pdftex.def Info: figures/meshinterior.png used on input line 29.
 (pdftex.def)             Requested size: 180.67499pt x 135.67995pt.
 
-<figures/meshinterior1.png, id=346, 301.79951pt x 226.63872pt>
+<figures/meshinterior1.png, id=161, 301.79951pt x 226.63872pt>
 File: figures/meshinterior1.png Graphic file (type png)
 
 <use figures/meshinterior1.png>
 Package pdftex.def Info: figures/meshinterior1.png used on input line 33.
 (pdftex.def)             Requested size: 180.67499pt x 135.67995pt.
 
-<figures/meshinterior2.png, id=347, 301.79951pt x 226.63872pt>
+<figures/meshinterior2.png, id=162, 301.79951pt x 226.63872pt>
 File: figures/meshinterior2.png Graphic file (type png)
 
 <use figures/meshinterior2.png>
 Package pdftex.def Info: figures/meshinterior2.png used on input line 37.
 (pdftex.def)             Requested size: 180.67499pt x 135.67995pt.
 
-<figures/meshinterior3.png, id=348, 301.79951pt x 226.63872pt>
+<figures/meshinterior3.png, id=163, 301.79951pt x 226.63872pt>
 File: figures/meshinterior3.png Graphic file (type png)
 
 <use figures/meshinterior3.png>
 Package pdftex.def Info: figures/meshinterior3.png used on input line 41.
 (pdftex.def)             Requested size: 180.67499pt x 135.67995pt.
 
-<figures/meshinterior4.png, id=349, 301.79951pt x 226.63872pt>
+<figures/meshinterior4.png, id=164, 301.79951pt x 226.63872pt>
 File: figures/meshinterior4.png Graphic file (type png)
 
 <use figures/meshinterior4.png>
 Package pdftex.def Info: figures/meshinterior4.png used on input line 45.
 (pdftex.def)             Requested size: 180.67499pt x 135.67995pt.
-
-<figures/meshborderx1.png, id=350, 301.79951pt x 226.63872pt>
+ [20]
+<figures/meshborderx1.png, id=169, 301.79951pt x 226.63872pt>
 File: figures/meshborderx1.png Graphic file (type png)
 
 <use figures/meshborderx1.png>
 Package pdftex.def Info: figures/meshborderx1.png used on input line 57.
 (pdftex.def)             Requested size: 180.67499pt x 135.67995pt.
 
-<figures/meshborderx2.png, id=351, 301.79951pt x 226.63872pt>
+<figures/meshborderx2.png, id=170, 301.79951pt x 226.63872pt>
 File: figures/meshborderx2.png Graphic file (type png)
 
 <use figures/meshborderx2.png>
 Package pdftex.def Info: figures/meshborderx2.png used on input line 61.
 (pdftex.def)             Requested size: 180.67499pt x 135.67995pt.
 
-<figures/meshborderx3.png, id=352, 301.79951pt x 226.63872pt>
+<figures/meshborderx3.png, id=171, 301.79951pt x 226.63872pt>
 File: figures/meshborderx3.png Graphic file (type png)
 
 <use figures/meshborderx3.png>
 Package pdftex.def Info: figures/meshborderx3.png used on input line 65.
 (pdftex.def)             Requested size: 180.67499pt x 135.67995pt.
- [20 <./figures/meshinterior.png> <./figures/meshinterior1.png> <./figures/mesh
-interior2.png> <./figures/meshinterior3.png> <./figures/meshinterior4.png>] [21
+ [21 <./figures/meshinterior.png> <./figures/meshinterior1.png> <./figures/mesh
+interior2.png> <./figures/meshinterior3.png> <./figures/meshinterior4.png>] [22
  <./figures/meshborderx1.png> <./figures/meshborderx2.png> <./figures/meshborde
 rx3.png>]
-<figures/meshbordery1.png, id=380, 299.01712pt x 229.63792pt>
+<figures/meshbordery1.png, id=201, 296.12633pt x 220.60417pt>
 File: figures/meshbordery1.png Graphic file (type png)
 
 <use figures/meshbordery1.png>
 Package pdftex.def Info: figures/meshbordery1.png used on input line 77.
-(pdftex.def)             Requested size: 180.67499pt x 138.7509pt.
+(pdftex.def)             Requested size: 180.67499pt x 134.59526pt.
 
-<figures/meshbordery2.png, id=381, 299.01712pt x 221.50755pt>
+<figures/meshbordery2.png, id=202, 296.12633pt x 220.60417pt>
 File: figures/meshbordery2.png Graphic file (type png)
 
 <use figures/meshbordery2.png>
 Package pdftex.def Info: figures/meshbordery2.png used on input line 81.
-(pdftex.def)             Requested size: 180.67499pt x 133.83841pt.
+(pdftex.def)             Requested size: 180.67499pt x 134.59526pt.
 
-<figures/meshbordery3.png, id=382, 299.01712pt x 221.50755pt>
+<figures/meshbordery3.png, id=203, 296.12633pt x 220.60417pt>
 File: figures/meshbordery3.png Graphic file (type png)
 
 <use figures/meshbordery3.png>
 Package pdftex.def Info: figures/meshbordery3.png used on input line 85.
-(pdftex.def)             Requested size: 180.67499pt x 133.83841pt.
+(pdftex.def)             Requested size: 180.67499pt x 134.59526pt.
 
-<figures/meshbordery4.png, id=383, 318.89137pt x 221.50755pt>
+<figures/meshbordery4.png, id=204, 296.12633pt x 220.60417pt>
 File: figures/meshbordery4.png Graphic file (type png)
 
 <use figures/meshbordery4.png>
 Package pdftex.def Info: figures/meshbordery4.png used on input line 89.
-(pdftex.def)             Requested size: 180.67499pt x 125.50351pt.
+(pdftex.def)             Requested size: 180.67499pt x 134.59526pt.
 
-<figures/meshbordery5.png, id=384, 315.27788pt x 221.50755pt>
+<figures/meshbordery5.png, id=205, 296.12633pt x 220.60417pt>
 File: figures/meshbordery5.png Graphic file (type png)
 
 <use figures/meshbordery5.png>
 Package pdftex.def Info: figures/meshbordery5.png used on input line 93.
-(pdftex.def)             Requested size: 180.67499pt x 126.93997pt.
- [22]
-<figures/meshcorner1.png, id=389, 289.08pt x 216.81pt>
+(pdftex.def)             Requested size: 180.67499pt x 134.59526pt.
+ [23]
+<figures/meshcorner1.png, id=210, 289.08pt x 216.81pt>
 File: figures/meshcorner1.png Graphic file (type png)
 
 <use figures/meshcorner1.png>
 Package pdftex.def Info: figures/meshcorner1.png used on input line 103.
 (pdftex.def)             Requested size: 180.67499pt x 135.5059pt.
 
-<figures/meshcorner2.png, id=390, 289.08pt x 216.81pt>
+<figures/meshcorner2.png, id=211, 289.08pt x 216.81pt>
 File: figures/meshcorner2.png Graphic file (type png)
 
 <use figures/meshcorner2.png>
 Package pdftex.def Info: figures/meshcorner2.png used on input line 107.
 (pdftex.def)             Requested size: 180.67499pt x 135.5059pt.
 
-<figures/meshcorner3.png, id=391, 292.6935pt x 216.81pt>
+<figures/meshcorner3.png, id=212, 298.11375pt x 216.81pt>
 File: figures/meshcorner3.png Graphic file (type png)
 
 <use figures/meshcorner3.png>
 Package pdftex.def Info: figures/meshcorner3.png used on input line 111.
-(pdftex.def)             Requested size: 180.67499pt x 133.83524pt.
- [23 <./figures/meshbordery1.png> <./figures/meshbordery2.png> <./figures/meshb
-ordery3.png> <./figures/meshbordery4.png> <./figures/meshbordery5.png>]) (./par
-ts/chapter5.tex [24 <./figures/meshcorner1.png> <./figures/meshcorner2.png> <./
-figures/meshcorner3.png>]
+(pdftex.def)             Requested size: 180.67499pt x 131.40038pt.
+
+<figures/meshcorner4.png, id=213, 298.11375pt x 216.81pt>
+File: figures/meshcorner4.png Graphic file (type png)
+
+<use figures/meshcorner4.png>
+Package pdftex.def Info: figures/meshcorner4.png used on input line 115.
+(pdftex.def)             Requested size: 180.67499pt x 131.40038pt.
+ [24 <./figures/meshbordery1.png> <./figures/meshbordery2.png> <./figures/meshb
+ordery3.png> <./figures/meshbordery4.png> <./figures/meshbordery5.png>] [25 <./
+figures/meshcorner1.png> <./figures/meshcorner2.png> <./figures/meshcorner3.png
+> <./figures/meshcorner4.png>])
+(./parts/chapter5.tex [26]
 Chapter 5.
-[25
+[27
 
 
-] [26]
+] [28]
+
+LaTeX Warning: Reference `fig:subfig1' on page 29 undefined on input line 22.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-<figures/chordal_a_l.png, id=428, 643.6547pt x 101.62968pt>
+<figures/chordal_a_l.png, id=261, 643.6547pt x 101.62968pt>
 File: figures/chordal_a_l.png Graphic file (type png)
 
 <use figures/chordal_a_l.png>
 Package pdftex.def Info: figures/chordal_a_l.png used on input line 28.
 (pdftex.def)             Requested size: 216.81pt x 34.23262pt.
 
-<figures/chordal_a1_l.png, id=429, 643.6547pt x 101.62968pt>
+<figures/chordal_a1_l.png, id=262, 643.6547pt x 101.62968pt>
 File: figures/chordal_a1_l.png Graphic file (type png)
 
 <use figures/chordal_a1_l.png>
 Package pdftex.def Info: figures/chordal_a1_l.png used on input line 32.
 (pdftex.def)             Requested size: 216.81pt x 34.23262pt.
- [27]
+ [29]
 Underfull \hbox (badness 10000) in paragraph at lines 37--39
 
  []
@@ -1580,30 +1607,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--41
  []
 
 
+LaTeX Warning: Reference `fig:subfig' on page 30 undefined on input line 43.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 42--44
 
  []
 
-[28 <./figures/chordal_a_l.png> <./figures/chordal_a1_l.png>]
-<figures/tjt1.png, id=445, 226.9278pt x 53.4798pt>
+[30 <./figures/chordal_a_l.png> <./figures/chordal_a1_l.png>]
+<figures/tjt1.png, id=279, 226.9278pt x 53.4798pt>
 File: figures/tjt1.png Graphic file (type png)
  <use figures/tjt1.png>
 Package pdftex.def Info: figures/tjt1.png used on input line 49.
 (pdftex.def)             Requested size: 180.67499pt x 42.57988pt.
 
-<figures/tjt2.png, id=446, 225.4824pt x 74.1972pt>
+<figures/tjt2.png, id=280, 225.4824pt x 74.1972pt>
 File: figures/tjt2.png Graphic file (type png)
  <use figures/tjt2.png>
 Package pdftex.def Info: figures/tjt2.png used on input line 53.
 (pdftex.def)             Requested size: 180.67499pt x 59.45518pt.
 
-<figures/tjt3.png, id=447, 210.5466pt x 73.2336pt>
+<figures/tjt3.png, id=281, 210.5466pt x 73.2336pt>
 File: figures/tjt3.png Graphic file (type png)
  <use figures/tjt3.png>
 Package pdftex.def Info: figures/tjt3.png used on input line 57.
 (pdftex.def)             Requested size: 180.67499pt x 62.84778pt.
 
-<figures/tjt4.png, id=448, 229.8186pt x 58.7796pt>
+<figures/tjt4.png, id=282, 229.8186pt x 58.7796pt>
 File: figures/tjt4.png Graphic file (type png)
  <use figures/tjt4.png>
 Package pdftex.def Info: figures/tjt4.png used on input line 61.
@@ -1613,38 +1643,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
-[29 <./figures/tjt1.png> <./figures/tjt2.png> <./figures/tjt3.png> <./figures/t
-jt4.png>] [30]
+[31 <./figures/tjt1.png> <./figures/tjt2.png> <./figures/tjt3.png> <./figures/t
+jt4.png>] [32]
 Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
-[31] [32] [33]
+[33] [34] [35]
 Overfull \hbox (52.33733pt too wide) in paragraph at lines 120--121
 []\OT1/cmr/m/n/12 For $\OML/cmm/m/it/12 CA$ \OT1/cmr/m/n/12 in sce-nario 1: Let
  us do-nate by $\OML/cmm/m/it/12 y$ \OT1/cmr/m/n/12 the co-or-di-nate of the no
 de in the $\OML/cmm/m/it/12 Notification Window$
  []
 
-[34] <figures/T29.png, id=486, 254.3904pt x 92.0238pt>
+[36]
+
+LaTeX Warning: Reference `fig:T29' on page 37 undefined on input line 127.
+
+<figures/T29.png, id=321, 254.3904pt x 92.0238pt>
 File: figures/T29.png Graphic file (type png)
  <use figures/T29.png>
 Package pdftex.def Info: figures/T29.png used on input line 131.
 (pdftex.def)             Requested size: 276.43555pt x 100.00345pt.
 
-<figures/T50.png, id=487, 254.3904pt x 106.4778pt>
+<figures/T50.png, id=322, 254.3904pt x 106.4778pt>
 File: figures/T50.png Graphic file (type png)
  <use figures/T50.png>
 Package pdftex.def Info: figures/T50.png used on input line 139.
 (pdftex.def)             Requested size: 276.43555pt x 115.71078pt.
 
-[35 <./figures/T29.png>] <figures/T611.png, id=494, 254.3904pt x 105.5142pt>
+[37 <./figures/T29.png>] <figures/T611.png, id=331, 254.3904pt x 105.5142pt>
 File: figures/T611.png Graphic file (type png)
 
 <use figures/T611.png>
 Package pdftex.def Info: figures/T611.png used on input line 147.
 (pdftex.def)             Requested size: 276.43555pt x 114.66365pt.
- <figures/T612.png, id=495, 254.3904pt x 105.5142pt>
+ <figures/T612.png, id=332, 254.3904pt x 105.5142pt>
 File: figures/T612.png Graphic file (type png)
 
 <use figures/T612.png>
@@ -1657,20 +1691,20 @@ h is from node 55 to node 65. Note that the $\OML/cmm/m/it/12 Notification Wind
 ow$
  []
 
-[36 <./figures/T50.png> <./figures/T611.png> <./figures/T612.png>]
-<figures/T75.png, id=503, 254.3904pt x 119.9682pt>
+[38 <./figures/T50.png> <./figures/T611.png> <./figures/T612.png>]
+<figures/T75.png, id=343, 254.3904pt x 119.9682pt>
 File: figures/T75.png Graphic file (type png)
  <use figures/T75.png>
 Package pdftex.def Info: figures/T75.png used on input line 160.
 (pdftex.def)             Requested size: 276.43555pt x 130.37099pt.
 
-<figures/T66.png, id=504, 254.3904pt x 119.9682pt>
+<figures/T66.png, id=344, 254.3904pt x 119.9682pt>
 File: figures/T66.png Graphic file (type png)
  <use figures/T66.png>
 Package pdftex.def Info: figures/T66.png used on input line 167.
 (pdftex.def)             Requested size: 276.43555pt x 130.37099pt.
 
-[37 <./figures/T75.png>] <figures/T94.png, id=510, 254.3904pt x 148.8762pt>
+[39 <./figures/T75.png>] <figures/T94.png, id=351, 254.3904pt x 148.8762pt>
 File: figures/T94.png Graphic file (type png)
 
 <use figures/T94.png>
@@ -1678,27 +1712,33 @@ Package pdftex.def Info: figures/T94.png used on input line 173.
 (pdftex.def)             Requested size: 276.43555pt x 161.7857pt.
 
 
-Package natbib Warning: Citation `Alotaibi' on page 38 undefined on input line 
+Package natbib Warning: Citation `Alotaibi' on page 40 undefined on input line 
 180.
 
-[38 <./figures/T66.png> <./figures/T94.png>]
-<figures/D1.png, id=518, 347.3778pt x 73.7154pt>
+[40 <./figures/T66.png> <./figures/T94.png>]
+
+LaTeX Warning: Reference `fig:D1' on page 41 undefined on input line 184.
+
+<figures/D1.png, id=361, 347.3778pt x 73.7154pt>
 File: figures/D1.png Graphic file (type png)
  <use figures/D1.png>
 Package pdftex.def Info: figures/D1.png used on input line 187.
 (pdftex.def)             Requested size: 276.43555pt x 58.6608pt.
- [39]
-<figures/D2.png, id=524, 320.397pt x 80.9424pt>
+ [41]
+
+LaTeX Warning: Reference `fig:D2' on page 42 undefined on input line 192.
+
+<figures/D2.png, id=366, 320.397pt x 80.9424pt>
 File: figures/D2.png Graphic file (type png)
  <use figures/D2.png>
 Package pdftex.def Info: figures/D2.png used on input line 195.
 (pdftex.def)             Requested size: 276.43555pt x 69.84006pt.
- [40 <./figures/D1.png> <./figures/D2.png>] [41]
+ [42 <./figures/D1.png> <./figures/D2.png>] [43]
 
-Package natbib Warning: Citation `Alotaibi' on page 42 undefined on input line 
-235.
+Package natbib Warning: Citation `Alotaibi' on page 44 undefined on input line 
+233.
 
-[42] [43]) [44]
+[44] [45]) [46]
 No file uottawa-thesis.bbl.
 
 Package natbib Warning: There were undefined citations.
@@ -1708,8 +1748,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 231.
 (./uottawa-thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 231.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 231.
-Package rerunfilecheck Info: File `uottawa-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 5C7202F3BC7F8931E4DF4375289C9E84;2237.
+
+
+Package rerunfilecheck Warning: File `uottawa-thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `uottawa-thesis.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  9F0BFB8CE2C048A944E96215E904ECE7;2453.
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -1717,13 +1766,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 231.
  ) 
 Here is how much of TeX's memory you used:
- 10286 strings out of 492995
- 149569 string characters out of 6132704
- 245783 words of memory out of 5000000
- 13415 multiletter control sequences out of 15000+600000
+ 10256 strings out of 492995
+ 149184 string characters out of 6132704
+ 243620 words of memory out of 5000000
+ 13387 multiletter control sequences out of 15000+600000
  13428 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,12n,30p,2753b,419s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,12n,30p,2753b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -1746,10 +1795,10 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2017/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on uottawa-thesis.pdf (52 pages, 1663714 bytes).
+Output written on uottawa-thesis.pdf (52 pages, 1710508 bytes).
 PDF statistics:
- 650 PDF objects out of 1000 (max. 8388607)
- 505 compressed objects within 6 object streams
- 134 named destinations out of 1000 (max. 500000)
- 425 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 497 PDF objects out of 1000 (max. 8388607)
+ 352 compressed objects within 4 object streams
+ 139 named destinations out of 1000 (max. 500000)
+ 166 words of extra memory for PDF output out of 10000 (max. 10000000)
 

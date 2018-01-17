@@ -7,19 +7,19 @@
 In this chapter, we discuss parallel strategy on BVD problem in meshes. A mesh of size $d_1\times d_2$ has $n=d_1\times d_2(d_1>2,d_2>2)$ nodes. Without loss of generality, let $d_1<d_2$ and let the node of {\em M} be donated by their column and row coordinate ($x_1$,$x_2$), $1\leq x_i \leq d_1$, $1\leq i \leq d_2$. Observe that in a mesh, we have three types of nodes: \textit{corner} (entities with only two neighbours), \textit{border}(entities with three neighbours), and \textit{interior}(with four neighbours). In the sequential strategy for meshes, an ``explorer agent ''and a ``leader explorer agent'' are sent to explore the graph and locate the BV. They traverse the mesh in a snake-like fashion column by column following the ``casual walk''. These strategies are simple to follow and result in least casualties. But at the same time they are not time-efficient. Now we consider that if more than two agents are allowed to participate in the exploring phase and we focus on decreasing the time cost in the exploring phase and the number of casualties, how to design a new strategy so that the we are able to reach the destination with acceptable cost (the increasing number of agents used in the exploring phase). Our strategy follows two phase: shadowed exploration and elimination. In the first phase, the network is traversed until the location of the BV is determined. That location is clear after the visit while all of its unprotected neighbours have become BVs. Actually, in our strategy, there are only one new formed BV. In the second phase, new formed BV is surrounded and permanently eliminated. There are two significant differences between our strategy and the sequential strategy: the number of agents employed in the exploration phase; the route of agents in the exploration phase. We also give the routes of agents in the elimination phase. 
 \section{Shadowed Exploration and Elimination}
 \noindent{\bf Shadowed Exploration Phase} \\
-Initially, 2$d_1$ agents are placed at the first two columns at $T_0$. More specifically, the coordinate of them are (1, $x_i$) and (2,$x_i$) where $1\leq x_i\leq d_1$. If the BV resides in a node in the first column, then all of its clones are destroyed. If the BV resides in a node in the second column, then the elimination phase begins. Let's assume that the we starts at $T_0$. Agents residing in nodes in the second column moves EAST at the beginning of T(2n), $n=0,1, \ldots ,d_2-1$. More precisely, node (x, y) move to (x+1, y) at the beginning of T(2n), $n=0,1, \dots , d_2-1$. Agents residing in the first column simply follow the node in the second column (see  Fig.\ref{fig:TShE}). When one of the node in the former column is destroyed by a BV, the second phase starts.
+Initially, 2$d_1$ agents are placed at the first two columns at $T_0$. More specifically, the coordinate of them are (1, $x_i$) and (2,$x_i$) where $1\leq x_i\leq d_1$. The agents residing in the first column are in the shadowing group while the agents residing in the second column are in the exploring group. If the BV resides in a node in the first column, then all of its clones are destroyed. If the BV resides in a node in the second column, then the elimination phase begins. It is obvious that if the BV do not reside in any node in the first column, then a agent in the exploring group should be destroyed when the BV is exposed.  Let's assume that the we starts at $T_0$. Agents residing in nodes in the second column moves EAST at the beginning of T(2n), $n=0,1, \ldots ,d_2-1$. More precisely, node (x, y) move to (x+1, y) at the beginning of T(2n), $n=0,1, \dots , d_2-1$. Agents residing in the first column simply follow the node in the second column (see  Fig.\ref{fig:TShE}). When one of the node in the former column is destroyed by a BV, the second phase starts.
 \begin{figure}[H]
   \centering  
   \includegraphics[width=2.5in]{figures/TShE.png}
   \caption{Agents move at time $T_0$}\label{fig:TShE}
 \end{figure}
 \noindent{\bf Elimination Phase}
-The elimination begins when one of the node in the former column is destroyed by a BV( let's say, at T(2$x_i$)). No matter where is the BV, there are always three agents residing on its north(if the BV is not in the first line), west and south (if the BV is not in the last line), so only one BV clone survives. In another word, only one node becomes BV node after the BV being triggered. Let the node where the surviving clone resided be $(x, y)$ and its situation can be divided into four cases. Different routes of agents in the elimination phase are based on the location of the new formed BV.
+The elimination begins when one of the node in the former column is destroyed by a BV( let's say, at T(2$x_i$)). No matter where is the BV, there are always three agents residing on its north(if the BV is not in the first line), west and south (if the BV is not in the last line), so only one BV clone survives. In another word, only one node becomes BV node after the BV being triggered.  Observe that in the parallel strategy, not all agents participate in the elimination phase automatically when the BV is explored because only those receive the clones of the original BV and those be notified by other agents can participate in the elimination phase. Since we want to make use of the agents we employ at the beginning in the elimination phase which means the situation that the number of agents is not enough for completing the elimination phase but there are still some agents keeping exploring the graph is not allowed to happen. So in some situation, agents who receive the BV clone should notify other agents to participate in the elimination.  Let the node where the surviving clone resided be $(x, y)$ and its situation can be divided into four cases. Different routes of agents in the elimination phase are based on the location of the new formed BV.
 \begin{itemize}
 \item Case 1: When $2<x<d_1$, $1<y<d_2-1$ (a interior node becomes a new formed BV), then agents (let's say agents $a,b,c$) residing in node $(x-1, y+1)$, $(x-1, y-1)$ and $(x-2, y)$ receive a BV clone at T(2$x_i$+1), so that they know the location of the original BV and also the new formed BV. Note that in the exploring phase, the agents move EAST at T(2n), $n=0,1, \ldots ,d_2-2$. Actually, one unit of time is reserved for some agents to receive the BV clone. After they receive the BV clone, these agents move EAST for one step (for example, to node $(x, y+1)$, $(x, y-1)$ and $(x-1, y)$ and stop. Note that other agents including agents residing in node $(x-2, y+1)$ and $(x-2, y-1)$ (let's say agent d and e) at T(2$x_i$) do not know the existence of the BV so they keep moving EAST. These two agents arrive at nodes $(x, y+1)$, $(x, y-1)$ at T(2($x_i+2$)) and at this time they meet agent $a$ and $b$ respectively. Agent $a$ and $b$ inform them of the location of the new form BV and the routes of agents $d$ and $e$ are as follow:\\
 route of $d$: $(x, y+1)(at\ T(2(x_i+2)){\rightarrow}(x+1,y+1)(at\ T(2(x_i+2)+1){\rightarrow}(x+1,y)(at\ T(2(x_i+3))$.\\
 route of $e$: $(x, y-1)(at\ T(2(x_i+2)){\rightarrow}(x, y)(at\ T(2(x_i+3)+1))$.
-The routes of agents are showed in Fig.\ref{fig:subfigmesh1}.
+The routes of agents are showed in Fig.\ref{fig:subfigmesh1} where a blue node indicate that there are one agent residing here; a red node indicate that there are two agents residing here; a yellow node indicate that there are three agents residing here.
 
 %\iffalse
 \begin{figure} [H]
@@ -56,11 +56,11 @@ The routes of agents are showed in Fig.\ref{fig:subfigmesh1}.
     \label{fig:subfigmesh2:a} %% label for first subfigure 
     \includegraphics[width=2.5in]{figures/meshborderx1.png}} 
 %  \hspace{1in} 
-  \subfigure[$T(2(x_i+1))$]{ 
+  \subfigure[$T(2(x_i+2))$]{ 
     \label{fig:subfigmesh2:b} %% label for second subfigure 
     \includegraphics[width=2.5in]{figures/meshborderx2.png}}
     \hspace{1in} 
-  \subfigure[$T(2(x_i+2))$]{ 
+  \subfigure[$T(2(x_i+2)+1)$]{ 
     \label{fig:subfigmesh2:c} %% label for second subfigure 
     \includegraphics[width=2.5in]{figures/meshborderx3.png}}
 %      \hspace{1in} 
@@ -110,12 +110,25 @@ The routes of agents are showed in Fig.\ref{fig:subfigmesh1}.
     \label{fig:subfigmesh4:c} %% label for second subfigure 
     \includegraphics[width=2.5in]{figures/meshcorner3.png}}
 %      \hspace{1in} 
+\subfigure[$T(2(x_i+2)+1)$]{ 
+    \label{fig:subfigmesh4:d} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/meshcorner4.png}}
     \caption{Arrangement of agents in elimination phase when the new formed BV resides in a corner (when $x=d_1$ and $y=1$ or $y=d_2-1$)} 
   \label{fig:subfigmesh4} %% label for entire figure 
 \end{figure}
-
 \end{itemize}
 
+\section{Analysis and Comparing}
+\subsection{Theorem and proof}
+\begin{theorem}
+Mesh contamination algorithm performs a decontamination of a mesh (size of $n=d_1\times d_2(d_1>2,d_2>2)$ using $k=2d_1$ agents and at most 1 casualties.
+\end{theorem}
+\begin{proof}
+Let $v=(x, y)$ be the node containing the BV. When one of the agent in the exploring group moves to $v$, it will be destroyed and the BV will move to all neighbours of $v$. If $x=1$, then the neighbours $(x, y+1)$, $(x, y-1)$ and $(x+1, y)$ are protected by agents and neighbour $(x-1, y)$ actually does not exist; if $x>1$, then neighbours $(x, y+1)$, $(x, y-1)$ and $(x-1, y)$ are protected by agents. So when the clones of BV moves to the neighbours of $v$, those contain a agent will not be infected by the BV clone; this means that the BV can safely move only to the unexplored neighbours of $v$, of which are at most one. In other words, after $v$ is explored, at most one BV node are formed. According to our elimination strategy, the new formed BV node can be surrounded and destroyed using at most five agents: one to enter a BV and four to protect the neighbours. Since we have one new formed BV, the number of agents participating in the elimination phase is at most five. In addition to the agent destroyed by the original BV, the number of agent needed to complete the elimination phase is at least six. Since we employ $k=2d_1$ ($d_1\geq 3$) which means at the beginning we have at least six agents, so $2d_1$ agents are enough for the decontamination algorithm.
+\end{proof}
+
+\subsection{Analysis and Comparing}
+\noindent{\bf Calamity Analysis}
 
 
 
