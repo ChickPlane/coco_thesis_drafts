@@ -1,5 +1,5 @@
-\contentsline {chapter}{List of Tables}{v}{section*.2}
-\contentsline {chapter}{List of Figures}{vi}{section*.4}
+\contentsline {chapter}{List of Tables}{vi}{section*.2}
+\contentsline {chapter}{List of Figures}{vii}{section*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Problem and Motivation}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Our Contribution}{3}{section.1.2}
@@ -20,20 +20,20 @@
 \contentsline {subsection}{\numberline {3.1.2}Problem, Cost}{14}{subsection.3.1.2}
 \contentsline {subsection}{\numberline {3.1.3}Monotone, Synchrony}{14}{subsection.3.1.3}
 \contentsline {section}{\numberline {3.2} General strategy}{15}{section.3.2}
-\contentsline {section}{\numberline {3.3}Conclusion}{16}{section.3.3}
-\contentsline {chapter}{\numberline {4}Parallel Black Virus Decontamination in Meshes}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{17}{section.4.1}
-\contentsline {section}{\numberline {4.2}Shadowed Exploration and Elimination}{18}{section.4.2}
-\contentsline {section}{\numberline {4.3}Analysis and Comparing}{25}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Theorem and proof}{25}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Analysis and Comparing}{26}{subsection.4.3.2}
-\contentsline {chapter}{\numberline {5}Parallel Black Virus Decontamination in Chordal Ring}{27}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{27}{section.5.1}
-\contentsline {section}{\numberline {5.2}Shadowed Exploration}{29}{section.5.2}
-\contentsline {section}{\numberline {5.3}Surrounding and Elimination}{32}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Notifying Moving Agents}{33}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Overview of the Elimination}{40}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Destination Table and Elimination}{42}{subsection.5.3.3}
-\contentsline {section}{\numberline {5.4}Analysis and Comparing}{43}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Theorem and Proof}{43}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Analysis and Comparing}{44}{subsection.5.4.2}
+\contentsline {section}{\numberline {3.3}Evaluation Criteria}{16}{section.3.3}
+\contentsline {section}{\numberline {3.4}Conclusion}{17}{section.3.4}
+\contentsline {chapter}{\numberline {4}Parallel Black Virus Decontamination in Meshes}{18}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{18}{section.4.1}
+\contentsline {section}{\numberline {4.2}Parallel BV Decontamination of Grids}{19}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Base Case:2-Dimensional Grid}{19}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Multi-Dimensional Grid}{29}{subsection.4.2.2}
+\contentsline {chapter}{\numberline {5}Parallel Black Virus Decontamination in Chordal Ring}{30}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{30}{section.5.1}
+\contentsline {section}{\numberline {5.2}Shadowed Exploration}{32}{section.5.2}
+\contentsline {section}{\numberline {5.3}Surrounding and Elimination}{35}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Notifying Moving Agents}{36}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Overview of the Elimination}{43}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Destination Table and Elimination}{45}{subsection.5.3.3}
+\contentsline {section}{\numberline {5.4}Analysis and Comparing}{46}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Theorem and Proof}{46}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Analysis and Comparing}{47}{subsection.5.4.2}
