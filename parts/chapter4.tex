@@ -10,9 +10,67 @@ Also, we compare the number of agents, the time cost, the number of movement and
 
 \section{Parallel BV Decontamination of Grids}
 \subsection{Base Case:2-Dimensional Grid}
-A 2-dimensional grid (which is a mesh) of size $d_1\times d_2$ has $n=d_1\times d_2(d_1>2,d_2>2)$ nodes. Without loss of generality, let $d_1<d_2$ and let the node of {\em M} be donated by their column and row coordinate ($x_1$,$x_2$), $1\leq x_i \leq d_1$, $1\leq i \leq d_2$. Observe that in a mesh, we have three types of nodes: \textit{corner} (entities with only two neighbours), \textit{border}(entities with three neighbours), and \textit{interior}(with four neighbours).  Our strategy follows two phase: shadowed exploration and elimination. In the first phase, the network is traversed until the location of the BV is determined. That location is clear after the visit while all of its unprotected neighbours have become BVs. Actually, in $PBVD-2G$, there are only one new formed BV. In the second phase, new formed BV is surrounded and permanently eliminated. Note that when we say the second phase starts, we actually mean that those agents knowing the existence of BV start to surround the BV, or notify some other agents, and then eliminate the BV, but not mean that all the agents enter this phase. There are two significant differences between $PBVD-2G$ and the sequential strategy : the number of agents employed in the exploration phase; the route of agents in the exploration phase. We also give the routes of agents in the elimination phase. 
+A 2-dimensional grid (which is a mesh) of size $d_1\times d_2$ has $n=d_1\times d_2(d_1>2,d_2>2)$ nodes. Without loss of generality, let $d_1<d_2$ and let the node of {\em M} be donated by their column and row coordinate ($x_1$,$x_2$), $1\leq x_1 \leq d_1$, $1\leq x_2 \leq d_2$. Observe that in a mesh, we have three types of nodes: \textit{corner} (entities with only two neighbours), \textit{border}(entities with three neighbours), and \textit{interior}(with four neighbours).  Our strategy follows two phases: shadowed exploration and elimination. In the first phase, the network is traversed until the location of the BV is determined. That location is clear after the visit while all of its unprotected neighbours have become BVs. Actually, in $PBVD-2G$, there are only one new formed BV. In the second phase, new formed BV is surrounded and permanently eliminated. Note that when we say the second phase starts, we actually mean that those agents knowing the existence of BV start to surround the BV, or notify some other agents, and then eliminate the BV, but not mean that all the agents enter this phase. There are two significant differences between $PBVD-2G$ and the sequential strategy: the number of agents employed in the exploration phase; the route of agents in the exploration phase. We also give the routes of agents in the elimination phase. 
 
 \noindent{\bf Shadowed Exploration Phase} \\
+
+As we introduce above, we should place the agents in a specific array at the beginning and then let them explore the graph. Now let us consider how to arrange them at the beginning and how to design the routes for them to explore the graph. We prefer to place the agents at the borders (or the corners) of the mesh because in this way we can reduce the casualties. For the same purpose of reducing the casualties, we prefer to arrange all the agents in a array so that when one of the exploring agent trigger the BV, the exploring agents and shadowed agents guide as many neighbours of the BV as possible. In another word, we want all the agent explore the graph in one direction but not from different direction. With these two principles, our strategy in the shadowed exploration is that given specific number of agents, we place them in one border of the mesh and if there are more agents, we place them on the row which is parallel to the border and so on. Then we design routes for them so that at any time they move to one direction to explore the graph. \\
+Monotonicity is a principle that we should obey in the whole process, which means one exploring agent should be followed by at least one shadowed agent, so the number of agents in the exploration phase should be at least twice the number of the exploring agents. To guarantee the monotonicity and the two principles, we should employ $2a\,(a\in\mathbb{Z}^*)$ agents in this phase and place $a$ of them in one of the border and the others in the second line paralleling to the border.
+Now let's consider the number of agents we should employ.
+When $a=1$, the arrangement is actually the sequential case. Since we want to explore the graph parallelly, let's start from the base case when $a=2$. The initial arrangement would be as Fig\ref{fig:twoagent1}:
+\begin{figure}[H]
+  \centering  
+  \includegraphics[width=2.5in]{figures/twoagent1.png}
+  \caption{Arrangement of agents at the beginning(when $a=2$)}\label{fig:twoagent1}
+\end{figure}
+Now let's consider the routes for the agents. For convenience, we assume that all the agents move at $T(x)\,(x\in\mathbb{Z}^*)$ because some time should be reserved for the coordination after the BV is triggered. More detail about the moving cycle would be discussed after we decide the number of agents and the routes for them. 
+Let $v=(x, y)$ be the node under exploration, with $1\leq x_i \leq d_1$, $1\leq i \leq d_2$. Additionally, we define ``Vertical Moving Mark'' (VMM) for every agent: VMM can only change between $0$ and $1$; every time when the agent moves SOUTH, that value changes. For example, if one agent continues to move SOUTH at $T(x)\,(x\in\mathbb{Z}^*)$ and its $Vertical_D$ is originally $0$, then its $Vertical_D$ changes into $1$ at $T(1)$, $0$ at $T(2)$ and so on.
+Every agent hold two VMMs in its memory and let's say $VMM_1$ and $VMM_2$. The original value of $VMM_1$ of the agents is $0$; the original value of $VMM_2$ of agents residing at node $(1, y)$ and node $(2, y)$ ($1\leq y\leq a$) is $0$ and $1$ respectively. 
+
+we now define the action of the $2a\,(a\in\mathbb{Z}^*)$ agents:\\ 
+\begin{itemize}
+\item Let $b=a-1$. When all agents' $VMM_1$ are ``0", then those agents with $VMM_2$ equal to ``0" move EAST when $x\neq d_1-1$ and move SOUTH for $b$ steps when $x=d_1-1$; those agents with $VMM_2$ equal to ``1" move EAST when $x\neq d_1$ and move SOUTH for $b$ when $x=d_1$. When all agents' $VMM_1$ are ``0", then those agents with $VMM_2$ equal to ``0"  move WEST when $x\neq2$ and move SOUTH for $b$ steps when $x=2$; those agents with $VMM_2$ equal to ``1" move WEST when $x\neq 1$ and move SOUTH for $b$ steps when $x=1$.
+\item A agent only move to a node which it has not explored. (Note that when residing at a node, a agent is able to know whether it has explored the neighbours of that node or not.)
+\end{itemize}
+Informally, the routes of agents are snakelike routes. When $a=2$, the routes of agents are shown as Fig\ref{fig:twoagent2}.
+%\iffalse
+\begin{figure} [H]
+  \centering 
+  \subfigure[Routes of agents in the first line when $a=2$]{ 
+    \label{fig:agentroute:a} %% label for first subfigure 
+    \includegraphics[width=3.5in]{figures/twoagentroute1.png}} 
+ \hspace{1in} 
+  \subfigure[Routes of agents in the second line when $a=2$]{ 
+    \label{fig:agentroute:b} %% label for second subfigure 
+    \includegraphics[width=3.5in]{figures/twoagentroute2.png}}
+  \caption{Routes of agents when $a=2$} 
+  \label{fig:twoagent2} %% label for entire figure 
+\end{figure}
+%\fi
+
+
+when $a=3$, the routes of agents are shown as Fig\ref{fig:threeagent1}. 
+\begin{figure} [H]
+  \centering 
+  \subfigure[Routes of agents in the first line when $a=3$]{ 
+    \label{fig:agentroute:a} %% label for first subfigure 
+    \includegraphics[width=3.5in]{figures/threeagentroute1.png}} 
+  \hspace{1in} 
+  \subfigure[Routes of agents in the second line when $a=3$]{ 
+    \label{fig:agentroute:b} %% label for second subfigure 
+    \includegraphics[width=3.5in]{figures/threeagentroute2.png}}
+    \hspace{1in} 
+    \subfigure[Routes of agents in the second line when $a=3$]{ 
+    \label{fig:agentroute:c} %% label for second subfigure 
+    \includegraphics[width=3.5in]{figures/threeagentroute3.png}}
+  \caption{Routes of agents when $a=3$} 
+  \label{fig:threeagent1} %% label for entire figure 
+\end{figure}
+
+
+
+
+
 Initially, 2$d_1$ agents are placed at the first two columns at $T_0$. More specifically, the coordinate of them are (1, $x_i$) and (2,$x_i$) where $1\leq x_i\leq d_1$. The agents residing in the first column are in the shadowing group while the agents residing in the second column are in the exploring group. If the BV resides in a node in the first column, then all of its clones are destroyed. If the BV resides in a node in the second column, then the elimination phase begins. It is obvious that if the BV do not reside in any node in the first column, then a agent in the exploring group should be destroyed when the BV is exposed.  Let's assume that the we starts at $T_0$. Agents residing in nodes in the second column moves EAST at the beginning of T(2n), $n=0,1, \ldots ,d_2-1$. More precisely, node (x, y) move to (x+1, y) at the beginning of T(2n), $n=0,1, \dots , d_2-1$. Agents residing in the first column simply follow the node in the second column (see  Fig.\ref{fig:TShE}). When one of the node in the former column is destroyed by a BV, the second phase starts.
 \begin{figure}[H]
   \centering  

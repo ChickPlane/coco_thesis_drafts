@@ -41,8 +41,21 @@ In this phase, since we already know the position of the BV, we employ agents to
 \section{Evaluation Criteria}
 For each of our strategy, we compute the number of agents, the number of movements, the time and the casualties.  In addition, we propose another cost measure which combines all the criteria mentioned above (Cost Function Measurement). In this thesis, we propose parallel strategy which aim at reducing the execution time and casualties. We reach this purpose at the cost of employing more agents to explore the graph parallelly. Unlike the sequential strategy which use only one agent, the parallel strategy are more flexible because you can adjust the strategy based on your resource (the number of agents, the time,\ldots). Generally, the more agents we employ to explore the graph, the less time we use in the shadowed exploration phase( the number of casualties may reduce at the same time), so there are some tradeoff we should make when we want to use the parallel BV decontamination strategy in practice. Now we introduce the general idea of the Cost Function Measurement.
 Let's denote by $w$ the number of agents we employ in the strategy, by $x$ the number of movements, by $y$ the time and by $z$ the casualties. Additionally, we introduce three useful function: $Cost_{AgentNumber}(w)$ which given the number of agents employed in the strategy, returns the overall cost of these agents; $Cost_{Movements}(x)$ which given the number of movements needed to complete the strategy, returns the overall cost of the movements; $Cost_{time}(y)$ which given the time required to finish the protocol, returns the overall cost of the time; $Cost_{casualty}(z)$ which given the casualty of the strategy, returns the overall of the casualties. Then the Cost Function $C(w, x, y, z)$ can be presented as $C(w, x, y, z)=C(Cost_{AgentNumber}(w), Cost_{Movements}(x), Cost_{time}(y), Cost_{casualty}(z))$.
-Users can build their own function to fit the specific scenario. For example, the simplest model is the liner function. More specifically, the cost functions can be expressed as below:\\
-  
+Users can build their own function to fit the specific scenario. For example, if the user care more about the time cost, then they can increase the weight of the time; they can also adjust each subfunction to simulate the practical situation. The simplest model is the liner function. More specifically, the cost functions can be expressed as below:\\
+\begin{equation}
+\left\{
+\begin{aligned}
+&C(w, x, y, z)=Cost_{AgentNumber}(w)+Cost_{Movements}(x)+Cost_{time}(y)+Cost_{casualty}(z)\\
+&Cost_{AgentNumber}(w)=\alpha w+\alpha _1\\
+&Cost_{Movements}(x)=\beta x+\beta _1\\
+&Cost_{time}(y)=\gamma y+\gamma _1\\
+&Cost_{casualty}(z)=\delta z+\delta _1\\
+&w, x, y, z\in \mathbb{Z}\\
+\end{aligned}
+\right.
+\end{equation}
+In this function we can see that the user view the four factor evenly (the coefficients of the four subfunctions are the same which are ``1''), and the cost of each item( agents, movement, time, casualty) increase linearly with their independent variable. We use this liner model to analyze some of our strategies. Note that the function we present here are for the purpose of explaining how to use the function method to analyze the BVD strategies, the function itself can be adjust by the users based on the practical situation.
+We simply compare the overall cost of different strategies for the same problem and assume that the strategy with the minimum cost is the best solution for the users.  
 \section{Conclusion}
 In this Chapter, we presented the model of our problem and also some important terminologies. Also we described a general strategy for our problem depending on particular setting: synchronous timing, parallel strategy... In the next chapter, we discuss the parallel strategies in BVD problem in two simple topologies: meshes and torus. 
 
