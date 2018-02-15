@@ -23,6 +23,7 @@ When $a=1$, the arrangement is actually the sequential case. Since we want to ex
   \includegraphics[width=2.5in]{figures/twoagent1.png}
   \caption{Arrangement of agents at the beginning(when $a=2$)}\label{fig:twoagent1}
 \end{figure}
+
 Now let's consider the routes for the agents. For convenience, we assume that all the agents move at $T(x)\,(x\in\mathbb{Z}^*)$ because some time should be reserved for the coordination after the BV is triggered. More detail about the moving cycle would be discussed after we decide the number of agents and the routes for them. 
 Let $v=(x, y)$ be the node under exploration, with $1\leq x_i \leq d_1$, $1\leq i \leq d_2$. Additionally, we define ``Vertical Moving Mark'' (VMM) for every agent: VMM can only change between $0$ and $1$; every time when the agent moves SOUTH, that value changes. For example, if one agent continues to move SOUTH at $T(x)\,(x\in\mathbb{Z}^*)$ and its $Vertical_D$ is originally $0$, then its $Vertical_D$ changes into $1$ at $T(1)$, $0$ at $T(2)$ and so on.
 Every agent hold two VMMs in its memory and let's say $VMM_1$ and $VMM_2$. The original value of $VMM_1$ of the agents is $0$; the original value of $VMM_2$ of agents residing at node $(1, y)$ and node $(2, y)$ ($1\leq y\leq a$) is $0$ and $1$ respectively. 
@@ -32,45 +33,53 @@ we now define the action of the $2a\,(a\in\mathbb{Z}^*)$ agents:\\
 \item Let $b=a-1$. When all agents' $VMM_1$ are ``0", then those agents with $VMM_2$ equal to ``0" move EAST when $x\neq d_1-1$ and move SOUTH for $b$ steps when $x=d_1-1$; those agents with $VMM_2$ equal to ``1" move EAST when $x\neq d_1$ and move SOUTH for $b$ when $x=d_1$. When all agents' $VMM_1$ are ``0", then those agents with $VMM_2$ equal to ``0"  move WEST when $x\neq2$ and move SOUTH for $b$ steps when $x=2$; those agents with $VMM_2$ equal to ``1" move WEST when $x\neq 1$ and move SOUTH for $b$ steps when $x=1$.
 \item A agent only move to a node which it has not explored. (Note that when residing at a node, a agent is able to know whether it has explored the neighbours of that node or not.)
 \end{itemize}
-Informally, the routes of agents are snakelike routes. When $a=2$, the routes of agents are shown as Fig\ref{fig:twoagent2}.
+Informally, the routes of agents are snakelike routes. When $a=2$, the routes of agents are shown as Fig\ref{fig:twoagent2}. In order to show the routes more clearly, we present the routes of agents in different line respectively.
 %\iffalse
 \begin{figure} [H]
   \centering 
   \subfigure[Routes of agents in the first line when $a=2$]{ 
     \label{fig:agentroute:a} %% label for first subfigure 
-    \includegraphics[width=3.5in]{figures/twoagentroute1.png}} 
- \hspace{1in} 
+    \includegraphics[width=3in]{figures/twoagentroute1.png}} 
+ %\hspace{1in} 
   \subfigure[Routes of agents in the second line when $a=2$]{ 
     \label{fig:agentroute:b} %% label for second subfigure 
-    \includegraphics[width=3.5in]{figures/twoagentroute2.png}}
+    \includegraphics[width=3in]{figures/twoagentroute2.png}}
   \caption{Routes of agents when $a=2$} 
   \label{fig:twoagent2} %% label for entire figure 
 \end{figure}
 %\fi
-
-
 when $a=3$, the routes of agents are shown as Fig\ref{fig:threeagent1}. 
 \begin{figure} [H]
   \centering 
   \subfigure[Routes of agents in the first line when $a=3$]{ 
     \label{fig:agentroute:a} %% label for first subfigure 
-    \includegraphics[width=3.5in]{figures/threeagentroute1.png}} 
+    \includegraphics[width=3in]{figures/threeagentroute1.png}} 
   \hspace{1in} 
   \subfigure[Routes of agents in the second line when $a=3$]{ 
     \label{fig:agentroute:b} %% label for second subfigure 
-    \includegraphics[width=3.5in]{figures/threeagentroute2.png}}
+    \includegraphics[width=3in]{figures/threeagentroute2.png}}
     \hspace{1in} 
     \subfigure[Routes of agents in the second line when $a=3$]{ 
     \label{fig:agentroute:c} %% label for second subfigure 
-    \includegraphics[width=3.5in]{figures/threeagentroute3.png}}
+    \includegraphics[width=3in]{figures/threeagentroute3.png}}
   \caption{Routes of agents when $a=3$} 
   \label{fig:threeagent1} %% label for entire figure 
 \end{figure}
-
-
-
-
-
+We can easily observe that some lines of the grid are traversed twice for the purpose of avoiding the explored nodes being contaminated (as shown in Fig \ref{fig:doubleline})
+\begin{figure} [H]
+  \centering 
+  \subfigure[Lines that are double traversed when $a=2$]{ 
+    \label{fig:agentroute:a} %% label for second subfigure 
+    \includegraphics[width=3in]{figures/doubleline2.png}}
+    %\hspace{1in} 
+    \subfigure[Lines that are double traversed when $a=3$]{ 
+    \label{fig:agentroute:b} %% label for second subfigure 
+    \includegraphics[width=3in]{figures/doubleline3.png}}
+  \caption{Lines that are double traversed (marked with red lines)} 
+  \label{fig:doubleline} %% label for entire figure 
+\end{figure}
+We can see that when the grid is fixed (so $d_1$ is fixed), the number of double traversed lines decrease as $a$ increases, which is easy to image. Let's denote by $r$ the number of lines that are double traversed, then $r=\left \lceil \frac{d_1-a}{a-1} \right \rceil$ where $d_1$ is the number of lines of the grid. Informally, $r$ reflect the time that we waste in the exploration phase, and we can reduce the wasted time by employing more agents. As we can see from the equation, when $a=d_1$, then $r=0$, which means if we employ $2d_1$ agents to explore the graph, none of the lines are traversed twice. \\
+Now we discuss the strategy when we employ $2d_1$ agents, and this strategy can be easily modified to fit the situation where we employ less than $2d_1$ agents.\\
 Initially, 2$d_1$ agents are placed at the first two columns at $T_0$. More specifically, the coordinate of them are (1, $x_i$) and (2,$x_i$) where $1\leq x_i\leq d_1$. The agents residing in the first column are in the shadowing group while the agents residing in the second column are in the exploring group. If the BV resides in a node in the first column, then all of its clones are destroyed. If the BV resides in a node in the second column, then the elimination phase begins. It is obvious that if the BV do not reside in any node in the first column, then a agent in the exploring group should be destroyed when the BV is exposed.  Let's assume that the we starts at $T_0$. Agents residing in nodes in the second column moves EAST at the beginning of T(2n), $n=0,1, \ldots ,d_2-1$. More precisely, node (x, y) move to (x+1, y) at the beginning of T(2n), $n=0,1, \dots , d_2-1$. Agents residing in the first column simply follow the node in the second column (see  Fig.\ref{fig:TShE}). When one of the node in the former column is destroyed by a BV, the second phase starts.
 \begin{figure}[H]
   \centering  
@@ -83,7 +92,7 @@ The elimination begins when one of the node in the former column is destroyed by
 \item Case 1: When $2<x<d_1$, $1<y<d_2-1$ (a interior node becomes a new formed BV), then agents (let's say agents $a,b,c$) residing in node $(x-1, y+1)$, $(x-1, y-1)$ and $(x-2, y)$ receive a BV clone at T(2$x_i$+1), so that they know the location of the original BV and also the new formed BV. Note that in the exploring phase, the agents move EAST at T(2n), $n=0,1, \ldots ,d_2-2$. Actually, one unit of time is reserved for some agents to receive the BV clone. After they receive the BV clone, these agents move EAST for one step (for example, to node $(x, y+1)$, $(x, y-1)$ and $(x-1, y)$ and stop. Note that other agents including agents residing in node $(x-2, y+1)$ and $(x-2, y-1)$ (let's say agent d and e) at T(2$x_i$) do not know the existence of the BV so they keep moving EAST. These two agents arrive at nodes $(x, y+1)$, $(x, y-1)$ at T(2($x_i+2$)) and at this time they meet agent $a$ and $b$ respectively. Agent $a$ and $b$ inform them of the location of the new form BV and the routes of agents $d$ and $e$ are as follow:\\
 route of $d$: $(x, y+1)(at\ T(2(x_i+2)){\rightarrow}(x+1,y+1)(at\ T(2(x_i+2)+1){\rightarrow}(x+1,y)(at\ T(2(x_i+3))$.\\
 route of $e$: $(x, y-1)(at\ T(2(x_i+2)){\rightarrow}(x, y)(at\ T(2(x_i+3)+1))$.
-The routes of agents are showed in Fig.\ref{fig:subfigmesh1} where a blue node indicate that there are one agent residing here; a red node indicate that there are two agents residing here; a yellow node indicate that there are three agents residing here.
+The routes of agents are showed in Fig.\ref{fig:subfigmesh1} where a blue node indicate that there are one agent residing here; a red node indicate that there are two agents residing here; a yellow node indicate that there are three agents residing here. 
 
 %\iffalse
 \begin{figure} [H]
@@ -111,7 +120,6 @@ The routes of agents are showed in Fig.\ref{fig:subfigmesh1} where a blue node i
   \label{fig:subfigmesh1} %% label for entire figure 
 \end{figure}
 %\fi
-
 
 \item Case 2: When $x=d_1$, $2<y<d_2-1$ (a border node becomes a new formed BV), then agents (let's say agents $a,b,c$) residing in node $(x-1, y+1)$, $(x-1, y-1)$ and $(x-2, y)$ receive a BV clone at T(2$x_i$+1). As above, they move EAST for one step and stop. Agents residing in nodes $(x-2, y+1)$ and $(x-2, y-1)$ (let's say agents $a,b$) at T(2$x_i$) have no knowledge of the BV, so they keep moving and arrive at nodes $(x, y+1)$ and $(x, y-1)$ at T(2($x_i$+2)) when they are informed of the location of the new formed BV. One of agents $a$ and $b$ should move to the new formed BV to decontaminate it while the other one stop moving. In order to avoid conflict, we always employ the agent $a$ to move to the new formed BV.
 \begin{figure} [H]
@@ -165,11 +173,11 @@ The routes of agents are showed in Fig.\ref{fig:subfigmesh1} where a blue node i
   \subfigure[$T(2x_i+1)$]{ 
     \label{fig:subfigmesh4:a} %% label for first subfigure 
     \includegraphics[width=2.5in]{figures/meshcorner1.png}} 
-%  \hspace{1in} 
+% \hspace{1in} 
   \subfigure[$T(2(x_i+1))$]{ 
     \label{fig:subfigmesh4:b} %% label for second subfigure 
     \includegraphics[width=2.5in]{figures/meshcorner2.png}}
-    \hspace{1in} 
+ \hspace{1in} 
   \subfigure[$T(2(x_i+2))$]{ 
     \label{fig:subfigmesh4:c} %% label for second subfigure 
     \includegraphics[width=2.5in]{figures/meshcorner3.png}}
@@ -217,7 +225,47 @@ Now we make some comparison between our strategy and the sequential strategy.
 \end{table}
 
 \subsection{Multi-Dimensional Grid}
-Let $M$ be a q-dimensional grid of size $d_1\times\ldots\times d_q$ and let each node of $M$ be denoted by its coordinates $(x_1,\ldots,x_q)$, $1\leq x_i\leq d_i$. The algorithm, called {\em PBVD-qG}, follows a general strategy similar to the one described in Section 4.2.1: a safe exploration with shadowing, followed by a surrounding and elimination phase. 
+Let $M$ be a q-dimensional grid of size $d_1\times\ldots\times d_q$ and let each node of $M$ be denoted by its coordinates $(x_1,\ldots,x_q)$, $1\leq x_i\leq d_q$. The algorithm, called {\em PBVD-qG}, follows a general strategy similar to the one described in Section 4.2.1: a safe exploration with shadowing, followed by a surrounding and elimination phase. Our general idea is that: (1) Transform the PBVD-qG problem into a BVD-qG problem (2) Use the BVD-qG strategy to solve the transformed problem. We want to solve the problem parallelly, so for convenience, if we use "q-dimensional" agent group, we use $d_1\times \ldots \times d_p$ agents and they are organized in a $d_1\times \ldots \times d_p$ grid. 
+In \cite{Cai}, the multi-dimensional grid is partitioned into $d_1\times \ldots d_(q-2)$ 2-dimensional grids of size $d_(q-1) \times d_q$. Each of these grids is explored using the BVD-2G: after traversing a grid in a snake-like fashion column by column, the agent returns to the starting point and from that starting point, it proceeds to another grid with a neighbouring starting point. In our strategy PBVD-qG, we use the similar exploring routes as that in BVD-G which is the snake-like route. Additionally, we use the idea of dimensionality reduction. Informally, when we solve the parallel contamination problem in q-dimensional grid using ``p-dimensional" agent group, we can view the ``p-dimensional" agent group as one ``large agent" and view the q-dimensional grid as a ``(q-p)-dimensional grid. So when we increase the number of the agents (for example, increase the ``p"), then actually we decrease the dimension of the grid we want to explore. For example, if we want to solve the BVD problem in a 4-dimensional grid (say in a $d_1 \times\ d_2 \times d_3\times d_4$ grid) using the PBVD-2G and we use $d_1$ agents to explore it. The problem can be viewed as using one ``large" agent to explore a $d_2\times d_3\times d_4$ grid. If we use $d_1\times d_2$ agents to explore it, then the problem can be viewed as using one ``large" agent to explore a $d_3 \times d_4$ grid. We can choose the dimension of the agent group at the beginning and Fig\ref{fig:4dimensional} shows how can we view a higher dimensional grid as a lower dimensional grid. 
+
+\begin{figure} [H]
+  \centering 
+  \subfigure[The arrangement of agents on a 4-dimensional grid]{ 
+    \label{fig:4dimensional1:a} %% label for first subfigure 
+    \includegraphics[width=2.8in]{figures/4dimensional1.png}} 
+% \hspace{1in} 
+  \subfigure[When we view the ``one dimensional" agent as a large agent and the grid can be view as a three dimensional grid]{ 
+    \label{fig:4dimensional2:b} %% label for second subfigure 
+    \includegraphics[width=2.8in]{figures/4dimensional2.png}}
+ \hspace{1in} 
+  \subfigure[The arrangement of agents on a 4-dimensional grid]{ 
+    \label{fig:4dimensional3:c} %% label for second subfigure 
+    \includegraphics[width=2.8in]{figures/4dimensional3.png}}
+%\hspace{1in} 
+\subfigure[When we view the ``two dimensional" agent as a large agent and the grid can be view as a two dimensional grid]{ 
+    \label{fig:4dimensional4:d} %% label for second subfigure 
+    \includegraphics[width=2.8in]{figures/4dimensional4.png}}
+    \caption{The idea of dimensionality reduction} 
+  \label{fig:4dimensional} %% label for entire figure 
+\end{figure}
+After we transform the problem, then we can use the BVD-qG to solve the PBVD-qG. Let's now have a brief review of the BVD-qG. There are two agents exploring the graph: one is called exploring agent (EA) and one is called leader exploring agent (LEA). They follow the ``four step casual walk" to explore the graph. Before exploring a node $v=(x_1, \ldots, x_q) (1\leq x_i \leq d_i)$ from a node $u$, the shadowing agents(SA) move to the already explored neighbours of $v$ (the coordinate of the neighbours can be precisely computed). When EA visits the BV node (and is destroyed there), the LEA and the SAs are aware of the location of the new BV nodes. (the coordinates of them can be precisely computed) So, once the $v$ is identified, $2q$ agents surround each node $u\in N_{un}(v)$ and an additional agent enters it destroying the BV resident there and the instances that it generates. \\
+We have map the $``d_1 \times \ldots \times d_p" (1\leq p\leq q)$ agents into one ``big agent". 
+Assume that we employ a ``p dimensional" agent group (which contains $d_1 \times \ldots d_q$), then the coordinates of the agents are $(x_1, \ldots, x_p, \ldots, x_q)$, $(1\leq x_1\leq d_1, \ldots, 1\leq x_p\leq d_p, x_{p+1}=0, \ldots, x_q=0)$. Then the coordinates of the ``big agent" in the $q-p$ dimensional grid is $(x_{p+1},\ldots, x_q)$. The first p dimensional coordinates of the agents would not change in the whole exploring phase, but from $(p+1)^{th}$ dimensional coordinates, they make the same change as the ``big agent". More specifically, the $(p+1)^{th}$ of the agents make the same change as the first dimensional coordinate of the ``big agent"; the $(p+2)^{th}$ of the agents make the same change as the second dimensional coordinate of the ``big agent";\ldots.
+
+\noindent{\bf Analysis and Comparing}
+\begin{theorem}
+Mesh contamination algorithm performs a decontamination of a mesh (size of $n=d_1\times d_2(d_1>2,d_2>2)$ using $k=2\sqrt{n}$ agents and at most 1 casualties. 
+\end{theorem}
+\begin{proof}
+As in the discussing in PBVD-2G, we first discuss the number of agents that should be employed in our strategy. 
+When analyzing the PBVD-qG strategy, we use the Cost Function Measurement (CFM)
+
+\end{proof}
+
+
+
+
+
 
 
 
