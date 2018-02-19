@@ -211,8 +211,8 @@ As for the time complexity. The time required for the exploration phase is equal
 Now we make some comparison between our strategy and the sequential strategy.
 
 \begin{table} [hbtp]
-\caption{Appointment Card}
-\label{table:AptCard}
+\caption{Comparision between PBVD-2G and BVD-2G}
+\label{table:ComparisionPBVD-2GandBVD-2G}
 \centering
 \tabulinesep=2mm
 \begin{tabu} to 140 mm {|X[6,c]|X[4,l]|X[4,l]|X[4,l]|X[4,l]|} \hline 
@@ -248,21 +248,34 @@ In \cite{Cai}, the multi-dimensional grid is partitioned into $d_1\times \ldots 
     \caption{The idea of dimensionality reduction} 
   \label{fig:4dimensional} %% label for entire figure 
 \end{figure}
-After we transform the problem, then we can use the BVD-qG to solve the PBVD-qG. Let's now have a brief review of the BVD-qG. There are two agents exploring the graph: one is called exploring agent (EA) and one is called leader exploring agent (LEA). They follow the ``four step casual walk" to explore the graph. Before exploring a node $v=(x_1, \ldots, x_q) (1\leq x_i \leq d_i)$ from a node $u$, the shadowing agents(SA) move to the already explored neighbours of $v$ (the coordinate of the neighbours can be precisely computed). When EA visits the BV node (and is destroyed there), the LEA and the SAs are aware of the location of the new BV nodes. (the coordinates of them can be precisely computed) So, once the $v$ is identified, $2q$ agents surround each node $u\in N_{un}(v)$ and an additional agent enters it destroying the BV resident there and the instances that it generates. \\
+After we transform the problem, then we can use the BVD-qG to solve the PBVD-qG. Let's now have a brief review of the BVD-qG. There are two agents exploring the graph: one is called exploring agent (EA) and one is called leader exploring agent (LEA). They follow the ``four step casual walk" to explore the graph. Before exploring a node $v=(x_1, \ldots, x_q) (1\leq x_i \leq d_i)$ from a node $u$, the shadowing agents(SA) move to the already explored neighbours of $v$ (the coordinate of the neighbours can be precisely computed). When EA visits the BV node (and is destroyed there), the LEA and the SAs are aware of the location of the new BV nodes. (the coordinates of them can be precisely computed) So, once the $v$ is identified, $2q$ agents surround each node $u\in N_{un}(v)$ and an additional agent enters it destroying the BV resident there and the instances that it generates. Note that in \cite{Cai}, the protocol BVD-qG use $3q+1$ agents, and because we view $d_1\times\ldots d_p$ agents as a ``big agent" then applying the BVD-qG protocol, so totally we need $d_1\times \ldots d_p\times (3q+1)$ agents.\\
 We have map the $``d_1 \times \ldots \times d_p" (1\leq p\leq q)$ agents into one ``big agent". 
-Assume that we employ a ``p dimensional" agent group (which contains $d_1 \times \ldots d_q$), then the coordinates of the agents are $(x_1, \ldots, x_p, \ldots, x_q)$, $(1\leq x_1\leq d_1, \ldots, 1\leq x_p\leq d_p, x_{p+1}=0, \ldots, x_q=0)$. Then the coordinates of the ``big agent" in the $q-p$ dimensional grid is $(x_{p+1},\ldots, x_q)$. The first p dimensional coordinates of the agents would not change in the whole exploring phase, but from $(p+1)^{th}$ dimensional coordinates, they make the same change as the ``big agent". More specifically, the $(p+1)^{th}$ of the agents make the same change as the first dimensional coordinate of the ``big agent"; the $(p+2)^{th}$ of the agents make the same change as the second dimensional coordinate of the ``big agent";\ldots.
+Assume that we employ a ``p dimensional" agent group (which contains $d_1 \times \ldots d_q$), then the coordinates of the agents are $(x_1, \ldots, x_p, \ldots, x_q)$, $(1\leq x_1\leq d_1, \ldots, 1\leq x_p\leq d_p, x_{p+1}=0, \ldots, x_q=0)$. Then the coordinates of the ``big agent" in the $q-p$ dimensional grid is $(x_{p+1},\ldots, x_q)$. The first p dimensional coordinates of the agents would not change in the whole exploring phase, but from $(p+1)^{th}$ dimensional coordinates, they make the same change as the ``big agent". More specifically, the $(p+1)^{th}$ of the agents make the same change as the first dimensional coordinate of the ``big agent"; the $(p+2)^{th}$ of the agents make the same change as the second dimensional coordinate of the ``big agent";\ldots. Assume that we now employ four agents(two agents are viewed as the LEA in the BVD-qG; two agents are viewed as the EA in the BVD-qG) to explore the 4-dimensional grid (they traverse the grid with the same routes following ``four step casual walk"), then the routes of the agents are as below (see Fig.\ref{fig:grouproute}):
+\begin{figure} [H]
+  \centering 
+  \subfigure[The route of the ``big agent"(LEA in the BVD-qG)]{ 
+    \label{fig:grouproute1:a} %% label for second subfigure 
+    \includegraphics[width=3.5in]{figures/grouproute1.png}}
+    \hspace{1in} 
+\subfigure[The routes of the 2 agents viewed as the ``big agent"]{ 
+    \label{fig:grouproute2:d} %% label for second subfigure 
+    \includegraphics[width=3.5in]{figures/grouproute2.png}}
+    \caption{The route of agent when exploring a $1\times1\times1\times2$ grid } 
+  \label{fig:grouproute} %% label for entire figure 
+\end{figure}
 
 \noindent{\bf Analysis and Comparing}
+Let's now compare the time cost, the number of movement and the casualties with different number of agents we employ. (Assuming that we are in a $d_1\times \ldots \times d_q$ q-dimensional grid)
+Theorems in \cite{Cai} show us that the protocol BVD-qG performs a BV decontamination of a q-dimensional Grid using $3q+1$ agents and at most $q+1$ casualties with at most $O(qn)$ movements and $\Theta(n)$ time. Based on these theorems, we now discuss the number of agents, the casualties, the time cost and the number of movement in PBVD-qG.
+
 \begin{theorem}
-Mesh contamination algorithm performs a decontamination of a mesh (size of $n=d_1\times d_2(d_1>2,d_2>2)$ using $k=2\sqrt{n}$ agents and at most 1 casualties. 
+PBVD-qG performs a decontamination of a mesh (size of $n=d_1\times d_2(d_1>2,d_2>2)$ using $2\times d_1\times \ldots d_p (1\leq p\leq q)$ agents and at most $q-p+1$casualties, with at most $O(qn)$ and $\Theta(\frac{n}{d_1\times\ldots\times d_p})$ time.
 \end{theorem}
+
 \begin{proof}
-As in the discussing in PBVD-2G, we first discuss the number of agents that should be employed in our strategy. 
-When analyzing the PBVD-qG strategy, we use the Cost Function Measurement (CFM)
+In PBVD-qG, we can choose different number of agents to start the exploration, and that number results in different casualties and so on. Assuming that we use $2\times d_1\times \ldots d_p (1\leq p\leq q)$ agents to explore the graph, then actually we view $d_1\times \ldots d_p$ agents as a ``big agent", As we mentioned before, totally we need $d_1\times \ldots d_p\times (3q+1)$ agents (every $d_1\times\ldots d_p$ agents play the role of one agent in the BVD-qG). Now our problem changes into solving the BVD-qG problem in a $q-p$ dimensional grid with $d_{p+1}\times \ldots d_q$ agents, so the casualties and the times cost follow the same as the situation when we use BVD-qG in a $q-p$ grid. More specifically, the casualties are $q-p+1$ and the time is $\Theta(\frac{n}{d_1\times\ldots\times d_p})$. In BVD-qG, the number of movements by LEA, EA and each SA is $O(n)$ and since there are at most $q$ shadowing agents, the total number of movements until the BV is found is $O(qn)$ in the worst case. In PBVD-qG, the new ``n" should be $\frac{q\times d_1\times\ldots d_p\times n}{d_1\times\ldots\times d_p}$ the number of movement should be $O(qn)$.  
 
 \end{proof}
-
-
 
 
 
