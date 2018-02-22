@@ -6,13 +6,14 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Routes of agents when $a=2$}}{23}{figure.4.2}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Routes of agents when $a=3$}}{24}{figure.4.3}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Lines that are double traversed (marked with red lines)}}{25}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Agents move at time $T_0$}}{26}{figure.4.5}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Agents move at time $T_0$. (The red node indicates that there are two agents residing there}}{26}{figure.4.5}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Arrangement of agents in elimination phase when the new formed BV resides in a interior node}}{28}{figure.4.6}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Arrangement of agents in elimination phase when the new formed BV resides in a border node (when $x=d_1$)}}{29}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Arrangement of agents in elimination phase when the new formed BV resides in a border node (when $y=1$ or $y=d_2-1$ ) }}{31}{figure.4.8}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Arrangement of agents in elimination phase when the new formed BV resides in a corner (when $x=d_1$ and $y=1$ or $y=d_2-1$)}}{32}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces The idea of dimensionality reduction}}{36}{figure.4.10}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces The route of agent when exploring a $1\times 1\times 1\times 2$ grid }}{38}{figure.4.11}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Arrangement of agents in elimination phase when the new formed BV resides in a interior node}}{30}{figure.4.8}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Arrangement of agents in elimination phase when the new formed BV resides in a corner (when $x=d_1$ and $y=1$ or $y=d_2-1$)}}{31}{figure.4.9}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces The idea of dimensionality reduction}}{35}{figure.4.10}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces The route of agent when exploring a $1\times 1\times 1\times 2$ grid }}{37}{figure.4.11}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces The route of agent when exploring a $1\times 1\times 1\times 2$ grid }}{39}{figure.4.12}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Arrangement of agents when moving}}{43}{figure.5.1}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces The whole process of the $Three\tmspace +\thinmuskip {.1667em}Jump\tmspace +\thinmuskip {.1667em}Notifying$ technique in chordal ring $C_n(1, 2, 4, 5)$}}{44}{figure.5.2}

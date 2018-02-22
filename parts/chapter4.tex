@@ -80,94 +80,104 @@ We can easily observe that some lines of the grid are traversed twice for the pu
 \end{figure}
 We can see that when the grid is fixed (so $d_1$ is fixed), the number of double traversed lines decrease as $a$ increases, which is easy to image. Let's denote by $r$ the number of lines that are double traversed, then $r=\left \lceil \frac{d_1-a}{a-1} \right \rceil$ where $d_1$ is the number of lines of the grid. Informally, $r$ reflect the time that we waste in the exploration phase, and we can reduce the wasted time by employing more agents. As we can see from the equation, when $a=d_1$, then $r=0$, which means if we employ $2d_1$ agents to explore the graph, none of the lines are traversed twice. \\
 Now we discuss the strategy when we employ $2d_1$ agents, and this strategy can be easily modified to fit the situation where we employ less than $2d_1$ agents.\\
-Initially, 2$d_1$ agents are placed at the first two columns at $T_0$. More specifically, the coordinate of them are (1, $x_i$) and (2,$x_i$) where $1\leq x_i\leq d_1$. The agents residing in the first column are in the shadowing group while the agents residing in the second column are in the exploring group. If the BV resides in a node in the first column, then all of its clones are destroyed. If the BV resides in a node in the second column, then the elimination phase begins. It is obvious that if the BV do not reside in any node in the first column, then a agent in the exploring group should be destroyed when the BV is exposed.  Let's assume that the we starts at $T_0$. Agents residing in nodes in the second column moves EAST at the beginning of T(2n), $n=0,1, \ldots ,d_2-1$. More precisely, node (x, y) move to (x+1, y) at the beginning of T(2n), $n=0,1, \dots , d_2-1$. Agents residing in the first column simply follow the node in the second column (see  Fig.\ref{fig:TShE}). When one of the node in the former column is destroyed by a BV, the second phase starts.
+Initially, 2$d_1$ agents are placed at the first two columns at $T_0$ and we place another one agent at the top and bottom of the first column (we would describe their roles in the following part). More specifically, the coordinate of them are (1, $x_i$) and (2,$x_i$) where $1\leq x_i\leq d_1$. The agents residing in the first column are in the shadowing group while the agents residing in the second column are in the exploring group. If the BV resides in a node in the first column, then all of its clones are destroyed. If the BV resides in a node in the second column, then the elimination phase begins. It is obvious that if the BV do not reside in any node in the first column, then a agent in the exploring group should be destroyed when the BV is exposed.  Let's assume that the we starts at $T(t_0)$. Agents residing in nodes in the second column moves EAST at the beginning of $T(t_i)$, $i=0,1, \ldots ,d_2-1$. More precisely, node (x, y) move to (x+1, y) at the beginning of $T(t_i)$, $i=0,1, \dots , d_2-1$. Agents residing in the first column simply follow the node in the second column (see  Fig.\ref{fig:TShE}). When one of the node in the former column is destroyed by a BV, the second phase starts.
 \begin{figure}[H]
   \centering  
   \includegraphics[width=2.5in]{figures/TShE.png}
-  \caption{Agents move at time $T_0$}\label{fig:TShE}
+  \caption{Agents move at time $T_0$. (The red node indicates that there are two agents residing there}\label{fig:TShE}
 \end{figure}
 \noindent{\bf Elimination Phase}\\
-The elimination begins when one of the node in the former column is destroyed by a BV( let's say, at T(2$x_i$)). No matter where is the BV, there are always three agents residing on its north(if the BV is not in the first line), west and south (if the BV is not in the last line), so only one BV clone survives. In another word, only one node becomes BV node after the BV being triggered.  Observe that in the parallel strategy, not all agents participate in the elimination phase automatically when the BV is explored because only those receive the clones of the original BV and those be notified by other agents can participate in the elimination phase. Since we want to make use of the agents we employ at the beginning in the elimination phase which means the situation that the number of agents is not enough for completing the elimination phase but there are still some agents keeping exploring the graph is not allowed to happen. So in some situation, agents who receive the BV clone should notify other agents to participate in the elimination.  Let the node where the surviving clone resided be $(x, y)$ and its situation can be divided into four cases. Different routes of agents in the elimination phase are based on the location of the new formed BV.
+The elimination begins when one of the node in the former column is destroyed by a BV( let's say, at T($t_i$)). No matter where is the BV, there are always three agents residing on its north(if the BV is not in the first line), west and south (if the BV is not in the last line), so only one BV clone survives. In another word, only one node becomes BV node after the BV being triggered. Observe that in the parallel strategy, not all agents participate in the elimination phase automatically when the BV is explored because only those receive the clones of the original BV and those be notified by other agents can participate in the elimination phase. So in some situation, agents who receive the BV clone should notify other agents to participate in the elimination (case 1,2 and 3) and in one situation, we use the agent (the following agent) we take along the way to complete the elimination phase (case4). Let the node where the surviving clone resided be $(x, y)$ and its situation can be divided into four cases. Different routes of agents in the elimination phase are based on the location of the new formed BV.
 \begin{itemize}
-\item Case 1: When $2<x<d_1$, $1<y<d_2-1$ (a interior node becomes a new formed BV), then agents (let's say agents $a,b,c$) residing in node $(x-1, y+1)$, $(x-1, y-1)$ and $(x-2, y)$ receive a BV clone at T(2$x_i$+1), so that they know the location of the original BV and also the new formed BV. Note that in the exploring phase, the agents move EAST at T(2n), $n=0,1, \ldots ,d_2-2$. Actually, one unit of time is reserved for some agents to receive the BV clone. After they receive the BV clone, these agents move EAST for one step (for example, to node $(x, y+1)$, $(x, y-1)$ and $(x-1, y)$ and stop. Note that other agents including agents residing in node $(x-2, y+1)$ and $(x-2, y-1)$ (let's say agent d and e) at T(2$x_i$) do not know the existence of the BV so they keep moving EAST. These two agents arrive at nodes $(x, y+1)$, $(x, y-1)$ at T(2($x_i+2$)) and at this time they meet agent $a$ and $b$ respectively. Agent $a$ and $b$ inform them of the location of the new form BV and the routes of agents $d$ and $e$ are as follow:\\
-route of $d$: $(x, y+1)(at\ T(2(x_i+2)){\rightarrow}(x+1,y+1)(at\ T(2(x_i+2)+1){\rightarrow}(x+1,y)(at\ T(2(x_i+3))$.\\
-route of $e$: $(x, y-1)(at\ T(2(x_i+2)){\rightarrow}(x, y)(at\ T(2(x_i+3)+1))$.
-The routes of agents are showed in Fig.\ref{fig:subfigmesh1} where a blue node indicate that there are one agent residing here; a red node indicate that there are two agents residing here; a yellow node indicate that there are three agents residing here. 
+\item Case 1: When $2<x<d_1$, $1<y<d_2-1$ (a interior node becomes a new formed BV), then agents (let's say agents $a,b,c$) residing in node $(x-1, y+1)$, $(x-1, y-1)$ and $(x-2, y)$ receive a BV clone at T($t_i$), so that they know the location of the original BV and also the new formed BVs. After they receive the BV clone, these agents move EAST at T($t_i$+1) for one step (for example, to node $(x, y+1)$, $(x, y-1)$ and $(x-1, y)$ )and stop. Note that other agents including agents residing in node $(x-2, y+1)$ and $(x-2, y-1)$ (let's say agent d and e) at T($t_i$) do not know the existence of the BV so they keep moving EAST and arrive at nodes $(x, y+1)$, $(x, y-1)$ at the end of T($t_i+2$) when they meet agent $a$ and $b$ respectively. Agent $a$ and $b$ inform them of the location of the new form BV and the routes of agents $d$ and $e$ are as follow:\\
+route of $d$: $(x, y+1)(at\ T(t_i+2){\rightarrow}(x+1,y+1)(at\ T(t_i+3){\rightarrow}(x+1,y)(at\ T(t_i+4)$.\\
+route of $e$: $(x, y-1)(at\ T(t_i+2){\rightarrow}(x, y)(at\ T(t_i+5)$.
+The routes of agents are showed in Fig.\ref{fig:caseone} where a blue node indicate that there is one agent residing here; a red node indicate that there are two agents residing here; a yellow node indicate that there are three agents residing here. 
 
 %\iffalse
 \begin{figure} [H]
   \centering 
-  \subfigure[$T(2x_i+1)$]{ 
-    \label{fig:subfigmesh1:a} %% label for first subfigure 
-    \includegraphics[width=2.5in]{figures/meshinterior.png}} 
+  \subfigure[T($t_i$)]{ 
+    \label{fig:caseone0:a} %% label for first subfigure 
+    \includegraphics[width=2.5in]{figures/caseone0.png}} 
 %  \hspace{1in} 
-  \subfigure[$T(2(x_i+1))$]{ 
-    \label{fig:subfigmesh1:b} %% label for second subfigure 
-    \includegraphics[width=2.5in]{figures/meshinterior1.png}}
+  \subfigure[T($t_i+1$)]{ 
+    \label{fig:caseone1:b} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/caseone1.png}}
     \hspace{1in} 
-  \subfigure[$T(2(x_i+2))$]{ 
-    \label{fig:subfigmesh1:c} %% label for second subfigure 
-    \includegraphics[width=2.5in]{figures/meshinterior2.png}}
+  \subfigure[T($t_i+2$)]{ 
+    \label{fig:caseone2:c} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/caseone2.png}}
 %      \hspace{1in} 
-  \subfigure[$T(2(x_i+3))$]{ 
-    \label{fig:subfigmesh1:d} %% label for second subfigure 
-    \includegraphics[width=2.5in]{figures/meshinterior3.png}}
+  \subfigure[T($t_i+3$)]{ 
+    \label{fig:caseone3:d} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/caseone3.png}}
       \hspace{1in} 
-  \subfigure[$T(2(x_i+3)+1)$]{ 
-    \label{fig:subfigmesh1:e} %% label for second subfigure 
-    \includegraphics[width=2.5in]{figures/meshinterior4.png}}
+  \subfigure[T($t_i+4$)]{ 
+    \label{fig:caseone4:e} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/caseone4.png}}
+     \subfigure[T($t_i+5$)]{ 
+    \label{fig:caseone5:e} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/caseone5.png}}
   \caption{Arrangement of agents in elimination phase when the new formed BV resides in a interior node} 
-  \label{fig:subfigmesh1} %% label for entire figure 
+  \label{fig:caseone} %% label for entire figure 
 \end{figure}
 %\fi
 
-\item Case 2: When $x=d_1$, $2<y<d_2-1$ (a border node becomes a new formed BV), then agents (let's say agents $a,b,c$) residing in node $(x-1, y+1)$, $(x-1, y-1)$ and $(x-2, y)$ receive a BV clone at T(2$x_i$+1). As above, they move EAST for one step and stop. Agents residing in nodes $(x-2, y+1)$ and $(x-2, y-1)$ (let's say agents $a,b$) at T(2$x_i$) have no knowledge of the BV, so they keep moving and arrive at nodes $(x, y+1)$ and $(x, y-1)$ at T(2($x_i$+2)) when they are informed of the location of the new formed BV. One of agents $a$ and $b$ should move to the new formed BV to decontaminate it while the other one stop moving. In order to avoid conflict, we always employ the agent $a$ to move to the new formed BV.
+\item Case 2: When $x=d_1$, $2<y<d_2-1$ (a border node becomes a new formed BV), then agents (let's say agents $a,b,c$) residing in node $(x-1, y+1)$, $(x-1, y-1)$ and $(x-2, y)$ receive a BV clone at T($t_i$). As above, they move EAST for one step and stop. Agents residing in nodes $(x-2, y+1)$ and $(x-2, y-1)$ (let's say agents $a,b$) at T($t_i$) have no knowledge of the BV, so they keep moving and arrive at nodes $(x, y+1)$ and $(x, y-1)$ at T($t_i$+2) when they are informed of the location of the new formed BV. One of agents $a$ and $b$ should move to the new formed BV to decontaminate it while the other one stop moving at T($t_i$+3). In order to avoid conflict, we always employ the agent $a$ to move to the new formed BV. (see Fig\ref{fig:casetwo})
 \begin{figure} [H]
   \centering 
-  \subfigure[$T(2x_i+1)$]{ 
-    \label{fig:subfigmesh2:a} %% label for first subfigure 
-    \includegraphics[width=2.5in]{figures/meshborderx1.png}} 
+  \subfigure[$T(t_i)$]{ 
+    \label{fig:casetwo0:a} %% label for first subfigure 
+    \includegraphics[width=2.5in]{figures/casetwo0.png}} 
 %  \hspace{1in} 
-  \subfigure[$T(2(x_i+2))$]{ 
-    \label{fig:subfigmesh2:b} %% label for second subfigure 
-    \includegraphics[width=2.5in]{figures/meshborderx2.png}}
+  \subfigure[$T(t_i+1)$]{ 
+    \label{fig:casetwo1:b} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/casetwo1.png}}
     \hspace{1in} 
-  \subfigure[$T(2(x_i+2)+1)$]{ 
-    \label{fig:subfigmesh2:c} %% label for second subfigure 
-    \includegraphics[width=2.5in]{figures/meshborderx3.png}}
+  \subfigure[$T(t_i)+2$]{ 
+    \label{fig:casetwo2:c} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/casetwo2.png}}
 %      \hspace{1in} 
+\subfigure[$T(t_i)+3$]{ 
+    \label{fig:casetwo3:d} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/casetwo3.png}}
     \caption{Arrangement of agents in elimination phase when the new formed BV resides in a border node (when $x=d_1$)} 
-  \label{fig:subfigmesh2} %% label for entire figure 
+  \label{fig:casetwo} %% label for entire figure 
 \end{figure}
 
-\item Case 3: When $2<x<d_1$, $y=1$ or $y=d_2-1$ (a border node becomes a new formed BV). For convenience, we only discuss the situation when $y=1$(the solution can be easily modified to fit the scenario when $y=d_2-1$). In this case, agents residing in nodes $(x-1, y+1)$ and $(x-2, y)$ (let's say agents a,b) receive a BV clone at T(2$x_i$+1). Agents $a$ and $b$ move EAST for one step and arrive at node $(x, y+1)$ and node $(x-1, y)$ at T($2(x_i+1)$). Since the number of agents who can be informed of the location of the new formed BV is not enough for decontaminating the BV, we should notify one more agent to participate in the elimination phase. We employ agent $a$ who resides in node $(x, y+1)$ at T(2$x_i$+1) to notify agent residing in node $(x, y+1)$ (let's say agent $c$), so it move NORTH for one step and arrive at node $(x, y+2)$ at T($2(x_i+1)+1$). Then both of agents $a$ and $c$ move SOUTH and reach node $(x, y+1)$ at T($2(x_i+2)$) when the they meet the agent who move from node $(x-1, y+1)$ (let's say agent $d$) and notify it to stop moving. Then agent $a$ move EAST and then SOUTH to reach node $(x+1, y)$ at T($2(x_i+3)$). Finally, at T($2(x_i+3)+1$), agent $d$ move SOUTH to permanently eliminate the BV.
-
+\item Case 3: When $2<x<d_1$, $y=1$ or $y=d_2-1$ (a border node becomes a new formed BV). For convenience, we only discuss the situation when $y=1$(the solution can be easily modified to fit the scenario when $y=d_2-1$). In this case, agents residing in nodes $(x-1, y+1)$ and $(x-2, y)$ (let's say agents a,b,c(the following agent)) receive a BV clone at T($t_i$). Agents $a$, $b$ and $c$ move EAST for one step and arrive at node $(x, y+1)$ and node $(x-1, y)$ at T($t_i+1$). Agent in node $(x-2, y+1)$ does not know the existence of the BV, so it keep 
+%\iffalse
 \begin{figure} [H]
   \centering 
-  \subfigure[$T(2x_i+1)$]{ 
-    \label{fig:subfigmesh3:a} %% label for first subfigure 
-    \includegraphics[width=2.5in]{figures/meshbordery1.png}} 
+  \subfigure[T($t_i$)]{ 
+    \label{fig:casethree0:a} %% label for first subfigure 
+    \includegraphics[width=2.5in]{figures/casethree0.png}} 
 %  \hspace{1in} 
-  \subfigure[$T(2(x_i+1))$]{ 
-    \label{fig:subfigmesh3:b} %% label for second subfigure 
-    \includegraphics[width=2.5in]{figures/meshbordery2.png}}
+  \subfigure[T($t_i+1$)]{ 
+    \label{fig:casethree1:b} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/casethree1.png}}
     \hspace{1in} 
-  \subfigure[$T(2(x_i+2))$]{ 
-    \label{fig:subfigmesh3:c} %% label for second subfigure 
-    \includegraphics[width=2.5in]{figures/meshbordery3.png}}
+  \subfigure[T($t_i+2$)]{ 
+    \label{fig:casethree2:c} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/casethree2.png}}
 %      \hspace{1in} 
-  \subfigure[$T(2(x_i+3))$]{ 
-    \label{fig:subfigmesh3:d} %% label for second subfigure 
-    \includegraphics[width=2.5in]{figures/meshbordery4.png}}
+  \subfigure[T($t_i+3$)]{ 
+    \label{fig:casethree3:d} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/casethree3.png}}
       \hspace{1in} 
-  \subfigure[$T(2(x_i+3)+1)$]{ 
-    \label{fig:subfigmesh3:e} %% label for second subfigure 
-    \includegraphics[width=2.5in]{figures/meshbordery5.png}}
-  \caption{Arrangement of agents in elimination phase when the new formed BV resides in a border node (when $y=1$ or $y=d_2-1$ ) } 
-  \label{fig:subfigmesh3} %% label for entire figure 
+  \subfigure[T($t_i+4$)]{ 
+    \label{fig:casethree4:e} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/casethree4.png}}
+     \subfigure[T($t_i+5$)]{ 
+    \label{fig:casethree5:e} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/casethree5.png}}
+  \caption{Arrangement of agents in elimination phase when the new formed BV resides in a interior node} 
+  \label{fig:casethree} %% label for entire figure 
 \end{figure}
+%\fi
 
-\item Case 4: When $x=d_1$ and $y=1$ or $y=d_2-1$ (a corner node becomes a new formed BV). For convenience, we only discuss the situation when $y=1$. In this case, agents residing in node $(x-1, y+1)$ and $(x-2, y)$ (let's say agents a,b) receive a BV clone at T(2$x_i$+1). Both of them keep moving for one step and arrive at nodes $(x, y+1)$ and $(x-1, y)$ at T$(2(x_i+1))$.
+\item Case 4: When $x=d_1$ and $y=1$ or $y=d_2-1$ (a corner node becomes a new formed BV). For convenience, we only discuss the situation when $y=1$. In this case, agents residing in node $(x-1, y+1)$ and $(x-2, y)$ (let's say agents a,b) receive a BV clone at T(2$x_i$). Both of them keep moving for one step and arrive at nodes $(x, y+1)$ and $(x-1, y)$ at T$(2(x_i+1))$.
 \begin{figure} [H]
   \centering 
   \subfigure[$T(2x_i+1)$]{ 
@@ -192,7 +202,7 @@ The routes of agents are showed in Fig.\ref{fig:subfigmesh1} where a blue node i
 
 \noindent{\bf Analysis and Comparing}
 \begin{theorem}
-Mesh contamination algorithm performs a decontamination of a mesh (size of $n=d_1\times d_2(d_1>2,d_2>2)$ using $k=2\sqrt{n}$ agents and at most 1 casualties.
+Mesh contamination algorithm performs a decontamination of a mesh (size of $n=d_1\times d_2(d_1>2,d_2>2)$ using $k=2(\sqrt{n}+1)$ agents and at most 1 casualties.
 \end{theorem}
 \begin{proof}
 Let $v=(x, y)$ be the node containing the BV. When one of the agent in the exploring group moves to $v$, it will be destroyed and the BV will move to all neighbours of $v$. If $x=1$, then the neighbours $(x, y+1)$, $(x, y-1)$ and $(x+1, y)$ are protected by agents and neighbour $(x-1, y)$ actually does not exist; if $x>1$, then neighbours $(x, y+1)$, $(x, y-1)$ and $(x-1, y)$ are protected by agents. So when the clones of BV moves to the neighbours of $v$, those contain a agent will not be infected by the BV clone; this means that the BV can safely move only to the unexplored neighbours of $v$, of which are at most one. In other words, after $v$ is explored, at most one BV node are formed. According to our elimination strategy, the new formed BV node can be surrounded and destroyed using at most five agents: one to enter a BV and four to protect the neighbours. Since we have one new formed BV, the number of agents participating in the elimination phase is at most five. In addition to the agent destroyed by the original BV, the number of agent needed to complete the elimination phase is at least six. Since we employ $k=2d_1$ ($d_1\geq 3$) which means at the beginning we have at least six agents, so $2d_1$ agents are enough for the decontamination algorithm.
@@ -274,12 +284,25 @@ PBVD-qG performs a decontamination of a mesh (size of $n=d_1\times d_2(d_1>2,d_2
 
 \begin{proof}
 In PBVD-qG, we can choose different number of agents to start the exploration, and that number results in different casualties and so on. Assuming that we use $2\times d_1\times \ldots d_p (1\leq p\leq q)$ agents to explore the graph, then actually we view $d_1\times \ldots d_p$ agents as a ``big agent", As we mentioned before, totally we need $d_1\times \ldots d_p\times (3q+1)$ agents (every $d_1\times\ldots d_p$ agents play the role of one agent in the BVD-qG). Now our problem changes into solving the BVD-qG problem in a $q-p$ dimensional grid with $d_{p+1}\times \ldots d_q$ agents, so the casualties and the times cost follow the same as the situation when we use BVD-qG in a $q-p$ grid. More specifically, the casualties are $q-p+1$ and the time is $\Theta(\frac{n}{d_1\times\ldots\times d_p})$. In BVD-qG, the number of movements by LEA, EA and each SA is $O(n)$ and since there are at most $q$ shadowing agents, the total number of movements until the BV is found is $O(qn)$ in the worst case. In PBVD-qG, the new ``n" should be $\frac{q\times d_1\times\ldots d_p\times n}{d_1\times\ldots\times d_p}$ the number of movement should be $O(qn)$.  
-
 \end{proof}
 
+\subsection{Tori}
+%Informally, the torus is a mesh with "wrap-round" links that transform it into a regular graph. A torus of dimensions $d_1\times d_2$ has $n=d_1\times d_2$ nodes $v_{i,j} (1\leq i\leq d_1, 1\leq j\leq d_2)$ and each node has four neighbours which are $v_{i,j+1}, v_{i,j-1}, v_{i+1,j}, v_{i-1,j}. The algorithm to parallelly decontaminate the BV in a torus, called PBVD-T, follows a strategy very similar to the one used for the 2-dimensional grid described in section 5.2.1. There are two difference between the two strategies: 1) In 2-dimensional grid, all the agents move EAST in the exploration phase, while in the torus, because of the lack of borders, the spread of the BV might happen even if it reside in $v_{d_2, j}$ $(1\leq j\leq d_2)$, we place another group of agents at $v_{i,0}$ (i=0, 1, ? b-1) and these agents will stay here until the end of exploration phase. 2) 
+%Initially, 2 $d_1$ agents are place at $v_{0,i}$, $v{1,i}$ (i=0,1, ?d_2-1) (first round). If no agents are destroyed, then we start the safe-exploration phase. If one of the agents is destroyed, assuming that the original BV resides in node $v{0,j}$, $(1\leq j\leq d_1)$, then all the clones of the BV are destroyed. If the BV resides in node $v{1,j}$, $(1\leq j\leq d_1)$, then the elimination phase begin.             
 
-
-
+\ref{fig:grouproute}):
+\begin{figure} [H]
+  \centering 
+  \subfigure[The route of the ``big agent"(LEA in the BVD-qG)]{ 
+    \label{fig:grouproute1:a} %% label for second subfigure 
+    \includegraphics[width=3.5in]{figures/grouproute1.png}}
+    \hspace{1in} 
+\subfigure[The routes of the 2 agents viewed as the ``big agent"]{ 
+    \label{fig:grouproute2:d} %% label for second subfigure 
+    \includegraphics[width=3.5in]{figures/grouproute2.png}}
+    \caption{The route of agent when exploring a $1\times1\times1\times2$ grid } 
+  \label{fig:grouproute} %% label for entire figure 
+\end{figure}
 
 
 

@@ -26,7 +26,8 @@
 \contentsline {section}{\numberline {4.1}Introduction}{19}{section.4.1}
 \contentsline {section}{\numberline {4.2}Parallel BV Decontamination of Grids}{20}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Base Case:2-Dimensional Grid}{20}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Multi-Dimensional Grid}{34}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.2}Multi-Dimensional Grid}{33}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Tori}{38}{subsection.4.2.3}
 \contentsline {chapter}{\numberline {5}Parallel Black Virus Decontamination in Chordal Ring}{40}{chapter.5}
 \contentsline {section}{\numberline {5.1}Introduction}{40}{section.5.1}
 \contentsline {section}{\numberline {5.2}Shadowed Exploration}{42}{section.5.2}
