@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  22 FEB 2018 16:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  23 FEB 2018 11:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1110,21 +1110,6 @@ LaTeX Warning: Label `fig:agentroute:b' multiply defined.
 
 LaTeX Warning: Label `sub@fig:agentroute:b' multiply defined.
 
-
-LaTeX Warning: Label `fig:grouproute1:a' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:grouproute1:a' multiply defined.
-
-
-LaTeX Warning: Label `fig:grouproute2:d' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:grouproute2:d' multiply defined.
-
-
-LaTeX Warning: Label `fig:grouproute' multiply defined.
-
 )
 \openout1 = `uottawa-thesis.aux'.
 
@@ -1566,14 +1551,14 @@ Package pdftex.def Info: figures/doubleline3.png used on input line 77.
 (pdftex.def)             Requested size: 216.81pt x 161.04802pt.
  [24 <./figures/threeagentroute1.png> <./figures/threeagentroute2.png> <./figur
 es/threeagentroute3.png>]
-<figures/TShE.png, id=433, 143.5764pt x 99.7326pt>
-File: figures/TShE.png Graphic file (type png)
- <use figures/TShE.png>
-Package pdftex.def Info: figures/TShE.png used on input line 86.
-(pdftex.def)             Requested size: 180.67499pt x 125.51306pt.
+<figures/moving.png, id=433, 457.4691pt x 320.8788pt>
+File: figures/moving.png Graphic file (type png)
+ <use figures/moving.png>
+Package pdftex.def Info: figures/moving.png used on input line 86.
+(pdftex.def)             Requested size: 180.67499pt x 126.72859pt.
 
-[25 <./figures/doubleline2.png> <./figures/doubleline3.png>] [26 <./figures/TSh
-E.png>] <figures/caseone0.png, id=448, 304.2567pt x 232.7094pt>
+[25 <./figures/doubleline2.png> <./figures/doubleline3.png>] [26 <./figures/mov
+ing.png>] <figures/caseone0.png, id=448, 304.2567pt x 232.7094pt>
 File: figures/caseone0.png Graphic file (type png)
 
 <use figures/caseone0.png>
@@ -1643,183 +1628,209 @@ File: figures/casetwo3.png Graphic file (type png)
 Package pdftex.def Info: figures/casetwo3.png used on input line 144.
 (pdftex.def)             Requested size: 180.67499pt x 138.18861pt.
  [28 <./figures/caseone0.png> <./figures/caseone1.png> <./figures/caseone2.png>
- <./figures/caseone3.png> <./figures/caseone4.png> <./figures/caseone5.png>]
-<figures/casethree0.png, id=481, 304.2567pt x 232.7094pt>
+ <./figures/caseone3.png> <./figures/caseone4.png> <./figures/caseone5.png>] [2
+9 <./figures/casetwo0.png> <./figures/casetwo1.png> <./figures/casetwo2.png> <.
+/figures/casetwo3.png>]
+<figures/casethree0.png, id=494, 304.2567pt x 232.7094pt>
 File: figures/casethree0.png Graphic file (type png)
 
 <use figures/casethree0.png>
-Package pdftex.def Info: figures/casethree0.png used on input line 155.
+Package pdftex.def Info: figures/casethree0.png used on input line 159.
 (pdftex.def)             Requested size: 180.67499pt x 138.18861pt.
 
-<figures/casethree1.png, id=482, 304.2567pt x 232.7094pt>
+<figures/casethree1.png, id=495, 304.2567pt x 232.7094pt>
 File: figures/casethree1.png Graphic file (type png)
 
 <use figures/casethree1.png>
-Package pdftex.def Info: figures/casethree1.png used on input line 159.
+Package pdftex.def Info: figures/casethree1.png used on input line 163.
 (pdftex.def)             Requested size: 180.67499pt x 138.18861pt.
 
-<figures/casethree2.png, id=483, 304.2567pt x 232.7094pt>
+<figures/casethree2.png, id=496, 304.2567pt x 232.7094pt>
 File: figures/casethree2.png Graphic file (type png)
 
 <use figures/casethree2.png>
-Package pdftex.def Info: figures/casethree2.png used on input line 163.
+Package pdftex.def Info: figures/casethree2.png used on input line 167.
 (pdftex.def)             Requested size: 180.67499pt x 138.18861pt.
 
-<figures/casethree3.png, id=484, 304.2567pt x 232.7094pt>
+<figures/casethree3.png, id=497, 304.2567pt x 232.7094pt>
 File: figures/casethree3.png Graphic file (type png)
 
 <use figures/casethree3.png>
-Package pdftex.def Info: figures/casethree3.png used on input line 167.
+Package pdftex.def Info: figures/casethree3.png used on input line 171.
 (pdftex.def)             Requested size: 180.67499pt x 138.18861pt.
 
-<figures/casethree4.png, id=485, 304.2567pt x 232.7094pt>
+<figures/casethree4.png, id=498, 304.2567pt x 232.7094pt>
 File: figures/casethree4.png Graphic file (type png)
 
 <use figures/casethree4.png>
-Package pdftex.def Info: figures/casethree4.png used on input line 171.
+Package pdftex.def Info: figures/casethree4.png used on input line 175.
 (pdftex.def)             Requested size: 180.67499pt x 138.18861pt.
 
-<figures/casethree5.png, id=486, 304.2567pt x 232.7094pt>
+<figures/casethree5.png, id=499, 304.2567pt x 232.7094pt>
 File: figures/casethree5.png Graphic file (type png)
 
 <use figures/casethree5.png>
-Package pdftex.def Info: figures/casethree5.png used on input line 174.
+Package pdftex.def Info: figures/casethree5.png used on input line 178.
 (pdftex.def)             Requested size: 180.67499pt x 138.18861pt.
- [29 <./figures/casetwo0.png> <./figures/casetwo1.png> <./figures/casetwo2.png>
- <./figures/casetwo3.png>]
-<figures/meshcorner1.png, id=500, 289.08pt x 216.81pt>
-File: figures/meshcorner1.png Graphic file (type png)
+ [30]
+<figures/casefour0.png, id=504, 304.2567pt x 232.7094pt>
+File: figures/casefour0.png Graphic file (type png)
 
-<use figures/meshcorner1.png>
-Package pdftex.def Info: figures/meshcorner1.png used on input line 185.
-(pdftex.def)             Requested size: 180.67499pt x 135.5059pt.
+<use figures/casefour0.png>
+Package pdftex.def Info: figures/casefour0.png used on input line 189.
+(pdftex.def)             Requested size: 180.67499pt x 138.18861pt.
 
-<figures/meshcorner2.png, id=501, 289.08pt x 216.81pt>
-File: figures/meshcorner2.png Graphic file (type png)
+<figures/casefour1.png, id=505, 304.2567pt x 232.7094pt>
+File: figures/casefour1.png Graphic file (type png)
 
-<use figures/meshcorner2.png>
-Package pdftex.def Info: figures/meshcorner2.png used on input line 189.
-(pdftex.def)             Requested size: 180.67499pt x 135.5059pt.
+<use figures/casefour1.png>
+Package pdftex.def Info: figures/casefour1.png used on input line 193.
+(pdftex.def)             Requested size: 180.67499pt x 138.18861pt.
 
-<figures/meshcorner3.png, id=502, 298.11375pt x 216.81pt>
-File: figures/meshcorner3.png Graphic file (type png)
+<figures/casefour3.png, id=506, 304.2567pt x 232.7094pt>
+File: figures/casefour3.png Graphic file (type png)
 
-<use figures/meshcorner3.png>
-Package pdftex.def Info: figures/meshcorner3.png used on input line 193.
-(pdftex.def)             Requested size: 180.67499pt x 131.40038pt.
-
-<figures/meshcorner4.png, id=503, 298.11375pt x 216.81pt>
-File: figures/meshcorner4.png Graphic file (type png)
-
-<use figures/meshcorner4.png>
-Package pdftex.def Info: figures/meshcorner4.png used on input line 197.
-(pdftex.def)             Requested size: 180.67499pt x 131.40038pt.
- [30 <./figures/casethree0.png> <./figures/casethree1.png> <./figures/casethree
+<use figures/casefour3.png>
+Package pdftex.def Info: figures/casefour3.png used on input line 197.
+(pdftex.def)             Requested size: 180.67499pt x 138.18861pt.
+ [31 <./figures/casethree0.png> <./figures/casethree1.png> <./figures/casethree
 2.png> <./figures/casethree3.png> <./figures/casethree4.png> <./figures/casethr
-ee5.png>] [31 <./figures/meshcorner1.png> <./figures/meshcorner2.png> <./figure
-s/meshcorner3.png> <./figures/meshcorner4.png>]
-[32]
+ee5.png>] [32 <./figures/casefour0.png> <./figures/casefour1.png> <./figures/ca
+sefour3.png>] [33]
 
-Package natbib Warning: Citation `Cai' on page 33 undefined on input line 239.
+Package natbib Warning: Citation `Cai' on page 34 undefined on input line 243.
 
-[33] <figures/4dimensional1.png, id=543, 963.3591pt x 542.025pt>
+[34] <figures/4dimensional1.png, id=544, 963.3591pt x 542.025pt>
 File: figures/4dimensional1.png Graphic file (type png)
 
 <use figures/4dimensional1.png>
-Package pdftex.def Info: figures/4dimensional1.png used on input line 245.
+Package pdftex.def Info: figures/4dimensional1.png used on input line 249.
 (pdftex.def)             Requested size: 202.35622pt x 113.85341pt.
 
-Underfull \hbox (badness 4366) in paragraph at lines 245--245
+Underfull \hbox (badness 4366) in paragraph at lines 249--249
 []\OT1/cmr/m/n/10 (a) The ar-range-ment of agents on a 4-
  []
 
-<figures/4dimensional2.png, id=544, 963.3591pt x 542.025pt>
+<figures/4dimensional2.png, id=545, 963.3591pt x 542.025pt>
 File: figures/4dimensional2.png Graphic file (type png)
 
 <use figures/4dimensional2.png>
-Package pdftex.def Info: figures/4dimensional2.png used on input line 249.
+Package pdftex.def Info: figures/4dimensional2.png used on input line 253.
 (pdftex.def)             Requested size: 202.35622pt x 113.85341pt.
 
-<figures/4dimensional3.png, id=545, 963.3591pt x 542.025pt>
+<figures/4dimensional3.png, id=546, 963.3591pt x 542.025pt>
 File: figures/4dimensional3.png Graphic file (type png)
 
 <use figures/4dimensional3.png>
-Package pdftex.def Info: figures/4dimensional3.png used on input line 253.
+Package pdftex.def Info: figures/4dimensional3.png used on input line 257.
 (pdftex.def)             Requested size: 202.35622pt x 113.85341pt.
 
-Underfull \hbox (badness 4556) in paragraph at lines 253--253
+Underfull \hbox (badness 4556) in paragraph at lines 257--257
 []\OT1/cmr/m/n/10 (c) The ar-range-ment of agents on a 4-
  []
 
-<figures/4dimensional4.png, id=546, 963.3591pt x 542.025pt>
+<figures/4dimensional4.png, id=547, 963.3591pt x 542.025pt>
 File: figures/4dimensional4.png Graphic file (type png)
 
 <use figures/4dimensional4.png>
-Package pdftex.def Info: figures/4dimensional4.png used on input line 257.
+Package pdftex.def Info: figures/4dimensional4.png used on input line 261.
 (pdftex.def)             Requested size: 202.35622pt x 113.85341pt.
- [34]
+ [35]
 
-Package natbib Warning: Citation `Cai' on page 35 undefined on input line 261.
+Package natbib Warning: Citation `Cai' on page 36 undefined on input line 265.
 
-<figures/grouproute1.png, id=552, 963.3591pt x 542.025pt>
+<figures/grouproute1.png, id=554, 963.3591pt x 542.025pt>
 File: figures/grouproute1.png Graphic file (type png)
 
 <use figures/grouproute1.png>
-Package pdftex.def Info: figures/grouproute1.png used on input line 268.
+Package pdftex.def Info: figures/grouproute1.png used on input line 272.
 (pdftex.def)             Requested size: 252.94499pt x 142.31264pt.
 
-<figures/grouproute2.png, id=553, 963.3591pt x 542.025pt>
+<figures/grouproute2.png, id=555, 963.3591pt x 542.025pt>
 File: figures/grouproute2.png Graphic file (type png)
 
 <use figures/grouproute2.png>
-Package pdftex.def Info: figures/grouproute2.png used on input line 272.
+Package pdftex.def Info: figures/grouproute2.png used on input line 276.
 (pdftex.def)             Requested size: 252.94499pt x 142.31264pt.
- [35 <./figures/4dimensional1.png> <./figures/4dimensional2.png> <./figures/4di
+ [36 <./figures/4dimensional1.png> <./figures/4dimensional2.png> <./figures/4di
 mensional3.png> <./figures/4dimensional4.png>]
-[36]
+[37]
 
-Package natbib Warning: Citation `Cai' on page 37 undefined on input line 279.
+Package natbib Warning: Citation `Cai' on page 38 undefined on input line 283.
 
-[37 <./figures/grouproute1.png> <./figures/grouproute2.png>]
-File: figures/grouproute1.png Graphic file (type png)
+[38 <./figures/grouproute1.png> <./figures/grouproute2.png>] [39]
+<figures/torus1.png, id=586, 632.00114pt x 366.04755pt>
+File: figures/torus1.png Graphic file (type png)
 
-<use figures/grouproute1.png>
-Package pdftex.def Info: figures/grouproute1.png used on input line 298.
-(pdftex.def)             Requested size: 252.94499pt x 142.31264pt.
-File: figures/grouproute2.png Graphic file (type png)
- <use figures/grouproute2.png>
-Package pdftex.def Info: figures/grouproute2.png used on input line 302.
-(pdftex.def)             Requested size: 252.94499pt x 142.31264pt.
- [38])
-(./parts/chapter5.tex [39]
+<use figures/torus1.png>
+Package pdftex.def Info: figures/torus1.png used on input line 304.
+(pdftex.def)             Requested size: 216.81pt x 125.5716pt.
+
+<figures/torus2.png, id=587, 632.00114pt x 366.04755pt>
+File: figures/torus2.png Graphic file (type png)
+
+<use figures/torus2.png>
+Package pdftex.def Info: figures/torus2.png used on input line 308.
+(pdftex.def)             Requested size: 216.81pt x 125.5716pt.
+
+<figures/torus3.png, id=588, 632.00114pt x 366.04755pt>
+File: figures/torus3.png Graphic file (type png)
+
+<use figures/torus3.png>
+Package pdftex.def Info: figures/torus3.png used on input line 312.
+(pdftex.def)             Requested size: 216.81pt x 125.5716pt.
+
+<figures/torus4.png, id=589, 632.00114pt x 366.04755pt>
+File: figures/torus4.png Graphic file (type png)
+
+<use figures/torus4.png>
+Package pdftex.def Info: figures/torus4.png used on input line 316.
+(pdftex.def)             Requested size: 216.81pt x 125.5716pt.
+
+<figures/torus5.png, id=590, 632.00114pt x 366.04755pt>
+File: figures/torus5.png Graphic file (type png)
+
+<use figures/torus5.png>
+Package pdftex.def Info: figures/torus5.png used on input line 320.
+(pdftex.def)             Requested size: 216.81pt x 125.5716pt.
+
+<figures/torus6.png, id=591, 632.00114pt x 366.04755pt>
+File: figures/torus6.png Graphic file (type png)
+
+<use figures/torus6.png>
+Package pdftex.def Info: figures/torus6.png used on input line 323.
+(pdftex.def)             Requested size: 216.81pt x 125.5716pt.
+ [40] [41 <./figures/torus1.png> <./figures/torus2.png> <./figures/torus3.png> 
+<./figures/torus4.png> <./figures/torus5.png> <./figures/torus6.png>]) (./parts
+/chapter5.tex [42]
 Chapter 5.
-[40
+[43
 
 
-] [41]
+] [44]
 Underfull \hbox (badness 10000) in paragraph at lines 59--73
 
  []
 
-<figures/chordal_a_l.png, id=601, 643.6547pt x 101.62968pt>
+<figures/chordal_a_l.png, id=628, 643.6547pt x 101.62968pt>
 File: figures/chordal_a_l.png Graphic file (type png)
 
 <use figures/chordal_a_l.png>
 Package pdftex.def Info: figures/chordal_a_l.png used on input line 78.
 (pdftex.def)             Requested size: 216.81pt x 34.23262pt.
 
-<figures/chordal_a1_l.png, id=602, 643.6547pt x 101.62968pt>
+<figures/chordal_a1_l.png, id=629, 643.6547pt x 101.62968pt>
 File: figures/chordal_a1_l.png Graphic file (type png)
 
 <use figures/chordal_a1_l.png>
 Package pdftex.def Info: figures/chordal_a1_l.png used on input line 82.
 (pdftex.def)             Requested size: 216.81pt x 34.23262pt.
- [42]
+ [45]
 Underfull \hbox (badness 10000) in paragraph at lines 87--92
 
  []
 
-[43 <./figures/chordal_a_l.png> <./figures/chordal_a1_l.png>]
+[46 <./figures/chordal_a_l.png> <./figures/chordal_a1_l.png>]
 Overfull \hbox (22.43526pt too wide) in paragraph at lines 103--104
 []\OT1/cmr/m/n/12 We would make some mod-i-fi-ca-tion of this agents route in t
 he $\OML/cmm/m/it/12 Surrounding and Elimination$\OT1/cmr/m/n/12 ,
@@ -1836,25 +1847,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
 
-<figures/tjt1.png, id=619, 226.9278pt x 53.4798pt>
+<figures/tjt1.png, id=645, 226.9278pt x 53.4798pt>
 File: figures/tjt1.png Graphic file (type png)
  <use figures/tjt1.png>
 Package pdftex.def Info: figures/tjt1.png used on input line 118.
 (pdftex.def)             Requested size: 180.67499pt x 42.57988pt.
 
-<figures/tjt2.png, id=620, 225.4824pt x 74.1972pt>
+<figures/tjt2.png, id=646, 225.4824pt x 74.1972pt>
 File: figures/tjt2.png Graphic file (type png)
  <use figures/tjt2.png>
 Package pdftex.def Info: figures/tjt2.png used on input line 122.
 (pdftex.def)             Requested size: 180.67499pt x 59.45518pt.
 
-<figures/tjt3.png, id=621, 210.5466pt x 73.2336pt>
+<figures/tjt3.png, id=647, 210.5466pt x 73.2336pt>
 File: figures/tjt3.png Graphic file (type png)
  <use figures/tjt3.png>
 Package pdftex.def Info: figures/tjt3.png used on input line 126.
 (pdftex.def)             Requested size: 180.67499pt x 62.84778pt.
 
-<figures/tjt4.png, id=622, 229.8186pt x 58.7796pt>
+<figures/tjt4.png, id=648, 229.8186pt x 58.7796pt>
 File: figures/tjt4.png Graphic file (type png)
  <use figures/tjt4.png>
 Package pdftex.def Info: figures/tjt4.png used on input line 130.
@@ -1864,34 +1875,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--141
 
  []
 
-[44 <./figures/tjt1.png> <./figures/tjt2.png> <./figures/tjt3.png> <./figures/t
-jt4.png>] [45] [46] [47] [48] [49]
+[47 <./figures/tjt1.png> <./figures/tjt2.png> <./figures/tjt3.png> <./figures/t
+jt4.png>] [48] [49] [50] [51] [52]
 Overfull \hbox (52.33733pt too wide) in paragraph at lines 222--223
 []\OT1/cmr/m/n/12 For $\OML/cmm/m/it/12 CA$ \OT1/cmr/m/n/12 in sce-nario 1: Let
  us do-nate by $\OML/cmm/m/it/12 y$ \OT1/cmr/m/n/12 the co-or-di-nate of the no
 de in the $\OML/cmm/m/it/12 Notification Window$
  []
 
-<figures/T29.png, id=664, 254.3904pt x 92.0238pt>
+<figures/T29.png, id=690, 254.3904pt x 92.0238pt>
 File: figures/T29.png Graphic file (type png)
  <use figures/T29.png>
 Package pdftex.def Info: figures/T29.png used on input line 233.
 (pdftex.def)             Requested size: 276.43555pt x 100.00345pt.
 
-[50] <figures/T50.png, id=669, 254.3904pt x 106.4778pt>
+[53] <figures/T50.png, id=696, 254.3904pt x 106.4778pt>
 File: figures/T50.png Graphic file (type png)
  <use figures/T50.png>
 Package pdftex.def Info: figures/T50.png used on input line 241.
 (pdftex.def)             Requested size: 276.43555pt x 115.71078pt.
 
-<figures/T611.png, id=670, 254.3904pt x 105.5142pt>
+<figures/T611.png, id=697, 254.3904pt x 105.5142pt>
 File: figures/T611.png Graphic file (type png)
  <use figures/T611.png>
 Package pdftex.def Info: figures/T611.png used on input line 249.
 (pdftex.def)             Requested size: 276.43555pt x 114.66365pt.
 
-[51 <./figures/T29.png> <./figures/T50.png>]
-<figures/T612.png, id=677, 254.3904pt x 105.5142pt>
+[54 <./figures/T29.png> <./figures/T50.png>]
+<figures/T612.png, id=704, 254.3904pt x 105.5142pt>
 File: figures/T612.png Graphic file (type png)
  <use figures/T612.png>
 Package pdftex.def Info: figures/T612.png used on input line 255.
@@ -1903,47 +1914,47 @@ h is from node 55 to node 65. Note that the $\OML/cmm/m/it/12 Notification Wind
 ow$
  []
 
-<figures/T75.png, id=678, 254.3904pt x 119.9682pt>
+<figures/T75.png, id=705, 254.3904pt x 119.9682pt>
 File: figures/T75.png Graphic file (type png)
  <use figures/T75.png>
 Package pdftex.def Info: figures/T75.png used on input line 262.
 (pdftex.def)             Requested size: 276.43555pt x 130.37099pt.
 
-<figures/T66.png, id=679, 254.3904pt x 119.9682pt>
+<figures/T66.png, id=706, 254.3904pt x 119.9682pt>
 File: figures/T66.png Graphic file (type png)
  <use figures/T66.png>
 Package pdftex.def Info: figures/T66.png used on input line 269.
 (pdftex.def)             Requested size: 276.43555pt x 130.37099pt.
 
-[52 <./figures/T611.png> <./figures/T612.png> <./figures/T75.png>]
-<figures/T94.png, id=687, 254.3904pt x 148.8762pt>
+[55 <./figures/T611.png> <./figures/T612.png> <./figures/T75.png>]
+<figures/T94.png, id=714, 254.3904pt x 148.8762pt>
 File: figures/T94.png Graphic file (type png)
  <use figures/T94.png>
 Package pdftex.def Info: figures/T94.png used on input line 275.
 (pdftex.def)             Requested size: 276.43555pt x 161.7857pt.
 
 
-Package natbib Warning: Citation `Alotaibi' on page 53 undefined on input line 
+Package natbib Warning: Citation `Alotaibi' on page 56 undefined on input line 
 282.
 
-[53 <./figures/T66.png> <./figures/T94.png>] [54]
-<figures/D1.png, id=700, 347.3778pt x 73.7154pt>
+[56 <./figures/T66.png> <./figures/T94.png>] [57]
+<figures/D1.png, id=726, 347.3778pt x 73.7154pt>
 File: figures/D1.png Graphic file (type png)
  <use figures/D1.png>
 Package pdftex.def Info: figures/D1.png used on input line 289.
 (pdftex.def)             Requested size: 276.43555pt x 58.6608pt.
 
-<figures/D2.png, id=702, 320.397pt x 80.9424pt>
+<figures/D2.png, id=728, 320.397pt x 80.9424pt>
 File: figures/D2.png Graphic file (type png)
  <use figures/D2.png>
 Package pdftex.def Info: figures/D2.png used on input line 297.
 (pdftex.def)             Requested size: 276.43555pt x 69.84006pt.
- [55 <./figures/D1.png>] [56 <./figures/D2.png>] [57]
+ [58 <./figures/D1.png>] [59 <./figures/D2.png>] [60]
 
-Package natbib Warning: Citation `Alotaibi' on page 58 undefined on input line 
+Package natbib Warning: Citation `Alotaibi' on page 61 undefined on input line 
 336.
 
-[58]) [59]
+[61]) [62]
 No file uottawa-thesis.bbl.
 
 Package natbib Warning: There were undefined citations.
@@ -1962,10 +1973,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 231.
  ) 
 Here is how much of TeX's memory you used:
- 11177 strings out of 492995
- 163154 string characters out of 6132704
- 264705 words of memory out of 5000000
- 14227 multiletter control sequences out of 15000+600000
+ 11220 strings out of 492995
+ 163845 string characters out of 6132704
+ 265338 words of memory out of 5000000
+ 14258 multiletter control sequences out of 15000+600000
  13428 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  30i,17n,30p,2753b,494s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1991,10 +2002,10 @@ dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2017/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on uottawa-thesis.pdf (67 pages, 1677899 bytes).
+Output written on uottawa-thesis.pdf (70 pages, 2093112 bytes).
 PDF statistics:
- 839 PDF objects out of 1000 (max. 8388607)
- 642 compressed objects within 7 object streams
- 189 named destinations out of 1000 (max. 500000)
- 547 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 866 PDF objects out of 1000 (max. 8388607)
+ 656 compressed objects within 7 object streams
+ 196 named destinations out of 1000 (max. 500000)
+ 572 words of extra memory for PDF output out of 10000 (max. 10000000)
 
