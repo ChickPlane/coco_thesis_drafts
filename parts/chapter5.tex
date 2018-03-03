@@ -8,32 +8,19 @@
  
 
 \section{Introduction}
-In this chapter, we discuss a parallel strategy for  BVD problem in chordal rings. A chordal ring is a circulant graph with $d_1=1$, i.e., it is an augmented ring, and will be denoted by $C_n(1, d_2, ..., d_k)$. More specifically, in chordal ring each node is directly connected to the nodes at distance $d_i$ by additional links called chords. The link connecting two nodes is labeled by the distance that separates these two nodes on the ring. 
+In this chapter, we discuss a parallel strategy for  BVD problem in chordal rings. A chordal ring is a circulant graph with $d_1=1$, i.e., it is an augmented ring, and will be denoted by $C_n(1, d_2, ..., d_k)$. More specifically, in chordal ring each node is directly connected to the nodes at distance $d_i$ by additional links called chords. The link connecting two nodes is labeled by the distance that separates these two nodes on the ring. (see Fig.\ref{fig:chordalring})
 {\bf Add a figure with an example of a chordal ring.}
+\begin{figure}[H]
+  \centering  
+  \includegraphics[width=3in]{figures/chordalring.png}
+  \caption{An example of chordal ring $C_n(1,4)$}\label{fig:chordalring}
+\end{figure}
 
-For convenience, if we say the agents or the clones move along chord $i$, then they actually move along $d_i$. If we say the agents or the clones move $i$, then they actually move along chord $d_x$ with its length equal to $i$. 
-
-Let us denote by $d$ the half degree of the chordal ring (for example, for the chordal ring structure $C_n(1,2,4,5)$, $d=4$), by $l$ the length of the longest chord of the chordal ring (for example, for the chordal ring structure $C_n(1,2,4,5)$, $l=5$). 
-{\bf d and l are already defined as $k$ and $d_k$ why change ? Use the same terminology throughout}
-
-In order to simplify the process, we assume that all the nodes in the network are marked with a number: the starting point is marked 0, then the second node is marked 1... {\bf Do they have distinct Ids, or is this just done for the purpose of easier description ?}
-
-Our goal is to minimize the time to complete the whole decontamination process and at the same time the casualties. In order to do that, we propose a parallel strategy for decontaminating the chordal ring. This is the first attempt to deal with this issue in a parallel way. 
-
-Agents are not allowed to communicate with each other unless they are in the same node so the protocol should enable agents in different nodes to move properly. That is, the route of every agent is different but they are served to explore the network; when a BV is triggered, other agents should bypass the new-formed BVs. We give simple but efficient solution to deal with the problem with acceptable cost. 
-
-{\bf The assumption on istantaneous triggering goes in the model, not here.}
-\color{red} 
-
-
-
-We would like to execute in parallel both the exploration and the elimination phase of the strategy.   
-However, during the  elimination phase a  tricky situation might happen when  the sites of   two clones are connected. If this occurs, after these two clones are triggered, one of their clones spread to another sites and since the agents sent to destroy them die, these two sites are empty when the second round clones arrive, which make our decontamination invalid. 
-
-In order to solve this problem, we make an assumption when we talk about the parallel strategy in elimination phase in chordal rings: when a BV is triggered, its clones reach all its neighbours instantaneously.
-
-\color{black}
-
+%For convenience, if we say the agents or the clones move along chord $i$, then they actually move along $d_i$. If we say the agents or the clones move $i$, then they actually move along chord $d_x$ with its length equal to $i$. 
+For the purpose of easier description, we assume that all the nodes in the network are marked with a number: the starting point is marked $x_0$, then the second node is marked $x_1$ \dots {\bf Do they have distinct Ids, or is this just done for the purpose of easier description ?}Agents are not allowed to communicate with each other unless they are in the same node so the protocol should enable agents in different nodes to move properly. That is, the route of every agent is different but they are served to explore the network; when a BV is triggered, other agents should bypass the new-formed BVs. We give simple but efficient solution to deal with the problem with acceptable cost. 
+%Let us denote by $d$ the half degree of the chordal ring (for example, for the chordal ring structure $C_n(1,2,4,5)$, $d=4$), by $l$ the length of the longest chord of the chordal ring (for example, for the chordal ring structure $C_n(1,2,4,5)$, $l=5$). 
+%{\bf d and l are already defined as $k$ and $d_k$ why change ? Use the same terminology throughout}
+Our goal is to minimize the time to complete the whole decontamination process and at the same time the casualties. In order to do that, we propose a parallel strategy for decontaminating the chordal ring and this is the first attempt to deal with this issue in a parallel way. 
 %
 %Since time cost in the elimination phase is negligible comparing to the exploring phase if $n$ is large enough, it would be much simple to execute the elimination sequentially. That is, instead of destroy all the clones at the same time, we decontaminate them on by one. Also, in the elimination phase, in order to save the number of agents, we chase all the $Keep\,Moving$ agents (explained in section Surrounding and Elimination) back.
 % It is obvious that it may cost some time for this process. If  the execution time is of great important to us and we care less the number of agents we employ, then we may carry enough agent at the beginning and start the elimination phase right after the exploring phase. 
@@ -49,15 +36,12 @@ In order to solve this problem, we make an assumption when we talk about the par
 \noindent{\bf Initialization }\\
 The chordal ring is a complete symmetrical structure, so we can randomly choose a node $x_0$ as the start node.  The initial setup consists of deploying three groups of agents.
 Initially, we place one  agent in each of the first $2d$ nodes   $x_0, x_1, \ldots , x_{2d-1}$. 
-The agents residing in nodes from $x_0$ to $x_{d-1}$ form the  {\em shadowing group}, while the ones  from 
-$x_d$ to $x_{2d-1}$ form  the {\em exploring group}. 
-If the BV is within this window of nodes, then it is easily detected. We then assume that the  first $2d$ nodes 
-  do not contain the BV, and we   place $d$ additional agents at nodes
- $x_ 0,x_1, \ldots, x_{d-1}$ ({\em guarding group}). 
- Only the shadowing and exploring groups move to  ..... The ones in the guarding group remain dormant for now, guarding the nodes to guarantee   monotonicity. 
+The agents residing in nodes from $x_0$ to $x_{d-1}$ form the  {\em shadowing group}, while the ones from $x_d$ to $x_{2d-1}$ form the {\em exploring group}. 
+If the BV is within this window of nodes, then it is easily detected. We then assume that the  first $2d$ nodes do not contain the BV, and we place $d$ additional agents at nodes $x_ 0,x_1, \ldots, x_{d-1}$ ({\em guarding group}). 
+Only the shadowing and exploring groups move to explore the graph. The ones in the guarding group remain dormant for now, guarding the nodes to guarantee monotonicity. 
 
 \noindent{\bf Route of the agent in exploring phase}\\
-The exploration proceeds in synchronized rounds composed each by  one movement step, when selected groups of agents move to proceed with the exploration, and three steps for synchronization purposes. We call these different steps    {\em move step}  and  {\em notification steps}. A round $T_i$ is   composed by four time units, one for the move step, and 3 for the notification steps : 
+The exploration proceeds in synchronized rounds composed each by  one movement step, when selected groups of agents move to proceed with the exploration, and three steps for synchronization purposes. We call these different steps    {\em move step}  and  {\em notification steps}. A round $T_i$ is composed by four time units, one for the move step, and 3 for the notification steps : 
 $T_1 = T_{move\_1},T_{noti\_1},T_{noti\_1},T_{noti\_1},  
 T_2 =  T_{move\_2},T_{noti\_2},T_{noti\_2},T_{noti\_2}, \ldots$.
 % 
@@ -68,7 +52,7 @@ T_2 =  T_{move\_2},T_{noti\_2},T_{noti\_2},T_{noti\_2}, \ldots$.
 %$T_{notice\_1''}$, $T_{move\_2}$, $T_{notice\_2}$, $T_{notice\_2'}$, $T_{notice\_2''}$ ...
 %
 %More specifically, every cycle contains one unit of time for moving and three units of time for notice. We discuss why we arrange the time as above and what exactly the agents do in the notice time later. 
-The agents  that move during a move step $T_{move\_i}$, always do so   along their longest chord $d_k$. That is, agents move along $d_k$ in steps $T=1+4t$ $(t\in \mathbb{N})$.  
+The agents that move during a move step $T_{move\_i}$, always do so along their longest chord $d_k$. That is, agents move along $d_k$ in steps $T=1+4t$ $(t\in \mathbb{N})$.  
 An example of how agents move in chordal ring $C_n(1, 2 , 4, 5)$ at $T_{move\_i}$ in the  exploring phase is shown in Fig.\ref{fig:subfig1}. \\
 
 \begin{figure} [H]
@@ -84,23 +68,19 @@ An example of how agents move in chordal ring $C_n(1, 2 , 4, 5)$ at $T_{move\_i}
   \label{fig:subfig1} %% label for entire figure 
 \end{figure}
 
-\noindent{\bf  Synchronization: Three\,Jump\,Notifying\,Technique}
-In the sequential strategy \cite{} {\bf add citation} two agents explore the graph (exploring agent and leader agent)  using  cautious walk. That is, the  exploring agent moves to the next node in its route, and if the node is safe, it moves back to the leader agent, and then move forward to that safe node together. In this case, if the leader agent does not meet the exploring agent in next $T$ after the exploring agent moves forward, the leader agent learns that the original BV resides in the next node so it stop moving. 
-{\bf doesn't it find out by receiving the clone ?}
-However, in our strategy, we employ $2d$ agents in the exploring phase we then have to guarantee that they all find out whether or not the BV has been found in the current round.
-In fact,  if they are not properly informed, when one agent is destroyed by the BV, in their next step some of them (the risky agents RAs) may be destroyed by the new formed BVs. In order to avoid these potential casualties, we propose the $Three\,Jump\,Notifying\,Technique$ to properly notify the agents who otherwise would  move   to the new formed BVs in the next round.\\
+\noindent{\bf Synchronization: Three\,Jump\,Notifying\,Technique}
+In the sequential strategy \cite{Alotaibi}, {\bf add citation} two agents explore the graph (exploring agent and leader agent)  using  ``cautious walk". That is, the Exploring Agent moves to the next node in its route, and if the node is safe, it moves back to the Leader Explorer Agent, and then move forward to that safe node together. If instead the node contains a BV, the Leader Explorer Agent becomes aware of that because a BV arrives through that link instead of Explorer Agent. {\bf doesn't it find out by receiving the clone ?}
+However, in our strategy, we employ $2d$ agents in the exploring phase but we do not use the ``casual walk". We then have to guarantee that they all find out whether or not the BV has been found in the current round. In fact, if they are not properly informed, when one agent is destroyed by the BV, in their next step some of them (the risky agents RAs) may be destroyed by the new formed BVs. In order to avoid these potential casualties, we propose the $Three\,Jump\,Notifying\,Technique$ to properly notify the agents who otherwise would move to the new formed BVs in the next round.\\
 
+The idea is the following: when/if a node receives a clone and becomes aware of the presence of the BV,  it becomes a  $Notification\,Agent$ (NA). The NA's role is to make the risky agents aware of the presence of the BV in an efficient way. They will do so in parallel, each following  a special  route of length 3.  More precisely, let the BV be at node $x_0$ (refer to Figure \ref{fig:subfig}), the $Notification\,Agent$ located at node $x_{n-d_i}$ will follow the following route:
 
-
-The idea is the following: when/if a node  receives a clone  and becomes aware of the presence of the BV,  it becomes a  $Notification\,Agent$ (NA). The NAs role is to make the risky  agents aware of the presence of the BV in an efficient way. They will do so in parallel, each following  a special  route of length 3.  More precisely,   let the BV be at node 0 (refer to Figure \ref{fig:subfig}),  the  $Notification\,Agent$ located at node $-i$ will follow the following route:
-
- $-d_i\xrightarrow[]{move\left | d_i \right |}0\xrightarrow[]{move\,along\,chord\,k}-d_k\xrightarrow[]{move\,\left | d_i \right |}-d_k+\left|d_i\right|$.
+$x_{n-d_i}\xrightarrow [] {move\,along\,chord\,d_i}x_0\xrightarrow [] {move\,along\,chord\,d_k}x_{n-d_k}\xrightarrow []{move\,along\,chord\,d_i}x_{n-d_k+d_i}$.
  
- In this case,   the notifying route of the $NA$ whose coordinate is $-d_k$ is $-d_k{\rightarrow}0{\rightarrow}-d_k{\rightarrow}0$.
+ In this case, the notifying route of the $NA$ whose coordinate is $x_{n-d_k}$ is $x_{n-d_k}{\rightarrow}x_0{\rightarrow}x_{-d_k}{\rightarrow}x_0$.
  
  {\bf confusion between node, chord, etc. Let us always use $x_i$ for the nodes (not $i$), $d_i$ for the chords, etc..}
  
- We would make some modification of this agents route in the $Surrounding\,and\,Elimination$, but now let us assume it still follow the route above. The whole process of $Three\,Jump\,Notifying$ technique in chordal ring $C_n(1, 2, 4, 5)$ is shown in Fig.\ref{fig:subfig}. \\
+ We would make some modification of this agents route in the $Surrounding\,and\,Elimination$, but now let us assume it still follows the route above. The whole process of $Three\,Jump\,Notifying$ technique in chordal ring $C_n(1, 2, 4, 5)$ is shown in Fig.\ref{fig:subfig}. \\
 
 %
 %
@@ -147,32 +127,74 @@ If  executing the $Three\,Jump\,Notifying$ technique,  the $NA$s move  back to w
 \section{Surrounding and Elimination}
  When a BV is found,  the Three\,Jump\,Notifying technique   guarantees that the risky agents are now aware of the presence of the BV. Other agents, however, might not have received the notification and might proceed to the next round without such knowledge; we call these agents $KeepMoving$ agents.   
 
-In this section, we introduce the process of eliminating the BVs after the original BV is triggered. For the purpose of saving the number of agents, we prefer to chase the $Keep\,Moving$ agents, but it is not necessary to complete the process especially when you care most about the  execution time; In that case, we may  instead  carry enough     agents  and  proceed to the $Surrounding\,and\,Elimination$ phase immediately. 
+In this section, we introduce the process of eliminating the BVs after the original BV is triggered. For the purpose of saving the number of agents, we prefer to chase the $Keep\,Moving$ agents, but it is not necessary to complete the process especially when you care most about the  execution time; In that case, we may  instead  carry enough agents  and  proceed to the $Surrounding\,and\,Elimination$ phase immediately. 
 The number of agents that should be carried in order to successfully proceed the $Surrounding\,and\,Elimination$ will be discussed later.  We now describe how to chase the $KeepMoving$ agents.
 
 \subsection{Notifying Moving Agents}
 
 \noindent{\bf Overview of the Notifying Moving Agents}
 
-When the $Shadowed\,Exploring$ ends, it is possible that some of the agents in the array are not informed and do not realize the existence of the BV, so they keep moving following the routes in $Shadowed\,Exploring$  phase but it is obvious that they would not encounter any BV. In order to reduce waste, we employ the agent who receives the clone from chord $d_k$ ($Coordinate\,Agent$) to notify the other $Keep\,Moving$ agents to move back to their   position  they occupied before the BV was triggered.
+When the $Shadowed\,Exploring$ ends, it is possible that some of the agents in the array are not informed and do not realize the existence of the BV, so they keep moving following the routes in $Shadowed\,Exploring$  phase but it is obvious that they would not encounter any BV. In order to reduce waste, we employ the agent who receives the clone from chord $d_k$ ($Coordinator\,Agent$) to notify the other $Keep\,Moving$ agents to move back to their   position  they occupied before the BV was triggered.
 % Now we introduce how we choose the $Coordinate\,Agent$($CA$)and how the $CA$ notifies the other agents.\\
 
 \noindent{\bf The Process of the Notifying Phase of the Coordination Agent}
 
-To do that we employ one of the agents as a   $Coordinator\,Agent$($CA$). {\bf Call it coordinator agent instead of coordinate agent} The CA follows a specific path that will guarantee to meet all the $Keep\,Moving$ within a certain amount of rounds.
+To do that we employ one of the agents as a  $Coordinator\,Agent$($CA$). The CA follows a specific path that will guarantee to meet all the $Keep\,Moving$ within a certain amount of rounds.
 
 
 The general outline of the technique is the following:
 \begin{enumerate}
-\item the CA is chosen to be the agent at distance -1 from the BV (i.e., its left neighbour)
-\item once the $Three\,Jump\,Notifying$ technique is terminated, the CA moves to occupy an arbitrary node within a special range   $[y,z]$ (the range computation is described later).
-\item the CA waits an appropriate amount of time  to allow the agents that are still moving to reach this window of nodes
-\item the CA now moves in synchronization  with the movement of the  agents and follows a specific paths. 
-More precisely,  while  the moving agents proceed as usual  with one move and 3 waiting steps, the CA will take its longest chord in correspondence of an agents move and 3 consecutive nodes in correspondence of the waiting steps of the moving agents. In doing so, with $O(d_k)$ moves, the CA is guaranteed to have encountered  all of them.
-\item when a moving agent encounters the CA,  it stops and waits for a second agent that will arrive at the next round. When both agents are there, they go back to their original positions to start the surrounding phase.
+\item the CA is chosen to be the agent who receives a BV clone from its longest chord. %once the $Three\,Jump\,Notifying$ technique is terminated,
+%\item the CA moves to occupy an arbitrary node within a special range $[y,z]$ (the rules of moving and the range computation are described later) once selected.
+\item following three moving rules (the rules of moving are described later) the CA moves to occupy an node as the starting point for chasing and set a notification window $[x_y,x_z]$ (the range computation are described later) based on its own coordinate. 
+\item the CA waits an appropriate amount of time to allow the agents that are still moving to reach this window of nodes
+\item the CA now moves in synchronization with the movement of the agents and follows a specific paths. 
+More precisely, while the moving agents proceed as usual  with one move and 3 waiting steps, the CA will take its longest chord in correspondence of an agents move and 3 consecutive nodes in correspondence of the waiting steps of the moving agents. In doing so, with $O(d_k)$ moves, the CA is guaranteed to have encountered  all of them.
+\item when a moving agent encounters the CA, it stops and waits for a second agent that will arrive at the next round. When both agents are there, they go back to their original positions to start the surrounding phase.
 \end{enumerate}
 
-{\bf  ----- Now try to restructure   the rest describing  each of the steps in separately. }
+{\bf  ----- Now try to restructure the rest describing each of the steps in separately. }
+
+For our convenience, in some case, we consider the chordal ring as arranged in rows of $d_k$ where the last node of a row is connected to the first node of the following row and the last node is connected to the first. Depending on the size of the chordal, the last row could be incomplete. So in this matrix, moving down a column corresponding to using the longest chord $d_k$.(see Fig.\ref{fig:matrix}). 
+\begin{figure}[H]
+  \centering  
+  \includegraphics[width=0.6\textwidth]{figures/matrix.png}
+  \caption{Viewing a chordal ring whose longest chord is 11 as a matrix}\label{fig:matrix}
+\end{figure}
+
+The selection of the $CA$ is simple: when an agent receives a BV clone from its longest chord, then it realizes that it is chosen as the $CA$. More specifically, if the coordinate of the original BV is $x_i$, then the coordinate of the CA would be $x_{i-d_k}$.
+After being selected as the CA, the CA should move to an node as the starting point for chasing. 
+
+In the following step, we would use a concept called ``notification window".  In a chord ring $C_n(1, d_2, \ldots, d_k)$, given a coordinate $x_i$, the $Notification\,Window$ $[x_y,x_z]$ based on this coordinate is set using the modular arithmetic and $x_y$ is called the $Beginning\,Flag$ while the $x_z$ is called the $End\,Flag$.
+The relations between $x$, $y$, $z$ should be as follow: 
+\begin{itemize}
+\item $x_y$ is the biggest number which satisfies that it is smaller than or equal to $x_i$ and that $x_y$ mod $d_k$ =$0$; 
+\item $x_z$ is the smallest number which satisfies that it is bigger than $x_i$ and that $x_z$ mod $d_k$ = $d_{k-1}$.
+\end{itemize} 
+
+There are three rules it should follow in correspondence to three scenarios.  
+
+Supposing the coordinate of the original BV is $x_i$ ,the coordinates of the positions where the clones spread are: $x_{i-d_k}$ (which is the original coordinate of the $CA$), $x_{i-d_{k-1}}$, $x_{i-d_{k-2}}$, \ldots, $x_{i-1}$, $x_{i+1}$, $x_{i+d_2}$, \ldots, $x_{i+d_{k-1}}$, $x_{i+d_{k}}$.
+Now we describe three scenarios:
+\begin{itemize}
+\item Scenario 1: The last agent of the $Exploring\,Group$ is destroyed by the BV and the positions of the clones satisfy: $x_{i-d_{k-1}+d_{k}}=x_{i+1}$, $x_{i-d_{k-2}+d_{k}}=x_{i+d_2}$, \ldots, $x_{{i-1}+d_{k}}=x_{i+d_{k-1}}$. 
+\item Scenario 2: The last agent of the $Exploring\,Group$ is destroyed by the BV and the at least one pair of the positions of the clones does not satisfy: $x_{i-d_{k-1}+d_{k}}=x_{i+1}$, $x_{i-d_{k-2}+d_{k}}=x_{i+d_2}$, \ldots, $x_{{i-1}+d_{k}}=x_{i+d_{k-1}}$. 
+\item Scenario 3: One of the agents in the $Exploring\,Group$ except the last agent is destroyed by the BV.
+\end{itemize}
+
+In scenario 1, the $CA$ needs to move for 5 steps to reach its destination while in the other two scenarios, it only needs to move for 4 steps to arrive the destination. Now we propose the route for each scenario.
+\begin{itemize}
+\item For $CA$ in scenario 1: Let us donate by $y$ the coordinate of the node in the $Notification\,Window$ set by the coordinate of the original BV which does not receive any clone and his left neighbour receives a clone (the coordinate of it is $y-1$). The $CA$ first moves to the original BV, then to node $y-1$, finally to $y$. After that it only need to move along the chord $d_k$ for twice to reach its destination.
+\item For $CA$ in scenario 2: There is at least one pair of the positions of the clones does not satisfy the equations so there should be one node (assuming its coordinate is $z$) who receives a clone from the original BV but node $z+d_k$ is empty. The route now for the $CA$ is first move to the BV, then to node $z$, and then moves along the chord $d_k$ for twice to reach its destination.
+\item For $CA$ in scenario 3: The $CA$ here simply need to move for one step to its right neighbour and move along the chord $d_k$ for three times to reach its destination.
+\end{itemize}
+
+In any case, the $CA$ can reach its destination within 6 unit of time which is required for the $Keep\,Moving$ agents to move to the $Initial\,Notification\,Window$, so the $CA$ start to chase the $Keep\,Moving$ agents as we introduce from $T_{notify\_{i+2}}$. 
+
+
+%We know that, the notifying phase starts from $T_{move\_{i+2}}$ assuming the time when the BV is triggered is $T_{move\_i}$, which means the notifying phase begins only after all the $Keep\,Moving$ agents move twice. At $T_{move\_{i+2}}$, all the $Keep\,Moving$ agents are in a $Notification\,Window$ from nodes $d_k\times(move\_{i}+1)\,to\,d_k\times(move\_{i}+1) + d_{k}-1$, and let us donate it by $Initial\,Notification\,Window$. The $CA$ would directly move to any node in $Initial\,Notification\,Window$. Now we propose three kinds of routes for the $CA$ to move to his destination:
+
+
 
 
 
@@ -182,16 +204,8 @@ More precisely,  while  the moving agents proceed as usual  with one move and 3 
 We can see that the relative position of agents does not change when they keep moving along the longest chord. 
 For example, agents residing in nodes 1, 5, 10 (noted as $A1$, $A5$, $A10$) move along the longest chord and then $A5$ moves forward for one step. Their relative position  would be exactly the same as the situation where all of them remain dormant except $A5$ moves forward for one step. 
 Now we discuss how the $CA$ notify all the $Keep\,Moving$ agents assuming they are dormant and then make some modification to fit the scenario where the $CA$ notifies the $Keep\,Moving$ agents. The problem we need to solve is that given a range within which the agents are in and a $CA$ located in this range, let the $CA$ to notify all the agents in this range. 
-In a chord ring $C_n(1, d_2, \ldots, d_k)$, the $CA$ sets a $Notification\,Window$ using the modular arithmetic.
- Let us assume the number of the node where the $CA$ resides in is $x$, the number of the nodes where should be marked the 
- $Beginning\,Flag$ and the $End\,Flag$ are $y$ and $z$. 
 
-The relations between $x$, $y$, $z$ should be as follow: 
 
-\begin{itemize}
-\item $y$ is the biggest number which satisfies that it is smaller than or equal to $x$ and that $y$ mod $d_k$ =$0$; 
-\item $z$ is the smallest number which satisfies that it is bigger than $x$ and that $z$ mod $d_k$ = $d_{k-1}$.
-\end{itemize} 
 
 
 When the agent is chosen to be the $CA$, it computes its $Notification\,Window$. When we mention marking a flag, it does not mean that the agent has to move to the node to do that but only needs to remember the positions of the two flags in its memory. Also, after the position of the $Notification\,Window$ is set, it remains stable. More specifically, when the $CA$ moves, he does not set another $Notification\,Window$ using its new position. The $CA$ moves step by step to every possible position and notifies the agents to go back if there is one until it realizes that it just passes the $End\,Flag$. After that, he moves along the longest chord anticlockwise to the node marked a $Beginning\,Flag$ and continues moving again step by step to notify agents until it arrives its relative departing node. For example, if the $CA$ starts to notify other from node $x$, then its relative departing node is $x'=x+t\times{d_k}$ ($t\in \mathbb{N}$).
@@ -205,29 +219,8 @@ We make some modifications to let the solution fit the real scenario where the a
 \item Let us assume that the time when the BV is triggered is $T_{move\_i}$, the $CA$ starts to move step by step to notify other agents after $T_{move\_{i+2}}$, because we want to ensure the security of the $CA$. If it starts to notify other agents at $T_{move\_{i+1}}$, it might encounter a BV. Also, it should be ensured that the $Keep\,Moving$ agents in the exploring group are in the $Notification\,Window$ of the $CA$, or the $CA$ would never encounter them. We would talk about how to ensure this in next section.
 \end{itemize} 
 
-\noindent{\bf Election of the Coordination Agent}
 
-We choose the agent who receives a BV clone from its chord $d_k$ to be the $CA$, which means when an agent receives a BV clone from its longest chord, then it realizes that it is chosen as the $CA$. We know that, the notifying phase starts from $T_{move\_{i+2}}$ assuming the time when the BV is triggered is $T_{move\_i}$, which means the notifying phase begins only after all the $Keep\,Moving$ agents move twice. At $T_{move\_{i+2}}$, all the $Keep\,Moving$ agents are in a $Notification\,Window$ from nodes $d_k\times(move\_{i}+1)\,to\,d_k\times(move\_{i}+1) + d_{k}-1$, and let us donate it by $Initial\,Notification\,Window$. The $CA$ would directly move to any node in $Initial\,Notification\,Window$. Now we propose three kinds of routes for the $CA$ to move to his destination:
-
-The coordinates of the positions where the clones spread are: $x-d_k$ (which is the coordinate of the $CA$), $x-d_{k-1}$, $x-d_{k-2}$, \ldots, $x-1$, $x+1$, $x+d_2$, \ldots, $x+d_{k-1}$, $x+d_{k}$ supposing the coordinate of the original BV is $x$ and we are in a chordal ring $C_n(1, d_2,\ldots, d_k)$.
- Now we describe three scenarios:
-\begin{itemize}
-\item Scenario 1: The last agent of the $Exploring\,Group$ is destroyed by the BV and the positions of the clones satisfy: $x-d_{k-1}+d_{k}=x+1$, $x-d_{k-2}+d_{k}=x+d_2$, \ldots, $x-1+d_{k}=x+d_{k-1}$. 
-\item Scenario 2: The last agent of the $Exploring\,Group$ is destroyed by the BV and the at least one pair of the positions of the clones does not satisfy: $x-d_{k-1}+d_{k}=x+1$, $x-d_{k-2}+d_{k}=x+d_2$, \ldots, $x-1+d_{k}=x+d_{k-1}$. 
-\item Scenario 3: One of the agents in the $Exploring\,Group$ except the last agent is destroyed by the BV.
-\end{itemize}
-
-In scenario 1, the $CA$ needs to move for 5 steps to reach its destination while in the other two scenarios, it only needs to move for 4 steps to arrive the destination. Now we propose the route for each scenario.
-\begin{itemize}
-\item For $CA$ in scenario 1: Let us donate by $y$ the coordinate of the node in the $Notification\,Window$ set by the original BV which does not receive any clone and his left neighbour receives a clone (the coordinate of it is $y-1$). The $CA$ first moves to the original BV, then to node $y-1$, finally to $y$. After that it only need to move along the chord $d_k$ for twice to reach its destination.
-\item For $CA$ in scenario 2: There is at least one pair of the positions of the clones does not satisfy the equations so there should be one node (assuming its coordinate is $z$) who receives a clone from the original BV but node $z+d_k$ is empty. The route now for the $CA$ is first move to the BV, then to node $z$, and then moves along the chord $d_k$ for twice to reach its destination.
-\item For $CA$ in scenario 3: The $CA$ here simply need to move for one step to its right neighbour and move along the chord $d_k$ for three times to reach its destination.
-\end{itemize}
-
-In any case, the $CA$ can reach its destination within 6 unit of time which is required for the $Keep\,Moving$ agents to move to the $Initial\,Notification\,Window$, so the $CA$ start to chase the $Keep\,Moving$ agents as we introduce from $T_{notify\_{i+2}}$. 
-
-An example of how the agents and the $CA$ move in chordal ring $C_n(1, 2, 7, 11)$is shown in \ref{fig:T29}. For our convenience, in some case, we consider the chordal ring as arranged in rows of $d_k$ where the last node of a row is connected to the first node of the following row and the last node is connected to the first. Depending on the size of the chordal, the last row could be incomplete. So in this matrix, moving down a column corresponding to using the longest chord $d_k$. In the matrix, we also mark the number of nodes.
-
+An example of how the agents and the $CA$ move in chordal ring $C_n(1, 2, 7, 11)$is shown in \ref{fig:T29}. 
 \begin{figure}[H]
   \centering  
   \includegraphics[width=0.6\textwidth]{figures/T29.png}
