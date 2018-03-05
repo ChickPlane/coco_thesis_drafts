@@ -41,9 +41,8 @@ If the BV is within this window of nodes, then it is easily detected. We then as
 Only the shadowing and exploring groups move to explore the graph. The ones in the guarding group remain dormant for now, guarding the nodes to guarantee monotonicity. 
 
 \noindent{\bf Route of the agent in exploring phase}\\
-The exploration proceeds in synchronized rounds composed each by  one movement step, when selected groups of agents move to proceed with the exploration, and three steps for synchronization purposes. We call these different steps    {\em move step}  and  {\em notification steps}. A round $T_i$ is composed by four time units, one for the move step, and 3 for the notification steps : 
-$T_1 = T_{move\_1},T_{noti\_1},T_{noti\_1},T_{noti\_1},  
-T_2 =  T_{move\_2},T_{noti\_2},T_{noti\_2},T_{noti\_2}, \ldots$.
+The exploration proceeds in synchronized rounds composed each by  one movement step, when selected groups of agents move to proceed with the exploration, and three steps for synchronization purposes. We call these different steps {\em move step}  and  {\em notification steps}. {\bf A round $T_i$ is composed by four time units, one for the move step, and 3 for the notification steps:} $T_1 = T_{move\_1},T_{noti\_1^{(1)}},T_{noti\_1^{(2)}},T_{noti\_1^{(3)}},  T_2 = T_{move\_2},T_{noti\_2^{(1)}},T_{noti\_2^{(2)}},T_{noti\_2^{(3)}}$
+
 % 
 %
 %$T_{move\_1}$, 
@@ -91,21 +90,22 @@ $x_{n-d_i}\xrightarrow [] {move\,along\,chord\,d_i}x_0\xrightarrow [] {move\,alo
 %is to notify the agents which are supposed to move there next (the $Risky\,Agent$ ($RA$s) )   to actually stop. 
 %The coordinates of the $Risky\,Agent$ ($RA$s) are $1- d_k$, $d_2-d_k$, \ldots, $d_{k-1}-d_k$, $d_k-d_k$ (which is exactly the coordinate of the original BV) respectively. It is obvious that not all of the nodes from $1$ to $d_k$ become BV nodes after the triggering because there might be some agents already there, but since notifying all the $Risky\,Agents$ does not add more cost comparing to notifying some of them, in our strategy, we notify all of the $RA$s. 
 
+
 \begin{figure} [H]
   \centering 
-  \subfigure[Arrangement of agents at $T_{move_i}$]{ 
+  \subfigure[Arrangement of agents at $T_{move\_i}$]{ 
     \label{fig:subfig:a} %% label for first subfigure 
     \includegraphics[width=2.5in]{figures/tjt1.png}} 
   \hspace{1in} 
-  \subfigure[Arrangement of agents at $T_{notify_i}$]{ 
+  \subfigure[Arrangement of agents at $T_{noti\_i^{(1)}}$]{ 
     \label{fig:subfig:b} %% label for second subfigure 
     \includegraphics[width=2.5in]{figures/tjt2.png}} \
   \hspace{1in} 
-  \subfigure[Arrangement of agents at $T_{notify_i'}$]{ 
+  \subfigure[Arrangement of agents at $T_{noti\_i^{(2)}}$]{ 
     \label{fig:subfig:c} %% label for second subfigure 
     \includegraphics[width=2.5in]{figures/tjt3.png}} 
   \hspace{1in} 
-  \subfigure[Arrangement of agents at $T_{notify_i''}$]{ 
+  \subfigure[Arrangement of agents at $T_{noti\_i^{(3)}}$]{ 
     \label{fig:subfig:d} %% label for second subfigure 
     \includegraphics[width=2.5in]{figures/tjt4.png}} 
   \caption{The whole process of the $Three\,Jump\,Notifying$ technique in chordal ring $C_n(1, 2, 4, 5)$} 
@@ -113,16 +113,18 @@ $x_{n-d_i}\xrightarrow [] {move\,along\,chord\,d_i}x_0\xrightarrow [] {move\,alo
 \end{figure}
 
 
+
+
 If the original BV is residing in the red node, then once an agent moves to it, the agent and the BV are destroyed but the clones of the BV spread to all its neighbours. According to our technique, 
 %nodes whose coordinates are $1$, $2$, $4$, $5$ become $Possible\,BV\,Nodes$; 
-agents residing in nodes $-4$, $-3$, $-1$, $0$ are the  ones to be notified; 
-agents residing in nodes $-5$, $-4$, $-2$, $-1$ are the $NA$s.
- The routes for agents residing in nodes $-5$, $-4$, $-2$, $-1$ are $-5{\rightarrow}0{\rightarrow}-5{\rightarrow}0$; $-4{\rightarrow}0{\rightarrow}-5{\rightarrow}-1$; $-2{\rightarrow}0{\rightarrow}-5{\rightarrow}-3$; $-1{\rightarrow}0{\rightarrow}-5{\rightarrow}-4$ respectively.\\
+agents residing in nodes $x_{-4}$, $x_{-3}$, $x_{-1}$, $x_0$ are the  ones to be notified; 
+agents residing in nodes $x_{-5}$, $x_{-4}$, $x_{-2}$, $x_{-1}$ are the $NA$s.
+ The routes for agents residing in nodes $x_{-5}$, $x_{-4}$, $x_{-2}$, $x_{-1}$ are $x_{-5}{\rightarrow}x_0{\rightarrow}x_{-5}{\rightarrow}x_0$; $x_{-4}{\rightarrow}x_0{\rightarrow}x_{-5}{\rightarrow}x_{-1}$; $x_{-2}{\rightarrow}x_0{\rightarrow}x_{-5}{\rightarrow}x_{-3}$; $x_{-1}{\rightarrow}x_0{\rightarrow}x_{-5}{\rightarrow}x_{-4}$ respectively.\\
 
 \noindent{\bf Safe Exploring with Three\,Jump\,Notifying technique}
 
-After the initialization, the exploring and shadowing agents move   following the longest chord. The subsequent three time units are either used for the notification phase (if one of the agents is destroyed at  time $T_{move_i}$), or they are spent simply by waiting before the next move.
-If  executing the $Three\,Jump\,Notifying$ technique,  the $NA$s move  back to where they are before the notification. For example, in the example in $Three\,Jump\,Notifying$ technique, $NA$ residing in node $-1$ moves back to node $-4$ following the reverse route in the notifying phase which is $-1{\rightarrow}-5{\rightarrow}0{\rightarrow}-4$. 
+After the initialization, the exploring and shadowing agents move   following the longest chord. The subsequent three time units are either used for the notification phase (if one of the agents is destroyed at  time $T_{move\_i}$), or they are spent simply by waiting before the next move.
+If  executing the $Three\,Jump\,Notifying$ technique,  the $NA$s move  back to where they are before the notification. For example, in the example in $Three\,Jump\,Notifying$ technique, $NA$ residing in node $-1$ moves back to node $x_{-4}$ following the reverse route in the notifying phase which is $x_{-1}{\rightarrow}x_{-5}{\rightarrow}x_0{\rightarrow}x_{-4}$. 
 
 \section{Surrounding and Elimination}
  When a BV is found,  the Three\,Jump\,Notifying technique   guarantees that the risky agents are now aware of the presence of the BV. Other agents, however, might not have received the notification and might proceed to the next round without such knowledge; we call these agents $KeepMoving$ agents.   
@@ -162,15 +164,18 @@ For our convenience, in some case, we consider the chordal ring as arranged in r
   \caption{Viewing a chordal ring whose longest chord is 11 as a matrix}\label{fig:matrix}
 \end{figure}
 
-The selection of the $CA$ is simple: when an agent receives a BV clone from its longest chord, then it realizes that it is chosen as the $CA$. More specifically, if the coordinate of the original BV is $x_i$, then the coordinate of the CA would be $x_{i-d_k}$.
-After being selected as the CA, the CA should move to an node as the starting point for chasing. 
-
-In the following step, we would use a concept called ``notification window".  In a chord ring $C_n(1, d_2, \ldots, d_k)$, given a coordinate $x_i$, the $Notification\,Window$ $[x_y,x_z]$ based on this coordinate is set using the modular arithmetic and $x_y$ is called the $Beginning\,Flag$ while the $x_z$ is called the $End\,Flag$.
-The relations between $x$, $y$, $z$ should be as follow: 
+In the following step, we would use a concept called ``Notification Window". In a chord ring $C_n(1, d_2, \ldots, d_k)$, given a coordinate $x_i$, the $Notification\,Window$ $[x_y,x_z]$ based on this coordinate is set using the modular arithmetic and $x_y$ is called the $Beginning\,Flag$ while the $x_z$ is called the $End\,Flag$. When we mention marking a flag, it does not mean that the agent has to move to the node to do that but only needs to remember the positions of the two flags in its memory.
+The relations between $x_i$, $x_y$, $x_z$ should be as follow: 
 \begin{itemize}
 \item $x_y$ is the biggest number which satisfies that it is smaller than or equal to $x_i$ and that $x_y$ mod $d_k$ =$0$; 
 \item $x_z$ is the smallest number which satisfies that it is bigger than $x_i$ and that $x_z$ mod $d_k$ = $d_{k-1}$.
 \end{itemize} 
+
+For example, in the matrix (see Fig\ref{fig:matrix}), given a node, the $Beginning\,Flag$ of its ``Notification Window" is the first node of its row while the $End\,Flag$ is the last node of its row.
+
+The selection of the $CA$ is simple: when an agent receives a BV clone from its longest chord, then it realizes that it is chosen as the $CA$. More specifically, if the coordinate of the original BV is $x_i$, then the coordinate of the CA would be $x_{i-d_k}$.
+After being selected as the CA, the CA should move to an node as the starting point for chasing. In the matrix, if the original BV reside in row $i$, then the destination of the $CA$ (the starting point for chasing) should be in any node in row $i+2$ to avoid being destroyed by the clones when chasing the ``Keep\,Moving" agents. In this case, the $Notification\,Window$ set by the $CA$ would be from $x_{d_k\times(i+2)}$ to $x_{d_k\times(i+2) + d_{k}-1}$.
+%In this case, the chasing phase starts from $T_{move\_{i+2}}$ assuming the time when the BV is triggered is $T_{move\_i}$, which means the chasing phase begins only after all the $Keep\,Moving$ agents move twice after the BV being triggered. At $T_{move\_{i+2}}$, all the $Keep\,Moving$ agents are in a 
 
 There are three rules it should follow in correspondence to three scenarios.  
 
@@ -184,31 +189,30 @@ Now we describe three scenarios:
 
 In scenario 1, the $CA$ needs to move for 5 steps to reach its destination while in the other two scenarios, it only needs to move for 4 steps to arrive the destination. Now we propose the route for each scenario.
 \begin{itemize}
-\item For $CA$ in scenario 1: Let us donate by $y$ the coordinate of the node in the $Notification\,Window$ set by the coordinate of the original BV which does not receive any clone and his left neighbour receives a clone (the coordinate of it is $y-1$). The $CA$ first moves to the original BV, then to node $y-1$, finally to $y$. After that it only need to move along the chord $d_k$ for twice to reach its destination.
-\item For $CA$ in scenario 2: There is at least one pair of the positions of the clones does not satisfy the equations so there should be one node (assuming its coordinate is $z$) who receives a clone from the original BV but node $z+d_k$ is empty. The route now for the $CA$ is first move to the BV, then to node $z$, and then moves along the chord $d_k$ for twice to reach its destination.
+\item For $CA$ in scenario 1: Let us donate by $x_i$ the coordinate of the node in the $Notification\,Window$ set by the coordinate of the original BV which does not receive any clone and his left neighbour receives a clone (the coordinate of it is $x_{i-1}$). The $CA$ first moves to the original BV, then to node $x_{i-1}$, finally to $x_i$. After that it only need to move along the chord $d_k$ for twice to reach its destination.
+\item For $CA$ in scenario 2: There is at least one pair of the positions of the clones does not satisfy the equations so there should be one node (assuming its coordinate is $x_i$) who receives a clone from the original BV but node $x_{i+d_k}$ is empty. The route now for the $CA$ is first move to the original BV, then to node $x_i$, and then moves along the chord $d_k$ for twice to reach its destination.
 \item For $CA$ in scenario 3: The $CA$ here simply need to move for one step to its right neighbour and move along the chord $d_k$ for three times to reach its destination.
 \end{itemize}
 
-In any case, the $CA$ can reach its destination within 6 unit of time which is required for the $Keep\,Moving$ agents to move to the $Initial\,Notification\,Window$, so the $CA$ start to chase the $Keep\,Moving$ agents as we introduce from $T_{notify\_{i+2}}$. 
+The $Keep\,Moving$ agents reach the $CA$'s $Notification Window$ 8 unit of time after the BV is triggered. Because it takes at most 6 units of time for the $CA$ to reach its destination, the $CA$ need to wait the $Keep\,Moving$ agents then begin the chasing. The $CA$ simply count the time it costs to reach its destination (i.e. $t_1$), and compute the time it need to wait which is $8-t_i$.
+%In any case, the $CA$ can reach its destination within 6 unit of time which is required for  
+%,and let us donate it by $Initial\,Notification\,Window$. The $CA$ would directly move to any node in $Initial\,Notification\,Window$. Now we propose three kinds of routes for the $CA$ to move to his destination:
+%We can see that the relative position of agents does not change when they keep moving along the longest chord. For example, agents residing in nodes 1, 5, 10 (noted as $A1$, $A5$, $A10$) move along the longest chord and then $A5$ moves forward for one step. Their relative position  would be exactly the same as the situation where all of them remain dormant except $A5$ moves forward for one step. 
+%Now we discuss how the $CA$ notify all the $Keep\,Moving$ agents assuming they are dormant and then make some modification to fit the scenario where the $CA$ notifies the $Keep\,Moving$ agents. The problem we need to solve is that given a range within which the agents are in and a $CA$ located in this range, let the $CA$ to notify all the agents in this range. 
+The chasing phase starts from $T_{move\_{{i+2}^{(1)}}}$. The ``Keep Moving" agents proceed with one move and three waiting steps while the $CA$ takes its longest chord in correspondence of an agent's move and three consecutive nodes in correspondence of the waiting steps of the ``Keep Moving" agents. Every time when the $CA$ moves along the chord $d_k$, it resets the ``Notification Window" as below: 
 
+$New\,Beginning\,Flag=Old\,Beginning\,Flag+d_k$
 
-%We know that, the notifying phase starts from $T_{move\_{i+2}}$ assuming the time when the BV is triggered is $T_{move\_i}$, which means the notifying phase begins only after all the $Keep\,Moving$ agents move twice. At $T_{move\_{i+2}}$, all the $Keep\,Moving$ agents are in a $Notification\,Window$ from nodes $d_k\times(move\_{i}+1)\,to\,d_k\times(move\_{i}+1) + d_{k}-1$, and let us donate it by $Initial\,Notification\,Window$. The $CA$ would directly move to any node in $Initial\,Notification\,Window$. Now we propose three kinds of routes for the $CA$ to move to his destination:
+$New\,End\,Flag=Old\,End\,Flag+d_k$
 
+When the $CA$ moves along three consecutive nodes, it notifies the agents to go back if there is one. To ensure that the $CA$ and the ``Keep Moving" agents are in the same ``Notification Window", during its moving, when it realizes that it just passes the $End\,Flag$, it should moves along the longest chord anticlockwise to the node marked a $Beginning\,Flag$ and continues moving along three consecutive node to notify agents. The chasing phase terminate when the $CA$ arrives at a  node $x_y$ which satisfies $x_y=x_z+t\times{d_k}$ ($t\in \mathbb{N}$). The route of the $CA$ in the chasing phase is shown in Fig.\ref{fig:chasing}). 
+\begin{figure}[H]
+  \centering  
+  \includegraphics[width=1.0\textwidth]{figures/chasing.png}
+  \caption{The route of the $CA$ in the chasing phase in a chordal ring C(1, 7, 11)}\label{fig:chasing}
+\end{figure}
 
-
-
-
-
-
-
-We can see that the relative position of agents does not change when they keep moving along the longest chord. 
-For example, agents residing in nodes 1, 5, 10 (noted as $A1$, $A5$, $A10$) move along the longest chord and then $A5$ moves forward for one step. Their relative position  would be exactly the same as the situation where all of them remain dormant except $A5$ moves forward for one step. 
-Now we discuss how the $CA$ notify all the $Keep\,Moving$ agents assuming they are dormant and then make some modification to fit the scenario where the $CA$ notifies the $Keep\,Moving$ agents. The problem we need to solve is that given a range within which the agents are in and a $CA$ located in this range, let the $CA$ to notify all the agents in this range. 
-
-
-
-
-When the agent is chosen to be the $CA$, it computes its $Notification\,Window$. When we mention marking a flag, it does not mean that the agent has to move to the node to do that but only needs to remember the positions of the two flags in its memory. Also, after the position of the $Notification\,Window$ is set, it remains stable. More specifically, when the $CA$ moves, he does not set another $Notification\,Window$ using its new position. The $CA$ moves step by step to every possible position and notifies the agents to go back if there is one until it realizes that it just passes the $End\,Flag$. After that, he moves along the longest chord anticlockwise to the node marked a $Beginning\,Flag$ and continues moving again step by step to notify agents until it arrives its relative departing node. For example, if the $CA$ starts to notify other from node $x$, then its relative departing node is $x'=x+t\times{d_k}$ ($t\in \mathbb{N}$).
+Node $x_{61}$ is the starting point of the chasing phase and at this time, the ``Notification Window" is $[x_{55}, x_{65}]$.The $CA$ moves along three consecutive nodes $x_{62}$, $x_{63}$ and $x_{64}$ while the ``Keep Moving" agents are waiting and then move along the longest chord to node $x_{75}$. At this time, the $CA$ updates its ``Notification Window" to $[x_{66}, x_{76}]$. After that, it continues to move along three consecutive nodes, but when it arrives $x_{77}$, it realizes that it just passes the ``End Flag" which is $x_{76}$, so it moves along the longest chord  anticlockwise to the node marked a $Beginning\,Flag$ which is $x_{66}$. Then, it moves along the longest chord with the ``Keep Moving" agents to $x_{77}$ and again update its ``Notification Window", then moves along the nodes to notify the agents. 
 
 We make some modifications to let the solution fit the real scenario where the agents move along the longest chord: 
 \begin{itemize}

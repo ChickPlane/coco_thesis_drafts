@@ -19,12 +19,13 @@
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Arrangement of agents when moving}}{44}{figure.5.2}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces The whole process of the $Three\tmspace +\thinmuskip {.1667em}Jump\tmspace +\thinmuskip {.1667em}Notifying$ technique in chordal ring $C_n(1, 2, 4, 5)$}}{46}{figure.5.3}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Viewing a chordal ring whose longest chord is 11 as a matrix}}{49}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Arrangement of agent at $T_{move\_2}$ when the BV is triggered}}{52}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Agents roles after $Three\tmspace +\thinmuskip {.1667em}Jump\tmspace +\thinmuskip {.1667em}Notifying\tmspace +\thinmuskip {.1667em}Technique$ and choosing $CA$. (for convenience, we donate the $CA$ by a red spot, more specifically, node 50 is where $CA$ resides)}}{53}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Arrangement of agent at $T_{move\_3}$. The $CA$ has arrived its destination)}}{53}{figure.5.7}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Arrangement of agents at $T_{move_4}$. The $CA$ starts its notice phase}}{54}{figure.5.8}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Arrangement of agents at $T_{move_5}$. }}{54}{figure.5.9}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Arrangement of agents at $T_{move_5''}$. }}{55}{figure.5.10}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Arrangement of agents at $T_{move_7''}$. }}{55}{figure.5.11}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Situation when the third agent in the exploring group is destroyed}}{57}{figure.5.12}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces The graph we build for Dijkstra Algorithm}}{57}{figure.5.13}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces The route of the $CA$ in the chasing phase in a chordal ring C(1, 7, 11)}}{52}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Arrangement of agent at $T_{move\_2}$ when the BV is triggered}}{54}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Agents roles after $Three\tmspace +\thinmuskip {.1667em}Jump\tmspace +\thinmuskip {.1667em}Notifying\tmspace +\thinmuskip {.1667em}Technique$ and choosing $CA$. (for convenience, we donate the $CA$ by a red spot, more specifically, node 50 is where $CA$ resides)}}{54}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Arrangement of agent at $T_{move\_3}$. The $CA$ has arrived its destination)}}{55}{figure.5.8}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Arrangement of agents at $T_{move_4}$. The $CA$ starts its notice phase}}{55}{figure.5.9}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Arrangement of agents at $T_{move_5}$. }}{55}{figure.5.10}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Arrangement of agents at $T_{move_5''}$. }}{56}{figure.5.11}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Arrangement of agents at $T_{move_7''}$. }}{56}{figure.5.12}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Situation when the third agent in the exploring group is destroyed}}{58}{figure.5.13}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces The graph we build for Dijkstra Algorithm}}{59}{figure.5.14}
