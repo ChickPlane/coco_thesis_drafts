@@ -35,3 +35,8 @@
 \BOOKMARK [1][-]{section.5.4}{Analysis and Comparing}{chapter.5}% 35
 \BOOKMARK [2][-]{subsection.5.4.1}{Theorem and Proof}{section.5.4}% 36
 \BOOKMARK [2][-]{subsection.5.4.2}{Analysis and Comparing}{section.5.4}% 37
+\BOOKMARK [0][-]{chapter.6}{Parallel Black Virus Decontamination in Arbitrary Graph}{}% 38
+\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 39
+\BOOKMARK [1][-]{section.6.2}{Parallel Strategies for BV Decontamination in Arbitrary Graph}{chapter.6}% 40
+\BOOKMARK [2][-]{subsection.6.2.1}{Flood Strategy}{section.6.2}% 41
+\BOOKMARK [2][-]{subsection.6.2.2}{Castle First Strategy}{section.6.2}% 42

@@ -1,5 +1,5 @@
-\contentsline {chapter}{List of Tables}{vi}{section*.2}
-\contentsline {chapter}{List of Figures}{vii}{section*.4}
+\contentsline {chapter}{List of Tables}{vii}{section*.2}
+\contentsline {chapter}{List of Figures}{viii}{section*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Problem and Motivation}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Our Contribution}{3}{section.1.2}
@@ -26,15 +26,20 @@
 \contentsline {section}{\numberline {4.1}Introduction}{19}{section.4.1}
 \contentsline {section}{\numberline {4.2}Parallel BV Decontamination of Grids}{20}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Base Case:2-Dimensional Grid}{20}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Multi-Dimensional Grid}{34}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Tori}{39}{subsection.4.2.3}
-\contentsline {chapter}{\numberline {5}Parallel Black Virus Decontamination in Chordal Ring}{42}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{42}{section.5.1}
-\contentsline {section}{\numberline {5.2}Shadowed Exploration}{43}{section.5.2}
-\contentsline {section}{\numberline {5.3}Surrounding and Elimination}{47}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Notifying Moving Agents}{47}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Overview of the Elimination}{57}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Destination Table and Elimination}{58}{subsection.5.3.3}
-\contentsline {section}{\numberline {5.4}Analysis and Comparing}{60}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Theorem and Proof}{60}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Analysis and Comparing}{61}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {4.2.2}Multi-Dimensional Grid}{33}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Tori}{38}{subsection.4.2.3}
+\contentsline {chapter}{\numberline {5}Parallel Black Virus Decontamination in Chordal Ring}{41}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{41}{section.5.1}
+\contentsline {section}{\numberline {5.2}Shadowed Exploration}{42}{section.5.2}
+\contentsline {section}{\numberline {5.3}Surrounding and Elimination}{46}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Notifying Moving Agents}{46}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Overview of the Elimination}{55}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Destination Table and Elimination}{57}{subsection.5.3.3}
+\contentsline {section}{\numberline {5.4}Analysis and Comparing}{59}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Theorem and Proof}{59}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Analysis and Comparing}{60}{subsection.5.4.2}
+\contentsline {chapter}{\numberline {6}Parallel Black Virus Decontamination in Arbitrary Graph}{62}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{62}{section.6.1}
+\contentsline {section}{\numberline {6.2}Parallel Strategies for BV Decontamination in Arbitrary Graph}{63}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Flood Strategy}{63}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Castle First Strategy}{64}{subsection.6.2.2}

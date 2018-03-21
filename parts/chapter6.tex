@@ -1,0 +1,45 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter {Parallel Black Virus Decontamination in Arbitrary Graph}
+\label{TL}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+In \cite{Cai}, he proposes two exploration strategies: Greedy Exploration and Threshold Exploration, both spread optimal and total number of agents asymptotical optimal. Since these strategies are sequential, they are time consuming($O(\Delta n^2)$).  In order to explore the graph parallelly, we propose two different strategies: \\
+(1) Flood Strategy\\
+(2) Castle First Strategy\\
+The general idea of the Flood Strategy is simple, supposing that an agent resides in node $v$, and it has $i$ neighbours excepted to be explored, then it simply clones $v$ agents and send them to its neighbours. In Castle First Strategy, we build castles which is a node or the combination of several nodes(rules are introduced later), the exploration phase can be viewed as the combination of many smaller scale exploration in the graph which begins with the location of one of the exploring group and ends with one of the unexplored castles. After all the castles are explored, all the nodes in the graph are explored. The general exploring strategy for these two strategies is based on the one described in Chapter 3 which consists of performing a {\em Shadowed Exploration} phase to locate the BV, followed by a {\em Surrounding and Elimination} phase to eliminate the cloned BVs. 
+
+Strategy {\em Flood}  is time optimal with the cost of a great number of agents while strategy {\em Castle First} comes to a compromise between the strategy {\em Flood} and the sequential strategies: it employ much less agents than the strategy {\em Flood} while cost much less time than the sequential strategies. 
+
+\section{Parallel Strategies for BV Decontamination in Arbitrary Graph}
+\subsection{Flood Strategy}
+\noindent{\bf Initialization}
+We use the Dijkstra Algorithm to compute the shortest route step for every node and write them on the white board on each node, so for each node, there should be a number (Shortest Route Number) recording the number of steps of the shortest route from the homebase to it. Let us denote by $v_{SRN}$ the Shortest Route Number of node $v$, and nodes ${v_1, \ldots, v_i}$ are neighbours of node $v$ assuming that $v$ has $i$ neighbours. Then edges connecting node $v$ and its neighbours are $e(v, v_1), \ldots, e(v, v_i)$. We write the $v_{SRN}$ to the end of these edges (the end connecting to its neighbours), so when an agent resides in any node from $v_1$ to $v_i$, it can see the Shortest Route Number of node v because of the local visibility. (For example, see Fig\ref{fig:Arbi1}) 
+
+\noindent{\bf Exploration and Elimination}
+In this strategy, we use an important ability of agents which is clone. As we introduced in Chapter 2, clone means that a agent is endowed with the capacity to generate one or more agent. All the agents in this strategy follow the same rules in the exploration phase.
+
+Rules for agents in the exploration phase:
+\begin{enumerate}
+\item
+\item
+\end{enumerate}
+
+
+
+Problem: 1-hop visibility: can the agent see the information on the white board set on its neighbours?
+               
+
+
+\subsection{Castle First Strategy}
+\noindent{\bf 
+
+
+  
+
+
+
+
+
+
+ 
