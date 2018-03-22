@@ -14,20 +14,37 @@ Strategy {\em Flood}  is time optimal with the cost of a great number of agents 
 \section{Parallel Strategies for BV Decontamination in Arbitrary Graph}
 \subsection{Flood Strategy}
 \noindent{\bf Initialization}
+In this strategy, all the agents are endowed with 3-hop visibility.
+
 We use the Dijkstra Algorithm to compute the shortest route step for every node and write them on the white board on each node, so for each node, there should be a number (Shortest Route Number) recording the number of steps of the shortest route from the homebase to it. Let us denote by $v_{SRN}$ the Shortest Route Number of node $v$, and nodes ${v_1, \ldots, v_i}$ are neighbours of node $v$ assuming that $v$ has $i$ neighbours. Then edges connecting node $v$ and its neighbours are $e(v, v_1), \ldots, e(v, v_i)$. We write the $v_{SRN}$ to the end of these edges (the end connecting to its neighbours), so when an agent resides in any node from $v_1$ to $v_i$, it can see the Shortest Route Number of node v because of the local visibility. (For example, see Fig\ref{fig:Arbi1}) 
 
-\noindent{\bf Exploration and Elimination}
+\noindent{\bf Exploration Phase}
 In this strategy, we use an important ability of agents which is clone. As we introduced in Chapter 2, clone means that a agent is endowed with the capacity to generate one or more agent. All the agents in this strategy follow the same rules in the exploration phase.
 
 Rules for agents in the exploration phase:
+Let us denote by $SNR$ the Shortest Route Number.
 \begin{enumerate}
-\item
-\item
+\item Agents can only move from node with lower $SNR$ to node with higher $SNR$.
+\item Assuming that there are $x$ agents residing in node $v$, and the next destination(s) are $\{v_1,\ldots, v_i\}$. 
+
+        if $x\geq i+1$, then $i$ agents move to the destinations respectively while one agent stays in node $v$ to guard $v$. If one of agents is destroyed, the Elimination phase begins; if none of the agents is destroyed, the left $x-(i+1)+1(the one who guards the node $v$)$ agents evenly move to the destinations. 
+        if $x< i+1$, then one of the agents residing in node $v$ clones $i+1-x$ agents, and these $i$ agents move to all the neighbours.
 \end{enumerate}
+An example of how the agents move is showed in Fig\ref{fig:Arbiflood}
+
+\noindent{\bf Elimination Phase}
+Let us assume that the node where the original BV resides is $v$ with $SNR$ equal to $a$ and it is triggered at $T_1$. Then at this time, the clones spread to all neighbours of node $v$ with $SNR$ equal to $a+1$ while leaving node $v$ clean (no agent and no BV) and let us denote by $v_{BV}$s all these BV nodes.  Agents residing in nodes with $SNR$ equal to $a-1$ also receive clones and realize the location of the BV.  There should be agents residing in the these $v_{BV}$s' neighbours with $SNR$ equal to $a$ (say Witness Agent) , and these Witness Agent can easily realize whether or not node $v$ is the place where the original BV resides. For example, since they have 3-hop visibility, so if they see that one of their ``2-distance" neighbours (say node $v'$ does not contains an agent but some neighbours of node $v'$ contain agents, then they can know that the original BV resides in node $v$. See Fig\ref{fig:Arbiflood}.
+
+
+If the Witness Agents realize the existence of BV at $T_1$, then they simply stop cloning and moving. All of node $v$'s neighbours with $SNR$ equal to $a-1$ (say the number of them is $y$) move to $v$ at $T_2$. Let us denote by $z$ the number of $v$'s neighbours with $SNR$ equal to $a+1$, then if $y< z+1$, then one of the agents residing in node $v$ should clone another $z+1-y$ agents. Note that agents who do not know the existence of BV still keep moving, so at $T_3$, all the neighbours of the BV nodes are guarded, so at this time, $z$ agents move to the BV nodes respectively while leaving one agent guarding the node $v$. By this way, the BVs are permanently decontaminated.
 
 
 
-Problem: 1-hop visibility: can the agent see the information on the white board set on its neighbours?
+
+
+
+Problem: 1-hop visibility: can the agent see the information on the white board set on its neighbours?              ?
+               In the concept of i-hop visibility (in chapter 3), I add one item that when an agent got i-visibility, except the ability that at a node {\em v} a agent can see the k-neighbourhood $N^{(v)}$ of {\em v}, including the node identities and the edge labels, it can also see whether or not there are agents there but cannot communicate.     ?
                
 
 

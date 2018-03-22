@@ -2,32 +2,32 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Comparision between PBVD-2G and BVD-2G}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Routes of agents in the first line when $a=2$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Routes of agents in the second line when $a=2$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Routes of agents in the first line when $a=3$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Routes of agents in the second line when $a=3$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {Routes of agents in the second line when $a=3$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Rows that are double traversed when $a=2$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Rows that are double traversed when $a=3$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {$t_i$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {$t_{i+1}$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {$t_{i+2}$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(d)}{\ignorespaces {$t_{i+3}$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(e)}{\ignorespaces {$t_{i+4}$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(f)}{\ignorespaces {$t_{i+5}$)}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {$t_i$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {$t_{i+1}$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {$t_{i+2}$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(d)}{\ignorespaces {$t_{i+3}$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {$t_i$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {$t_i+1$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {$t_{i+2}$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(d)}{\ignorespaces {$t_{i+3}$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(e)}{\ignorespaces {$t_{i+4}$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(f)}{\ignorespaces {$t_{i+5}$)}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {$t_i$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {$T(t_i+1)$}}}{33}{table.4.1}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {$T(t_i+2)$}}}{33}{table.4.1}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Comparision between PBVD-2G and BVD-2G}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Routes of agents in the first line when $a=2$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Routes of agents in the second line when $a=2$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Routes of agents in the first line when $a=3$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Routes of agents in the second line when $a=3$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {Routes of agents in the second line when $a=3$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Rows that are double traversed when $a=2$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Rows that are double traversed when $a=3$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {$t_i$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {$t_{i+1}$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {$t_{i+2}$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(d)}{\ignorespaces {$t_{i+3}$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(e)}{\ignorespaces {$t_{i+4}$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(f)}{\ignorespaces {$t_{i+5}$)}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {$t_i$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {$t_{i+1}$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {$t_{i+2}$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(d)}{\ignorespaces {$t_{i+3}$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {$t_i$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {$t_i+1$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {$t_{i+2}$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(d)}{\ignorespaces {$t_{i+3}$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(e)}{\ignorespaces {$t_{i+4}$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(f)}{\ignorespaces {$t_{i+5}$)}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {$t_i$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {$T(t_i+1)$}}}{32}{table.4.1}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {$T(t_i+2)$}}}{32}{table.4.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
