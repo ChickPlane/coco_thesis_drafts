@@ -41,4 +41,4 @@
 \contentsline {section}{\numberline {6.1}Introduction}{61}{section.6.1}
 \contentsline {section}{\numberline {6.2}Parallel Strategies for BV Decontamination in Arbitrary Graph}{62}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Flood Strategy}{62}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Castle First Strategy}{64}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.2}Castle First Strategy}{67}{subsection.6.2.2}
