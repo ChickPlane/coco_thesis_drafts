@@ -145,7 +145,8 @@ After the arrangement of the SAs, it should be ensured that all the lower $SNR$ 
 
 When one agent group starts to surround the castle, by which we mean that the LA has placed SAs in at least one lower $SNR$ of the castle, it is possible that another agent group has started to surround the castle (even the LA updates the information when it moves, still the consistency of all the information cannot be guaranteed). The LA of an agent group realize this by meeting an SA not from its group when it arranges the SAs to guard the lower $SNR$ neighbours of the castle. We prefer to avoid conflict when two agent group explore one castle (SAs from two different agent group move to the castle nodes). The LA can compute the time when the arrangement is finished and record it on a timestamp, so when the LA places the SAs, it leaves timestamp with these SAs. By doing this, every SA from one agent group guarding the castle hold a timestamp recording when does the arrangement end and if a LA meet a SA from other agent group with a earlier timestamp, it move back to collect the SAs in its group that have been placed and the status of this agent group turn into ``Finding Castle". 
 
-When the arrangement is done, the LA resides in the last node needing guarded and in the next unit of time, all the Attacking Agents move to the castle nodes. Note that at this time, if there is a BV in the castle, not all the guarding agents can receive a BV clone.(see Fig\ref{fig:MultiCastleNode}
+When the arrangement is done, the LA resides in the last node needing guarded and in the next unit of time, all the Attacking Agents move to the castle nodes. Note that at this time, if there is a BV in the castle, not all the guarding agents can receive a BV clone.
+%(see Fig\ref{fig:MultiCastleNode}
 %\begin{figure}[H]
  % \centering  
  % \includegraphics[width=3.5in]{figures/MultiCastleNode.png}
@@ -153,6 +154,17 @@ When the arrangement is done, the LA resides in the last node needing guarded an
 %\end{figure} 
 
 So after the ``attacking" by the ``Attacking agent", the LA should execute the ``Double Patrol". Now we introduce what is the ``Double Patrol".
+The LA first computes a route to traverse all the castle nodes, (say the route is $castle\_0\rightarrow castle\_1 \rightarrow\ldots, castle\_x$ assuming that there are $x$ nodes in the castle. In this first ``patrol", the LA first leaves a flag saying ``First Patrol" and then moves to one castle node, it tells the SA residing in that castle node to collect the SAs residing in all its lower $SNR$ neighbours and finally move to that castle node with all these collecting SAs. Also, when the SA collects the ones residing in the lower $SNR$ neighbours, it places a flag on that neighbour node saying ``First Patrol". After the LA traverses all the castle nodes, it can easily know whether there is a BV in the castle: if there is no BV in the castle, then there should be one agent residing in every castle node, if not, then there is a BV and the clones of it have move to all higher $SNR$ neighbours of this node. If the LA realizes that there is a BV, then the Elimination Phase ends, if not, then the LA move back to the first castle node with the route $castle\_0\rightarrow castle\_1 \rightarrow\ldots, castle\_x$ and when it move to that castle node, it should wait until all the guarding agents have been collected and move to the next castle node. When the LA move back to the first castle node, the ``First Patrol" finishes.
+% see \ref{fig:FirstPatrol}
+
+
+
+
+
+
+
+
+
 
 
 
