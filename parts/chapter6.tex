@@ -4,7 +4,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Introduction}
-In \cite{Cai}, he proposes two exploration strategies: Greedy Exploration and Threshold Exploration, both spread optimal and total number of agents asymptotical optimal. Since these strategies are sequential, they are time consuming($O(\Delta n^2)$).  In order to explore the graph parallelly, we propose two different strategies: \\
+In \cite{Cai}, Cai proposes two exploration strategies: Greedy Exploration and Threshold Exploration, both spread optimal and total number of agents asymptotical optimal. Since these strategies are sequential, they are time consuming($O(\Delta n^2)$).  In order to explore the graph parallelly, we propose two different strategies: \\
 (1) Flood Strategy\\
 (2) Castle First Strategy\\
 The general idea of the Flood Strategy is simple, supposing that an agent resides in node $v$, and it has $i$ neighbours excepted to be explored, then it simply clones $v$ agents and send them to its neighbours. In Castle First Strategy, we build castles which is a node or the combination of several nodes(rules are introduced later), the exploration phase can be viewed as the combination of many smaller scale exploration in the graph which begins with the location of one of the exploring group and ends with one of the unexplored castles. After all the castles are explored, all the nodes in the graph are explored. The general exploring strategy for these two strategies is based on the one described in Chapter 3 which consists of performing a {\em Shadowed Exploration} phase to locate the BV, followed by a {\em Surrounding and Elimination} phase to eliminate the cloned BVs. 
@@ -122,7 +122,7 @@ Some examples of castles are shown in Fig\ref{fig:CastleExample}
   \caption{Examples of Castles}\label{fig:CastleExample}
 \end{figure} 
 
-After the processing, we have a new graph called ``Castle Graph" and this graph is presented on the whiteboard on the nodes which have more than two neighbours, so when the agent reach this node, it can read the graph to update its own information or using its own information to update the ``Castle Graph". 
+After the processing, we have a new graph called ``Castle Graph" and this graph is presented on the whiteboard on the nodes which have more than two neighbours, so when the agent reaches this node, it can read the graph to update its own information or using its own information to update the ``Castle Graph". 
 
 \noindent{\bf Exploration Phase}
 There are two principle in the exploration phase for the agents:
@@ -135,7 +135,9 @@ There are two kind of agents in this strategy: Leader Agent (LA) and Shadow Agen
 
 The agents are divided into three status: Finding Castle, Attacking Castle and Waiting in Line. 
 
-Initially, the status of all agent group are ``Finding Castle".In a agent group with the status of ``Finding Castle", if the LA in that agent group can find an available castle, then the status of this group changes into ``Attacking castle". Unless the agent group realizing the existence of BV, the status of the agent group changes into ``Finding Castle" at the end; if the LA in that agent group cannot find an available castle but there are still castle unexplored in the group, then the status of this group changes into ``Waiting in line". Unless the agent group realizing the existence of BV, the status of agent group changes into ``Finding Castle" at the end. 
+Initially, the status of all agent group are ``Finding Castle".In a agent group with the status of ``Finding Castle", if the LA in that agent group can find an available castle, then the status of this group changes into ``Attacking castle". Unless the agent group realizing the existence of BV, the status of the agent group changes into ``Finding Castle" at the end; if the LA in that agent group cannot find an available castle but there are still castle unexplored in the graph, then the status of this group changes into ``Waiting in line". Unless the agent group realizing the existence of BV, the status of agent group changes into ``Finding Castle" at the end. 
+
+(1) From ``Finding Castle" to ``Attacking Castle"
 
 When the status of an agent group changes into ``Attacking Castle", the LA in this exploring group updates the information on the whiteboard on the node along its route to that castle. On the way to their destination (the castle), the agents follow the ``casual walk" in the unexplored area and ``normal walk" in the explored area: when exploring the node $u$ from the node $v$, one of the SAs moves to node $u$, when the node $u$ is safe, it returns to node $v$ and moves to the node $u$ with the LA and the other SAs; when the node $u$ contains a BV, then the LA knows the existence of the BV by receiving the clone of the BV.   
 
@@ -145,34 +147,90 @@ After the arrangement of the SAs, it should be ensured that all the lower $SNR$ 
 
 When one agent group starts to surround the castle, by which we mean that the LA has placed SAs in at least one lower $SNR$ of the castle, it is possible that another agent group has started to surround the castle (even the LA updates the information when it moves, still the consistency of all the information cannot be guaranteed). The LA of an agent group realize this by meeting an SA not from its group when it arranges the SAs to guard the lower $SNR$ neighbours of the castle. We prefer to avoid conflict when two agent group explore one castle (SAs from two different agent group move to the castle nodes). The LA can compute the time when the arrangement is finished and record it on a timestamp, so when the LA places the SAs, it leaves timestamp with these SAs. By doing this, every SA from one agent group guarding the castle hold a timestamp recording when does the arrangement end and if a LA meet a SA from other agent group with a earlier timestamp, it move back to collect the SAs in its group that have been placed and the status of this agent group turn into ``Finding Castle". 
 
-When the arrangement is done, the LA resides in the last node needing guarded and in the next unit of time, all the Attacking Agents move to the castle nodes. Note that at this time, if there is a BV in the castle, not all the guarding agents can receive a BV clone.
-%(see Fig\ref{fig:MultiCastleNode}
-%\begin{figure}[H]
- % \centering  
- % \includegraphics[width=3.5in]{figures/MultiCastleNode.png}
- % \caption{An example shows that if there is a BV in the castle, in some cases not all the guarding agents can receive a BV clone}\label{fig:MultiCastleNode}
-%\end{figure} 
+When the arrangement is done, the LA resides in the last node needing guarded and in the next unit of time, all the Attacking Agents move to the castle nodes. Note that at this time, if there is a BV in the castle, not all the guarding agents can receive a BV clone. As shown in Fig\ref{fig:MultiCastleNode}, when the BV is triggered, except the castle nodes, only the guarding agents 1 and 2 receive the clones.
+\begin{figure}[H]
+\centering  
+\includegraphics[width=3.5in]{figures/MultiCastleNode.png}
+\caption{An example shows that if there is a BV in the castle, in some cases not all the guarding agents can receive a BV clone}\label{fig:MultiCastleNode}
+\end{figure} 
 
 So after the ``attacking" by the ``Attacking agent", the LA should execute the ``Double Patrol". Now we introduce what is the ``Double Patrol".
-The LA first computes a route to traverse all the castle nodes, (say the route is $castle\_0\rightarrow castle\_1 \rightarrow\ldots, castle\_x$ assuming that there are $x$ nodes in the castle. In this first ``patrol", the LA first leaves a flag saying ``First Patrol" and then moves to one castle node, it tells the SA residing in that castle node to collect the SAs residing in all its lower $SNR$ neighbours and finally move to that castle node with all these collecting SAs. Also, when the SA collects the ones residing in the lower $SNR$ neighbours, it places a flag on that neighbour node saying ``First Patrol". After the LA traverses all the castle nodes, it can easily know whether there is a BV in the castle: if there is no BV in the castle, then there should be one agent residing in every castle node, if not, then there is a BV and the clones of it have move to all higher $SNR$ neighbours of this node. If the LA realizes that there is a BV, then the Elimination Phase ends, if not, then the LA move back to the first castle node with the route $castle\_0\rightarrow castle\_1 \rightarrow\ldots, castle\_x$ and when it move to that castle node, it should wait until all the guarding agents have been collected and move to the next castle node. When the LA move back to the first castle node, the ``First Patrol" finishes.
-% see \ref{fig:FirstPatrol}
+\begin{enumerate}
+\item 
+The LA first computes a route to traverse all the castle nodes, (say the route is $castle\_0\rightarrow castle\_1 \rightarrow\ldots, castle\_x$ assuming that there are $x$ nodes in the castle). In this first ``patrol", the LA first leaves a flag saying ``First Patrol" and then moves to one castle node, it tells the SA residing in that castle node to collect the SAs residing in all its lower $SNR$ neighbours and finally move to that castle node with all these collecting SAs. Also, when the SA collects the ones residing in the lower $SNR$ neighbours, it places a flag on that neighbour node saying ``First Patrol". After the LA traverses all the castle nodes, it can easily know whether there is a BV in the castle: if there is no BV in the castle, then there should be one agent residing in every castle node, if not, then there is a BV and the clones of it have move to all higher $SNR$ neighbours of this node. If the LA realizes that there is a BV, then the Elimination Phase ends, if not, then the LA move back to the first castle node with the route $castle\_0\rightarrow castle\_1 \rightarrow\ldots, castle\_x$ and when it moves to that castle node, it should wait until all the guarding agents have been collected and move to the next castle node. When the LA move back to the first castle node, the ``First Patrol" finishes. See Fig.\ref{fig:FirstPatrol}
+\begin{figure} [H]
+  \centering 
+  \subfigure[$T_a$]{ 
+    \label{fig:FirstPatrol1:a} %% label for first subfigure 
+    \includegraphics[width=2.5in]{figures/FirstPatrol1.png}} 
+%  \hspace{1in} 
+  \subfigure[$T_{a+1}$]{ 
+    \label{fig:FirstPatrol2:b} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/FirstPatrol2.png}}
+    \hspace{1in} 
+  \subfigure[$T_{a+2}$]{ 
+    \label{fig:FirstPatrol3:c} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/FirstPatrol3.png}}
+%      \hspace{1in} 
+  \subfigure[$T_{a+3}$]{ 
+    \label{fig:FirstPatrol4:d} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/FirstPatrol4.png}}
+      \hspace{1in} 
+  \subfigure[$T_{a+4}$]{ 
+    \label{fig:FirstPatrol5:e} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/FirstPatrol5.png}}
+     \subfigure[$T_{a+5}$]{ 
+    \label{fig:FirstPatrol6:f} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/FirstPatrol6.png}}
+     \subfigure[$T_{a+6}$]{ 
+    \label{fig:FirstPatrol7:g} %% label for first subfigure 
+    \includegraphics[width=2.5in]{figures/FirstPatrol7.png}} 
+%  \hspace{1in} 
+  \subfigure[$T_{a+7}$]{ 
+    \label{fig:FirstPatrol8:h} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/FirstPatrol8.png}}
+    \hspace{1in} 
+  \subfigure[$T_{a+8}$]{ 
+    \label{fig:FirstPatrol9:i} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/FirstPatrol9.png}}
+%      \hspace{1in} 
+  \subfigure[$T_{a+9}$]{ 
+    \label{fig:FirstPatrol10:j} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/FirstPatrol10.png}}
+      \hspace{1in} 
+  \subfigure[$T_{a+10}$]{ 
+    \label{fig:FirstPatrol11:k} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/FirstPatrol11.png}}
+  \caption{An example of  ``FirstPatrol"} 
+  \label{fig:Arbiflood} %% label for entire figure 
+\end{figure}
+
+\item 
+After the first patrol, the LA knows that if there is a BV. If there is, then the Exploration phase ends, and the Elimination phase starts. If there is not, then the ``Second Patrol" starts. In the ``Second Patrol" the LA moves along the route as it does in the ``First Patrol" which is $castle\_0\rightarrow castle\_1 \rightarrow\ldots, castle\_x$. Also it collects all the SAs in the castle node it passes by and updates the information on the whiteboard on the castle node saying that the castle is explored. 
+\end{enumerate}  
+After the ``Second Patrol", the status of this agent group changes into ``Finding Castle". 
 
 
+(2) From ``Finding Castle" to ``Waiting in Line"
 
+When the status of the agent group changes into ``Waiting in Line", then it means that the  LA in that agent group cannot find an available castle but there are still castle unexplored in the graph. At this time, the LA  randomly chooses an  castle marked ``under exploring" and move there with its agent group. When the agent group arrives one of the lower $SNR$ neighbours of that castle we call them the ``Guarding Node", three situations may happen:
+\begin{enumerate}
+\item Case 1: The agent group arrives there finding that no SA(s) and no flag in that  Guarding Node. In this situation, the agent group who is excepted to attack this castle may not yet arrive this castle or does not finish the arrangement of the SAs. Then the agent group should wait at that Guarding Node until there is an SA and follows the instruction in case 2.
 
+\item Case 2: The agent group arrives there finding at least one SA. In this situation, it means that the agent group who is excepted to attack the castle has finished arranging the SAs but has not finished the ``First Patrol". So this agent group stays with the SA until the SA is called by another SA and move into the castle. After moving into the castle node, the agent group should wait the LA of the agent group who is attacking the castle to move to this castle node again because at this time the LA would update the situation in the castle: whether there is a BV or not. If there is a BV in the castle, then agent group who is waiting in the castle node ends its exploration phase and start the elimination phase; If not, then the status of this agent group changes into ``Finding Castle".
 
+\item Case 3:The agent group arrives there there finding there is a flag on that guarding node. It means that the LA of the agent group who is excepted to attack the castle is doing the ``First Patrol" or has finished the first ``First Patrol", or is doing the second ``Second Patrol". In this situation, the agent group moves into the castle node which is connected to the guarding node it arrives and wait the LA of the agent group who is attacking the castle to move to this castle node again. As in the case 2, this agent group can know the if there is a BV in the castle and follows the same instruction as in the case 2: if there is a BV, then the agent group starts the elimination phase, if not, the status of it changes into ``Finding Castle".
 
-
-
-
-
+\end{enumerate}
 
 
 \noindent{\bf Eliminaiotn Phase}
 
 When the BV is triggered, then the location of the BV can be in a castle or outside the castle. In both situation, the lower $SNR$ neighbours of the BV node or the castle containing the BV have been guarded by the agents. In another word, when the BV is triggered, only the clones spreading to the higher $SNR$ neighbours (say that the number of them is $y$) survive and their locations are exposed. Also, the locations of all the neighbours of these new formed BVs are exposed. 
 
-So the LA computes the route from where it resides to all the nodes needing guarded (guarding node). When the location of the original BV is outside the castle, then all the SAs stays with the LA, so the LA simply sends the SAs to these guarding node. When the original BV is in the castle, then the SAs are guarding the lower $SNR$ neighbours of the castle. So first all of the SAs move to the node where the original BV resides, and then the LA send the SAs to these guarding nodes. By saying sending the SAs to these guarding nodes, the LA actually tells the route to a specific destination and with the route the SA can move without the guidance of the LA. The LA knows the longest routes among these agents (say the length of it is $x$), so it wait $x+1$ unit of time after it sends the agent and send  $y$ agents to the new formed BV nodes and permanently destroy them.
+So the LA computes the routes from where it resides to all the nodes needing guarded including the lower $SNR$ neighbours and the higher $SNR$ neighbours(Surrounding Nodes). When the location of the original BV is outside the castle, then all the SAs stays with the LA, so the LA simply sends the SAs to these Surrounding Nodes. When the original BV is in the castle, then after the  ``Double Patrol", the LA knows the location of the original BV so it computes the routes from where it resides to all the Surrounding Nodes and sent the SAs to them (note that all the SAs are with the LA after the  ``Double Patrol"). Note that in our assumption that any node in the graph does not disconnect the graph, there is always another route to reach the surrounding node  except bypassing the new formed BV nodes. Assuming that there are $x$ higher $SNR$ neighbours of the original BV, then finally, the LA sends another $x$ to the new formed BV nodes and permanently destroy the BVs.
+
+
 
 
 
