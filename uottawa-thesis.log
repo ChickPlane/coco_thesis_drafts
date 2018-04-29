@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  17 APR 2018 18:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  29 APR 2018 10:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1113,9 +1113,6 @@ LaTeX Warning: Label `sub@fig:agentroute:b' multiply defined.
 
 LaTeX Warning: Label `TL' multiply defined.
 
-
-LaTeX Warning: Label `fig:Arbiflood' multiply defined.
-
 )
 \openout1 = `uottawa-thesis.aux'.
 
@@ -2034,22 +2031,22 @@ Package pdftex.def Info: figures/Arbiflood6.png used on input line 68.
 (pdftex.def)             Requested size: 180.67499pt x 129.45782pt.
  [64 <./figures/Arbiflood1.png> <./figures/Arbiflood2.png> <./figures/Arbiflood
 3.png> <./figures/Arbiflood4.png> <./figures/Arbiflood5.png> <./figures/Arbiflo
-od6.png>]
-<figures/Arbi3.png, id=838, 557.2017pt x 482.7636pt>
+od6.png>] [65]
+<figures/Arbi3.png, id=844, 557.2017pt x 482.7636pt>
 File: figures/Arbi3.png Graphic file (type png)
  <use figures/Arbi3.png>
-Package pdftex.def Info: figures/Arbi3.png used on input line 88.
+Package pdftex.def Info: figures/Arbi3.png used on input line 91.
 (pdftex.def)             Requested size: 216.81pt x 187.8498pt.
 
-[65] [66 <./figures/Arbi3.png>] [67]
-<figures/CastleExample.png, id=860, 734.9859pt x 444.4605pt>
+[66 <./figures/Arbi3.png>] [67]
+<figures/CastleExample.png, id=859, 734.9859pt x 444.4605pt>
 File: figures/CastleExample.png Graphic file (type png)
 
 <use figures/CastleExample.png>
-Package pdftex.def Info: figures/CastleExample.png used on input line 121.
+Package pdftex.def Info: figures/CastleExample.png used on input line 124.
 (pdftex.def)             Requested size: 252.94499pt x 152.95924pt.
  [68 <./figures/CastleExample.png>]
-Overfull \hbox (1.61435pt too wide) in paragraph at lines 134--135
+Overfull \hbox (1.61435pt too wide) in paragraph at lines 137--138
 []\OT1/cmr/m/n/12 There are two kind of agents in this strat-egy: Leader Agent 
 (LA) and Shadow Agent(SA)
  []
@@ -2058,88 +2055,84 @@ Overfull \hbox (1.61435pt too wide) in paragraph at lines 134--135
 File: figures/MultiCastleNode.png Graphic file (type png)
 
 <use figures/MultiCastleNode.png>
-Package pdftex.def Info: figures/MultiCastleNode.png used on input line 153.
+Package pdftex.def Info: figures/MultiCastleNode.png used on input line 156.
 (pdftex.def)             Requested size: 252.94499pt x 187.67337pt.
  [71]
-
-LaTeX Warning: Reference `fig:FirstPatrol' on page 72 undefined on input line 1
-60.
-
-<figures/FirstPatrol1.png, id=885, 652.5981pt x 484.209pt>
+<figures/FirstPatrol1.png, id=886, 652.5981pt x 484.209pt>
 File: figures/FirstPatrol1.png Graphic file (type png)
 
 <use figures/FirstPatrol1.png>
-Package pdftex.def Info: figures/FirstPatrol1.png used on input line 165.
+Package pdftex.def Info: figures/FirstPatrol1.png used on input line 168.
 (pdftex.def)             Requested size: 180.67499pt x 134.05557pt.
 
-<figures/FirstPatrol2.png, id=886, 652.5981pt x 484.209pt>
+<figures/FirstPatrol2.png, id=887, 652.5981pt x 484.209pt>
 File: figures/FirstPatrol2.png Graphic file (type png)
 
 <use figures/FirstPatrol2.png>
-Package pdftex.def Info: figures/FirstPatrol2.png used on input line 169.
+Package pdftex.def Info: figures/FirstPatrol2.png used on input line 172.
 (pdftex.def)             Requested size: 180.67499pt x 134.05557pt.
 
-<figures/FirstPatrol3.png, id=887, 652.5981pt x 484.209pt>
+<figures/FirstPatrol3.png, id=888, 652.5981pt x 484.209pt>
 File: figures/FirstPatrol3.png Graphic file (type png)
 
 <use figures/FirstPatrol3.png>
-Package pdftex.def Info: figures/FirstPatrol3.png used on input line 173.
+Package pdftex.def Info: figures/FirstPatrol3.png used on input line 176.
 (pdftex.def)             Requested size: 180.67499pt x 134.05557pt.
 
-<figures/FirstPatrol4.png, id=888, 652.5981pt x 484.209pt>
+<figures/FirstPatrol4.png, id=889, 652.5981pt x 484.209pt>
 File: figures/FirstPatrol4.png Graphic file (type png)
 
 <use figures/FirstPatrol4.png>
-Package pdftex.def Info: figures/FirstPatrol4.png used on input line 177.
+Package pdftex.def Info: figures/FirstPatrol4.png used on input line 180.
 (pdftex.def)             Requested size: 180.67499pt x 134.05557pt.
 
-<figures/FirstPatrol5.png, id=889, 652.5981pt x 484.209pt>
+<figures/FirstPatrol5.png, id=890, 652.5981pt x 484.209pt>
 File: figures/FirstPatrol5.png Graphic file (type png)
 
 <use figures/FirstPatrol5.png>
-Package pdftex.def Info: figures/FirstPatrol5.png used on input line 181.
+Package pdftex.def Info: figures/FirstPatrol5.png used on input line 184.
 (pdftex.def)             Requested size: 180.67499pt x 134.05557pt.
 
-<figures/FirstPatrol6.png, id=890, 652.5981pt x 484.209pt>
+<figures/FirstPatrol6.png, id=891, 652.5981pt x 484.209pt>
 File: figures/FirstPatrol6.png Graphic file (type png)
 
 <use figures/FirstPatrol6.png>
-Package pdftex.def Info: figures/FirstPatrol6.png used on input line 184.
+Package pdftex.def Info: figures/FirstPatrol6.png used on input line 187.
 (pdftex.def)             Requested size: 180.67499pt x 134.05557pt.
 
-<figures/FirstPatrol7.png, id=891, 652.5981pt x 484.209pt>
+<figures/FirstPatrol7.png, id=892, 652.5981pt x 484.209pt>
 File: figures/FirstPatrol7.png Graphic file (type png)
 
 <use figures/FirstPatrol7.png>
-Package pdftex.def Info: figures/FirstPatrol7.png used on input line 187.
+Package pdftex.def Info: figures/FirstPatrol7.png used on input line 190.
 (pdftex.def)             Requested size: 180.67499pt x 134.05557pt.
 
-<figures/FirstPatrol8.png, id=892, 652.5981pt x 484.209pt>
+<figures/FirstPatrol8.png, id=893, 652.5981pt x 484.209pt>
 File: figures/FirstPatrol8.png Graphic file (type png)
 
 <use figures/FirstPatrol8.png>
-Package pdftex.def Info: figures/FirstPatrol8.png used on input line 191.
+Package pdftex.def Info: figures/FirstPatrol8.png used on input line 194.
 (pdftex.def)             Requested size: 180.67499pt x 134.05557pt.
 
-<figures/FirstPatrol9.png, id=893, 652.5981pt x 484.209pt>
+<figures/FirstPatrol9.png, id=894, 652.5981pt x 484.209pt>
 File: figures/FirstPatrol9.png Graphic file (type png)
 
 <use figures/FirstPatrol9.png>
-Package pdftex.def Info: figures/FirstPatrol9.png used on input line 195.
+Package pdftex.def Info: figures/FirstPatrol9.png used on input line 199.
 (pdftex.def)             Requested size: 180.67499pt x 134.05557pt.
 
-<figures/FirstPatrol10.png, id=894, 652.5981pt x 484.209pt>
+<figures/FirstPatrol10.png, id=895, 652.5981pt x 484.209pt>
 File: figures/FirstPatrol10.png Graphic file (type png)
 
 <use figures/FirstPatrol10.png>
-Package pdftex.def Info: figures/FirstPatrol10.png used on input line 199.
+Package pdftex.def Info: figures/FirstPatrol10.png used on input line 204.
 (pdftex.def)             Requested size: 180.67499pt x 134.05557pt.
 
-<figures/FirstPatrol11.png, id=895, 652.5981pt x 484.209pt>
+<figures/FirstPatrol11.png, id=896, 652.5981pt x 484.209pt>
 File: figures/FirstPatrol11.png Graphic file (type png)
 
 <use figures/FirstPatrol11.png>
-Package pdftex.def Info: figures/FirstPatrol11.png used on input line 203.
+Package pdftex.def Info: figures/FirstPatrol11.png used on input line 208.
 (pdftex.def)             Requested size: 180.67499pt x 134.05557pt.
  [72 <./figures/MultiCastleNode.png>] [73]
 Overfull \vbox (342.57005pt too high) has occurred while \output is active []
@@ -2163,9 +2156,6 @@ Package rerunfilecheck Info: File `uottawa-thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 685DD9C25C90F0B20286137365B6C181;2854.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 231.
@@ -2173,7 +2163,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 231.
 Here is how much of TeX's memory you used:
  11451 strings out of 492995
  168410 string characters out of 6132704
- 267765 words of memory out of 5000000
+ 267847 words of memory out of 5000000
  14401 multiletter control sequences out of 15000+600000
  13428 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2199,10 +2189,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2017/texmf
 ist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2017/texmf-di
 st/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2017/texm
 f-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on uottawa-thesis.pdf (86 pages, 2989643 bytes).
+Output written on uottawa-thesis.pdf (86 pages, 2990201 bytes).
 PDF statistics:
- 1075 PDF objects out of 1200 (max. 8388607)
- 802 compressed objects within 9 object streams
+ 1076 PDF objects out of 1200 (max. 8388607)
+ 803 compressed objects within 9 object streams
  258 named destinations out of 1000 (max. 500000)
  724 words of extra memory for PDF output out of 10000 (max. 10000000)
 

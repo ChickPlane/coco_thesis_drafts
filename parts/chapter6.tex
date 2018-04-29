@@ -16,9 +16,9 @@ In the arbitrary graph, we assume that any node does not disconnect the graph.
 \section{Parallel Strategies for BV Decontamination in Arbitrary Graph}
 \subsection{Flood Strategy}
 \noindent{\bf Initialization}
-In this strategy, all the agents are endowed with 3-hop visibility. Also, all the agents do not need to remember the routes they pass. Finally, in this strategy, we use an important ability of agents which is clone. As we introduced in Chapter 2, clone means that a agent is endowed with the capacity to generate one or more agent. 
+In this strategy, all the agents are endowed with 3-hop visibility. Also, all the agents do not need to remember the routes they pass. Finally, in this strategy, we use an important ability of agents which is clone. As we introduced in Chapter 2, clone means that an agent is endowed with the capacity to generate one or more agent. 
 
-We use the Dijkstra Algorithm to compute the shortest route step for every node and write them on the white board on each node, so for each node, there should be a number (Shortest Route Number) recording the number of steps of the shortest route from the homebase to it. Let us denote by $v_{SRN}$ the Shortest Route Number of node $v$, and nodes ${v_1, \ldots, v_i}$ are neighbours of node $v$ assuming that $v$ has $i$ neighbours. Then edges connecting node $v$ and its neighbours are $e(v, v_1), \ldots, e(v, v_i)$. We write the $v_{SRN}$ to the end of these edges (the end connecting to its neighbours), so when an agent resides in any node from $v_1$ to $v_i$, it can see the Shortest Route Number of node v because of the local visibility. (For example, see Fig\ref{fig:Arbi1}) 
+We use the Dijkstra Algorithm to compute the shortest route from the homebase to every node and write the route step on the white board on each node, so for each node, there should be a number (Shortest Route Number) recording the number of steps of the shortest route from the homebase to it. Let us denote by $v_{SRN}$ the Shortest Route Number of node $v$, and nodes ${v_1, \ldots, v_i}$ are neighbours of node $v$ assuming that $v$ has $i$ neighbours. Then edges connecting node $v$ and its neighbours are $e(v, v_1), \ldots, e(v, v_i)$. We write the $v_{SRN}$ to the end of these edges (the end connecting to its neighbours), so when an agent resides in any node from $v_1$ to $v_i$, it can see the Shortest Route Number of node v because of the local visibility. (For example, see Fig\ref{fig:Arbi1}) 
 
 \begin{figure}[H]
   \centering  
@@ -35,7 +35,7 @@ Let us denote by $SNR$ the Shortest Route Number.
 \item Agents can only move from node with lower $SNR$ to node with higher $SNR$.
 \item Assuming that there are $x$ agents residing in node $v$, and the next destination(s) are $\{v_1,\ldots, v_i\}$. 
 
-        if $x\geq i+1$, then $i$ agents move to the destinations respectively while one agent stays in node $v$ to guard $v$ at $T_i$. If one of agents is destroyed, the Elimination phase begins; if none of the agents is destroyed, the left $x-(i+1)+1(the one who guards the node $v$)$ agents evenly move to the destinations at $T_{i+1}$. 
+        if $x\geq i+1$, then $i$ agents move to the destinations respectively while the left agents stay in node $v$ to guard $v$ at $T_i$. If one of the agents is destroyed, the Elimination phase begins; if none of the agents is destroyed, the left $x-(i+1)+1$ (the one who guards the node $v$) agents evenly move to the destinations at $T_{i+1}$. \\
         if $x< i+1$, then one of the agents residing in node $v$ clones $i+1-x$ agents, and these $i$ agents move to all the neighbours at $T_i$. If one of the agents is destroyed, the Elimination phase begins; if none of the agents is destroyed, the agent guarding the node $v$ randomly moves to one neighbour with $SNR$ equal to $a+1$ at $T_{i+1}$.
 \item If an agent resides in a node (assuming its $SNR$ is $a$) without any neighbour whose $SNR$ equal to $a+1$, then it simply stays there.
  
@@ -68,7 +68,7 @@ An example of how the agents move is showed in Fig\ref{fig:Arbiflood}
     \includegraphics[width=2.5in]{figures/Arbiflood6.png}}
   \caption{An example of how the agents move in the Flood Strategy} 
   \label{fig:Arbiflood} %% label for entire figure 
-\end{figure}
+\end{figure}      
 
 \noindent{\bf Elimination Phase}
 Let us assume that the node where the original BV resides is $v$ with $SNR$ equal to $a$ and it is triggered at $T_i$. Then at this time, the clones spread to all neighbours of node $v$ with $SNR$ equal to $a+1$ and survive while leaving node $v$ clean (no agent and no BV) and let us denote by $v_{BV}$s all these BV nodes.  
@@ -76,20 +76,23 @@ Let us assume that the node where the original BV resides is $v$ with $SNR$ equa
 Now we introduce how agents residing in different positions move in the Elimination phase.
 \begin{enumerate}
 
-\item Rule 1: We call agents residing in the these $v_{BV}$s' neighbours with $SNR$ equal to $a$ the Witness Agent, and these Witness Agent can easily realize whether or not node $v$ is the place where the original BV resides. For example, since they have 3-hop visibility, so if they see that one of their ``2-distance" neighbours (say node $v'$) does not contains an agent but some neighbours of node $v'$ contain agents, then they can know that the original BV resides in node $v$. If the Witness Agents realize the existence of BV at $T_1$, then they simply stop cloning and moving. 
+\item Rule 1: For convenience, we call agents residing in the these $v_{BV}$s' neighbours with $SNR$ equal to $a$ the Witness Agents, and these Witness Agents can easily realize whether or not node $v$ is the place where the original BV resides. For example, since they have 3-hop visibility, if they see that one of their ``2-distance" neighbours (say node $v'$) does not contains an agent but some neighbours of node $v'$ contain agents, they can know that the original BV resides in node $v$. If the Witness Agents realize the existence of BV at $T_i$, then they simply stop cloning and moving to the new formed BV nodes. Note that if the Witness Agents have some higher $SNR$ neighbours except the new formed BVs, they should still explore these nodes following the rules in the exploration phase.  
 
 \item Rule 2: For all of the agents residing in node $v$'s neighbours with $SNR$ equal to $a-1$ (say the number of them is $y$), they receive clones and realize the location of the BV and would move to $v$ at $T_{i+1}$. Let us denote by $z$ the number of $v$'s neighbours with $SNR$ equal to $a+1$, then if $y< z+1$, one of the agents residing in node $v$ should clone another $z+1-y$ agents and then $z$ agents move to $v$'s neighbours with $SNR$ equal to $a+1$ at $T_{i+2}$.
 \end{enumerate}
 
-See Fig\ref{fig:Arbiflood}. For convenience of description, we give every node in the graph a distinct ID from 1 to 13. As shown in the picture, when the BV is triggered, the clones spread to all neighbours of node 3, and node 4 and 5 become new BV node while nodes 1, 2 and 12 destroy a clone respectively and realize that the original BV resides in node 3.
+Note that in our assumption, any node does not disconnect the graph, so there should be other routes from the homebase to the new BV nodes except through the original BV node. So when the  
+
+   
+See Fig\ref{fig:Arbi3}. For convenience of description, we give every node in the graph a distinct ID from 1 to 13. As shown in the picture, when the BV is triggered, the clones spread to all neighbours of node 3, and node 4 and 5 become new BV node while nodes 1, 2 and 12 destroy a clone respectively and realize that the original BV resides in node 3. 
 
 \begin{figure}[H]
   \centering  
   \includegraphics[width=3in]{figures/Arbi3.png}
   \caption{An possible situation when the BV is detected}\label{fig:Arbi3}
-\end{figure} 
+\end{figure}    
 
-In Fig.\ref{fig:Arbi3}, node 10 is a Witness Agent and because of the 3-hop visibility, it can ``see" that there is no agent residing in node 3 but there are agents residing in node 3's neighbours which are node 1 and node 2. By this way, it knows that the original BV resides in node 3 and it stop moving and cloning.
+In Fig.\ref{fig:Arbi3}, agent residing in node 10 is a Witness Agent and because of the 3-hop visibility, it can ``see" that there is no agent residing in node 3 but there are agents residing in node 3's neighbours which are node 1 and node 2. By this way, it knows that the original BV resides in node 3 and it stops moving and cloning.
 
 For convenience, let us denote by $a$ the $SNR$ of the original BV node. Since in our assumption, any node does not disconnect the graph, so the following situation would not happen:
 \begin{enumerate}
@@ -145,7 +148,7 @@ Along the route to the group's destination, the LA updates the information (chan
 
 After the arrangement of the SAs, it should be ensured that all the lower $SNR$ neighbours of the castle are guarded and assuming that there are $x$ nodes in the castle $\{castle\_0, \ldots, castle\_x\}$, another $x$ SAs (Attacking Agent) should move to these $x$ nodes at the same time. In order to do that, we propose one possible strategy for the LA to place the SAs: assuming that the sequence of the nodes which should be guarded is $\{node\_0, \ldots, node\_y\}$, and $node\_i$ is the last node in the sequence connected to $castle\_k$ where $0\leq i\leq y$, $0\leq k\leq x$, then the LA should place two agents in $node\_i$ while place one agent in the other nodes when it moves in sequence to place the SAs. Also, the LA knows the time when it finishes the arrangement of the last agent(s), then it should inform the agents the exact time to move to the castle nodes and permanently destroy the BVs.
 
-When one agent group starts to surround the castle, by which we mean that the LA has placed SAs in at least one lower $SNR$ of the castle, it is possible that another agent group has started to surround the castle (even the LA updates the information when it moves, still the consistency of all the information cannot be guaranteed). The LA of an agent group realize this by meeting an SA not from its group when it arranges the SAs to guard the lower $SNR$ neighbours of the castle. We prefer to avoid conflict when two agent group explore one castle (SAs from two different agent group move to the castle nodes). The LA can compute the time when the arrangement is finished and record it on a timestamp, so when the LA places the SAs, it leaves timestamp with these SAs. By doing this, every SA from one agent group guarding the castle hold a timestamp recording when does the arrangement end and if a LA meet a SA from other agent group with a earlier timestamp, it move back to collect the SAs in its group that have been placed and the status of this agent group turn into ``Finding Castle". 
+When one agent group starts to surround the castle, by which we mean that the LA has placed SAs in at least one lower $SNR$ of the castle, it is possible that another agent group has started to surround the castle (even the LA updates the information when it moves, still the consistency of all the information cannot be guaranteed). The LA of an agent group realize this by meeting an SA not from its group when it arranges the SAs to guard the lower $SNR$ neighbours of the castle. We prefer to avoid conflict when two agent group explore one castle (SAs from two different agent group move to the castle nodes). The LA can compute the time when the arrangement is finished and record it on a timestamp, so when the LA places the SAs, it leaves timestamp with these SAs. By doing this, every SA from one agent group guarding the castle hold a timestamp recording when does the arrangement end and if a LA meet a SA from other agent group with a earlier timestamp, it moves back to collect the SAs in its group that have been placed and the status of this agent group turn into ``Finding Castle". 
 
 When the arrangement is done, the LA resides in the last node needing guarded and in the next unit of time, all the Attacking Agents move to the castle nodes. Note that at this time, if there is a BV in the castle, not all the guarding agents can receive a BV clone. As shown in Fig\ref{fig:MultiCastleNode}, when the BV is triggered, except the castle nodes, only the guarding agents 1 and 2 receive the clones.
 \begin{figure}[H]
@@ -190,10 +193,12 @@ The LA first computes a route to traverse all the castle nodes, (say the route i
     \label{fig:FirstPatrol8:h} %% label for second subfigure 
     \includegraphics[width=2.5in]{figures/FirstPatrol8.png}}
     \hspace{1in} 
+    \\
   \subfigure[$T_{a+8}$]{ 
     \label{fig:FirstPatrol9:i} %% label for second subfigure 
     \includegraphics[width=2.5in]{figures/FirstPatrol9.png}}
 %      \hspace{1in} 
+
   \subfigure[$T_{a+9}$]{ 
     \label{fig:FirstPatrol10:j} %% label for second subfigure 
     \includegraphics[width=2.5in]{figures/FirstPatrol10.png}}
@@ -202,7 +207,7 @@ The LA first computes a route to traverse all the castle nodes, (say the route i
     \label{fig:FirstPatrol11:k} %% label for second subfigure 
     \includegraphics[width=2.5in]{figures/FirstPatrol11.png}}
   \caption{An example of  ``FirstPatrol"} 
-  \label{fig:Arbiflood} %% label for entire figure 
+  \label{fig:FirstPatrol} %% label for entire figure 
 \end{figure}
 
 \item 
