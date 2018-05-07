@@ -2,39 +2,39 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Arrangement of agents at the beginning(when $a=2$)\relax }}{21}{figure.caption.10}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Routes of agents when $a=2$\relax }}{22}{figure.caption.11}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Routes of agents when $a=3$\relax }}{23}{figure.caption.12}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Rows that are double traversed (marked with red rows)\relax }}{24}{figure.caption.13}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Agents move at time $t_0$. (The red node indicates that there are two agents residing there\relax }}{25}{figure.caption.14}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Arrangement of the agents in elimination phase when the new formed BV resides in a interior node\relax }}{27}{figure.caption.15}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Arrangement of the agents in the elimination phase when the new formed BV resides in a border node (when $x=d_1$)\relax }}{28}{figure.caption.16}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Arrangement of the agents in the elimination phase when the new formed BV resides in a border node(when $y=1$ or $y=d_2-1$)\relax }}{29}{figure.caption.17}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Arrangement of the agents in the elimination phase when the new formed BV resides in a corner node(when $x=d_1$ and $y=1$ or $y=d_2-1$)\relax }}{30}{figure.caption.18}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces The idea of dimensionality reduction\relax }}{34}{figure.caption.20}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces The route of agent when exploring a $1\times 1\times 1\times 2$ grid \relax }}{35}{figure.caption.21}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Arrangement of agents PBVD-T\relax }}{38}{figure.caption.22}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Arrangement of agents at the beginning(when $a=2$)\relax }}{22}{figure.caption.10}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Routes of agents when $a=2$\relax }}{23}{figure.caption.11}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Routes of agents when $a=3$\relax }}{24}{figure.caption.12}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Rows that are double traversed (marked with red rows)\relax }}{25}{figure.caption.13}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Agents move at time $t_0$. (The red node indicates that there are two agents residing there\relax }}{26}{figure.caption.14}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Arrangement of the agents in elimination phase when the new formed BV resides in a interior node\relax }}{28}{figure.caption.15}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Arrangement of the agents in the elimination phase when the new formed BV resides in a border node (when $x=d_1$)\relax }}{29}{figure.caption.16}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Arrangement of the agents in the elimination phase when the new formed BV resides in a border node(when $y=1$ or $y=d_2-1$)\relax }}{30}{figure.caption.17}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Arrangement of the agents in the elimination phase when the new formed BV resides in a corner node(when $x=d_1$ and $y=1$ or $y=d_2-1$)\relax }}{31}{figure.caption.18}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces The idea of dimensionality reduction\relax }}{35}{figure.caption.20}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces The route of agent when exploring a $1\times 1\times 1\times 2$ grid \relax }}{37}{figure.caption.21}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Arrangement of agents PBVD-T\relax }}{40}{figure.caption.22}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces An example of chordal ring $C_n(1,4)$\relax }}{41}{figure.caption.23}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Arrangement of agents when moving\relax }}{42}{figure.caption.24}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces The whole process of the $Three\tmspace +\thinmuskip {.1667em}Jump\tmspace +\thinmuskip {.1667em}Notifying$ technique in chordal ring $C_n(1, 2, 4, 5)$\relax }}{44}{figure.caption.25}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Viewing a chordal ring whose longest chord is 11 as a matrix\relax }}{47}{figure.caption.26}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces The route of the $CA$ in the chasing phase in a chordal ring C(1, 7, 11)\relax }}{50}{figure.caption.27}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Arrangement of agent at $T_{move\_2}$ when the BV is triggered\relax }}{51}{figure.caption.28}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Agents' roles after $Three\tmspace +\thinmuskip {.1667em}Jump\tmspace +\thinmuskip {.1667em}Notifying\tmspace +\thinmuskip {.1667em}Technique$. (for convenience, we denote the $CA$ by a red spot, more specifically, node $x_{50}$ is where $CA$ resides)\relax }}{52}{figure.caption.29}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Arrangement of agent at $T_{move\_3}$. The $CA$ has arrived its destination\relax }}{52}{figure.caption.30}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Arrangement of agents at $T_{move\_4}$. The $CA$ starts its chasing phase\relax }}{52}{figure.caption.31}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Arrangement of agents at $T_{move\_5}$. \relax }}{53}{figure.caption.32}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Arrangement of agents at $T_{move\_5^{(3)}}$. \relax }}{53}{figure.caption.33}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Arrangement of agents at $T_{move\_7^{(3)}}$. \relax }}{54}{figure.caption.34}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Situation when the third agent in the exploring group is destroyed\relax }}{56}{figure.caption.35}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces The graph we build for Dijkstra Algorithm\relax }}{56}{figure.caption.36}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces An example of chordal ring $C_n(1,4)$\relax }}{43}{figure.caption.23}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Arrangement of agents when moving\relax }}{44}{figure.caption.24}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces The whole process of the $Three\tmspace +\thinmuskip {.1667em}Jump\tmspace +\thinmuskip {.1667em}Notifying$ technique in chordal ring $C_n(1, 2, 4, 5)$\relax }}{46}{figure.caption.25}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Viewing a chordal ring whose longest chord is 11 as a matrix\relax }}{49}{figure.caption.26}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces The route of the $CA$ in the chasing phase in a chordal ring C(1, 7, 11)\relax }}{52}{figure.caption.28}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Arrangement of agent at $T_{move\_2}$ when the BV is triggered\relax }}{53}{figure.caption.29}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Agents' roles after $Three\tmspace +\thinmuskip {.1667em}Jump\tmspace +\thinmuskip {.1667em}Notifying\tmspace +\thinmuskip {.1667em}Technique$. (for convenience, we denote the $CA$ by a red spot, more specifically, node $x_{50}$ is where $CA$ resides)\relax }}{53}{figure.caption.30}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Arrangement of agent at $T_{move\_3}$. The $CA$ has arrived its destination\relax }}{54}{figure.caption.31}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Arrangement of agents at $T_{move\_4}$. The $CA$ starts its chasing phase\relax }}{54}{figure.caption.32}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Arrangement of agents at $T_{move\_5}$. \relax }}{54}{figure.caption.33}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Arrangement of agents at $T_{move\_5^{(3)}}$. \relax }}{55}{figure.caption.34}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Arrangement of agents at $T_{move\_7^{(3)}}$. \relax }}{55}{figure.caption.35}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Situation when the third agent in the exploring group is destroyed\relax }}{57}{figure.caption.36}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces The graph we build for Dijkstra Algorithm\relax }}{58}{figure.caption.37}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Initialization of the graph\relax }}{63}{figure.caption.37}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces An example of how the agents move in the Flood Strategy\relax }}{65}{figure.caption.38}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces An possible situation when the BV is detected\relax }}{67}{figure.caption.39}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Examples of Castles\relax }}{68}{figure.caption.40}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Exploration phase of the Exploration Phase\relax }}{69}{figure.caption.41}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces An example shows that if there is a BV in the castle, in some cases not all the guarding agents can receive a BV clone\relax }}{73}{figure.caption.42}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces An example of ``FirstPatrol"\relax }}{74}{figure.caption.43}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces An example of ``FirstPatrol" \relax }}{75}{figure.caption.44}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Initialization of the graph\relax }}{65}{figure.caption.38}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces An example of how the agents move in the Flood Strategy\relax }}{67}{figure.caption.39}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces An possible situation when the BV is detected\relax }}{69}{figure.caption.40}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Examples of Castles\relax }}{70}{figure.caption.41}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Exploration phase of the Exploration Phase\relax }}{71}{figure.caption.42}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces An example shows that if there is a BV in the castle, in some cases not all the guarding agents can receive a BV clone\relax }}{75}{figure.caption.43}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces An example of ``FirstPatrol"\relax }}{76}{figure.caption.44}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces An example of ``FirstPatrol" \relax }}{77}{figure.caption.45}

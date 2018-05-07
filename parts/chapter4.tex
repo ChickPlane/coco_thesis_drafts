@@ -9,14 +9,14 @@ The general idea is simple, we will employ a group of agents and place them in a
 We study the number of agents, the time cost, the number of movements and  casualty, comparing them with  the ones of the corresponding sequential strategy.
 
 \section{Parallel BV Decontamination of Grids}
-\subsection{Base Case:2-Dimensional Grid}
+\subsection{Base Case: 2-Dimensional Grid}
 A 2-dimensional grid (which is a mesh) of size $d_1\times d_2$ has $n=d_1\times d_2(d_1>2,d_2>2)$ nodes. Without loss of generality, let $d_1<d_2$ and let the nodes of {\em M} be denoted by their column and row coordinate ($x_1$,$x_2$), $1\leq x_1 \leq d_1$, $1\leq x_2 \leq d_2$. Observe that in a mesh, we have three types of nodes: \textit{corner} (entities with only two neighbours), \textit{border}(entities with three neighbours), and \textit{interior}(with four neighbours).  Our strategy follows two phases: shadowed exploration and elimination. In the first phase, the network is traversed until the location of the BV is determined. That location is found after the visit, at which time    all the  unprotected neighbours have become BVs.  Note that in $PBVD-2G$, there is  only one new formed BV. In the second phase, the new formed BV is surrounded and permanently eliminated. Note that when we say that  the second phase starts, we actually mean that those agents knowing the existence of BV start to surround the BV, or notify some other agents, and then eliminate the BV, but not   that all the agents enter this phase. There are two significant differences between $PBVD-2G$ and the sequential strategy: mainly the number of agents employed in the exploration phase and  the route of agents in the exploration phase. We also describe the routes of agents in the elimination phase. \ \\
 
 \noindent{\bf Shadowed Exploration Phase} \\
 
 As we mentioned above, we should place the agents in a specific array at the beginning and then let them explore the graph. Now let us consider how to arrange them at the beginning and how to design the routes for them to explore the graph. We prefer to place the agents at the borders (or the corners) of the mesh because in this way we can reduce the casualties. For the same purpose of reducing the casualties, we prefer to arrange all the agents in an array so that when one of the exploring agent triggers the BV, the exploring agents and shadowed agents guide as many neighbours of the BV as possible. In another word, we want all the agents explore the graph in one direction rather than   from different directions. With these two principles, our strategy in the shadowed exploration is that given specific number of agents, we place them in one border of the mesh and if there are more agents, we place them on the row which is parallel to the border and so on. Then we design routes for them so that at any time they move to one direction to explore the graph. \\
 Monotonicity is a principle that we should obey in the whole process, which means one exploring agent should be followed by at least one shadowed agent, so the number of agents in the exploration phase should be at least twice the number of the exploring agents. To guarantee the monotonicity and the two principles, we should employ $2a\,(a\in\mathbb{Z}^+)$ agents in this phase and place $a$ of them in one of the border and the others in the second line paralleling to the border.
-Let us nowconsider the number of agents we should employ.
+Let us now consider the number of agents we should employ.
 When $a=1$, the arrangement is actually the sequential case. Since we want to explore the graph in parallel,  we start with  $a=2$, in which case, the initial arrangement would be as Fig\ref{fig:twoagent1}:
 \begin{figure}[H]
   \centering  
@@ -24,8 +24,8 @@ When $a=1$, the arrangement is actually the sequential case. Since we want to ex
   \caption{Arrangement of agents at the beginning(when $a=2$)}\label{fig:twoagent1}
 \end{figure}
 
-Let us now consider the routes for the agents. For convenience, we assume that all the agents move at time $t_i\,(i\in\mathbb{Z}^*)$ ( {\bf what is $x$ ?}) because some time should be reserved for the coordination after the BV is triggered. More detail about the moving cycle would be discussed after we decide the number of agents and the routes for them. 
-Let $v=(x, y)$ be the node under exploration, with $1\leq x_i \leq d_1$, $1\leq i \leq d_2$. Additionally, we define ``Vertical Moving Mark'' (VMM) for every agent: VMM can only change between $0$ and $1$; every time when the agent moves SOUTH, that value changes. For example, if one agent continues to move SOUTH at $t_i$ ({\bf no need to repeat $\,(x\in\mathbb{Z}^+$}) and its $Vertical_D$ is originally $0$, then its $Vertical_D$ changes into $1$ at $t_1$, $0$ at $t_2$ and so on.
+Let us now consider the routes for the agents. For convenience, we assume that all the agents move at time $t_i\,(i\in\mathbb{Z}^*)$   because some time should be reserved for the coordination after the BV is triggered. More detail about the moving cycle would be discussed after we decide the number of agents and the routes for them. 
+Let $v=(x, y)$ be the node under exploration, with $1\leq x_i \leq d_1$, $1\leq i \leq d_2$. Additionally, we define ``Vertical Moving Mark'' (VMM) for every agent: VMM can only change between $0$ and $1$; every time when the agent moves SOUTH, that value changes. For example, if one agent continues to move SOUTH at $t_i$  and its $Vertical_D$ is originally $0$, then its $Vertical_D$ changes into $1$ at $t_1$, $0$ at $t_2$ and so on.
 Every agent hold two VMMs in its memory and let's say $VMM_1$ and $VMM_2$. The original value of $VMM_1$ of the agents is $0$; the original value of $VMM_2$ of agents residing at node $(1, y)$ and node $(2, y)$ ($1\leq y\leq a$) is $0$ and $1$ respectively. 
 
 We now define the action of the $2a$ agents:\\ 
@@ -78,16 +78,16 @@ We can easily observe that some rows of the grid are traversed twice for the pur
   \caption{Rows that are double traversed (marked with red rows)} 
   \label{fig:doubleline} %% label for entire figure 
 \end{figure}
-We can see that when the grid is fixed (so $d_1$ is fixed), the number of double traversed rows decrease as $a$ increases, which is easy to image. Let us denote by $r$ the number of rows that are double traversed, then $r=\left \lceil \frac{d_1-a}{a-1} \right \rceil$ where $d_1$ is the number of rows of the grid. Informally, $r$ reflect the time that we waste in the exploration phase, and we can reduce the wasted time by employing more agents. As we can see from the equation, when $a=d_1$, then $r=0$, which means if we employ $2d_1$ agents to explore the graph, none of the rows are traversed twice. \\
-Now we discuss the strategy when we employ $2d_1$ agents, and this strategy can be easily modified to fit the situation where we employ less than $2d_1$ agents.\\
-Initially, 2$d_1$ agents are placed at the first two columns at $t_0$ and we place another one agent at the top and bottom of the first column (we shall describe their roles in the following part). More specifically, their coordinates   are (1, $x_i$) and (2,$x_i$) where $1\leq x_i\leq d_1$. The agents residing in the first column are in the shadowing group while the agents residing in the second column are in the exploring group. If the BV resides in a node in the first column, then all of its clones are destroyed. If the BV resides in a node in the second column, then the elimination phase begins. It is obvious that if the BV does not reside in any node in the first column, then an agent in the exploring group should be destroyed when the BV is exposed.  Let us assume that the we starts at $t_0$ {\bf (why using this strange notation for time ? Woulnd't be sufficient to use time $t_0$, $t_1$ without the $T( )$ function ?)}. Agents residing in nodes in the second column moves EAST at the beginning of $t_i$, $i=0,1, \ldots ,d_2-1$. More precisely, node $(x, y)$ move to $(x+1, y)$ at the beginning of $t_i$, $i=0,1, \dots , d_2-1$. Agents residing in the first column simply follow the node in the second column (see  Fig.\ref{fig:moving}). When one of the node in the second {\bf ( former ? do you mean second column ?)}column is destroyed by a BV, the second phase starts.
+We can see that when the grid is fixed (so $d_1$ is fixed), the number of double traversed rows decrease as $a$ increases, which is easy to image. Let us denote by $r$ the number of rows that are double traversed, then $r=\left \lceil \frac{d_1-a}{a-1} \right \rceil$ where $d_1$ is the number of rows of the grid. Informally, $r$ indicates the time that is spent   in the exploration phase, and we can reduce this time by employing more agents. As we can see from the equation, when $a=d_1$, then $r=0$, which means if we employ $2d_1$ agents to explore the graph, none of the rows are traversed twice. \\
+We now discuss the strategy when we employ $2d_1$ agents, and this strategy can be easily modified to fit the situation where we employ less than $2d_1$ agents.\\
+Initially, 2$d_1$ agents are placed at the first two columns at $t_0$ and we place another  agent at the top and bottom of the first column (we shall describe their roles in the following part). More specifically, their coordinates   are (1, $x_i$) and (2,$x_i$) where $1\leq x_i\leq d_1$. The agents residing in the first column are in the shadowing group while the agents residing in the second column are in the exploring group. If the BV resides in a node of the first column, then all of its clones are destroyed. If the BV resides in a node in the second column, then the elimination phase begins. It is obvious that if the BV does not reside in any node in the first column, then an agent in the exploring group should be destroyed when the BV is exposed.  Let us assume that the we starts at $t_0$. Agents residing in nodes of the second column move  EAST at the beginning of $t_i$, $i=0,1, \ldots ,d_2-1$. More precisely, the agent located in $(x, y)$ moves to $(x+1, y)$ at the beginning of $t_i$, $i=0,1, \dots , d_2-1$. Agents residing in the first column simply follow the node in the second column (see  Fig.\ref{fig:moving}). When one of the nodes in the second  column is destroyed by a BV, the second phase starts.
 \begin{figure}[H]
   \centering  
   \includegraphics[width=2.5in]{figures/moving.png}
   \caption{Agents move at time $t_0$. (The red node indicates that there are two agents residing there}\label{fig:moving}
 \end{figure}
 \noindent{\bf Elimination Phase}\\
-The elimination begins when one of the nodes in the second ({\bf former ?}) column is destroyed by a BV( let us say, at time $t_i$). No matter where   the BV is, there are always three agents residing on its north (if the BV is not in the first row), west and south (if the BV is not in the last row), so only one BV clone survives. In another words, only one node becomes BV node after the BV has been triggered. Observe that in the parallel strategy, not all agents participate in the elimination phase automatically when the BV is explored because only the ones  that receive the clones of the original BV and those that are notified by other agents can participate in the elimination phase. So,  in some situation, agents that receive the BV clone should notify other agents to participate in the elimination (case 1,2 and 3). In one particular situation (case4), we  instead use the agent  that we take along the way (called  following agent) to complete the elimination phase. Let the node where the surviving clone reside be $(x, y)$ and its situation can be divided into four cases. Different routes of agents in the elimination phase are based on the location of the new formed BV.
+The elimination begins when one of the nodes in the second column is destroyed by a BV (let us say, at time $t_i$). No matter where   the BV is, there are always three agents residing on its north (if the BV is not in the first row), west and south (if the BV is not in the last row), so only one BV clone survives. In another words, only one node becomes BV   after the BV has been triggered. Observe that in the parallel strategy, not all agents participate in the elimination phase automatically when the BV is explored because only the ones  that receive the clones of the original BV and those that are notified by other agents can participate in the elimination phase. So,  in some situations, agents that receive the BV clone should notify other agents to participate in the elimination (case 1,2 and 3). In one particular situation (case 4), we  instead use the agent  that we take along the way (called  following agent) to complete the elimination phase. Let the node where the surviving clone reside be $(x, y)$. We have four different situations   depending on the location of the new formed BV, each situation corresponding to a different route  taken in the elimination phase.
 \begin{itemize}
 \item Case 1: When $2<x<d_1$, $1<y<d_2-1$ (an interior node becomes a new formed BV), then the agents residing in node $(x-1, y+1)$, $(x-1, y-1)$ and $(x-2, y)$ (say $a,b,c$) receive a BV clone at time $t_i$, and  they know the location of the original BV and also the new formed BVs. After they receive the BV clone, these agents move EAST at $t_{i+1}$ for one step (for example, to node $(x, y+1)$, $(x, y-1)$ and $(x-1, y)$) and stop. Note that other agents including the ones residing in node $(x-2, y+1)$ and $(x-2, y-1)$ (say agent $d$ and $e$) at $t_i$ do not know the existence of the BV so they keep moving EAST and arrive at nodes $(x, y+1)$, $(x, y-1)$ at the end of $t_{i+2}$ when they meet agent $a$ and $b$ respectively. Agent $a$ and $b$ inform them of the location of the new formed BV and the routes of agents $d$ and $e$ are as follow:\\
 route of $d$: $(x, y+1)(at\ t_{i+2}){\rightarrow}(x+1,y+1)(at\ t_{i+3}){\rightarrow}(x+1,y)(at\ t_{i+4})$.\\
@@ -117,7 +117,7 @@ The routes of agents are showed in Fig.\ref{fig:caseone} where ``one circle" ind
   \subfigure[$t_{i+4}$]{ 
     \label{fig:caseone4:e} %% label for second subfigure 
     \includegraphics[width=2.5in]{figures/caseone4.png}}
-     \subfigure[$t_{i+5}$)]{ 
+     \subfigure[$t_{i+5}$]{ 
     \label{fig:caseone5:e} %% label for second subfigure 
     \includegraphics[width=2.5in]{figures/caseone5.png}}
   \caption{Arrangement of the agents in elimination phase when the new formed BV resides in a interior node} 
@@ -125,7 +125,8 @@ The routes of agents are showed in Fig.\ref{fig:caseone} where ``one circle" ind
 \end{figure}
 %\fi
 
-\item Case 2: When $x=d_1$, $2<y<d_2-1$ (a border node becomes a new formed BV), then the agents residing in node $(x-1, y+1)$, $(x-1, y-1)$ and $(x-2, y)$  (say  $a,b,c$)  receive a BV clone at time $t_i$. As above, they move EAST for one step and stop. The agents residing in nodes $(x-2, y+1)$ and $(x-2, y-1)$ (say  $a,b$) at $t_i$ have no knowledge of the BV, so they keep moving and arrive at nodes $(x, y+1)$ and $(x, y-1)$ at $t_{i+2}$ when they are informed of the location of the new formed BV. One of the agents $a$ and $b$ should move to the new formed BV to decontaminate it while the other stops moving at $t_{i+3}$. In order to avoid conflict, we always employ the agent $a$ (the agent who observes that the BV is in its SOUTH) to move to the new formed BV. (see Fig\ref{fig:casetwo}) {(\bf conflict for who ? The agents do not know who is $a$ and who is $b$)}
+\item Case 2: When $x=d_1$, $2<y<d_2-1$ (a border node becomes a new formed BV), then the agents residing in node $(x-1, y+1)$, $(x-1, y-1)$ and $(x-2, y)$  (say  $a,b,c$)  receive a BV clone at time $t_i$. As above, they move EAST for one step and stop. The agents residing in nodes $(x-2, y+1)$ and $(x-2, y-1)$ (say  $a,b$) at $t_i$ have no knowledge of the BV, so they keep moving and arrive at nodes $(x, y+1)$ and $(x, y-1)$ at $t_{i+2}$ when they are informed of the location of the new formed BV. 
+One of the agents  should move to the new formed BV to decontaminate it while the other stops moving at $t_{i+3}$. In order to avoid conflict, we always employ the agent  who observes that the BV is in its SOUTH (say agent $a$) to move to the new formed BV  (see Fig \ref{fig:casetwo}).
 \begin{figure} [H]
   \centering 
   \subfigure[$t_i$]{ 
@@ -174,7 +175,7 @@ route of $c$: $(x-1, y)(at\ t_{i+2}{\rightarrow}(x, y)(at\ t_{i+5})$.
   \subfigure[$t_{i+4}$]{ 
     \label{fig:casethree4:e} %% label for second subfigure 
     \includegraphics[width=2.5in]{figures/casethree4.png}}
-     \subfigure[$t_{i+5}$)]{ 
+     \subfigure[$t_{i+5}$]{ 
     \label{fig:casethree5:e} %% label for second subfigure 
     \includegraphics[width=2.5in]{figures/casethree5.png}}
   \caption{Arrangement of the agents in the  elimination phase when the new formed BV resides in a border node(when $y=1$ or $y=d_2-1$)} 
@@ -189,11 +190,11 @@ route of $c$: $(x-1, y)(at\ t_{i+2}{\rightarrow}(x, y)(at\ t_{i+5})$.
     \label{fig:casefour0:a} %% label for first subfigure 
     \includegraphics[width=2.5in]{figures/casefour0.png}} 
 % \hspace{1in} 
-  \subfigure[$T(t_i+1)$]{ 
+  \subfigure[$t_{i+1}$]{ 
     \label{fig:casefour1:b} %% label for second subfigure 
     \includegraphics[width=2.5in]{figures/casefour1.png}}
  \hspace{1in} 
-  \subfigure[$T(t_i+2)$]{ 
+  \subfigure[$t_{i+2}$]{ 
     \label{fig:casefour3:c} %% label for second subfigure 
     \includegraphics[width=2.5in]{figures/casefour3.png}}
 %      \hspace{1in} 
@@ -207,11 +208,10 @@ route of $c$: $(x-1, y)(at\ t_{i+2}{\rightarrow}(x, y)(at\ t_{i+5})$.
 
 \noindent{\bf Analysis and Comparisons}
 \begin{theorem}
-Algorithm $PBVD-2G$  performs a decontamination of a mesh (size of $n=d_1\times d_2$) using $k=2(d_1+1)$ $(d_1=min(d_1, d_2))$ agents $(2(\sqrt{n}+1)$ agents in the worst case) and at most 1 casualties. 
+Algorithm $PBVD-2G$  performs a decontamination of a mesh (size of $n=d_1\times d_2$) using $k=2(d_1+1)\,(d_1=min(d_1, d_2))$ agents,\,$(2(\sqrt{n}+1)$ agents in the worst case) and at most 1 casualties. 
 \end{theorem}
 \begin{proof}
-Let $v=(x, y)$ be the node containing the BV. When one of the agent in the exploring group moves to $v$, it will be destroyed and the BV will move to all neighbours of $v$. If $x=1$, then the neighbours $(x, y+1)$, $(x, y-1)$ and $(x+1, y)$ are protected by agents and neighbour $(x-1, y)$ actually does not exist; if $x>1$, then neighbours $(x, y+1)$, $(x, y-1)$ and $(x-1, y)$ are protected by agents. So when the clones of BV moves to the neighbours of $v$, those contain an agent will not be infected by the BV clone; this means that the BV can safely move only to the unexplored neighbours of $v$, of which are at most one. In other words, after $v$ is explored, at most one BV node is formed. According to our elimination strategy, the new formed BV node can be surrounded and destroyed using at most five agents: one to enter a BV and four to protect the neighbours. Since we have one new formed BV, the number of agents participating in the elimination phase is at most five. In addition to the agent destroyed by the original BV, the number of agent needed to complete the elimination phase is at least six. Since we employ $k=2d_1+2$ ($d_1\geq 3$) which means at the beginning we have at least eight agents, so $2d_1+2$ agents are enough for the decontamination algorithm. In the worst case (in a square mesh where $d_1=d_2$, the number of agent is equal to $2\sqrt{n}+2$.)
-({\bf are you assuming  $d_1 = \sqrt n $ ? or you mean to say that this is the worst case ? In fact, one would chose to put the agents on  the smallest dimension and the worst case is when the dimensions are the same, i.e. $\sqrt n$ }).
+Let $v=(x, y)$ be the node containing the BV. When one of the agent in the exploring group moves to $v$, it will be destroyed and the BV will move to all neighbours of $v$. If $x=1$, then the neighbours $(x, y+1)$, $(x, y-1)$ and $(x+1, y)$ are protected by agents and neighbour $(x-1, y)$ actually does not exist; if $x>1$, then neighbours $(x, y+1)$, $(x, y-1)$ and $(x-1, y)$ are protected by agents. So when the clones of BV moves to the neighbours of $v$, those contain an agent will not be infected by the BV clone; this means that the BV can safely move only to the unexplored neighbours of $v$, of which are at most one. In other words, after $v$ is explored, at most one BV node is formed. According to our elimination strategy, the new formed BV node can be surrounded and destroyed using at most five agents: one to enter a BV and four to protect the neighbours. Since we have one new formed BV, the number of agents participating in the elimination phase is at most five. In addition to the agent destroyed by the original BV, the number of agent needed to complete the elimination phase is at least six. Since we employ $k=2d_1+2$ ($d_1\geq 3$) which means at the beginning we have at least eight agents, so $2d_1+2$ agents are enough for the decontamination algorithm. In the worst case (which is the case of a  square mesh where $d_1=d_2$) the number of agent is equal to $2\sqrt{n}+2$.
 \end{proof}
 Let us now consider the number of movements.
 \begin{theorem}
@@ -282,9 +282,9 @@ Let us  now have a brief review of the  BVD-qG strategy:  there are two agents e
 
 %We have map the $``d_1 \times \ldots \times d_p" (1\leq p\leq q)$ agents into one ``big agent". 
 
-{\bf This part is not clear}. Assume that we employ a ``p dimensional" agent group (which contains $d_1 \times \ldots d_q$), then the coordinates of the agents are $(x_1, \ldots, x_p, \ldots, x_q)$, $(1\leq x_1\leq d_1, \ldots, 1\leq x_p\leq d_p, x_{p+1}=0, \ldots, x_q=0)$. Then the coordinates of the ``big agent" in the $q-p$ dimensional grid is $(x_{p+1},\ldots, x_q)$.
-The first $p$ dimensional coordinates of the agents would not change in the whole exploring phase, but from $(p+1)^{th}$ dimensional coordinates, they make the same change as the ``big agent". More specifically, the $(p+1)^{th}$ of the agents make the same change as the first dimensional coordinate of the ``big agent"; the $(p+2)^{th}$ of the agents make the same change as the second dimensional coordinate of the ``big agent";\ldots. 
-Assume that we now employ four agents(two agents are viewed as the LEA in the BVD-qG; two agents are viewed as the EA in the BVD-qG) to explore the 4-dimensional grid (they traverse the grid with the same routes following ``four step cautious walk"), then the routes of the agents are as below (see Fig.\ref{fig:grouproute}):
+Assume that we employ a ``p dimensional" agent group, which consists of $d_1 \times \ldots d_q$ agents with coordinates: $(x_1, \ldots, x_p, \ldots, x_q)$, $(1\leq x_1\leq d_1, \ldots, 1\leq x_p\leq d_p, x_{p+1}=0, \ldots, x_q=0)$. Then the coordinates of the ``big agent" in the $q-p$ dimensional grid are  $(x_{p+1},\ldots, x_q)$.
+The first $p$ dimensional coordinates of the agents would not change in the whole exploring phase, but from that $(p+1)^{th}$ dimensional coordinates, they  change as the ``big agent" changes. More specifically, the coordinates of the  $(p+1)^{th}$ dimension   of the agents make the same change as the first dimensional coordinate of the ``big agent"; the coordinates of the  $(p+2)^{th}$  dimension of the agents make the same change as the second dimensional coordinate of the ``big agent", and so on. 
+Assume  now that we   employ four agents (two agents are viewed as the LEA in the BVD-qG; two agents are viewed as the EA in the BVD-qG) to explore the 4-dimensional grid (they traverse the grid with the same routes following ``four step cautious walk"), then the routes of the agents are as below (see Fig.\ref{fig:grouproute}):
 \begin{figure} [H]
   \centering 
   \subfigure[The route of the ``big agent"(LEA in the BVD-qG)]{ 
@@ -298,11 +298,11 @@ Assume that we now employ four agents(two agents are viewed as the LEA in the BV
   \label{fig:grouproute} %% label for entire figure 
 \end{figure}
 
-\noindent{\bf Analysis and Comparing}
+\noindent{\bf Analysis and Comparisons}
 We now compare the time cost, the number of movement and the casualties with different number of agents we employ. (Assuming that we are in a $d_1\times \ldots \times d_q$ q-dimensional grid)
-Theorems in \cite{Cai} show us that the protocol BVD-qG performs a BV decontamination of a q-dimensional Grid using $3q+1$ agents and at most $q+1$ casualties with at most $O(qn)$ movements and $\Theta(n)$ time. Based on these theorems, we now discuss the number of agents, the casualties, the time cost and the number of movement in PBVD-qG.
+The theorems in \cite{Cai} show us that the protocol BVD-qG performs a BV decontamination of a q-dimensional Grid using $3q+1$ agents with at most $q+1$ casualties and  at most $O(qn)$ movements and $\Theta(n)$ time. Based on these theorems, we now discuss the number of agents, the casualties, the time cost and the number of movement in PBVD-qG.
 
-({\bf You could derive a trade off. Instead of choosing to use   $2\times d_1\times \ldots d_p (1\leq p\leq q)$ agents, you can write it in a generic way: using X agents the complexity would be .....})
+ 
 \begin{theorem}
 PBVD-qG performs a decontamination of a q-dimensional grid(size of $n=d_1\times \ldots d_p(d_i>2, 1\leq i\leq p)$ using $2\times d_1\times \ldots d_p (1\leq p\leq q)$ agents and at most $q-p+1$casualties, with at most $O(qn)$ and $\Theta(\frac{n}{d_1\times\ldots\times d_p})$ time.
 \end{theorem}
@@ -319,28 +319,36 @@ Initially, 2$d_1$ agents are placed at $v_{0,i}$, $v_{1,i}$ $(i=0,\ldots,d_1-1)$
 %\iffalse
 \begin{figure} [H]
   \centering 
-  \subfigure[T(1)]{ 
+  \subfigure[$t_0$]{ 
     \label{fig:torus1:a} %% label for first subfigure 
-    \includegraphics[width=3in]{figures/torus1.png}} 
+    \includegraphics[width=2.8in]{figures/torus1.png}} 
 %  \hspace{1in} 
-  \subfigure[T(2)]{ 
+  \subfigure[$t_1$]{ 
     \label{fig:torus2:b} %% label for second subfigure 
-    \includegraphics[width=3in]{figures/torus2.png}}
+    \includegraphics[width=2.8in]{figures/torus2.png}}
     \hspace{1in} 
-  \subfigure[T(3)]{ 
+  \subfigure[$t_2$]{ 
     \label{fig:torus3:c} %% label for second subfigure 
-    \includegraphics[width=3in]{figures/torus3.png}}
+    \includegraphics[width=2.8in]{figures/torus3.png}}
 %      \hspace{1in} 
-  \subfigure[T(4)]{ 
+  \subfigure[$t_3$]{ 
     \label{fig:torus4:d} %% label for second subfigure 
     \includegraphics[width=3in]{figures/torus4.png}}
       \hspace{1in} 
-  \subfigure[T(5)]{ 
+  \subfigure[$t_4$]{ 
     \label{fig:torus5:e} %% label for second subfigure 
-    \includegraphics[width=3in]{figures/torus5.png}}
-     \subfigure[T(6)]{ 
+    \includegraphics[width=2.8in]{figures/torus5.png}}
+     \subfigure[$t_5$]{ 
     \label{fig:torus6:e} %% label for second subfigure 
-    \includegraphics[width=3in]{figures/torus6.png}}
+    \includegraphics[width=2.8in]{figures/torus6.png}}
+    \hspace{1in} 
+  \subfigure[$t_6$]{ 
+    \label{fig:torus3:c} %% label for second subfigure 
+    \includegraphics[width=2.8in]{figures/torus7.png}}     
+    %\hspace{1in} 
+  \subfigure[$t_7$]{ 
+    \label{fig:torus4:d} %% label for second subfigure 
+    \includegraphics[width=2.8in]{figures/torus8.png}}
   \caption{Arrangement of agents PBVD-T} 
   \label{fig:torus} %% label for entire figure 
 \end{figure}
@@ -350,12 +358,11 @@ Initially, 2$d_1$ agents are placed at $v_{0,i}$, $v_{1,i}$ $(i=0,\ldots,d_1-1)$
 The PBVD-T performs a decontamination of a torus (size of $n=d_1\times d_2(d_1>2,d_2>2$) using $3d_1+2$(($d_1=min(d_1,d_2)$, in the worst case, $d_1=\sqrt{n}$) agents and at most 1 casualties with at most $2n-\sqrt{n}+O(1)$ movements and at most $\sqrt{n}+11$.
 \end{theorem}
 \begin{proof}
-To complete the exploration and the elimination, we need $2(d_1+1)$ agents which has been proven in Theorem 2({\bf which theorem ?}), plus  $d_1$ agents to guard the first column, we need $3d_1+2$ (which is $3\sqrt{n}+2$ in the worst case) agents. {\bf ???} Proof of the casualties, the number of movement and the time cost can simply follow Theorem 2.
+To complete the exploration and the elimination, we need $2(d_1+1)$ agents which has been proven in Theorem 2, plus  $d_1$ agents to guard the first column, we need $3d_1+2$ agents (which is $3\sqrt{n}+2$ in the worst case).  The computation of casualties,  number of movements, and   time   follow from Theorem 2.
 \end{proof}
 
 
 
 
-{\bf General comment: colors are nice and we should keep them, but there should be also another way for the reader to distinguish nodes with different roles, for example shape of the node ... Some examiners  print the thesis.}
 
 
