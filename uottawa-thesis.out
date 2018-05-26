@@ -37,4 +37,8 @@
 \BOOKMARK [1][-]{section.6.2}{Parallel Strategies for BV Decontamination in Arbitrary Graph}{chapter.6}% 37
 \BOOKMARK [2][-]{subsection.6.2.1}{Flood Strategy}{section.6.2}% 38
 \BOOKMARK [2][-]{subsection.6.2.2}{Castle First Strategy}{section.6.2}% 39
-\BOOKMARK [1][-]{section.6.3}{Analysis and Comparing}{chapter.6}% 40
+\BOOKMARK [1][-]{section.6.3}{Experimental Study on Black Virus Decontamination on Arbitrary graph}{chapter.6}% 40
+\BOOKMARK [1][-]{section.6.4}{Introduction of the simulator}{chapter.6}% 41
+\BOOKMARK [2][-]{subsection.6.4.1}{Simulation Model}{section.6.4}% 42
+\BOOKMARK [2][-]{subsection.6.4.2}{Simulation Sample graph}{section.6.4}% 43
+\BOOKMARK [1][-]{section.6.5}{Simulation Results}{chapter.6}% 44

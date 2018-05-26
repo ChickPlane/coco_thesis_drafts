@@ -41,4 +41,8 @@
 \contentsline {section}{\numberline {6.2}Parallel Strategies for BV Decontamination in Arbitrary Graph}{64}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Flood Strategy}{64}{subsection.6.2.1}
 \contentsline {subsection}{\numberline {6.2.2}Castle First Strategy}{69}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}Analysis and Comparing}{79}{section.6.3}
+\contentsline {section}{\numberline {6.3}Experimental Study on Black Virus Decontamination on Arbitrary graph}{80}{section.6.3}
+\contentsline {section}{\numberline {6.4}Introduction of the simulator}{80}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Simulation Model}{80}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Simulation Sample graph}{81}{subsection.6.4.2}
+\contentsline {section}{\numberline {6.5}Simulation Results}{82}{section.6.5}

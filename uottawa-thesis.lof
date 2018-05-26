@@ -36,5 +36,7 @@
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Examples of Castles\relax }}{70}{figure.caption.41}
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Exploration phase of the Exploration Phase\relax }}{71}{figure.caption.42}
 \contentsline {figure}{\numberline {6.6}{\ignorespaces An example shows that if there is a BV in the castle, in some cases not all the guarding agents can receive a BV clone\relax }}{75}{figure.caption.43}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces An example of ``FirstPatrol"\relax }}{76}{figure.caption.44}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces An example of ``FirstPatrol"\relax }}{76}{figure.caption.44}
 \contentsline {figure}{\numberline {6.7}{\ignorespaces An example of ``FirstPatrol" \relax }}{77}{figure.caption.45}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Comparison between GREEDY Exploration and Castle First Strategy \relax }}{83}{figure.caption.46}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Ratio of the time and the agent cost of Castle First Strategy by one group to GREEDY Exploratioin\relax }}{86}{figure.caption.47}

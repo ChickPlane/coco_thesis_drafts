@@ -170,11 +170,12 @@ When the arrangement is done, the LA resides in the last node needing guarded an
 So after the ``attacking" by the ``Attacking agent", the LA should execute the ``Double Patrol". Now we introduce what is the ``Double Patrol".
 \begin{enumerate}
 \item 
-The LA first computes a route to traverse all the castle nodes, (say the route is $castle\_0\rightarrow castle\_1 \rightarrow\ldots, castle\_x$ assuming that there are $x$ nodes in the castle). In this first ``patrol" (see Fig.\ref{fig:FirstPatrol}), the LA first leaves a flag saying ``First Patrol" and then moves to one castle node, it tells the SA residing in that castle node to collect the SAs residing in all its lower $SNR$ neighbours and finally move to that castle node with all these collecting SAs. Also, when the SA collects the ones residing in the lower $SNR$ neighbours, it places a flag on that neighbour node saying ``First Patrol". After the LA traverses all the castle nodes, it can easily know whether there is a BV in the castle: if there is no BV in the castle, then there should be one agent residing in every castle node and the LA would start the ``second patrol". if not, then there is a BV and the clones of it have move to all higher $SNR$ neighbours of this node. If the LA realizes that there is a BV, it stops traversing the left castle nodes.\\
+The LA first computes a route to traverse all the castle nodes, (say the route is $castle\_0\rightarrow castle\_1 \rightarrow\ldots, castle\_x$ assuming that there are $x$ nodes in the castle). In this first ``patrol" (see Fig.\ref{fig:FirstPatrol}), the LA first leaves a flag saying ``First Patrol" and then moves to one castle node, it tells the SA residing in that castle node to collect the SAs residing in all its lower $SNR$ neighbours and finally move to that castle node with all these collecting SAs. Also, when the SA collects the ones residing in the lower $SNR$ neighbours, it places a flag on that neighbour node saying ``First Patrol". After the LA traverses all the castle nodes, it can easily know whether there is a BV in the castle: if there is no BV in the castle, then there should be one agent residing in every castle node and the LA would start the ``second patrol". if not, then there is a BV and the clones of it have move to all higher $SNR$ neighbours of this node. If the LA realizes that there is a BV, it stops traversing the left castle nodes.\\ 
 %we know that in both situations, the LA should move back to the first castle node with the route $castle\_0\rightarrow castle\_1 \rightarrow\ldots, castle\_x$ and when it moves to every castle node, it should wait until all the guarding agents of that castle node being collected and then moves to the next castle node. When the LA moves back to the first castle node, the ``First Patrol" finishes. 
 
 \begin{figure} [H]
   \centering 
+  \ContinuedFloat
   \subfigure[$T_a$]{ 
     \label{fig:FirstPatrol1:a} %% label for first subfigure 
     \includegraphics[width=2.5in]{figures/FirstPatrol1.png}} 
@@ -201,7 +202,7 @@ The LA first computes a route to traverse all the castle nodes, (say the route i
   \label{fig:FirstPatrol} %% label for entire figure 
 \end{figure}
 \begin{figure} [H]
-    \ContinuedFloat
+    
   \centering 
     \subfigure[$T_{a+6}$]{ 
     \label{fig:FirstPatrol7:g} %% label for first subfigure 
@@ -252,7 +253,144 @@ So the LA computes the routes from where it resides to all the nodes needing gua
 
 
 
-\section{Analysis and Comparing}
+\section{Experimental Study on Black Virus Decontamination on Arbitrary graph}
+In this section, we experimentally investigate the problem of black virus decontamination by studying the Castle First Strategy described in Chapter 6, and comparing it with the Greedy Exploration Algorithm \cite{Cai}.
+The simulator we built is called ArbiBV. We introduce its modelling methods and execution. The behaviour, properities and performance have been investigated through an extensive number of computer simulation runs. The simulation results confirm the excepted behaviour/properties of the solution protocol. 
+%In particular, the result of the experiment has shown the following conclusion:
+%\begin{enumerate}
+%\item
+%\item
+%\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%????????? ???
+\section{Introduction of the simulator}
+\subsection{Simulation Model}
+Our simulator only operates the process in the exploration phase, since the parameters (for example, the number of agent, the execution time \ldots) can be easily derived (the time in elimination phase is $O(1)$ ) after the location of the BV is exposed. In the simulator, we do not set a BV, so the agents have to explore the whole graph. The environment where the agents operate is a network modeled as a simple arbitrary undirected connected graph and each node has an unique ID (without loss of generality, from $1$ to $n$ where n is the number of node in the graph) . An agent is modelled as an entity with computational or information processing capability. All the agents follow the same protocol while the role of them and the state can be different (for example, some of the agents are Leader Agent (LA) while some of the agents are Shadowing Agent(SA)) Also, our simulator describes the movement of the agent through language but not through Graphical User Interface(GUI). For example, "Leader Agent in group 1 moves from node $x$ to node $y$". By doing this, we can monitor the movement of the agents. In each run of the simulator, we provide the number of node, the average degree of the graph, and the simulator generates a arbitrary graph based on that. After each run, the simulator calculates the number of agent, the units of time.          
+
+\subsection{Simulation Sample graph} 
+In this section, we compare the number of agents and the execution time between the Castle First Strategy and  the sequential strategy\cite{Cai}, also between Castle First Strategy with different settings (sending different number of group to explore the graph). When we compare our strategy with the sequential strategy, we run our protocol in different graph setting (the size of the graph are 20, 40, 60, 80, 100 nodes and network connectivity densities are 10\%, 20\%, \ldots, 100\%). The network connectivity density is defined as the ratio of the number of links of a graph to the number of links in complete graph with the same nodes. For each specific setting (size of the graph, the network connectivity densities and number of group of agent), we run the experiment for 50 times: the average execution time and the average number of agent needed would be the result of the execution time and the number of agent of this setting. So overall, we run 9020 experiments to obtain statistic data of our strategy. By doing the comparison, we are interested in observing how faster can our strategy be than the sequential strategy and in the cost (more agents) that we should pay for the faster speed. 
+
+When we compare the results of different strategy settings of Castle First Strategy, we are interested in the following aspects: 
+\begin{enumerate}
+\item What is the relationship between the execution time and the number of agent group that completing the strategy;
+\item Since in our strategy, given a certain group of agent group, we except them to explore as many castles at the same time as possible (the advantage of distributed strategy would be more obvious), we also investigate how the efficiency of the the strategy depending on various topologies factors (the size of node, the connectivity, \ldots) .
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%?????????????
+
+
+\section{Simulation Results}
+\noindent{\bf Comparison between the Castle First Strategy and the Sequential Strategy (GREEDY Exploration)}\\
+As a worst case scenario, we let the exploration proceed until all nodes without placing any black virus. We do the comparison of the Castle First Strategy and the GREEDY Exploration. For each size category, we create 10 connectivity levels and run our protocol with the number of group ranging from one to four.
+
+Simulation results demonstrate Castle First Strategy is never slower than the GREEDY Exploration even when only one group of agent explore the graph and the cost (more agents) that we pay is acceptable. The time needed to finish the exploration of the graph in GREEDY Exploration and Castle First Strategy (where number of exploring group ranging from one to four) is as shown in Figure\ref{fig:C_Move} 
+
+\begin{figure} [H] 
+  \centering 
+  \subfigure[size of graph:20 nodes ]{ 
+    \label{fig:C_Move1:a} %% label for first subfigure 
+    \includegraphics[width=2.2in]{figures/C_Move1.png}} 
+%  \hspace{1in} 
+  \subfigure[size of graph:40 nodes]{ 
+    \label{fig:C_Move2:b} %% label for second subfigure 
+    \includegraphics[width=2.2in]{figures/C_Move2.png}}
+    \hspace{1in} 
+  \subfigure[size of graph:60 nodes]{ 
+    \label{fig:C_Move3:c} %% label for second subfigure 
+    \includegraphics[width=2.2in]{figures/C_Move3.png}}
+%      \hspace{1in} 
+  \subfigure[size of graph:80 nodes]{ 
+    \label{fig:C_Move4:d} %% label for second subfigure 
+    \includegraphics[width=2.2in]{figures/C_Move4.png}}
+      \hspace{1in} 
+  \subfigure[size of graph:100 nodes]{ 
+    \label{fig:C_Move5:e} %% label for second subfigure 
+    \includegraphics[width=2.2in]{figures/C_Move5.png}}
+      \caption{Comparison between GREEDY Exploration and Castle First Strategy } 
+  \label{fig:C_Move}%% label for entire figure 
+\end{figure}
+From Figure\ref{fig:C_Move}, we have the following observations of the time:
+\begin{enumerate}
+\item Sequential Strategy(GREEDY Exploration) vs Castle First Strategy: 
+
+In all size of graph, the time of the GREEDY Exploration increases gradually to a maximum at 40\%-60\% connectivities, after that, it gradually decreases. It should be pointed out that the time costs are close for different graphs at 100\% connectivity level and are comparable or less than those at all 10\% connectivity level. While in the Castle First Strategy, the time cost first increases slightly and then decreases gradually to a minimum at 28\%-40\% connectivities, after that, they gradually increase to a number comparable to those at all 10\%-20\% and then decrease sharply to reach a minimum when the connectivity is 100\%. Note that though experiencing an increase from connectivity of 10 to 20 when the size of node is 20, the time increases less and less obviously as the size of the graph grows (except the time cost by the  ``one group" agent in all size of graph which always experiences decreasing until it reaches the local minimum). When the size of graph is 80, the time cost of the Castle First Strategy executed by more than one group stays at almost the same level from connectivity of 10 to 20. When the size of the graph is 100, the time directly decreases to the local minimum. This is reasonable because as the size of the graph grows, even at the same connectivity, graph with more nodes is denser, so when the agents move from one castle to another, they have shorter route to choose which saves time. The behaviour of the ``one group" agent are largely influenced by this factor, so except in the graph of 20 nodes, the time cost by  ``one group" agent does not experience an slight increase but decreases directly to the local minimum.    
+
+After reaching the local minimum, the movement starts to increase. The reason is that though there are more shorter routes to choose as the connectivity increases when moving to the next castle which saves more time, this advantage becomes less obvious because the length of the route from one node to another node does not change a lot as the connectivity increases. At the same time, as the graph becomes denser, the castles are becoming larger, so we need to complete the ``Double Patrol" in large castles which costs lots of time. The result of the counteracting is that the movement increases after the local minimum movement. 
+
+When the connectivity is larger than 90\%, the situation is that except the home base, the combination of the other nodes becomes a extreme large castle, so that in the exploration phase, the only thing we need to do is to explore one castle which results in the decrease of movement.  
+
+\item Performance of the Castle First Strategy when the number of agent group executing the strategy is different. 
+
+From the Fig.\ref{fig:C_Move}, we can see that when the connectivity is larger than 30\%, then performances of movement are almost the same no matter how many groups we send to explore the graph. This is reasonable because according to our algorithm, the castles in a graph should be explored strictly sequentially following some rules, which means in some case, though there are many castles unexplored and many group of agent not exploring the castle or on the way to explore the castle, these agent group cannot explore these unexplored castles because they have to wait until some castles are explored first. At this time, even we sent more agent group to explore the graph, we cannot decrease the time.
+
+Also, another important thing is that when the connectivity is larger than 20 (or maybe less), the time cost by different number of group of agent is similar (almost the same). In another word, we prefer to use one group of agent executing the Castle First Strategy when the connectivity is larger than 20\%. 
+
+
+\end{enumerate} 
+
+Based on the statistics presented in Fig.\ref{fig:C_Move}, we now compare the time and the number of agent used by these two strategies. Since the time cost between the Castle First Strategy executed by different group of agent is similar from connectivity 10\%to 100\% especially when the connectivity is larger than 20\% , so we only compare the statistics between the GREEDY Exploration and the the Castle First Strategy with one group of agent. 
+In figure \ref{fig:C_AT}, we give the ratio of the number of agent used in Castle First Strategy using one group of agent to the number of agent used in GREEDY Exploration. Also we give the ratio of the time cost by Castle First Strategy using one group of agent to the time cost by the GREEDY Exploration. 
+
+\begin{figure} [H]
+  \centering 
+  \subfigure[Ratio of the number of agent used in Castle First Strategy using one group of agent to the number of agent used in GREEDY Exploration]{ 
+    \label{fig:C_AT1:a} %% label for first subfigure 
+    \includegraphics[width=2.5in]{figures/C_AT1.png}} 
+    \hspace{1in} 
+  \subfigure[Ratio of the time cost by Castle First Strategy using one group of agent to the time cost by the GREEDY Exploration]{ 
+    \label{fig:C_AT2:b} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/C_AT2.png}}
+    \hspace{1in} 
+    \caption{Ratio of the time and the agent cost of Castle First Strategy by one group to GREEDY Exploratioin} 
+  \label{fig:C_AT} %% label for entire figure 
+\end{figure}      
+As we can see on the figure \ref{fig:C_AT}, in (a), the ratio is equal to number of agent used in Castle First Strategy using one group of agent/ the number of agent used in GREEDY Exploration (for convenience, we call it the ratio 1)  while in (b), the ratio is equal to the time cost by Castle First Strategy using one group of agent/ the time cost by the GREEDY Exploration (for convenience, we call it the ratio 2).
+
+From the Fig\ref{fig:C_AT}, we have the following observations:
+\begin{enumerate}
+\item As the connectivity grows, we can see that the ratio 1 is decreasing and when the connectivity is larger than 30\%, the ratio does not change a lot. When the connectivity is larger than 70, the ratio is near 1. This tell us that when the connectivity is smaller than 20, we use much more agents (up to 5.5 times) than the GREEDY Exploration while when the connectivity is between 30 to 60, we use 1.2 to 2.5 times as many agents as that in the GREEDY Exploration. When the connectivity exceeds 70, we use almost the same number of agent as that used in GREEDY Exploration.   
+\item The ratio 2 first increases to the local maximum when the connectivity reaching 30\% to 50\%, then decreases to the local minimum when the connectivity reaching 90\%, then increases sharply to reach a maximum when the connectivity reaching 100\%.
+\item Based on the two observations above, we come to an conclusion that when the connectivity of the graph reach 30\% to 50\%, the Castle First Strategy using one group of agent work most efficiently.
+
+\end{enumerate}
+Now we would like to focus on the graph with small connectivity, it is obvious that when the size of the graph is different, even with the same connectivity, the degrees of the nodes are different. The average degree of a graph is an important factor because it influences how the castles of the graph form. Now we would like to introduce the factor ``Average Degree" and to see if the results of the Castle First Strategy executed by different number group of agent have large difference. Note that from the conclusion above, we know that when the connectivity is larger than 20\% (or less), there are no big difference between the the time finished by different group of agent, so now we would like to start from small degree and increase by 0.5 degree at a time until no big difference appears. 
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
