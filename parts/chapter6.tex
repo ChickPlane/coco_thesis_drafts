@@ -4,7 +4,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Introduction}
-In \cite{Cai}, Cai proposes two exploration strategies: Greedy Exploration and Threshold Exploration, both spread optimal and total number of agents asymptotical optimal. Since these strategies are sequential, they are time consuming($O(\Delta n^2)$).  In order to explore the graph parallelly, we propose two different strategies: \\
+In \cite{cai}, Cai proposes two exploration strategies: Greedy Exploration and Threshold Exploration, both spread optimal and total number of agents asymptotical optimal. Since these strategies are sequential, they are time consuming($O(\Delta n^2)$).  In order to explore the graph parallelly, we propose two different strategies: \\
 (1) Flood Strategy\\
 (2) Castle First Strategy\\
 The general idea of the Flood Strategy is simple, supposing that an agent resides in node $v$, and it has $i$ neighbours excepted to be explored, then it simply clones $v$ agents and send them to its neighbours. In Castle First Strategy, we build castles which is a node or the combination of several nodes(rules are introduced later), the exploration phase can be viewed as the combination of many smaller scale exploration in the graph which begins with the location of one of the exploring group and ends with one of the unexplored castles. After all the castles are explored, all the nodes in the graph are explored. The general exploring strategy for these two strategies is based on the one described in Chapter 3 which consists of performing a {\em Shadowed Exploration} phase to locate the BV, followed by a {\em Surrounding and Elimination} phase to eliminate the cloned BVs. 
@@ -81,7 +81,7 @@ Now we introduce how agents residing in different positions move in the Eliminat
 \item Rule 2: For all of the agents residing in node $v$'s neighbours with $SNR$ equal to $a-1$ (say the number of them is $y$), they receive clones and realize the location of the BV and would move to $v$ at $T_{i+2}$. Let us denote by $z$ the number of $v$'s neighbours with $SNR$ equal to $a+1$, then if $y< z+1$, one of the agents residing in node $v$ should clone another $z+1-y$ agents and then $z$ agents move to $v$'s neighbours with $SNR$ equal to $a+1$ at $T_{i+4}$.
 \end{enumerate}
 
-Note that in our assumption, any node does not disconnect the graph, so there should be other routes from the homebase to the new BV nodes except through the original BV node. So when $z$ agents are sent to $v$'s neighbours with $SNR$ equal to $a+1$ at $T_{i+4}$, some other agents move to these nodes's higher $SNR$ neighbours at the same time, which ensure that all the neighbours of the new formed BVs are guarded when they are triggered. 
+Note that in our assumption, any node does not disconnect the graph (for example, if the nodes in the res circle does not connect other nodes except nodes shown in the graph, then node 5 disconnect the graph), so there should be other routes from the homebase to the new BV nodes except through the original BV node. So when $z$ agents are sent to $v$'s neighbours with $SNR$ equal to $a+1$ at $T_{i+4}$, some other agents move to these nodes's higher $SNR$ neighbours at the same time, which ensure that all the neighbours of the new formed BVs are guarded when they are triggered. 
 
 See Fig\ref{fig:Arbi3}. For convenience of description, we give every node in the graph a distinct ID from 1 to 13. As shown in the picture, when the BV is triggered, the clones spread to all neighbours of node 3, and node 4 and 5 become new BV nodes while nodes 1, 2 and 12 destroy a clone respectively and realize that the original BV resides in node 3. 
 
@@ -92,6 +92,14 @@ See Fig\ref{fig:Arbi3}. For convenience of description, we give every node in th
 \end{figure}    
 
 In Fig.\ref{fig:Arbi3}, agent residing in node 10 is a Witness Agent and because of the 3-hop visibility, it can ``see" that there is no agent residing in node 3 but there are agents residing in node 3's neighbours which are node 1 and node 2. By this way, it knows that the original BV resides in node 3 and it stops moving and cloning. Also, according to the Rule1, it still has a higer $SNR$ neighbour (node 9) which does not contain a BV, so for this node, it continue to explore it following the rule in the exploration phase. For example, it sends an agent to node 9, then all the agent except one move to node 9. After that, one agent is sent to node 8. 
+
+\begin{theorem}
+Assuming that the diameter of the graph is $h$, the Flood Strategy performs the exploration phase with $2*h$ unit of time.
+\end{theorem}
+\begin{proof}
+According to the rules in the exploration phase, the agents keep exploring when they have no more higher $SNR$ neighbours, which means the exploration phase ends when the node(s) with the highest $SNR$ is explored and this $SNR$ should be the diameter of the graph. Since exploring nodes with the same $SNR$ needs 2 units of time, the exploration phase needs $2*h$ unit of time.
+\end{proof}
+
 
 %For convenience, let us denote by $a$ the $SNR$ of the original BV node. Since in our assumption, any node does not disconnect the graph, so the following situation would not happen:
 %\begin{enumerate}
@@ -254,7 +262,7 @@ So the LA computes the routes from where it resides to all the nodes needing gua
 
 
 \section{Experimental Study on Black Virus Decontamination on Arbitrary graph}
-In this section, we experimentally investigate the problem of black virus decontamination by studying the Castle First Strategy described in Chapter 6, and comparing it with the Greedy Exploration Algorithm \cite{Cai}.
+In this section, we experimentally investigate the problem of black virus decontamination by studying the Castle First Strategy described in Chapter 6, and comparing it with the Greedy Exploration Algorithm \cite{cai}.
 The simulator we built is called ArbiBV. We introduce its modelling methods and execution. The behaviour, properities and performance have been investigated through an extensive number of computer simulation runs. The simulation results confirm the excepted behaviour/properties of the solution protocol. 
 %In particular, the result of the experiment has shown the following conclusion:
 %\begin{enumerate}
@@ -267,7 +275,7 @@ The simulator we built is called ArbiBV. We introduce its modelling methods and 
 Our simulator only operates the process in the exploration phase, since the parameters (for example, the number of agent, the execution time \ldots) can be easily derived (the time in elimination phase is $O(1)$ ) after the location of the BV is exposed. In the simulator, we do not set a BV, so the agents have to explore the whole graph. The environment where the agents operate is a network modeled as a simple arbitrary undirected connected graph and each node has an unique ID (without loss of generality, from $1$ to $n$ where n is the number of node in the graph) . An agent is modelled as an entity with computational or information processing capability. All the agents follow the same protocol while the role of them and the state can be different (for example, some of the agents are Leader Agent (LA) while some of the agents are Shadowing Agent(SA)) Also, our simulator describes the movement of the agent through language but not through Graphical User Interface(GUI). For example, "Leader Agent in group 1 moves from node $x$ to node $y$". By doing this, we can monitor the movement of the agents. In each run of the simulator, we provide the number of node, the average degree of the graph, and the simulator generates a arbitrary graph based on that. After each run, the simulator calculates the number of agent, the units of time.          
 
 \subsection{Simulation Sample graph} 
-In this section, we compare the number of agents and the execution time between the Castle First Strategy and  the sequential strategy\cite{Cai}, also between Castle First Strategy with different settings (sending different number of group to explore the graph). When we compare our strategy with the sequential strategy, we run our protocol in different graph setting (the size of the graph are 20, 40, 60, 80, 100 nodes and network connectivity densities are 10\%, 20\%, \ldots, 100\%). The network connectivity density is defined as the ratio of the number of links of a graph to the number of links in complete graph with the same nodes. For each specific setting (size of the graph, the network connectivity densities and number of group of agent), we run the experiment for 50 times: the average execution time and the average number of agent needed would be the result of the execution time and the number of agent of this setting. So overall, we run 9020 experiments to obtain statistic data of our strategy. By doing the comparison, we are interested in observing how faster can our strategy be than the sequential strategy and in the cost (more agents) that we should pay for the faster speed. 
+In this section, we compare the number of agents and the execution time between the Castle First Strategy and  the sequential strategy\cite{cai}, also between Castle First Strategy with different settings (sending different number of group to explore the graph). When we compare our strategy with the sequential strategy, we run our protocol in different graph setting (the size of the graph are 20, 40, 60, 80, 100 nodes and network connectivity densities are 10\%, 20\%, \ldots, 100\%). The network connectivity density is defined as the ratio of the number of links of a graph to the number of links in complete graph with the same nodes. For each specific setting (size of the graph, the network connectivity densities and number of group of agent), we run the experiment for 50 times: the average execution time and the average number of agent needed would be the result of the execution time and the number of agent of this setting. So overall, we run 9020 experiments to obtain statistic data of our strategy. By doing the comparison, we are interested in observing how faster can our strategy be than the sequential strategy and in the cost (more agents) that we should pay for the faster speed. 
 
 When we compare the results of different strategy settings of Castle First Strategy, we are interested in the following aspects: 
 \begin{enumerate}
@@ -348,13 +356,53 @@ From the Fig\ref{fig:C_AT}, we have the following observations:
 \begin{enumerate}
 \item As the connectivity grows, we can see that the ratio 1 is decreasing and when the connectivity is larger than 30\%, the ratio does not change a lot. When the connectivity is larger than 70, the ratio is near 1. This tell us that when the connectivity is smaller than 20, we use much more agents (up to 5.5 times) than the GREEDY Exploration while when the connectivity is between 30 to 60, we use 1.2 to 2.5 times as many agents as that in the GREEDY Exploration. When the connectivity exceeds 70, we use almost the same number of agent as that used in GREEDY Exploration.   
 \item The ratio 2 first increases to the local maximum when the connectivity reaching 30\% to 50\%, then decreases to the local minimum when the connectivity reaching 90\%, then increases sharply to reach a maximum when the connectivity reaching 100\%.
-\item Based on the two observations above, we come to an conclusion that when the connectivity of the graph reach 30\% to 50\%, the Castle First Strategy using one group of agent work most efficiently.
-
+\item Based on the two observations above, we come to an conclusion that when the connectivity of the graph reach 30\% to 50\%, the Castle First Strategy using one group of agent works most efficiently.
 \end{enumerate}
-Now we would like to focus on the graph with small connectivity, it is obvious that when the size of the graph is different, even with the same connectivity, the degrees of the nodes are different. The average degree of a graph is an important factor because it influences how the castles of the graph form. Now we would like to introduce the factor ``Average Degree" and to see if the results of the Castle First Strategy executed by different number group of agent have large difference. Note that from the conclusion above, we know that when the connectivity is larger than 20\% (or less), there are no big difference between the the time finished by different group of agent, so now we would like to start from small degree and increase by 0.5 degree at a time until no big difference appears. 
+
+From the statistics we shown in Fig.6.8, we know that except the performance of one group of agent, the performances of different number of groups are similar even when the connectivity is only 10. Note that we compute the time cost in every 10 connectivity but maybe if we give more precise statistics describing what happening in the first 10 connectivity, the connectivity from where the performance of different number of groups are almost the same is smaller (including the performance of one group). Now we would like to focus on the graph with small connectivity, it is obvious that when the size of the graph is different, even with the same connectivity, the degrees of the nodes are different so we would like to introduce the factor ``Average Degree" and to see if the results of the Castle First Strategy executed by different number of groups of agent have large difference. The average degree of a graph is an important factor because it influences how the castles of the graph form. From the conclusion of Fig.6.8, we know that when the connectivity is larger than 10\%~20\%(or less), there are no big difference between the the time finished by different group of agent, so now we would like to start from small degree of 2.5 and increase by 0.5 degree at a time until there is no big difference appearing (as shown in Fig.\ref{fig:Final})
+
+\begin{figure} [H]
+  \centering 
+  \subfigure[size of graph:50 nodes]{ 
+    \label{fig:Final1:a} %% label for first subfigure 
+    \includegraphics[width=2.5in]{figures/50.png}} 
+    \hspace{1in} 
+  \subfigure[size of graph:100 nodes]{ 
+    \label{fig:Final2:b} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/100.png}}
+    \hspace{1in} 
+      \subfigure[size of graph:150 nodes]{ 
+    \label{fig:Final3:c} %% label for first subfigure 
+    \includegraphics[width=2.5in]{figures/150.png}} 
+    \hspace{1in} 
+  \subfigure[size of graph:200 nodes]{ 
+    \label{fig:Final4:d} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/200.png}}
+    \hspace{1in} 
+      \subfigure[size of graph:250 nodes]{ 
+    \label{fig:Final5:e} %% label for first subfigure 
+    \includegraphics[width=2.5in]{figures/250.png}} 
+    \hspace{1in} 
+  \subfigure[size of graph:300 nodes]{ 
+    \label{fig:Final6:f} %% label for second subfigure 
+    \includegraphics[width=2.5in]{figures/300.png}}
+    \hspace{1in} 
+    \caption{Time cost by different number of group} 
+  \label{fig:Final} %% label for entire figure 
+\end{figure}  
+
+From the statistics we have the following observations: (for convenience, we call the average degree where the difference of time cost by different number of group is large (at least 100 unit of time) the "optimal average degree" ).   
+ 
+\begin{enumerate}
+\item In different size of group, the largest difference of time cost is between the strategy executed by one group and two group of agent, though there are still some decrease when we increase the number of group executing the strategy, it is much smaller. Also, the difference of time executed by different number of group is smaller as the average degree grow.
+
+\item Except the time cost by one group of agent, let us now focus on the performance of other number of group. When the size of the graph is 50, we can see that the performance of different number of group is similar from the beginning(the difference between them is smaller than 50). When the size increases to 100, the optimal average is  2.5. What should be pointed out is that such big difference exists between the time cost by two group and three group of agent. So if we want to execute the strategy and decrease the time, at most two groups of agent are recommended. 
+
+Besides, we also do experiments on graph with larger size. Though the performance of different number of group shows an tendency to be similar when the average degree is larger than 5 from where we do not give the statistics, we can see that there are large difference between time cost by different number of group (even between the time cost  by three group or even four group of agent). This is a good observation because it remind us that as the size of the graph grow, we can to more extent decrease the execution time by increasing the number of agents.
+\end{enumerate}
 
 
-
+   
 
 
   

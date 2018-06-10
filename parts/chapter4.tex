@@ -245,7 +245,7 @@ Table \ref{table:ComparisionPBVD-2GandBVD-2G}  shows a comparison between our st
 Let $M$ be a q-dimensional grid of size $d_1\times\ldots\times d_q$ and let each node of $M$ be denoted by its coordinates $(x_1,\ldots,x_q)$, $1\leq x_i\leq d_q$. The algorithm, called {\em PBVD-qG}, follows a general strategy similar to the one described in Section 4.2.1: a safe exploration with shadowing, followed by a surrounding and elimination phase. Our general idea is as follows: (1) Transform the PBVD-qG problem into a BVD-qG problem (2) Use the BVD-qG strategy to solve the transformed problem.
 
  %
-In \cite{Cai}, the multi-dimensional grid is partitioned into $d_1\times \ldots d_{q-2}$ 2-dimensional grids of size $d_{q-1} \times d_q$. Each of these grids is explored using the BVD-2G: after traversing a grid in a snake-like fashion column by column, the agent returns to the starting point and from that starting point, it proceeds to another grid with a neighbouring starting point. In our strategy PBVD-qG, we use the similar exploring routes as that in BVD-G, which is the snake-like route. Additionally, we use the idea of dimensionality reduction.
+In \cite{cai}, the multi-dimensional grid is partitioned into $d_1\times \ldots d_{q-2}$ 2-dimensional grids of size $d_{q-1} \times d_q$. Each of these grids is explored using the BVD-2G: after traversing a grid in a snake-like fashion column by column, the agent returns to the starting point and from that starting point, it proceeds to another grid with a neighbouring starting point. In our strategy PBVD-qG, we use the similar exploring routes as that in BVD-G, which is the snake-like route. Additionally, we use the idea of dimensionality reduction.
 In our  parallel strategy   we use the term  ``p-dimensional  agent group" to 
 refer to a group of $d_1\times \ldots \times d_p$ agents   ($p<q$) organized in a $d_1\times \ldots \times d_p$ grid (i.e.,   fully occupying  a $d_1\times \ldots \times d_p$ sub-grid of the original $q$-dimensional grid). 
 Informally, a ``p-dimensional  agent group" 
@@ -300,7 +300,7 @@ Assume  now that we   employ four agents (two agents are viewed as the LEA in th
 
 \noindent{\bf Analysis and Comparisons}
 We now compare the time cost, the number of movement and the casualties with different number of agents we employ. (Assuming that we are in a $d_1\times \ldots \times d_q$ q-dimensional grid)
-The theorems in \cite{Cai} show us that the protocol BVD-qG performs a BV decontamination of a q-dimensional Grid using $3q+1$ agents with at most $q+1$ casualties and  at most $O(qn)$ movements and $\Theta(n)$ time. Based on these theorems, we now discuss the number of agents, the casualties, the time cost and the number of movement in PBVD-qG.
+The theorems in \cite{cai} show us that the protocol BVD-qG performs a BV decontamination of a q-dimensional Grid using $3q+1$ agents with at most $q+1$ casualties and  at most $O(qn)$ movements and $\Theta(n)$ time. Based on these theorems, we now discuss the number of agents, the casualties, the time cost and the number of movement in PBVD-qG.
 
  
 \begin{theorem}
