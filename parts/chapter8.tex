@@ -1,0 +1,49 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter {Concluding Remarks and Future Work}
+\label{INTRO}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Summary}
+Mobile agents are widely used in distributed and network systems while their employ can cause many security issues. Particularly, a malicious agent can cause computer nodes to malfunction or crash by contaminating or infecting them (harmful agent); a contaminated or infected host in turn destroy working agents for various malicious purpose(harmful host). Problem triggered by the harmful agent is called $Intruder\,Capture$(IC) which focus on deploying a group of mobile agents to capture an extraneous mobile agent (the intruder) that move arbitrarily fast through the network and infects the visiting sites. The problem triggered by the harmful host (also called $Black\,Holes$) is called $Black\, Hole\,Search$($BHS$), the focus of which is to locate the positions of these  $Black\,Holes$ in the topology. These two problems have been widely studied in many variants.
+
+The BVD problem, integrating in its definition both the harmful aspects of the classical $BHS$ problem with the mobility of the classical $IC$ problem, was first introduced by \cite{cai}. Their main focus is on the sequential protocols for agents to complete this task by causing minimum network damage and by scarifying minimum number of agents. Except for the topologies that have been studied in \cite{cai}, the sequential strategy in BVD problem in choral rings is studied in \cite{alotaibi}.
+
+In this thesis, we propose parallel strategies to deal with the BVD problem, focusing on employing more number of agents to explore the graph parallelly, thus decreasing the time needed to finish the decontamination.
+
+This chapter highlights the main contributions of this thesis to the parallel BVD problem:
+
+The first part of the thesis describes the terminology and the model. In this thesis, we only consider the situation of $Fertile$ BV. In this case, we need to protect the network from further spread after detecting the original BV. A basic principle that monotonicity is necessary for optimality should be obeyed: in every network, to minimize the spread, a solution protocol must be monotone. Also, we follow the same basic general strategy as \cite{cai}: a careful exploration of the network followed by an elimination.
+
+The second part of this thesis focuses on the parallel BVD problem for three important classes of interconnection network topologies:(multi-dimensional) grids, toris and chordal rings. For each topology, we provide a parallel strategy and analyze the number of agents, the time cost, the number of movements and the casualty. Comparisons between the parallel strategy and the sequential strategy in each topology are also made.
+
+The third part of this thesis focus on the parallel BVD problem in an arbitrary graph. We propose two strategies to deal with the problem: $Flood\,Strategy$ and {\sc Castle-First} Strategy. The first strategy finish the exploring of the graph in $2*d$ unit of time where $d$ is the diameter of the graph while using much more agents than the sequential strategy and the {\sc Castle-First} Strategy; the second strategy completes the exploration of the graph using much less time than the sequential one and much less agents than the $Flood\,Strategy$. In order to reach this purpose, some prerequisite work should be done: computing the length of the shortest route from the homebase to each node (both strategies); using whiteboards to record the information of the whole topology including all the edges and nodes and pointing out the castles (the {\sc Castle-First} Strategy) \ldots
+
+The last part of this thesis shifts the theoretical study on an arbitrary graph (the {\sc Castle-First} Strategy) to experimental investigation. A large number of simulations on different sizes of graphs with many connectivity densities are carried out. The experiment results show that even using one group of agents to explore the graph, 
+the time cost by the  {\sc Castle-First} Strategy is much less than the sequential strategy. Additionally, as we use more agents than the sequential strategy, when the connectivity of the graph reaches 30\% to 50\%, the {\sc Castle-First} Strategy using a group of agents works most efficiently. That is, the ratio between time incurred by {\sc Castle-First} using a single group of agents and time incurred by Greedy is much larger than the ratio between the number of agents used in {\sc Castle-First} with a single group and the number of agents used in Greedy. When the connectivity is low(less than 10\%), as the size of the graph grows, the advantage of using more groups of agents is becoming more obvious. That is, when we use more group of agents to explore the graph, the time cost still experiences a great decrease.
+
+
+\section{Open Problems and Future Research}
+The results of this thesis open many research problems and pose new questions.
+\begin{enumerate}
+\item In addition to grids, toris, and choral rings, future research can be extended to parallelly explore and decontaminate BVs in other special network topologies: hypercubes \ldots
+\item Though we propose two parallel strategies to deal with the BVD problem in the arbitrary graph, we have to do lots of prerequisite work and the full knowledge of the topology is necessary to use these protocols, future research can be extended to deal the problem when less knowledge of the graph is given.
+\item We only investigate the problem with only one BV, so future research can be extended to studying the problem with more than one BV.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
