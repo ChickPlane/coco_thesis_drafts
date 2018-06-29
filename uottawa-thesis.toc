@@ -26,7 +26,7 @@
 \contentsline {subsection}{\numberline {4.2.1}Base Case: 2-Dimensional Grid}{21}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Multi-Dimensional Grid}{35}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Tori}{40}{subsection.4.2.3}
-\contentsline {chapter}{\numberline {5}Parallel Black Virus Decontamination in Chordal Ring}{44}{chapter.5}
+\contentsline {chapter}{\numberline {5}Parallel Black Virus Decontamination in Chordal Rings}{44}{chapter.5}
 \contentsline {section}{\numberline {5.1}Introduction}{44}{section.5.1}
 \contentsline {section}{\numberline {5.2}Shadowed Exploration}{45}{section.5.2}
 \contentsline {section}{\numberline {5.3}Surrounding and Elimination}{49}{section.5.3}
@@ -34,20 +34,19 @@
 \contentsline {paragraph}{\bf Example:}{53}{section*.27}
 \contentsline {subsection}{\numberline {5.3.2}Overview of the Elimination}{58}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Destination Table and Elimination}{59}{subsection.5.3.3}
-\contentsline {section}{\numberline {5.4}Analysis}{61}{section.5.4}
-\contentsline {chapter}{\numberline {6}Parallel Black Virus Decontamination in Arbitrary Graph}{65}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction}{65}{section.6.1}
-\contentsline {section}{\numberline {6.2}The Flood Strategy}{66}{section.6.2}
-\contentsline {section}{\numberline {6.3}Castle-First Strategy}{71}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1} Introduction}{71}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2} Initialization}{72}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3} Exploration Phase}{73}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4} Elimination Phase}{81}{subsection.6.3.4}
-\contentsline {chapter}{\numberline {7}Experimental Study on BVD in Arbitrary graph}{83}{chapter.7}
-\contentsline {section}{\numberline {7.1}Introduction of the simulator}{83}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Simulation Model}{83}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Simulation Sample graph}{84}{subsection.7.1.2}
-\contentsline {section}{\numberline {7.2}Simulation Results}{85}{section.7.2}
-\contentsline {chapter}{\numberline {8}Concluding Remarks and Future Work}{94}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary}{94}{section.8.1}
-\contentsline {section}{\numberline {8.2}Open Problems and Future Research}{96}{section.8.2}
+\contentsline {chapter}{\numberline {6}Parallel Black Virus Decontamination in Arbitrary Graph}{64}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{64}{section.6.1}
+\contentsline {section}{\numberline {6.2}The Flood Strategy}{65}{section.6.2}
+\contentsline {section}{\numberline {6.3}Castle-First Strategy}{70}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1} Introduction}{70}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2} Initialization}{71}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3} Exploration Phase}{71}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4} Elimination Phase}{80}{subsection.6.3.4}
+\contentsline {chapter}{\numberline {7}Experimental Study on BVD in Arbitrary graph}{81}{chapter.7}
+\contentsline {section}{\numberline {7.1}Introduction of the simulator}{81}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Simulation Model}{81}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Simulation Sample graph}{82}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}Simulation Results}{83}{section.7.2}
+\contentsline {chapter}{\numberline {8}Concluding Remarks and Future Work}{92}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary}{92}{section.8.1}
+\contentsline {section}{\numberline {8.2}Open Problems and Future Research}{94}{section.8.2}

@@ -15,13 +15,13 @@ The general idea of the Flood Strategy is simple: supposing that an agent reside
 Strategy {\em Flood}  is time optimal with the cost of a great number of agents,
  while strategy {\em Castle-First} comes to a compromise between  {\em Flood} and the sequential strategies: it employ much less agents than  {\em Flood} and it costs much less  than the sequential strategies in terms of time. 
 
-\color{blue}In the arbitrary graph, we assume that  the original BV and its clones do not disconnect the graph.
-\color{black}
+ In the arbitrary graph, we assume that  the original BV and its clones do not disconnect the graph.
+
 \section{The Flood Strategy}
 \noindent{\bf Initialization.}
 In this strategy, we assume that all the agents are endowed with 3-hop visibility. For this strategy, in contrast with the sequential strategy, agents   do not need memory to remember the routes they pass by.  Finally, in this strategy, we use an important ability of agents which is ``cloning". As we introduced in Chapter 2, cloning means that an agent is endowed with the capacity to generate one or more agent identical to itself. 
 
-We use the Dijkstra Algorithm to compute the shortest route from the homebase to every node and write the route step on the white board on each node, so for each node, there should be a number (Shortest Route Number) recording the number of steps of the shortest route from the homebase to it. Let us denote by $v_{SRN}$ the Shortest Route Number of node $v$, and nodes ${v_1, \ldots, v_i}$ are neighbours of node $v$ assuming that $v$ has $i$ neighbours. Then edges connecting node $v$ and its neighbours are $e(v, v_1), \ldots, e(v, v_i)$. We write the $v_{SRN}$ in correspondence to the   end port of these edges (the end connecting to its neighbours), so when an agent resides in any node from $v_1$ to $v_i$, it can see the Shortest Route Number of node v because of the local visibility (see, for example,   Fig \ref{fig:Arbi1}).
+We use the Dijkstra Algorithm to compute the shortest route from the homebase to every node and write the route step on the white board on each node, so for each node, there should be a number (Shortest Route Number) recording the number of steps of the shortest route from the homebase to it. Let us denote by $v_{SRN}$ the Shortest Route Number of node $v$, and nodes ${v_1, \ldots, v_i}$ are neighbours of node $v$ assuming that $v$ has $i$ neighbours. Then edges connecting node $v$ and its neighbours are $e(v, v_1), \ldots, e(v, v_i)$. We write the $v_{SRN}$ in correspondence to the   end port of these edges (the end connecting to its neighbours), so when an agent resides in any node from $v_1$ to $v_i$, it can see the Shortest Route Number of node v because of the local visibility (see, for example,   Figure \ref{fig:Arbi1}).
 
 \begin{figure}[H]
   \centering  
@@ -35,26 +35,21 @@ All the agents in this strategy follow the same rules in the exploration phase.
 Let us denote by $SNR$ the Shortest Route Number.
 \begin{enumerate}
 \item Agents can only move from node with lower $SNR$ to node with higher $SNR$.
-\item Let  $m$ agents reside in node $v$ with   $SNR$ of $v$ equal to $a$, and let  the next destination(s) (node $v$'s neighbours with higher $SNR$ than $v$') be $\{v_1,\ldots, v_k\}$. (such a neighbour always exist)
+\item Let  $m$ agents reside in node $v$ with   $SNR$ of $v$ equal to $a$, and let  the next destination(s) (node $v$'s neighbours with higher $SNR$ than $v$) be $\{v_1,\ldots, v_k\}$  (such   neighbours always exist).
 
    %  -   if $m\geq k+1$, then $k$ agents move to the $k$ destinations  while the remaining agents stay in node $v$ to guard $v$ at $T_i$.  If $m< k+1$, then one of the agents residing in node $v$ clones $k+1-m$ agents and 
 - if $m<k+1$ (the number of agents is not sufficient), then one of the agents residing in node $v$ clones $k+1-m$ agents. After that, $k$ agents of the agents residing in node $v$ move to the $k$ destinations while the remaining agents stay in node $v$ to guard $v$ at $T_i$. 
  If one of the agents is destroyed, the Elimination phase begins; if none of the agents are destroyed, the remaining $m-k$ agents %\color{blue}  {\bf what do you mean ``randomly???} \color{black} 
 move to any of the $k$ destinations at  time $T_{i+1}$. 
- 
- \color{blue} are the destination the same as the neighbour ? If indeed the two rules are the same except for the cloning you should put them together saying simply that if the number of agents is not sufficient ($m< k+1$), the necessary number is cloned.  Do not use the term "random", just say move in "any" ....\color{black} \\
-     %-   if $m< k+1$, then one of the agents residing in node $v$ clones $k+1-m$ agents, and these $k$ agents move to all the neighbours at $T_i$. If one of the agents is destroyed, the Elimination phase begins; if none of the agents are destroyed, the agent guarding node $v$   moves to one of the neighbours with $SNR$ equal to $a+1$ at time $T_{i+1}$ 
-     \color{blue} (such a neighbour always exist). \color{black}
-     
+   %    \color{blue} (such a neighbour always exist). \color{black}
 %\color{blue}  Wouldn't this happen also in the previous case ?(Yes, but in the first case, no agents should be cloned.  Isn't the next rule part of this (Yes, but in next rule, no agents should be cloned) ?\\  
-- If an agent resides in a node without any neighbour whose $SNR$ equal to $a+1$, then it simply stays there.
- \color{black}
+- If an agent resides in a node without any neighbour whose $SNR$ is equal to $a+1$, then it simply stays there.
         Since all the action of agents happen after they meet each other at the same node, they can communicate with each other and make sure that all their routes do not conflict.
 %\item If an agent resides in a node without any neighbour whose $SNR$ equal to $a+1$, then it simply stays there.
 % 
 %        Since all the action of agents happen after they meet each other at the same node, they can communicate with each other and make sure that all their routes do not conflict.
 \end{enumerate}
-An example of how the agents move is showed in Fig \ref{fig:Arbiflood}
+An example of how the agents move is showed in Figure \ref{fig:Arbiflood}.
 \begin{figure} [H]
   \centering 
   \subfigure[$T_1$]{ 
@@ -94,9 +89,9 @@ We now  describe how agents residing in different positions move in the Eliminat
 \item Rule 2: For all of the agents residing in node $v$'s neighbours with $SNR$ equal to $a-1$ (say  there are $k$ such agents), they receive clones and understand the location of the BV,  and should move to $v$ at  time $T_{i+2}$. Let us denote by $p$ the number of $v$'s neighbours with $SNR$ equal to $a+1$, then if $k< p+1$, one of the agents residing in node $v$ should clone another $p+1-k$ agents and then $p$ agents move to $v$'s neighbours with $SNR$ equal to $a+1$ at $T_{i+4}$.
 \end{enumerate}
 
-\color{blue} Note that in our assumptions, the original BV and its clones do not disconnect the graph,  so there should be other routes from the homebase to the new BV nodes even excluding   the original BV node. \color{black} So when $z$ agents are sent to $v$'s neighbours with $SNR$ equal to $a+1$ at time $T_{i+4}$, some other agents move to these nodes's higher $SNR$ neighbours at the same time, which ensure that all the neighbours of the new formed BVs are guarded when they are triggered. 
+ Note that in our assumptions, the original BV and its clones do not disconnect the graph,  so there should be alternative routes from the homebase to the new BV nodes, even excluding   the original BV node.   So, when the agents are sent to $v$'s neighbours with $SNR$ equal to $a+1$ at time $T_{i+4}$, some other agents move to these nodes's higher $SNR$ neighbours at the same time, which ensure that all the neighbours of the new formed BVs are guarded when they are triggered. 
 
-See Fig \ref{fig:BVd}. For convenience of description, we give every node in the graph a distinct ID from 1 to 13. As shown in the picture, when the BV is triggered, the clones spread to all neighbours of node 3;  node 4 and 5 become new BV nodes while nodes 1, 2 and 12 destroy a clone each and understand  that the original BV resides in node 3. 
+See Figure \ref{fig:BVd}. For convenience of description, we give every node in the graph a distinct ID from 1 to 13. As shown in the picture, when the BV is triggered, the clones spread to all neighbours of node 3;  node 4 and 5 become new BV nodes while nodes 1, 2 and 12 destroy a clone each and understand  that the original BV resides in node 3. 
 %
 \begin{figure} [H]
   \centering 
@@ -120,7 +115,7 @@ See Fig \ref{fig:BVd}. For convenience of description, we give every node in the
 \end{figure}    
 
  
-In Fig. \ref{fig:BVd}, an agent residing in node 10 is a Witness Agent and, because of the 3-hop visibility, it can ``see" that there is no agent residing in node 3 but there are agents residing in node 3's neighbours  (node 1 and node 2). In this way, it knows that the original BV resides in node 3, therefore, it stops moving and cloning towards the BV but,  since it has still   a higher $SNR$ neighbour (node 9) which does not contain a BV,   it continues the exploration in that direction following the rule in the exploration phase. That is, it sends an agent to node 9, then all the agents except one move to node 9. After that, one agent is sent to node 8. 
+In Figure \ref{fig:BVd}, an agent residing in node 10 is a Witness Agent and, because of the 3-hop visibility, it can ``see" that there is no agent residing in node 3 but there are agents residing in node 3's neighbours  (node 1 and node 2). In this way, it knows that the original BV resides in node 3, therefore, it stops moving and cloning towards the BV but,  since it has still   a higher $SNR$ neighbour (node 9) which does not contain a BV,   it continues the exploration in that direction following the rule in the exploration phase. That is, it sends an agent to node 9, then all the agents except one move to node 9. After that, one agent is sent to node 8. 
 
 \begin{theorem}
 Let $h$ be  the diameter of the graph. The Flood Strategy performs the exploration phase in  $2h$ unit of time.
@@ -143,8 +138,7 @@ According to the rules in the exploration phase, the agents keep exploring when 
 \subsection{ Introduction}
 In the Castle-First Strategy, all the agents have only   local visibility. But the leader agent in each exploration group has the map of the graph in its memory. Furthermore, the leader agents are endowed with the ability of clone.
 
-In the Castle-First Strategy, we build some castles based on the  $SNR$ of the nodes. More than one group of agents are sent to explore the graph at the same time. Their exploration of the graph is separated into many ``sub-exploration"s and each ``sub-exploration" begins   where a group of  agents are  initially residing  and ends with a new unexplored castle. The map of the graph with all the castles %\color{blue} 
-
+In the Castle-First Strategy, we build some castles based on the  $SNR$ of the nodes. More than one group of agents are sent to explore the graph at the same time. Their exploration of the graph is separated into many ``sub-exploration"s and each ``sub-exploration" begins   where a group of  agents are  initially residing  and ends with a new unexplored castle. The map of the graph with all the castles 
 being pointing out is recorded on the whiteboard on nodes with more than two neighbours (called the {\em intersections}) so when agents move across these nodes, they can update the information on the whiteboard (for example, changing the state of some castles into explored and update its own memory %(explanation : the updated information should be viewed by other agents so they should change the state. they cannot only change their own memory)
 When agents cannot find an unexplored castle in the graph,  they terminate. 
 
@@ -174,7 +168,7 @@ After the processing, we have a new graph called ``Castle Graph", and a ``Castle
 %Not clear what is a castle graph. Just the indication of the castles positions  or the subgraph induced by them ?   \color{black}
 
 \subsection{ Exploration Phase}
-The Exploration Phase of the Castle-First Strategy is shown in Fig \ref{fig:castlestates} 
+The Exploration Phase of the Castle-First Strategy is shown in Figure \ref{fig:castlestates} 
 %\color{blue} wrong figure ? \color{black} 
 and is introduced in detail in the following.
 \begin{figure}[H]
@@ -209,8 +203,7 @@ When/if one of the agent is destroyed by the BV, then the elimination phase begi
 
 Along the route to the group's destination, the LA updates the information of the intersections  (changing the state of the destination castle to be ``under exploration")  and also reads information  found at the intersections, if it finds that the destination castle of its ``sub exploration" has been already explored or is under exploration, then the status of its group changes into ``Finding-Castle" again. If not, then this group reaches one of the destination castle's lower $SNR$ neighbour and the LA starts to arrange the SAs to guard all the lower $SNR$ neighbour(s) of the castle. 
 
-\color{blue} Check the following ----- \color{black}
-
+ 
 After the arrangement of the SAs, it should be ensured that all the lower $SNR$ neighbours of the castle are guarded. 
 Consider a castle with $m$ nodes  $\{x_1, \ldots, x_m\}$ and let 
  $\{y_1, \ldots, y_h\}$ be the sequence of neighbouring nodes of the castle that should be guarded. That is, the LA would move sequentially from $y_1$ to $y_h$.
@@ -218,7 +211,7 @@ Consider a castle with $m$ nodes  $\{x_1, \ldots, x_m\}$ and let
 The LA  moves sequentially, placing two agents in the last node connected to each $x_i$ in the sequence and one agent in each of the other neighbours so that all these $y_i$
  nodes are covered and $m$ of them, one per castle node, contain two agents (the Attacking Agents).  
 %    where $0\leq i\leq h$, $0\leq j\leq m$: 
-For example, in Fig \ref{fig:MultiCastleNode}, let  $\{y_1, y_2, \ldots, y_{10}\}$ be the sequence of nodes needing guarding, then after the arrangement, there are two agents in $y_2$, $y_4$, $y_6$, $y_8$, $y_{10}$ and one agent in the other nodes.
+For example, in Figure \ref{fig:MultiCastleNode}, let  $\{y_1, y_2, \ldots, y_{10}\}$ be the sequence of nodes needing guarding, then after the arrangement, there are two agents in $y_2$, $y_4$, $y_6$, $y_8$, $y_{10}$ and one agent in the other nodes.
 When   the arrangement of the last agent(s) is completed, the LA 
  informs the Attacking Agents about the  exact time  when they have to move simultaneously  
  to the castle nodes to permanently destroy the BVs.
@@ -240,7 +233,7 @@ When the arrangement is done, the LA resides in the last node needing guarding a
 So after the ``attacking" by the ``Attacking agent", the LA should execute a ``Double Patrol"   to check if there was a BV in this castle and to  locate it if there was.  We  now introduce the idea of   ``Double Patrol".
 \begin{enumerate}
 \item 
-The LA first computes a route to traverse all the castle nodes, (say the route is $x_0\rightarrow x_1 \rightarrow\ldots, x_m$ assuming that there are $m$ nodes in the castle). In this first ``patrol" (see Fig.\ref{fig:FirstPatrol}), the LA first leaves a flag saying: ``First Patrol" and then moves to one castle node, it tells the SA residing in that castle node to collect the SAs residing in all its lower $SNR$ neighbours and finally moves to that castle node with all these collected SAs. Also, when the SA collects the agents  residing in the lower $SNR$ neighbours, it places a flag on that neighbour node saying: ``First Patrol". After the LA traverses all the castle nodes, it can easily know whether there is a BV in the castle: if there is no BV in the castle, then there should be one agent residing in every castle node and the LA would start the ``second patrol". Otherwise, there is a BV and its clones  have moved   to higher $SNR$ neighbours of this node. If the LA realizes that there is a BV, it stops traversing the remaining castle nodes.\\ 
+The LA first computes a route to traverse all the castle nodes, (say the route is $x_0\rightarrow x_1 \rightarrow\ldots, x_m$ assuming that there are $m$ nodes in the castle). In this first ``patrol" (see Figure \ref{fig:FirstPatrol}), the LA first leaves a flag saying: ``First Patrol" and then moves to one castle node, it tells the SA residing in that castle node to collect the SAs residing in all its lower $SNR$ neighbours and finally moves to that castle node with all these collected SAs. Also, when the SA collects the agents  residing in the lower $SNR$ neighbours, it places a flag on that neighbour node saying: ``First Patrol". After the LA traverses all the castle nodes, it can easily know whether there is a BV in the castle: if there is no BV in the castle, then there should be one agent residing in every castle node and the LA would start the ``second patrol". Otherwise, there is a BV and its clones  have moved   to higher $SNR$ neighbours of this node. If the LA realizes that there is a BV, it stops traversing the remaining castle nodes.\\ 
 %we know that in both situations, the LA should move back to the first castle node with the route $castle\_0\rightarrow castle\_1 \rightarrow\ldots, castle\_x$ and when it moves to every castle node, it should wait until all the guarding agents of that castle node being collected and then moves to the next castle node. When the LA moves back to the first castle node, the ``First Patrol" finishes. 
 
 \begin{figure} [H]
@@ -297,7 +290,10 @@ The LA first computes a route to traverse all the castle nodes, (say the route i
 
 
 \item 
-After the first patrol,    if there is a BV the Elimination phase starts; otherwise,  the ``Second Patrol" starts. In the ``Second Patrol" the LA moves along the reverse route of  the ``First Patrol" which is $x_m \rightarrow x_{m-1} \rightarrow\ldots, x_0$.  While doing so,  it collects all the SAs in the castle node   and  it updates the information on the whiteboards on the castle nodes (if they have a whiteboard) saying that the castle is explored. \color{blue}what do you mean, if they have a whiteboard ? Are we assuming the whiteboard or not ?the whiteboards are placed on node with more than two neighbours, some of the castles may have less or equal to two neighbours \color{black}
+After the first patrol,    if there is a BV the Elimination phase starts; otherwise,  the ``Second Patrol" starts. In the ``Second Patrol" the LA moves along the reverse route of  the ``First Patrol" which is $x_m \rightarrow x_{m-1} \rightarrow\ldots, x_0$.  While doing so,  it collects all the SAs in the castle node   and  it updates the information on the whiteboards on the castle nodes 
+%(if they have a whiteboard) 
+saying that the castle is explored. 
+%\color{blue}what do you mean, if they have a whiteboard ? Are we assuming the whiteboard or not ?the whiteboards are placed on node with more than two neighbours, some of the castles may have less or equal to two neighbours \color{black}
 \end{enumerate}  
 After the ``Second Patrol", the status of this agent group changes into ``Finding-Castle" again. 
 
@@ -319,10 +315,6 @@ When the BV is triggered,   the location of the BVs can be in a castle or outsid
 survive and their locations are exposed. Also, the locations of all the neighbours of these new formed BVs are exposed. 
 
 So, the LA computes the routes from where it resides to all the nodes needing guarding, including both  the lower and the higher $SNR$ neighbours   (Surrounding Nodes). If the location of the original BV is outside the castle, then all the SAs stay  with the LA, so the LA simply sends the SAs to these Surrounding Nodes. If the original BV is in the castle, then after the  ``Double Patrol", the LA knows the location of the original BV, so it computes the routes from where it resides to all the Surrounding Nodes and send the SAs to them (note that all the SAs are with the LA after the  ``Double Patrol"). Also note that since the graph is biconnected, there is always a route to reach the surrounding node bypassing the new formed BV nodes. 
-\color{blue}
-(Yes, we have this assumption, I add this assumption at the beginning  (marking blue) ) 
-Actually, a single node cannot disconnect, but multiple nodes could (i.e., the original BV and its clones).
-\color{black}
 Assuming that there are $k$ higher $SNR$ neighbours of the original BV, then   the LA sends another $k$ agents to the new formed BV nodes and permanently destroy the BVs.
    
 

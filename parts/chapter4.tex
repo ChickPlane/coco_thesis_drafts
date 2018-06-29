@@ -4,10 +4,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
  
 \section{Introduction}
-In this Chapter, we discuss parallel strategies for the    BVD problem in grids and tori. In the sequential strategy ({\em BVD-2G}) for 2-dimensional grids, an ``explorer agent'' and a ``leader explorer agent'' are sent to explore the graph and locate the BV. They traverse the mesh in a snake-like fashion, column by column, following   ``cautious walk''. In the sequential protocol ({\em BVD-qG}) for q-dimensional grids, the grid is partitioned into $d_1\times\ldots\times d_{q-2}$ 2-dimensional grids of size $d_{q-1}\times d_q$, and each 2-dimensional grid is explored using the shadowed traversal technique as described in the 2-dimensional grids. Similarly, in the protocol ($BVD-qT$) for q-dimensional torus, the torus is partitioned into $d_1\times \ldots \times d_{q-1}$ ring of size $d_q$. The exploration procedure traverses a ring and, when back to the starting point, proceeds to another ring, with a neighbouring starting point. After locating the BV, agents surround the new formed BVs sequentially and eliminate them. These strategies are simple to follow, but at the same time they are not time-efficient. We now consider the situation when  more than two agents are allowed to participate in the exploring phase and we focus on decreasing the time cost in the exploring phase and the number of casualties; that is, we focus on how to design a new strategy so that the we are able to reach the destination faster, but with  anacceptable cost in terms of number of agents.\\
-\color{blue} at his point it is not clear what you mean by ``array", do you mean a compact area of consecutive/adjacent nodes ? 
+In this Chapter, we discuss parallel strategies for the BVD problem in grids and tori. In the sequential strategy ({\em BVD-2G}) for 2-dimensional grids, an ``explorer agent'' and a ``leader explorer agent'' are sent to explore the graph and locate the BV. They traverse the mesh in a snake-like fashion, column by column, following   ``cautious walk''. In the sequential protocol ({\em BVD-qG}) for q-dimensional grids, the grid is partitioned into $d_1\times\ldots\times d_{q-2}$ 2-dimensional grids of size $d_{q-1}\times d_q$, and each 2-dimensional grid is explored using the shadowed traversal technique as described in the 2-dimensional grids. Similarly, in the protocol ($BVD-qT$) for q-dimensional torus, the torus is partitioned into $d_1\times \ldots \times d_{q-1}$ ring of size $d_q$. The exploration procedure traverses a ring and, when back to the starting point, proceeds to another ring, with a neighbouring starting point. After locating the BV, agents surround the new formed BVs sequentially and eliminate them. These strategies are simple to follow, but at the same time they are not time-efficient. We now consider the situation when  more than two agents are allowed to participate in the exploring phase and we focus on decreasing the time cost in the exploring phase and the number of casualties; that is, we focus on how to design a new strategy so that the we are able to reach the destination faster, but with  an acceptable cost in terms of number of agents.\\
+\color{blue} at his point it is not clear what you mean by ``array", do you mean a compact area of consecutive/adjacent nodes ? I add the explanation below.
 \color{black}
-The general idea is simple, we will employ a group of agents and place them in a specific position (array) at the beginning. Informally, in the shadowed exploration of our strategy in 2-dimensional grid({\em PBVD-2G}), q-dimensional grid ({\em PBVD-qG}) and tori ({\em PBVD-qT}), the agents that are employed to explore the graph stay in that array and this  ``array of agents"  traverse that graph in the shadowed exploration. 
+The general idea is simple, we will employ a group of agents and place them in a compact area of consecutive or adjacent nodes (for convenience, let us call it ``array") at the beginning.  Informally, in the shadowed exploration of our strategy in 2-dimensional grid({\em PBVD-2G}), q-dimensional grid ({\em PBVD-qG}) and tori ({\em PBVD-qT}), the agents that are employed to explore the graph stay in that array and this  ``array of agents"  traverse that graph in the shadowed exploration. 
 Note that, after the BV is triggered, not all the agents automatically enter the elimination phase but only the ones that   know the existence of the  BV. However,  in some cases, the number of agents that know the existence of BV is not sufficient for surrounding and eliminating the BVs. For this reason,  in the elimination phase, our strategies employ some agents that know  the existence of the BV (because they receive the clones of the original BV) to notify some other agents to participate in the elimination phase as well. 
 We study the number of agents, the time cost, the number of movements and  casualty, comparing them with  the ones of the corresponding sequential strategy.
 
@@ -30,25 +30,23 @@ When $a=1$, the arrangement is actually the same as in the sequential case. Sinc
 
 Let us now consider the routes for the agents, which will result to be a snake-like path. For convenience, we assume that all the agents move at time $t_i\,(i\in\mathbb{Z}^*)$  \color{blue} ??? because some time should be reserved for the coordination after the BV is triggered.???\color{black} 
 %More detail about the moving cycle would be discussed after we decide the number of agents and the routes for them. 
-Let $v=(x, y)$ be the node under exploration, with $1\leq x_i \leq d_1$, $1\leq i \leq d_2$. 
+Let $v=(x, y)$ be the node under exploration, with $1\leq x_i \leq d_1$, $1\leq y_i \leq d_2$. 
 We define a boolean value called {\em Vertical Moving Mark}  (VMM) for every agent as follows: 
 the value  VMM is initialized at zero and    every time   the agent moves SOUTH, it switches to  (VMM+1)mod 2. 
   For example, if an agent continues to move SOUTH  the VMM will keep alternating between 0 and 1, essentially indicating the parity of the row.
   
 Every agent holds two VMMs in its memory  (say $VMM_1$ and $VMM_2$). 
-The original value of $VMM_1$   is $0$; t
+The original value of $VMM_1$ is $0$; 
 the original value of $VMM_2$ is 0 for the agents 
 residing at node $(1, y)$ and  $1$ for the ones residing in node  $(2, y)$ ($1\leq y\leq a$).
 We now define the action of the $2a$ agents:\\ 
 \begin{itemize}
 \item Let $b=a-1$. 
-When all agents' $VMM_1$ are ``0", 
+\color{blue} these should be local rules, how can the individual agent know that all values are zero. You have to express the rule in a different way, not replying on this type of info. (make some modification, please check)\color{black}
 
-\color{blue} these should be local rules, how can the individual agent know that all values are zero. You have to express the rule in a different way, not replying on this type of info.\color{black}
+When an agent' s $VMM_1$ is ``0": then it moves EAST when $x\neq d_1-1$ and move SOUTH for $b$ steps when $x=d_1-1$ when its $VMM_2$ is equal to ``0" ; or it moves EAST when $x\neq d_1$ and move SOUTH for $b$ steps  when $x=d_1$ when its $VMM_2$ is equal to ``1". 
 
-then the agents with $VMM_2$ equal to ``0" move EAST when $x\neq d_1-1$ and move SOUTH for $b$ steps when $x=d_1-1$; the agents with $VMM_2$ equal to ``1" move EAST when $x\neq d_1$ and move SOUTH for $b$ steps  when $x=d_1$. 
-
-When all agents' $VMM_1$ are ``0", then the agents with $VMM_2$ equal to ``0"  move WEST when $x\neq2$ and move SOUTH for $b$ steps when $x=2$; the  agents with $VMM_2$ equal to ``1" move WEST when $x\neq 1$ and move SOUTH for $b$ steps when $x=1$.
+When an agents' $VMM_1$ is ``1": then it moves WEST when $x\neq2$ and move SOUTH for $b$ steps when $x=2$ when its $VMM_2$ is equal to ``0"  ; or it moves WEST when $x\neq 1$ and move SOUTH for $b$ steps when $x=1$ when its $VMM_2$ is equal to ``1" .
 
 \item An agent  moves only to a node that it has not explored yet. (Note that when residing at a node, an agent is able to know whether it has explored the neighbours of that node or not).
 \end{itemize}

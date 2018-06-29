@@ -24,22 +24,22 @@
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Agents' roles after $Three\tmspace +\thinmuskip {.1667em}Jump\tmspace +\thinmuskip {.1667em}Notifying\tmspace +\thinmuskip {.1667em}Technique$. (for convenience, we denote the $CA$ by a red spot, more specifically, node $x_{50}$ is where $CA$ resides)\relax }}{55}{figure.caption.30}
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Arrangement of agent at $T_{move\_3}$. The $CA$ has arrived its destination\relax }}{56}{figure.caption.31}
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Arrangement of agents at $T_{move\_4}$. The $CA$ starts its chasing phase\relax }}{56}{figure.caption.32}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Arrangement of agents at $T_{move\_5}$. \relax }}{56}{figure.caption.33}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Arrangement of agents at $T_{move\_5}$. \relax }}{57}{figure.caption.33}
 \contentsline {figure}{\numberline {5.11}{\ignorespaces Arrangement of agents at $T_{move\_5^{(3)}}$. \relax }}{57}{figure.caption.34}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Arrangement of agents at $T_{move\_7^{(3)}}$. \relax }}{57}{figure.caption.35}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Situation when the third agent in the exploring group is destroyed\relax }}{59}{figure.caption.36}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Arrangement of agents at $T_{move\_7^{(3)}}$. \relax }}{58}{figure.caption.35}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Situation when the third agent in the exploring group is destroyed\relax }}{60}{figure.caption.36}
 \contentsline {figure}{\numberline {5.14}{\ignorespaces The graph we build for Dijkstra Algorithm\relax }}{60}{figure.caption.37}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Initialization of the graph\relax }}{67}{figure.caption.38}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces An example of how the agents move in the Flood Strategy\relax }}{68}{figure.caption.39}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces A possible situation when the BV is detected. The Ids of the nodes are written inside the nodes, their SNR value is indicated in parenthesis.\relax }}{70}{figure.caption.40}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Examples of Castles\relax }}{72}{figure.caption.41}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Exploration phase of the Exploration Phase\relax }}{73}{figure.caption.42}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces An example shows that if there is a BV in the castle, in some cases not all the guarding agents can receive a BV clone\relax }}{76}{figure.caption.43}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces An example of ``FirstPatrol"\relax }}{78}{figure.caption.44}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces An example of ``FirstPatrol" \relax }}{79}{figure.caption.45}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Initialization of the graph\relax }}{66}{figure.caption.38}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces An example of how the agents move in the Flood Strategy\relax }}{67}{figure.caption.39}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces A possible situation when the BV is detected. The Ids of the nodes are written inside the nodes, their SNR value is indicated in parenthesis.\relax }}{69}{figure.caption.40}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Examples of Castles\relax }}{71}{figure.caption.41}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Exploration phase of the Exploration Phase\relax }}{72}{figure.caption.42}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces An example shows that if there is a BV in the castle, in some cases not all the guarding agents can receive a BV clone\relax }}{75}{figure.caption.43}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces An example of ``FirstPatrol"\relax }}{77}{figure.caption.44}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces An example of ``FirstPatrol" \relax }}{78}{figure.caption.45}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Comparison between {\sc Greedy} Exploration and {\sc Castle-First} Strategy \relax }}{86}{figure.caption.46}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Ratio between time and agent cost of {\sc Castle-First} using a single group and {\sc Greedy} in the same situation.\relax }}{89}{figure.caption.47}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Time cost by different number of group\relax }}{91}{figure.caption.48}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Comparison between {\sc Greedy} Exploration and {\sc Castle-First} Strategy \relax }}{84}{figure.caption.46}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Ratio between time and agent cost of {\sc Castle-First} using a single group and {\sc Greedy} in the same situation.\relax }}{87}{figure.caption.47}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Time cost by different number of group\relax }}{89}{figure.caption.48}
 \addvspace {10\p@ }
