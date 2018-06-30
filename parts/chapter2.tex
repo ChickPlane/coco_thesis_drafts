@@ -11,7 +11,6 @@ Some papers might have appeared in Journal, you need to update the references.
 
 Also note, the reference should be in alphabetic order
 
-
 Some references did not compile, perhaps I don't have the last version of the bib file
 
 \color{black}
@@ -20,9 +19,9 @@ Mobile agents have been widely used in  distributed computing due to their featu
 \section{Black Hole Search, BHS}
 The BHS problem assumes there is a BH (or multiple static BHs) residing at certain network nodes. The BHs will destroy any upcoming agents without leaving any detectable trace. The task is to use a team of good agents to locate the black hole(s). The task is completed when at least one agent survives and reports the location(s) of the black hole(s). Note that this task is dangerous for the team of agents and some will inevitably  be destroyed during their search.  
 %  In \cite{das}, Das et al. considered a model for unknown environment with dispersed agents under the weakest possible setting, many exploration models and works were included in this article. {\bf ???} Their research includes different ways to mark the node and to communicate among agents (pebble, marker, and whiteboard), one or multiple agents, asynchronous agents, different topologies (ring, tree, directed or undirected) and different agent memory size limitation and etc.
-\color{blue}
-paper [43] is not on black hole, why was it here ?  I removed the paragraph.
-\color{black}
+%\color{blue}
+%paper [43] is not on black hole, why was it here ?  I removed the paragraph.
+%\color{black}
 
 The BHS problem has been widely studied in various topologies and settings: 
 %the timing can be synchronous (there is a global notion of time and an agent movement along a link takes 1 time unit), or asynchronous (no assumption is made on the time taken by each agent to traverse a link and there is no global clock)); the number of black hole(s) can be known or unknown. For example: 
@@ -73,7 +72,7 @@ The BVD problem is to permanently remove any BVs in the network using a team of 
 \cite{alotaibi}.
 
 \subsection{BVD in different topologies}
-Protocols to solve the  BVD problems in grid are BVD-2G and BVD-qG which deal with BVD problems in 2-dimensional grid (meshes) and q-dimensional grid respectively. BVD-2G performs a BV decontamination of a 2-dimensional grid of size $n$ using $k=7$ agents and 3 casualties (i.e., losses of agents), within at most $9n+O(1)$ moves and at most $3n$ time. While protocol BVD-qG performs a decontamination of a q-dimensional grid of size $d_1\times d_2 ...\times d_q$ using $3q+1$agents and at most $q+1$ casualties, within at most $O(qn)$ moves and at most $\Theta$($n$) time. The Algorithm to decontaminate the BV in a q-dimensional torus, called BVD-qT uses $4q$ agents with 2 casualties with at most $O(qn)$ moves and $\Theta$($n$). Protocol BVD-qH is to perform a BV decontamination of a q-hypercube using $2q$ agents and $q$ casualties with at most O($n\log n$) moves and $\Theta$($n$). In arbitrary graphs (see \cite{cai1}), two protocols are presented: {\sc Greedy Exploration} and {\sc Threshold Exploration}. In these two protocols, $\Delta +1$ agents are needed and both of the protocols are worst-case optimal with respect to the team size, where $\Delta$ represents the maximum degree in $G$. Though the protocols are described for a synchronous setting, they easily adapt to asynchronous ones with an additional $O(n)$ moves for the coordinating activities. An advantage of these protocols is that the agents can use only local information to execute the protocol. Another interesting fact based on these two protocols is that both {\sc Greedy} and {\sc Threshold}   produce an optimal acyclic orientation of the graph rooted in the homebase.
+Protocols to solve the  BVD problems in grid are BVD-2G and BVD-qG which deal with BVD problems in 2-dimensional grid (meshes) and q-dimensional grid respectively. BVD-2G performs a BV decontamination of a 2-dimensional grid of size $n$ using $k=7$ agents and 3 casualties (i.e., losses of agents), within at most $9n+O(1)$ moves and at most $3n$ time. While protocol BVD-qG performs a decontamination of a q-dimensional grid of size $d_1\times d_2 ...\times d_q$ using $3q+1$agents and at most $q+1$ casualties, within at most $O(qn)$ moves and at most $\Theta$($n$) time. The Algorithm to decontaminate the BV in a q-dimensional torus, called BVD-qT uses $4q$ agents with 2 casualties with at most $O(qn)$ moves and $\Theta$($n$). Protocol BVD-qH is to perform a BV decontamination of a q-hypercube using $2q$ agents and $q$ casualties with at most O($n\log n$) moves and $\Theta$($n$). In arbitrary graphs (see \cite{cai1}), two protocols are presented: {\sc Greedy Exploration} and {\sc Threshold Exploration}. In these two protocols, $2\Delta$ agents are needed and both of the protocols are worst-case optimal with respect to the team size, where $\Delta$ represents the maximum degree in $G$. Also, both of the strategies cause casualties of $\Delta$ and need the number of movements of $O(\Delta ^{2}n)$. Though the protocols are described for a synchronous setting, they easily adapt to asynchronous ones with an additional $O(n)$ moves for the coordinating activities. An advantage of these protocols is that the agents can use only local information to execute the protocol. Another interesting fact based on these two protocols is that both {\sc Greedy} and {\sc Threshold}   produce an optimal acyclic orientation of the graph rooted in the homebase.
 
 \color{blue}
 I like tables. I would add summary tables for the results of Cai, as well as for the results of Madawi 

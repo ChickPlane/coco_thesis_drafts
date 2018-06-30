@@ -4,8 +4,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
   A distributed system is a group of computational entities cooperating with each other to achieve one or more tasks. This thesis deals with distributed computing by mobile agents in networks. More specifically, we deal with the problem of deploying a group of mobile agents that follow the same protocol,  to explore the network and decontaminate it from a dangerous virus (called Black Virus) present on some of the the network nodes.
-  In this Chapter, the motivations of the problem are provided, following is a brief summary of the contributions. 
-  Finally, an overview of the organization of the thesis is presented.
+In this Chapter, the motivations of the problem are provided, following is a brief summary of the contributions. 
+Finally, an overview of the organization of the thesis is presented.
 
 
 \section{Problem and Motivation} 
@@ -29,7 +29,7 @@ Solutions in which the agents explore the network's nodes sequentially have been
 We provide a simple   efficient solution to deal with this problem. 
 %\color{blue} ? 
 We also give the size of the minimum exploring team  to guarantee both the TWT and the  casualties we reach.  \color{black}
-\item The BVD problem is investigated for three important topologies: {\em meshes}, {\em tori}, {\em chordal rings}. All the protocols are asymptotically optimal both in term of TWT and casualties. We compare our solutions with \cite{alotaibi} and  \cite{cai}, where the exploring route is  sequential, and the result is that our solution outperforms theirs in terms of both TWT and casualties. We  should   point out that in chordal rings especially, the more complicated the chordal ring becomes, the hiher are the improvements of our algorithms in terms of in TWT  compared to \cite{alotaibi}.
+\item The BVD problem is investigated for three important topologies: {\em meshes}, {\em tori}, {\em chordal rings}. All the protocols are asymptotically optimal both in term of TWT and casualties. We compare our solutions with \cite{alotaibi} and  \cite{cai}, where the exploring route is  sequential, and the result is that our solution outperforms theirs in terms of both TWT and casualties. We  should   point out that in chordal rings especially, the more complicated the chordal ring becomes, the higher are the improvements of our algorithms in terms of in TWT  compared to \cite{alotaibi}.
 \item The BVD problem is investigated also in the general case of the arbitrary topology. In this case we run extensive simulations to test its performance and we experimentally observe that also in this case, our solution is better than the existing sequential one.
 \end{enumerate}
 
@@ -48,7 +48,7 @@ Chapter 4 focuses on the BVD problem for the mesh topology. In this chapter, an 
 Chapter 5 presents the BVD problem for the chordal ring topology. In this chapter, we introduce the {\em Three Jump Notifying Technique} (TJNT) to manipulate each mobile agent to efficiently move along its route during the exploration,   and to avoid  the spread of clone BVs after the original BV is triggered. Based on this technique, we develop the parallel strategy for the mobile agents to decontaminate the chordal ring. Complexity analysis in terms of casualty and TWT are performed. Finally some comparisons are made between our solution and \cite{alotaibi} and the result shows that our solution performs better.
 
  
-Chapter 6 proposes two parallel strategies to solve the BVD problem in the arbitrary graph: {\sc Flood} Strategy and {\sc Castle-First} Strategy. {\sc Flood} Strategy completes the decontamination in $2d$ units of time where $d$ is the diameter of the graph with a very high  cost  in terms of agents compared to any other   strategy; on the other hand,    the {\sc Castle-First} Strategy reaches a compromise between the sequential strategy and the {\sc Flood} Strategy: it employs  a reasonable number of agents and significantly less time than the sequential strategy.
+Chapter 6 proposes two parallel strategies to solve the BVD problem in the arbitrary graph: {\sc Flood} Strategy and {\sc Castle-First} Strategy. Flood Strategy completes the decontamination in $2d$ unit of time where $d$ is the diameter of the graph with a very high  cost  in terms of agents compared to any other   strategy; on the other hand,    the {\sc Castle-First} Strategy reaches a compromise between the sequential strategy and the {\sc Flood} Strategy: it employs  a reasonable number of agents and significantly less time than the sequential strategy.
 
  In Chapter 7, we experimentally study the BVD problem in the arbitrary graph. Details of simulation work are presented. We run experiments on different size of graphs with many connectivity densities and the results are collected and analyzed.
  

@@ -5,9 +5,13 @@
 
 
 
-In this thesis, the problem of decontaminating networks from {\em black virus} (BVs) using parallel strategy with a team of system mobile agents (the BVD problem) is studied.
-The BV is a harmful process whose initial location is unknown a priori. It destroys any agent arriving at the network site where it resides, and once triggered, it spreads to all the neighboring sites, i.e, its clones, thus increasing its presence in the network. In order to permanently remove any presence of the BV with as less execution time as possible and minimum number of site infections (and thus casualties), we propose parallel strategy to decontaminate the BVs: instead of exploring the network step by step we employ a group of agents who follow the same protocol to explore the network at the same time, thus dramatically reducing the time needed in the exploration phase and minimizing the casualties. Different protocols are proposed in meshes, tori, and chordal rings following the monotonicity principle. Then we analyze the cost of all our solutions and compare to the asynchronous BV decontamination. 
-Finally conclusion marks are presented and future researches are proposed.
+In this thesis, we consider  the problem of decontaminating networks from   {\em black viruses} (BVs)  with a team of   mobile agents, using parallel strategies.
+The BV is a harmful process whose initial location is unknown a priori. It destroys any agent arriving at the network site where it resides and, once triggered, it spreads to all the neighboring sites, creating copies of itself, thus increasing its presence in the network. To eliminate a virus present in a node, an agent has to move on that node; however, once the disinfection is performed,   the agent is destroyed (i.e., it becomes inactive  and cannot operate anymore).
+Existing literature has proposed sequential strategies that minimize the spread of the virus, such techniques are however   quite inefficient in terms of time complexity. In order to permanently remove any presence of the BV  faster, still  minimizing the number of site infections, we propose parallel strategies to decontaminate the BVs. Instead of exploring the network sequentially, we employ a group of agents that coordinate to follow a collective protocol to explore the network simultaneously, thus dramatically reducing the time needed in the exploration phase but still keeping the spread (and the number of agents loss)  asymptotically optimal. Different protocols are proposed in meshes, tori, and chordal rings following the monotonicity principle (i.e., once a node is disinfected we prevent it from being recontaminated). Finally, a solution is proposed also for the general case of the arbitrary topology.
+ We analyze theoretically  the cost of all our solutions for special topologies showing the advantages of our strategies with respect to the existing ones.
+% and we make comparisons with   the existing results based on sequential approaches showing . 
+ In the case of the arbitrary topology, we   conduct   experimental analysis to assess the performance of our solution, confirming its efficiency. In all cases, our strategies dramatically improve time while maintaining asymptotically optimal spread and agent losses.
+ %Finally conclusion  are presented and future research directions are proposed.
  
 
  
