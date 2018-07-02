@@ -74,19 +74,41 @@ The BVD problem is to permanently remove any BVs in the network using a team of 
 \subsection{BVD in different topologies}
 Protocols to solve the  BVD problems in grid are BVD-2G and BVD-qG which deal with BVD problems in 2-dimensional grid (meshes) and q-dimensional grid respectively. BVD-2G performs a BV decontamination of a 2-dimensional grid of size $n$ using $k=7$ agents and 3 casualties (i.e., losses of agents), within at most $9n+O(1)$ moves and at most $3n$ time. While protocol BVD-qG performs a decontamination of a q-dimensional grid of size $d_1\times d_2 ...\times d_q$ using $3q+1$agents and at most $q+1$ casualties, within at most $O(qn)$ moves and at most $\Theta$($n$) time. The Algorithm to decontaminate the BV in a q-dimensional torus, called BVD-qT uses $4q$ agents with 2 casualties with at most $O(qn)$ moves and $\Theta$($n$). Protocol BVD-qH is to perform a BV decontamination of a q-hypercube using $2q$ agents and $q$ casualties with at most O($n\log n$) moves and $\Theta$($n$). In arbitrary graphs (see \cite{cai1}), two protocols are presented: {\sc Greedy Exploration} and {\sc Threshold Exploration}. In these two protocols, $2\Delta$ agents are needed and both of the protocols are worst-case optimal with respect to the team size, where $\Delta$ represents the maximum degree in $G$. Also, both of the strategies cause casualties of $\Delta$ and need the number of movements of $O(\Delta ^{2}n)$. Though the protocols are described for a synchronous setting, they easily adapt to asynchronous ones with an additional $O(n)$ moves for the coordinating activities. An advantage of these protocols is that the agents can use only local information to execute the protocol. Another interesting fact based on these two protocols is that both {\sc Greedy} and {\sc Threshold}   produce an optimal acyclic orientation of the graph rooted in the homebase.
 
-\color{blue}
+\color{blue} I add the casualties for the strategies of chordal ring........
+
+
 I like tables. I would add summary tables for the results of Cai, as well as for the results of Madawi 
 \color{black}
 
 In \cite{alotaibi}, solutions for BVD in chordal ring are discussed. The solutions are designed for  different kinds of chordal rings: double loops, triple loops, consecutive-chords rings and finally general chordal ring. In double loops,     three strategies  are proposed  
 %for the elimination phase and 
-with an  upper bound of moves of  $4n-7$  and a maximum of 12 agents   employed.
-In triple loops,  two classes of chordal rings are discussed: $C_n(1,p,k)$  and $C_n(1,k-1,k)$. In any triple loop $C_n(1,p,k)$, a maximum of $5n-6k+22$ moves and 24 agents are needed for the decontamination while in any triple loop $C_n(1,k-1,k)$, a maximum of $5n-7k+22$ moves and 19 agents are needed. Finally, in the consecutive-chords ring, a maximum of $(k+2)n-2k-3$ moves and $4k+1$ agents are needed. Decontamination strategies  are described  in synchronous settings, but   with a cost of $O(n)$ moves   the strategies can be used in asynchronous settings as well.
+with an  upper bound of moves of  $4n-7$, an upper bound of casualties of 4, and a maximum of 12 agents   employed.
+In triple loops,  two classes of chordal rings are discussed: $C_n(1,p,k)$  and $C_n(1,k-1,k)$. In any triple loop $C_n(1,p,k)$, a maximum of $5n-6k+22$ moves and 24 agents are needed for the decontamination with the casualties of 6 while in any triple loop $C_n(1,k-1,k)$, a maximum of $5n-7k+22$ moves and 19 agents are needed, causing an upper bound of casualties of 6. Finally, in the consecutive-chords ring, a maximum of $(k+2)n-2k-3$ moves and $4k+1$ agents are needed, causing an upper bound of casualties of $2k$. Decontamination strategies  are described  in synchronous settings, but   with a cost of $O(n)$ moves   the strategies can be used in asynchronous settings as well.
 
+A summary (table \ref{table:Summary of Results in Sequential Strategies in Special Graphs}) of casualties, movements, time and size of the team in sequential BVD strategies in different topologies is presented below. 
 
+\begin{table} [hbtp]
+\caption{Summary of Results in Sequential Strategies in Special Graphs}
+\label{table:Summary of Results in Sequential Strategies in Special Graphs}
+\centering
+\tabulinesep=2mm
+\begin{tabu} to 140 mm {|X[6,c]|X[4,l]|X[4,l]|X[4,l]|X[4,l]|} \hline 
+%\begin{tabular}{|c|l|} \hline 
+Network  &   Spread &   Size   &   Movements &   Time \\ \hline
+{\em 2-Grid}   &3 &7 & $9n+O(1)$   & $3n$         \\ \hline
+{\em q-Grid (size of $n=d_1\times d_2 \times\ldots\times d_q$)} & $q+1$    & $3q+1$  & $O(qn)$      & $\Theta (n)$            \\ \hline
 
+{\em q-Tori} & 2   & $4q$          & $O(qn)$     & $\Theta(n) $    \\ \hline
+{\em q-Hypercube} & $q$ & $2q$    & $O(nlog(n))$     & $O(n)$    \\ \hline
 
-
+{\em Arbitrary Graph} & $\Delta$    & $2\Delta $     & $O(\Delta^2n)$     & $O(\Delta^2n)$    \\ \hline
+{\em Chordal Ring (Double Loops)} & 4   & 12         & $4n-7$     & $-$    \\ \hline
+{\em Chordal Ring (Triple Loops $C_n(1,p,k)$)} & 6 & 24          & $5n-6k+22$     & $-$   \\ \hline
+{\em Chordal Ring (Triple Loops $C_n(1,k-1,k)$)} & 6  & 19       & $5n-7k+22$     & $-$   \\ \hline
+{\em Chordal Ring (consecutive chords ring)} & $2k$   & $4k+1$          & $(k+2)n-2k-3$     & $-$   \\ \hline
+\end{tabu}
+%\end{tabular}
+\end{table}
 
 
  
