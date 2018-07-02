@@ -7,7 +7,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
  
 
-\section{Introduction}
 In this Chapter, we discuss a parallel strategy for  the BVD problem in chordal rings. In a  chordal ring $C_n(d_1=1, d_2, ..., d_k)$, the nodes form a ring of size $n$ and every node is directly connected to the nodes at distance $d_i$ in the ring by additional links called chords. The link connecting two nodes is labeled by the distance that separates these two nodes on the ring (see Figure \ref{fig:chordalring} for an example).
  
 \begin{figure}[H]
@@ -349,7 +348,7 @@ After one of the agents is destroyed, the agents can check their $Destination\,T
 
 We only consider the situation when $n$ (the number of nodes of the chordal ring) is much larger than $d_k$, and since the time cost in the elimination phase is $O(1)$, we only compute the time cost in the exploring phase. Finally, we compute the TWT(calculated by multiplying the size of the team and the time cost by the solution) of both protocols to present a more fair comparison.
 
-Let us assume that the total number of moves is $M$, then the worst case costing the most time is when the BV is located at any nodes within the range from $x_{n-d_k+1}$ to $x_{n-1}$. In this case, it cost $M=\left \lfloor 2n-2d_k\right \rfloor$ moves and 4$\frac{M}{2d_k}$ units of time which is $4\times \left \lfloor \frac{n}{d_k}-1\right \rfloor$ to finish the exploring phase. 
+Let us assume that the total number of moves is $M$, then the worst case costing the most time is when the BV is located at any nodes within the range from $x_{n-d_k+1}$ to $x_{n-1}$. In this case, it cost $M=2n-2d_k$ moves and 4$\left \lfloor \frac{M}{2d_k}\right \rfloor$ units of time which is $4\times \left \lfloor \frac{n}{d_k}-1\right \rfloor$ to finish the exploring phase. 
 In \cite{alotaibi}, the author gives the number of move in three cases.
 \begin{itemize}
 \item 1) In double loops the upper bound of moves is $4n-7$.
@@ -364,20 +363,58 @@ In the exploring phase, we use $2d_k$ agents, so the TWT of our protocol is $8n-
 \item 2)The TWT in chordal rings $C_n(1,p,d_k)$ is $10n-6d_k+44$ and in chordal rings $C_n(1,d_k-1,d_k)$ is $10n-14d_k+44$.
 \item 3)The TWT in consecutive-chordal rings is $2(d_k+2)n-4d_k-6$.
 \end{itemize}
-It is obvious that when $d_k\geq 2$, our protocol is faster in the  first case; when $d_k\leq \frac{1}{3}n+7$,our protocol is faster in the second case (both $C_n(1,p,k)$ and $C_n(1,d_k-1,d_k)$); when $d>2-\frac{1}{n+2}$, our protocol is faster in the third case.
-
+It is obvious that when $d_k\geq 2$, our protocol is faster in the  first case; when $d_k\leq \frac{1}{3}n+7$,our protocol is faster in the second case (both $C_n(1,p,k)$ and $C_n(1,d_k-1,d_k)$); when $d>2-\frac{1}{n+2}$, our protocol is faster in the third case. Note that our protocol is faster than the sequential strategy in any cases, so here we means that we are faster than the sequential in terms of TWT.
 
 \color{blue}
-I would put tables with results\color{black}
+I would put tables with results (I add a overall summary at the end, please check)\color{black}
+
 
 \noindent{\bf Casualty Analysis}
-
 Casualty is the number of agents destroyed by the BV. In chordal ring $C_n(1, d_2,\dots, d_k)$, the worst case is when the first agent in the exploring group is destroyed by a BV and its clones  spread to all its neighbouring nodes. The casualties in this case are $d_k+1$ because another $d_k$ nodes are guarded by agents. On the other hand,
-  in sequential case, the casualties are $2d_k$. So in terms of casualty, our protocol is better than the sequential strategy.
+ in sequential case, the casualties are $2d_k$. So in terms of casualty, our protocol is better than the sequential strategy.
+
+A comparison of casualties, movement, size of agents, and TWT  is made below (see Table: \ref{table:Comparison of Results of Parallel Strategy and Sequential Strategy in Chordal Ring})
+
 
 \color{blue}
 I would put another small  table  with the comparison
 \color{black}
+
+\begin{table} [hbtp]
+\caption{Comparison of Results of Parallel Strategy and Sequential Strategy in Chordal Ring}
+\label{table:Comparison of Results of Parallel Strategy and Sequential Strategy in Chordal Ring}
+\centering
+\tabulinesep=2mm
+\begin{tabu} to 140 mm {|X[6,c]|X[4,l]|X[4,l]|X[4,l]|X[4,l]|} \hline 
+%\begin{tabular}{|c|l|} \hline 
+Network  & Casualties  &   Size &   Movement  &  TWT  \\ \hline
+
+{\em Chordal Ring (Double Loops)} & 4   & 12         & $4n-7$     & $8n-14$    \\ \hline
+{\em Chordal Ring (Triple Loops $C_n(1,p,k)$)} & 6 & 24          & $5n-6d_k+22$     & $10n-6d_k+44$   \\ \hline
+{\em Chordal Ring (Triple Loops $C_n(1,k-1,k)$)} & 6  & 19       & $5n-7d_k+22$     & $10n-14d_k+44$   \\ \hline
+{\em Chordal Ring (consecutive chords ring)} & $2d_k$   & $4d_k+1$          & $(d_k+2)n-2d_k-3$     & $2(d_k+2)n-4d_k-6$   \\ \hline
+{\em Parallel Strategy}   & $d_k+1$ &$2d_k$& $2n-2d_k$   & $8n-8d_k$         \\ \hline
+
+\end{tabu}
+%\end{tabular}
+\end{table}
+
+
+\color{blue}
+\section{Summary}
+In this chapter, the parallel BVD problem has been examined in chordal rings. We introduce the technique called  {\em Three Jump Notifying Technique} (TJNT) to let the mobile agents efficiently move along its route in the exploration phase, and to avoid the spread of clone BVs after the original BV is triggered. Based on this technique, an parallel decontamination protocol for chordal ring is presented. In order to compare the sequential strategy and the parallel strategy, we introduce the {\em total working time}(TWT) which is obtained by multiplying the number of agent executing the strategy and the time cost. Our analysis shows that in terms of TWT, when $d_k\geq 2$, our protocol is faster than the sequential strategy in the double loops; when $d_k\leq \frac{1}{3}n+7$,our protocol is faster than the sequential strategy in the triple loops (both $C_n(1,p,k)$ and $C_n(1,d_k-1,d_k)$); when $d>2-\frac{1}{n+2}$, our protocol is faster than the sequential strategy in the consecutive-chordal rings.
+
+Also, the casualties of parallel strategy are smaller than that of the sequential strategy in any case.
+\color{black}
+
+
+
+
+
+
+
+
+
 
 
 

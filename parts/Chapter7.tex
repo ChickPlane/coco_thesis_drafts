@@ -179,10 +179,28 @@ We also run experiments on larger  graphs  (when the number of nodes is bigger t
 First note that, according to our conclusion based on Figure \ref{fig:C_Move}, as the size of the graph grows, the connectivities from where different group members perform similarly  become smaller. 
 As a result, the average degree from where different group members perform similarly   increases, but very slowly. That is, like in the case of   small size graphs, the performance of different number of groups in larger graphs is still similar   when the average degree is larger than a certain number (this number might increase as the size of the graph grows,  but the increase is slow). From Figure \ref{fig:C_Move} (c) to (f), we can see that there are large differences between time cost by different group numbers (even between the time cost by three groups or even four groups of agent). When the size of the graph is 250 or 300, we can see that there are still  big differences between the performance of three groups and four groups of agents at an average degree of 5.0 (which is the maximum average degree shown in Figure \ref{fig:Final} )
 We can see that at this interval (average degree from 2.5 to 5.0), as the size of the graph grows, the advantage of using more groups of agents is becoming more obvious, and this interval is longer as the size of the graph becoming larger.
-
+ \end{enumerate}
 %We can see that Though the difference of performance of different group numbers shows a  tendency to be similar when the average degree is larger than 5 (which is the maximum average degree shown in Figure \ref{fig:Final}  \color {blue} ??? from where we do not give the statistics, 
 
- \end{enumerate}
+\section{Summary}
+In this chapter, the parallel BVD problem in Castle-First Strategy is investigated experimentally. A large number of simulations on different size of graphs with many connectivity densities are carried out. The Castle-First Strategy beats the sequential strategy for all graph at each connectivity level even employing only one group of agent. Also, from the results, we have the following conclusions:
+\begin{enumerate}
+\item When the connectivity of the graph is larger than $20\%$, we prefer to use one group of agents executing the Castle-First Strategy because when the graph becomes denser, sending more groups to explore the graph does not decrease time.
+\item When the connectivity of the graph reaches 30\% to 50\%, the Castle-First Strategy using a single group of agents works most efficiently: it is much faster than the sequential strategy and at the same time it employs similar number of agents to the sequential strategy.
+\item At the interval of average degree from 2.5 to 5.0, as the size of the graph grows, the advantage of using more groups of agents is becoming more obvious (the time still experiences large decrease when employing more groups of agents to explore the graph) and this interval is longer as the size of the graph becoming larger.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

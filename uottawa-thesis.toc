@@ -1,5 +1,5 @@
-\contentsline {chapter}{List of Tables}{v}{section*.2}
-\contentsline {chapter}{List of Figures}{vi}{section*.4}
+\contentsline {chapter}{List of Tables}{vii}{section*.2}
+\contentsline {chapter}{List of Figures}{viii}{section*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Problem and Motivation}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Our Contribution}{3}{section.1.2}
@@ -14,41 +14,41 @@
 \contentsline {section}{\numberline {2.4}Black Virus Decontamination}{11}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Overview}{11}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}BVD in different topologies}{12}{subsection.2.4.2}
-\contentsline {chapter}{\numberline {3}Definitions and Terminology}{14}{chapter.3}
-\contentsline {section}{\numberline {3.1}Model}{14}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Network, Agent, Black Virus}{14}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Problem and Cost Measures}{17}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Monotonicity and Synchrony}{17}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2} General strategy}{18}{section.3.2}
-\contentsline {section}{\numberline {3.3}Summary}{19}{section.3.3}
-\contentsline {chapter}{\numberline {4}Parallel Black Virus Decontamination in Meshes and Tori}{20}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{20}{section.4.1}
-\contentsline {section}{\numberline {4.2}Parallel BV Decontamination of Grids}{21}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Base Case: 2-Dimensional Grid}{21}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Multi-Dimensional Grid}{35}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Tori}{40}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Summary}{43}{section.4.3}
-\contentsline {chapter}{\numberline {5}Parallel Black Virus Decontamination in Chordal Rings}{44}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{44}{section.5.1}
-\contentsline {section}{\numberline {5.2}Shadowed Exploration}{45}{section.5.2}
-\contentsline {section}{\numberline {5.3}Surrounding and Elimination}{49}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Notifying Moving Agents}{49}{subsection.5.3.1}
-\contentsline {paragraph}{\bf Example:}{53}{section*.27}
-\contentsline {subsection}{\numberline {5.3.2}Overview of the Elimination}{58}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Destination Table and Elimination}{59}{subsection.5.3.3}
-\contentsline {chapter}{\numberline {6}Parallel Black Virus Decontamination in Arbitrary Graph}{64}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction}{64}{section.6.1}
-\contentsline {section}{\numberline {6.2}The Flood Strategy}{65}{section.6.2}
-\contentsline {section}{\numberline {6.3}Castle-First Strategy}{70}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1} Introduction}{70}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2} Initialization}{71}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3} Exploration Phase}{71}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4} Elimination Phase}{80}{subsection.6.3.4}
-\contentsline {chapter}{\numberline {7}Experimental Study on BVD in Arbitrary graph}{81}{chapter.7}
-\contentsline {section}{\numberline {7.1}The simulator}{81}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Simulation Model}{81}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Simulation Sample graph}{82}{subsection.7.1.2}
-\contentsline {section}{\numberline {7.2}Simulation Results}{83}{section.7.2}
-\contentsline {chapter}{\numberline {8}Concluding Remarks and Future Work}{91}{chapter.8}
-\contentsline {section}{\numberline {8.1}Summary}{91}{section.8.1}
-\contentsline {section}{\numberline {8.2}Open Problems and Future Research}{93}{section.8.2}
+\contentsline {chapter}{\numberline {3}Definitions and Terminology}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}Model}{15}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Network, Agent, Black Virus}{15}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Problem and Cost Measures}{18}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Monotonicity and Synchrony}{18}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2} General strategy}{19}{section.3.2}
+\contentsline {section}{\numberline {3.3}Summary}{20}{section.3.3}
+\contentsline {chapter}{\numberline {4}Parallel Black Virus Decontamination in Meshes and Tori}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Parallel BV Decontamination of Grids}{22}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Base Case: 2-Dimensional Grid}{22}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Multi-Dimensional Grid}{36}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Tori}{41}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Summary}{44}{section.4.2}
+\contentsline {chapter}{\numberline {5}Parallel Black Virus Decontamination in Chordal Rings}{45}{chapter.5}
+\contentsline {section}{\numberline {5.1}Shadowed Exploration}{46}{section.5.1}
+\contentsline {section}{\numberline {5.2}Surrounding and Elimination}{50}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Notifying Moving Agents}{50}{subsection.5.2.1}
+\contentsline {paragraph}{\bf Example:}{54}{section*.29}
+\contentsline {subsection}{\numberline {5.2.2}Overview of the Elimination}{59}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Destination Table and Elimination}{60}{subsection.5.2.3}
+\contentsline {section}{\numberline {5.3}Summary}{64}{section.5.3}
+\contentsline {chapter}{\numberline {6}Parallel Black Virus Decontamination in Arbitrary Graph}{66}{chapter.6}
+\contentsline {section}{\numberline {6.1}The Flood Strategy}{67}{section.6.1}
+\contentsline {section}{\numberline {6.2}Castle-First Strategy}{72}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1} Introduction}{72}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2} Initialization}{73}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3} Exploration Phase}{73}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4} Elimination Phase}{82}{subsection.6.2.4}
+\contentsline {section}{\numberline {6.3}Summary}{83}{section.6.3}
+\contentsline {chapter}{\numberline {7}Experimental Study on BVD in Arbitrary graph}{84}{chapter.7}
+\contentsline {section}{\numberline {7.1}The simulator}{84}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Simulation Model}{84}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Simulation Sample graph}{85}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}Simulation Results}{86}{section.7.2}
+\contentsline {section}{\numberline {7.3}Summary}{94}{section.7.3}
+\contentsline {chapter}{\numberline {8}Concluding Remarks and Future Work}{95}{chapter.8}
+\contentsline {section}{\numberline {8.1}Summary}{95}{section.8.1}
+\contentsline {section}{\numberline {8.2}Open Problems and Future Research}{97}{section.8.2}

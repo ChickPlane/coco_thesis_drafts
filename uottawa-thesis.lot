@@ -1,35 +1,58 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Summary of Results in Sequential Strategies in Special Graphs\relax }}{14}{table.caption.10}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Comparison between PBVD-2G and BVD-2G\relax }}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Routes of agents in the first line when $a=2$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Routes of agents in the second line when $a=2$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Routes of agents in the first line when $a=3$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Routes of agents in the second line when $a=3$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {Routes of agents in the second line when $a=3$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Rows that are double traversed when $a=2$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Rows that are double traversed when $a=3$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {$t_i$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {$t_{i+1}$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {$t_{i+2}$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(d)}{\ignorespaces {$t_{i+3}$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(e)}{\ignorespaces {$t_{i+4}$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(f)}{\ignorespaces {$t_{i+5}$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {$t_i$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {$t_{i+1}$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {$t_{i+2}$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(d)}{\ignorespaces {$t_{i+3}$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {$t_i$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {$t_i+1$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {$t_{i+2}$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(d)}{\ignorespaces {$t_{i+3}$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(e)}{\ignorespaces {$t_{i+4}$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(f)}{\ignorespaces {$t_{i+5}$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(a)}{\ignorespaces {$t_i$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(b)}{\ignorespaces {$t_{i+1}$}}}{35}{table.caption.19}
-\contentsline {subtable}{\numberline {(c)}{\ignorespaces {$t_{i+2}$}}}{35}{table.caption.19}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Comparison between PBVD-2G and BVD-2G\relax }}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Routes of agents in the first line when $a=2$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Routes of agents in the second line when $a=2$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Routes of agents in the first line when $a=3$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Routes of agents in the second line when $a=3$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {Routes of agents in the second line when $a=3$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Rows that are double traversed when $a=2$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Rows that are double traversed when $a=3$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {$t_i$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {$t_{i+1}$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {$t_{i+2}$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(d)}{\ignorespaces {$t_{i+3}$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(e)}{\ignorespaces {$t_{i+4}$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(f)}{\ignorespaces {$t_{i+5}$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {$t_i$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {$t_{i+1}$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {$t_{i+2}$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(d)}{\ignorespaces {$t_{i+3}$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {$t_i$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {$t_i+1$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {$t_{i+2}$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(d)}{\ignorespaces {$t_{i+3}$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(e)}{\ignorespaces {$t_{i+4}$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(f)}{\ignorespaces {$t_{i+5}$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {$t_i$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {$t_{i+1}$}}}{36}{table.caption.20}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {$t_{i+2}$}}}{36}{table.caption.20}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Summary of Results of Parallel Strategies in Grids and Toris\relax }}{44}{table.caption.24}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {The arrangement of agents on a 4-dimensional grid}}}{44}{table.caption.24}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {When we view the ``one dimensional" agent as a large agent and the grid can be view as a three dimensional grid}}}{44}{table.caption.24}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {The arrangement of agents on a 4-dimensional grid}}}{44}{table.caption.24}
+\contentsline {subtable}{\numberline {(d)}{\ignorespaces {When we view the ``two dimensional" agent as a large agent and the grid can be view as a two dimensional grid}}}{44}{table.caption.24}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {The route of the ``big agent"(LEA in the BVD-qG)}}}{44}{table.caption.24}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {The routes of the 2 agents viewed as the ``big agent"}}}{44}{table.caption.24}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {$t_0$}}}{44}{table.caption.24}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {$t_1$}}}{44}{table.caption.24}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {$t_2$}}}{44}{table.caption.24}
+\contentsline {subtable}{\numberline {(d)}{\ignorespaces {$t_3$}}}{44}{table.caption.24}
+\contentsline {subtable}{\numberline {(e)}{\ignorespaces {$t_4$}}}{44}{table.caption.24}
+\contentsline {subtable}{\numberline {(f)}{\ignorespaces {$t_5$}}}{44}{table.caption.24}
+\contentsline {subtable}{\numberline {(g)}{\ignorespaces {$t_6$}}}{44}{table.caption.24}
+\contentsline {subtable}{\numberline {(h)}{\ignorespaces {$t_7$}}}{44}{table.caption.24}
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Comparison of Results of Parallel Strategy and Sequential Strategy in Chordal Ring\relax }}{64}{table.caption.40}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Arrangement of agents at $T_{move\_i}$}}}{64}{table.caption.40}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Arrangement of agents at $T_{move\_{i+1}}$}}}{64}{table.caption.40}
+\contentsline {subtable}{\numberline {(a)}{\ignorespaces {Arrangement of agents at $T_{move\_i}$}}}{64}{table.caption.40}
+\contentsline {subtable}{\numberline {(b)}{\ignorespaces {Arrangement of agents at $T_{noti\_i^{(1)}}$}}}{64}{table.caption.40}
+\contentsline {subtable}{\numberline {(c)}{\ignorespaces {Arrangement of agents at $T_{noti\_i^{(2)}}$}}}{64}{table.caption.40}
+\contentsline {subtable}{\numberline {(d)}{\ignorespaces {Arrangement of agents at $T_{noti\_i^{(3)}}$}}}{64}{table.caption.40}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

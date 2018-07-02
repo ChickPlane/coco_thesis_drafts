@@ -2,8 +2,7 @@
 \chapter {Parallel Black Virus Decontamination in Meshes and Tori}
 \label{DL}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
-\section{Introduction}
+
 In this Chapter, we discuss parallel strategies for the BVD problem in grids and tori. In the sequential strategy ({\em BVD-2G}) for 2-dimensional grids, an ``explorer agent'' and a ``leader explorer agent'' are sent to explore the graph and locate the BV. They traverse the mesh in a snake-like fashion, column by column, following   ``cautious walk''. In the sequential protocol ({\em BVD-qG}) for q-dimensional grids, the grid is partitioned into $d_1\times\ldots\times d_{q-2}$ 2-dimensional grids of size $d_{q-1}\times d_q$, and each 2-dimensional grid is explored using the shadowed traversal technique as described in the 2-dimensional grids. Similarly, in the protocol ($BVD-qT$) for q-dimensional torus, the torus is partitioned into $d_1\times \ldots \times d_{q-1}$ ring of size $d_q$. The exploration procedure traverses a ring and, when back to the starting point, proceeds to another ring, with a neighbouring starting point. After locating the BV, agents surround the new formed BVs sequentially and eliminate them. These strategies are simple to follow, but at the same time they are not time-efficient. We now consider the situation when  more than two agents are allowed to participate in the exploring phase and we focus on decreasing the time cost in the exploring phase and the number of casualties; that is, we focus on how to design a new strategy so that the we are able to reach the destination faster, but with  an acceptable cost in terms of number of agents.\\
 \color{blue} at his point it is not clear what you mean by ``array", do you mean a compact area of consecutive/adjacent nodes ? I add the explanation below.
 \color{black}
@@ -28,7 +27,7 @@ When $a=1$, the arrangement is actually the same as in the sequential case. Sinc
   \caption{Arrangement of agents at the beginning(when $a=2$)}\label{fig:twoagent1}
 \end{figure}
 
-Let us now consider the routes for the agents, which will result to be a snake-like path. For convenience, we assume that all the agents move at time $t_i\,(i\in\mathbb{Z}^*)$  \color{blue} ??? because some time should be reserved for the coordination after the BV is triggered.???\color{black} 
+Let us now consider the routes for the agents, which will result to be a snake-like path. For convenience, we assume that all the agents move at time $t_i\,(i\in\mathbb{Z}^*)$  \color{blue} ??? because some time should be reserved for the coordination after the BV is triggered.??? In fact, we do not need to reserve time for the elimination. \color{black} 
 %More detail about the moving cycle would be discussed after we decide the number of agents and the routes for them. 
 Let $v=(x, y)$ be the node under exploration, with $1\leq x_i \leq d_1$, $1\leq y_i \leq d_2$. 
 We define a boolean value called {\em Vertical Moving Mark}  (VMM) for every agent as follows: 
@@ -44,9 +43,16 @@ We now define the action of the $2a$ agents:\\
 \item Let $b=a-1$. 
 \color{blue} these should be local rules, how can the individual agent know that all values are zero. You have to express the rule in a different way, not replying on this type of info. (make some modification, please check)\color{black}
 
-When an agent' s $VMM_1$ is ``0": then it moves EAST when $x\neq d_1-1$ and move SOUTH for $b$ steps when $x=d_1-1$ when its $VMM_2$ is equal to ``0" ; or it moves EAST when $x\neq d_1$ and move SOUTH for $b$ steps  when $x=d_1$ when its $VMM_2$ is equal to ``1". 
+When an agent' s $VMM_1$ is ``0" and its $VMM_2$ is equal to ``0", then it moves EAST when $x\neq d_1-1$ and move SOUTH for $b$ steps when $x=d_1-1$;
 
-When an agents' $VMM_1$ is ``1": then it moves WEST when $x\neq2$ and move SOUTH for $b$ steps when $x=2$ when its $VMM_2$ is equal to ``0"  ; or it moves WEST when $x\neq 1$ and move SOUTH for $b$ steps when $x=1$ when its $VMM_2$ is equal to ``1" .
+When an agent' s $VMM_1$ is ``0" and its $VMM_2$ is equal to ``1", then it moves EAST when $x\neq d_1$ and move SOUTH for $b$ steps  when $x=d_1$;
+
+When an agents' $VMM_1$ is ``1" and its $VMM_2$ is equal to ``0", then it moves WEST when $x\neq2$ and move SOUTH for $b$ steps when $x=2$;
+
+When an agents' $VMM_1$ is ``1" and its $VMM_2$ is equal to ``1",  then it moves WEST when $x\neq 1$ and move SOUTH for $b$ steps when $x=1$.
+
+
+
 
 \item An agent  moves only to a node that it has not explored yet. (Note that when residing at a node, an agent is able to know whether it has explored the neighbours of that node or not).
 \end{itemize}
@@ -399,12 +405,27 @@ To complete the exploration and the elimination, we need $2(d_1+1)$ agents which
 
 \color{blue}
 \section{Summary}
-In this chapter, the BVD problems have been examined for two classes of interconnection networks: grids and tori. The parallel decontamination protocols for these two classes have been presented. Agents in our solution use only local information to execute the protocol. A summary of the results is shown in the table below, where $q$ denotes the dimensions of the network, and n denote the numbers of nodes.
+In this chapter, the parallel BVD problems have been examined for two classes of interconnection networks: grids and tori. The parallel decontamination protocols for these two classes have been presented. Agents in our solution use only local information to execute the protocol. A summary (see 
+Table \ref{table:Summary of Results of Parallel Strategies in Grids and Toris}  ) of the results is shown in the table below, where $q$ denotes the dimensions of the network, and n denote the numbers of nodes.
+
+\begin{table} [hbtp]
+\caption{Summary of Results of Parallel Strategies in Grids and Toris}
+\label{table:Summary of Results of Parallel Strategies in Grids and Toris}
+\centering
+\tabulinesep=2mm
+\begin{tabu} to 140 mm {|X[6,c]|X[4,l]|X[4,l]|X[4,l]|X[4,l]|} \hline 
+%\begin{tabular}{|c|l|} \hline 
+Network  &   Spread &   Size   &   Movements &   Time \\ \hline
+{\em 2-Grid}   &1 &$2(\sqrt{n}+1)$& $2n-\sqrt{n}+O(1)$   & $\sqrt{n}+11$         \\ \hline
+{\em q-Grid (size of $n=d_1\times\ldots\times d_p\times\ldots\times d_q$)} & $q-p+1$    & $2\times d_1\times\ldots\times d_p (1\leq p\leq q)$  & $O(qn)$      & $\Theta (\frac{n}{d_1\times\ldots\times d_p})$            \\ \hline
+{\em 2-Tori} & 1   & $3\sqrt{n}+2$          & $2n-\sqrt{n}+O(1)$     & $\sqrt{n}+11 $    \\ \hline
+
+\end{tabu}
+%\end{tabular}
+\end{table}
 
 
-
-
-
+\color{black}
 
 
 

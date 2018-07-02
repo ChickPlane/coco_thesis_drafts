@@ -6,7 +6,7 @@
 %\color{blue}
 %Use $x,y,z$ for indicating nodes, use something different to indicate ``numbers" ($n,m,,k,h ...$).
 %\color{black}
-\section{Introduction}
+
 In \cite{cai}, Cai proposes two exploration strategies: Greedy Exploration and Threshold Exploration, both spread optimal and total number of agents asymptotical optimal. Since these strategies are sequential, they are time consuming($O(\Delta n^2)$).  In order to explore the graph in parallel, we propose two different strategies: \\
 (1) Flood Strategy\\
 (2) Castle-First Strategy\\
@@ -316,10 +316,12 @@ survive and their locations are exposed. Also, the locations of all the neighbou
 
 So, the LA computes the routes from where it resides to all the nodes needing guarding, including both  the lower and the higher $SNR$ neighbours   (Surrounding Nodes). If the location of the original BV is outside the castle, then all the SAs stay  with the LA, so the LA simply sends the SAs to these Surrounding Nodes. If the original BV is in the castle, then after the  ``Double Patrol", the LA knows the location of the original BV, so it computes the routes from where it resides to all the Surrounding Nodes and send the SAs to them (note that all the SAs are with the LA after the  ``Double Patrol"). Also note that since the graph is biconnected, there is always a route to reach the surrounding node bypassing the new formed BV nodes. 
 Assuming that there are $k$ higher $SNR$ neighbours of the original BV, then   the LA sends another $k$ agents to the new formed BV nodes and permanently destroy the BVs.
-   
 
+\color{blue}
+\section{Summary}
+In this chapter, the parallel BVD problem has been examined in arbitrary graph. Two different strategies have been presented: Flood Strategy and Castle-First Strategy. Both strategies require the full knowledge of the topology. Also, 3-hop visibility is needed in Flood Strategy. The Flood Strategy performs the exploration phase in $2h$ units of time where $h$ is the diameter of the graph. The Castle-First Strategy provides an possible way for different groups of agents to explore the arbitrary graph at the same time, and reach a compromise of the Flood Strategy which consumes a great number of agents and the sequential strategy which is time consuming. The experimental analysis of the Castle-First Strategy is presented in the following chapter. 
+\color{black}
 
-  
 
 
 
