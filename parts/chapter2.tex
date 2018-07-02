@@ -5,7 +5,7 @@
 
 
 \color{blue}
-Note {floc} and {flocchini4} are the same paper.
+Note {floc} and {floc} are the same paper.
 
 Some papers might have appeared in Journal, you need to update the references.
 
@@ -36,13 +36,13 @@ The main differences made in the literature is  whether the system is synchronou
 %, floc},   the case of black holes in arbitrary networks for anonymous and non-anonymous node are investigateds. In synchronous setting, 
  In \cite{Czyz2} the case of black holes located in   synchronous tree networks are studied for a given starting node.
  % and the minimum number of agents to locate a black hole is two. 
- In \cite{coop1}, the authors consider locating  and repairing faults in network (the agent would die after repairing the fault). The authors compute   the number of steps that is necessary and sufficient to complete this task. Finally, some recent studies deal with scattered agents searching for a black hole in rings and toris \cite{chal,chal1}. Also, in \cite{ng,hohl1,hohl2,rubi}   various methods to protect mobile agent against malicious host are discussed. Note that the BH is static which means that it does not propagate in the network and thus it is not harmful to other sites. 
+ In \cite{cc}, the authors consider locating  and repairing faults in network (the agent would die after repairing the fault). The authors compute   the number of steps that is necessary and sufficient to complete this task. Finally, some recent studies deal with scattered agents searching for a black hole in rings and toris \cite{das2,chal2}. Also, in \cite{sand,hohl1,hohl2,rubi}   various methods to protect mobile agent against malicious host are discussed. Note that the BH is static which means that it does not propagate in the network and thus it is not harmful to other sites. 
 
 
 What is worth pointing out is that the number of BHs remains the same as it is at the beginning of the search,   thus not causing harm to other sites of the network.
  
 \section{Intruder Capture}
-The IC problem assumes that there is an intruder moving with an arbitrary speed from node to node in the network and contaminating the sites it visits. The goal is to deploy a group of mobile agents to capture the intruder; the intruder is captured when it comes in contact with an agent. Note that the intruder does not cause any harm to the upcoming agents. This problem is equivalent to the problem of decontaminating a network contaminated by a virus while avoiding any recontamination, which is also called {\em connected graph search}, and has been extensively studied (see \cite{fomin}).  The Intruder Capture problem is first introduced in \cite{flocchini} and has been widely investigated in a variety network topologies: trees \cite{flocchini, flocchini1,treeintruder}, hypercubes\cite{flocchini2}, multi-dimensional grids\cite{flocchini2}, pyramids\cite{shar},chordal rings\cite{flocchini3}, tori\cite{floc3}, outerplanar graphs\cite{iman}, etc. The studies of arbitrary graph has been started in \cite{nisse,nisse1}.   Note that monotone is a critical principle in the solutions of IC problems.  
+The IC problem assumes that there is an intruder moving with an arbitrary speed from node to node in the network and contaminating the sites it visits. The goal is to deploy a group of mobile agents to capture the intruder; the intruder is captured when it comes in contact with an agent. Note that the intruder does not cause any harm to the upcoming agents. This problem is equivalent to the problem of decontaminating a network contaminated by a virus while avoiding any recontamination, which is also called {\em connected graph search}, and has been extensively studied (see \cite{fomin}).  The Intruder Capture problem is first introduced in \cite{flocchini} and has been widely investigated in a variety network topologies: trees \cite{flocchini, flocchini1,treeintruder}, hypercubes\cite{mhuang1}, multi-dimensional grids\cite{mhuang1}, pyramids\cite{shar},chordal rings\cite{flocchini3}, tori\cite{mhuang}, outerplanar graphs\cite{iman}, etc. The studies of arbitrary graph has been started in \cite{nisse,nisse1}.   Note that monotone is a critical principle in the solutions of IC problems.  
  
 
 \section{Agent Capabilities}
@@ -52,7 +52,7 @@ Different capacities granted to the mobile agents have an impart on solving the 
 Mobile agents can communicate with each other only when they are in the same node in a network. 
 Various  communication methods have been studied in literature: whiteboard, tokens and time-out.  
 
- In \cite{jc, dobr, flocchini4, ak}, the whiteboard model is used, which is a storage space located at each node and agents arriving there are able to read and write. In the token model, (see \cite{ jc1, flocchini4}), tokens are like pebbles that    the agents can drop   off and pick up  at nodes or edges. Time-out mechanisms achieve implicit communication (or synchronization) among the agents but  can only be used in synchronous settings. (see \cite{cc,cc1,jc2}).
+ In \cite{czyz, dobr, floc, ak}, the whiteboard model is used, which is a storage space located at each node and agents arriving there are able to read and write. In the token model, (see \cite{ das1, floc}), tokens are like pebbles that    the agents can drop   off and pick up  at nodes or edges. Time-out mechanisms achieve implicit communication (or synchronization) among the agents but  can only be used in synchronous settings. (see \cite{cc,coop,jc2}).
 
 \paragraph{Knowledge of the topology} 
 Different assumptions on the agents' knowledge of the topology have an impact on solutions of some of the problems mentioned above, for example, the BHS problem. In \cite{dobr}, Dobrev et al. present three types of topological knowledge in an asynchronous arbitrary network and show the results of the BHS problem based on different setting of the topology knowledge.
